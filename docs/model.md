@@ -5,6 +5,9 @@
 > Therefore the exactness argument below is conditional on a correct MILP solve;
 > the current presolve-enabled execution does not satisfy that condition. See
 > `results/generality/kill-report-v1.md` and the replayable counterexample ledger.
+> The exact-SCIP amendment repairs the frozen legacy sweep. The public Android
+> branch also has a separate certificate described below that does not trust a
+> floating-point solver bound.
 
 ## Scope
 
@@ -57,6 +60,56 @@ matrix has the consecutive-ones property and is totally unimodular.  Its
 extreme points are integral and correspond exactly to a tiling of the
 instruction trace by legal single/pair opcodes.
 
+## Replayed rational-dual certificate for fixed q
+
+For every custom-pattern aggregate row
+
+```text
+sum(e uses p) x_e <= occurrences(p) * y_p,
+```
+
+the Android proof adds each individual activation row `x_e <= y_p`. These rows
+are redundant when `y_p` is binary: `y_p=0` forces every nonnegative occurrence
+to zero through the aggregate, while `y_p=1` reduces the added row to the
+existing upper bound `x_e<=1`. Conversely, summing all individual activation
+rows gives the aggregate row. The strengthened LP can therefore remove the
+aggregate without changing its fractional feasible set.
+
+Write the resulting relaxation as
+
+```text
+min c*x
+Aeq*x = beq
+Aub*x <= bub
+0 <= x <= 1.
+```
+
+The floating LP supplies candidate equality multipliers `a/D` and nonpositive
+inequality multipliers `b/D`. They are not accepted as a bound. The verifier
+stores integer numerators and recomputes
+
+```text
+r = D*c - Aeq^T*a - Aub^T*b
+B = beq^T*a + bub^T*b + sum_j min(0, r_j).
+```
+
+All matrix products, sign checks, and the scalar `B` use guarded integer sparse
+arithmetic. Variable-bound multipliers are supplied implicitly by the sign of
+each reduced cost, so any replayed `a` and `b<=0` give the exact rational lower
+bound `B/D`; closeness to the floating basis is irrelevant. Because the target
+parse problem is binary with an integer byte objective (equivalently, fixed
+binary table choices leave an integral interval-cover path problem),
+`ceil(B/D)` is an integer lower bound. A candidate is accepted only when its
+entire 0/1 vector satisfies the original rows and strengthened rows exactly and
+its objective meets that ceiling.
+
+Fixed-q instruction optima are nonincreasing in `q`. Any table at `q` can be
+represented at `q+1` by retaining its selected patterns and adding the one RFC
+pair pattern newly overwritten by the longer prefix. This uses at most `q+1`
+patterns and preserves every old parse. Consequently, a lower bound at an
+anchor `q` also bounds every smaller slot count; each smaller full-patch bound
+is obtained by charging its own deterministic header and varint lengths.
+
 ## Exact byte objective
 
 For each `q`, the implementation precomputes `H_q`, the byte length of the
@@ -99,10 +152,16 @@ header cost reproduce the emitted file's remaining bytes.  Equal integer
 primal and dual objectives at zero MIP gap, together with this attained DP
 construction, therefore give matching lower and upper bounds.
 
-The verifier performs the converse construction independently: it rebuilds
+The exact-SCIP verifier performs the converse construction independently: it rebuilds
 the table, reruns the fixed-table dynamic program, regenerates the full patch,
 checks the parse ledger and hashes, reruns the global MILP, and decodes with two
 decoders.
+
+The rational-dual verifier instead regenerates each fixed-q sparse model,
+checks its model fingerprint, replays the stored numerator vectors, and verifies
+the exact bound. A global label is issued only when every `q` is covered by an
+attained result or an eliminating lower bound, and the chosen emitted patch is
+attained by the integral parser and accepted by both decoders.
 
 ## Evidence boundary
 

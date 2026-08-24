@@ -3,6 +3,16 @@ from __future__ import annotations
 import hashlib
 import itertools
 
+import numpy as np
+from scipy.optimize import Bounds, LinearConstraint
+from scipy.sparse import csr_matrix
+
+import vcdiff_opt.optimizer as optimizer_module
+from benchmark.integer_dual_adapter import (
+    IntegerDualAdapter,
+    IntegerDualReplayAdapter,
+    RationalDualBoundReplayAdapter,
+)
 from vcdiff_opt.codec import build_custom_table, encode_file, encode_file_header
 from vcdiff_opt.decoder import decode_file
 from vcdiff_opt.default_table import (
@@ -102,6 +112,85 @@ def test_milp_matches_bruteforce_and_custom_patch_round_trips() -> None:
     )
     assert decode_file(encoding.encoded, b"") == target
     assert encoding.windows[0].instruction_length == brute_cost
+
+
+def test_integer_dual_adapter_writes_and_replays_exact_proof(tmp_path) -> None:
+    window = _add_trace()
+    single = Pattern((window.instructions[0].atom,))
+    pair = Pattern((window.instructions[0].atom, window.instructions[1].atom))
+    candidates = (single, pair)
+    original = optimizer_module.milp
+    constructor = IntegerDualAdapter(proof_directory=tmp_path)
+    optimizer_module.milp = constructor
+    try:
+        constructed = optimizer_module.solve_selection(
+            (window,), 1, candidates=candidates
+        )
+    finally:
+        optimizer_module.milp = original
+    assert constructed.instruction_bytes == constructor.calls[0].exact_dual_bound
+
+    replay = IntegerDualReplayAdapter(tmp_path)
+    optimizer_module.milp = replay
+    try:
+        replayed = optimizer_module.solve_selection(
+            (window,), 1, candidates=candidates
+        )
+    finally:
+        optimizer_module.milp = original
+    assert replayed == constructed
+    assert replay.calls[0].exact_objective == constructed.instruction_bytes
+
+    bound_replay = RationalDualBoundReplayAdapter(tmp_path)
+    optimizer_module.milp = bound_replay
+    try:
+        try:
+            optimizer_module.solve_selection((window,), 1, candidates=candidates)
+        except RuntimeError as error:
+            assert "replayed_exact_rational_bound_only" in str(error)
+        else:
+            raise AssertionError("bound-only replay unexpectedly returned a witness")
+    finally:
+        optimizer_module.milp = original
+    assert (
+        bound_replay.calls[0].integer_lattice_lower_bound
+        == constructed.instruction_bytes
+    )
+
+
+def test_integer_dual_adapter_replays_fractional_bound_ceiling(tmp_path) -> None:
+    # The strengthened root LP has x0=x1=y=1/2 and objective 1/2, while the
+    # binary-selection problem requires y=1.  This exercises a denominator-2
+    # dual and the integer-objective ceiling rule independently of VCDIFF.
+    objective = np.asarray([0, 0, 1], dtype=float)
+    integrality = np.asarray([0, 0, 1], dtype=np.uint8)
+    bounds = Bounds(np.zeros(3), np.ones(3))
+    constraints = LinearConstraint(
+        csr_matrix(np.asarray([[1, 1, 0], [1, 1, -2]], dtype=float)),
+        np.asarray([1, -np.inf]),
+        np.asarray([1, 0]),
+    )
+    constructor = IntegerDualAdapter(proof_directory=tmp_path)
+    result = constructor(
+        c=objective,
+        integrality=integrality,
+        bounds=bounds,
+        constraints=constraints,
+    )
+    assert result.success
+    assert constructor.calls[0].exact_dual_numerator == 1
+    assert constructor.calls[0].exact_dual_denominator == 2
+    assert constructor.calls[0].exact_objective == 1
+
+    replay = IntegerDualReplayAdapter(tmp_path)
+    replayed = replay(
+        c=objective,
+        integrality=integrality,
+        bounds=bounds,
+        constraints=constraints,
+    )
+    assert replayed.success
+    assert replay.calls[0].exact_objective == 1
 
 
 def test_default_table_patch_round_trips() -> None:

@@ -1,0 +1,144 @@
+{
+  "bound_root": "benchmark_android/artifacts/fdroid-com.jstappdev.e6bflightcomputer-19-to-20/fixed-q-bounds",
+  "elapsed_seconds": 25.07894254600251,
+  "expected_count": 13,
+  "format": "vcdiff-fixed-q-rational-dual-replay-ledger-v1",
+  "q_range": [
+    80,
+    92
+  ],
+  "replayed_exact_count": 13,
+  "rows": [
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55601,
+      "full_patch_bytes_integer_lower_bound": 240979,
+      "instruction_bytes_integer_lower_bound": 55601,
+      "model_fingerprint": "9654204aefa3d0227425357bb83c27715976af0922edf890b81d237026536e28",
+      "physical_slots": 80,
+      "proof_vectors_sha256": "f83b748652f6200325495299601a8676fe06a9cc5035f12f49c866fba7d4054f",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 111073,
+      "full_patch_bytes_integer_lower_bound": 240921,
+      "instruction_bytes_integer_lower_bound": 55537,
+      "model_fingerprint": "9a281ea33407ff97186e5193add2be2f84a9e2466ece2ab1f20fbb53cd3b915a",
+      "physical_slots": 81,
+      "proof_vectors_sha256": "2dd956a00f92ea2bf560cea9a22dfeaeca61acfb6946390fce56cc80c2ab38d6",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 110945,
+      "full_patch_bytes_integer_lower_bound": 240863,
+      "instruction_bytes_integer_lower_bound": 55473,
+      "model_fingerprint": "7e5622692778210f0cb01616318c487d2cfc366ab8890b4995408695026a5237",
+      "physical_slots": 82,
+      "proof_vectors_sha256": "55b3c2d8a2094facd65a15e1768f510b52c1078ee43f33f6f8c6ecf50263070f",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55409,
+      "full_patch_bytes_integer_lower_bound": 240805,
+      "instruction_bytes_integer_lower_bound": 55409,
+      "model_fingerprint": "8188c6ed27f8b7a6b6a5eaac31e16df7877b0992c90bb8a4e8f35b62b4c8f2e0",
+      "physical_slots": 83,
+      "proof_vectors_sha256": "383fe19ad6c0a040735088ef2ada22160bec0cfbd4c6c650f478282546fccf84",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55346,
+      "full_patch_bytes_integer_lower_bound": 240748,
+      "instruction_bytes_integer_lower_bound": 55346,
+      "model_fingerprint": "13641237a45d09ebdfe98f81a695f0ce9a8480733f4daf49c42565883e3cadb9",
+      "physical_slots": 84,
+      "proof_vectors_sha256": "97b648edd75a1909895c90d56369b188a9c0a35ffdd34746ca6ae6985c1c22da",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55283,
+      "full_patch_bytes_integer_lower_bound": 240691,
+      "instruction_bytes_integer_lower_bound": 55283,
+      "model_fingerprint": "d50853d0187f71bd56bf2e067f66e041e48a145065de7fe158460df6ac081932",
+      "physical_slots": 85,
+      "proof_vectors_sha256": "549ab3c927f041f092ca3ced4f3441d820a363fed71b385abf1af117a02c055a",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55283,
+      "full_patch_bytes_integer_lower_bound": 240697,
+      "instruction_bytes_integer_lower_bound": 55283,
+      "model_fingerprint": "15490dc6185eeca0685056de000e6c1b78c2535d3ff73a50cb2ff388707cbd4a",
+      "physical_slots": 86,
+      "proof_vectors_sha256": "ec8966013eed6ae143c84b662c37bbec9540e1cb2264cfbe9546590e16491eef",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55245,
+      "full_patch_bytes_integer_lower_bound": 240665,
+      "instruction_bytes_integer_lower_bound": 55245,
+      "model_fingerprint": "dd0aa3c16e368a61575d4c7b9ac4cc1859ea962ec966d83bde16a5470ff04348",
+      "physical_slots": 87,
+      "proof_vectors_sha256": "52e67501eaada9afa81712d00ac84fb0a5c909b7c7361463393e46da265fdfe6",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55201,
+      "full_patch_bytes_integer_lower_bound": 240627,
+      "instruction_bytes_integer_lower_bound": 55201,
+      "model_fingerprint": "368f5ad3b6d63122fdb989d3770146d2eb886d4255899f4c0b07537c76860dae",
+      "physical_slots": 88,
+      "proof_vectors_sha256": "b63471bcceea35536a86d5c846acb9313180ea4bfce9d5bc0e2833a63b4472bd",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55164,
+      "full_patch_bytes_integer_lower_bound": 240596,
+      "instruction_bytes_integer_lower_bound": 55164,
+      "model_fingerprint": "7c4d96ee6ccb2b68e114f663882a615b1df62852f6e65094080f2e67132ed603",
+      "physical_slots": 89,
+      "proof_vectors_sha256": "f9bb31049c8ac7d7857b2c179e02b5892efe1c293acaa8c89f694f83a89df373",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55127,
+      "full_patch_bytes_integer_lower_bound": 240566,
+      "instruction_bytes_integer_lower_bound": 55127,
+      "model_fingerprint": "7700684f68da84b0eb1d976d76aae40d3779bef9af673f113d79ef2459868e82",
+      "physical_slots": 90,
+      "proof_vectors_sha256": "5f9a233af8eeaef93c38ab04e8a757d59f7440dd7fa43cc80c16807380a2fe9b",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55073,
+      "full_patch_bytes_integer_lower_bound": 240518,
+      "instruction_bytes_integer_lower_bound": 55073,
+      "model_fingerprint": "cfd829c25c5889f22024b5c306cf37b9246497326c094283159bbe9d731e47e1",
+      "physical_slots": 91,
+      "proof_vectors_sha256": "b8c1b3d3a7bda6d677e9a9cc9e518b536d8e7a23bb7c55b69ba3f37ac6a6136a",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 55019,
+      "full_patch_bytes_integer_lower_bound": 240470,
+      "instruction_bytes_integer_lower_bound": 55019,
+      "model_fingerprint": "70f48389e2c3209bdab6e9a640682bd75ba02829d4311dc7abf2d1ab6087c612",
+      "physical_slots": 92,
+      "proof_vectors_sha256": "a1281538bd81cc91d7d6caa950dda25e5d28dee990b829179f39694845c98059",
+      "status": "replayed_exact"
+    }
+  ],
+  "trace": "benchmark_android/artifacts/fdroid-com.jstappdev.e6bflightcomputer-19-to-20/trace.json"
+}

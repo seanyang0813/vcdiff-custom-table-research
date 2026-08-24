@@ -13,6 +13,8 @@ standard VCDIFF patch, and writes a solver certificate.
 > replays. It reproduces the trigger and every prior CP-SAT result. The frozen
 > corpus is currently 25/48 exact, so its distribution is nonconfirmatory. See
 > [`scip-partial-summary-v1.md`](results/generality/scip-partial-summary-v1.md).
+> A separate replayed rational-LP-dual backend now handles the larger Android
+> fixed-q models without weakening the exact label.
 
 ## Public Android DEX branch
 
@@ -21,10 +23,20 @@ archive indices: 40 distinct public projects selected in fixed hash order,
 with consecutive universal-APK releases and deterministic complete multidex
 bundles. Corpus membership was frozen before any VCDIFF trace was generated.
 
-The first scheduled pair is exact and favorable: QuickDice 45→48 is
-32,517→30,627 bytes, saving 1,890 bytes (5.8123%) at q=83. This is **one
-preregistered example, not generalization**. The second pair exposed a scaling
-stop: its 70,913-instruction global model exceeded 8 GiB process RSS. The
+The first two scheduled pairs are exact and favorable. QuickDice 45→48 is
+32,517→30,627 bytes, saving 1,890 bytes (5.8123%) at q=83. E6B Flight Computer
+19→20 is 251,942→240,417 bytes, saving 11,525 bytes (4.5745%) at q=93.
+
+The second pair originally exposed an operational scaling stop: generic exact
+SCIP exceeded 8 GiB process RSS. The replacement proof removes LP-redundant
+aggregate big-M rows, verifies exact rational dual vectors with integer sparse
+arithmetic, uses q-monotonicity to transfer the q=80 lower bound to q=1..79,
+and matches q=93 with a binary witness, integral DP parse, emitted patch, and
+two decoder replays. All 94 values q=0..93 are therefore covered. See the
+compact [integer-dual summary](results/android/e6b-integer-dual-summary-v1.md)
+and [independent replay ledger](results/android/e6b-fixed-q-bound-replay-v1.json).
+
+These are **two preregistered examples, not generalization**. The
 preregistered minimum is 30 exact Android pairs, so no predictor, table bank,
 deployment experiment, or Superpack claim is authorized. See
 [`status-v1.md`](results/android/status-v1.md) and
@@ -130,12 +142,18 @@ reproduction.
 - `src/vcdiff_opt/codec.py` — canonical table delta and RFC patch emitter.
 - `src/vcdiff_opt/decoder.py` — strict independent decoder.
 - `src/vcdiff_opt/study.py` and `verify.py` — certificate production/replay.
+- `benchmark/integer_dual_adapter.py` — integer-arithmetic replay of rational
+  LP lower bounds and matching binary witnesses.
+- `benchmark_android/run_fixed_q_integer_dual.py` and
+  `verify_fixed_q_bound_sweep.py` — fixed-q proof construction and independent
+  bound replay for the public DEX branch.
 - `docs/model.md` — formulation and exactness argument.
 - `docs/implementation-audit.md` — RFC and decoder audit.
 - `corpus/manifest.json` — immutable corpus provenance.
 
 The governing evidence boundary is deliberate: a reported floating-point zero
 gap is not an exact certificate when an independently feasible vector beats its
-dual bound. Exact labels now require the locked exact-SCIP protocol, independent
-integral attainment, emitted-byte equality, and decoder replay. Incomplete
-corpora remain explicitly incomplete.
+dual bound. Exact labels require either the locked exact-SCIP protocol or an
+integer-replayed rational LP lower bound with a matching binary witness, plus
+independent integral attainment, emitted-byte equality, and decoder replay.
+Incomplete corpora remain explicitly incomplete.

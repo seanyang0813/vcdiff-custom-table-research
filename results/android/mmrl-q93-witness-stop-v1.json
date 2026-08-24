@@ -1,0 +1,19 @@
+{
+  "baseline_bytes": 627709,
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. No binary witness was obtained, so this is neither an attained fixed-q optimum nor an exact preregistered pair label.",
+  "format": "vcdiff-android-fixed-q-witness-stop-v1",
+  "instruction_bytes_integer_lower_bound": 120730,
+  "logical_instructions": 165172,
+  "model_fingerprint": "3960c98e94f75416842c970e443435e53017c140cbac663352dd2be1934673a6",
+  "pair_id": "fdroid-com.dergoogler.mmrl-22020-to-32432",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "bd2ef2f5fea85211f3ec72d2dc8e4da8a893b53bd73505c23c6f5dad5aac5bad",
+  "q93_full_patch_bytes_integer_lower_bound": 601568,
+  "resource_observation": {
+    "approximate_elapsed_seconds_at_stop": 940,
+    "peak_rss_kb": 2310204
+  },
+  "status": "nonexact_witness_search_runtime_stop",
+  "stop_reason": "The exact rational LP lower bound was retained, but no matching binary witness appeared during the capped search; the run was stopped before a second presolve mode could duplicate the cost.",
+  "trace_sha256": "9dcf41a5e149082a79e30420af25f5c1112b07a18d6e04ac39094e1264a61e99"
+}

@@ -1,0 +1,54 @@
+{
+  "baseline_bytes": 251942,
+  "chosen_patch": {
+    "python_decoder_sha256": "11019f59b9075feeac14ddeacf815492f6143ccc3a9fd184a9318215579e80fa",
+    "sha256": "d8b1ed6506903b9ec20872c8a11fe2fccd56f5e061bfd09d006b1d4c22460d58",
+    "unchanged_xdelta_decoder_sha256": "11019f59b9075feeac14ddeacf815492f6143ccc3a9fd184a9318215579e80fa"
+  },
+  "corpus_gate": {
+    "exact_pairs_after_this_result": 2,
+    "minimum_required_exact_pairs": 30,
+    "predictor_or_table_bank_authorized": false
+  },
+  "evidence_boundary": "Exact for the frozen public F-Droid DEX-bundle surrogate and restricted canonical table family only; no Meta or Superpack claim.",
+  "format": "vcdiff-android-integer-dual-summary-v1",
+  "full_certificate": {
+    "note": "local certificate references frozen APK-derived artifacts excluded from Git",
+    "path": "benchmark_android/artifacts/fdroid-com.jstappdev.e6bflightcomputer-19-to-20/certificate.json",
+    "sha256": "5a5e054a2b4b02cf6e7874d3eb090f6821dc6ae7cfbe965065833c056b9721eb"
+  },
+  "independent_bound_replay": {
+    "path": "results/android/e6b-fixed-q-bound-replay-v1.json",
+    "q_range": [
+      80,
+      92
+    ],
+    "replayed_exact_count": 13,
+    "sha256": "444c740518f6b39927a6a4ee09da9a1cbe3ccbb2d3d7423cfc7aa2054ef6dd58"
+  },
+  "instruction_bytes": 54964,
+  "logical_instruction_count": 70913,
+  "oracle_bytes": 240417,
+  "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+  "passes_preregistered_one_percent_pair_threshold": true,
+  "physical_slots": 93,
+  "proof_of_exhaustion": {
+    "all_nonincumbent_bounds_eliminate_incumbent": true,
+    "attained_custom_rows": 1,
+    "covered_q_count": 94,
+    "direct_rational_lower_bound_rows": 13,
+    "method": "q=0 exact default-table DP; q=80..92 replayed rational LP lower bounds; q=80 monotonicity transfers its instruction lower bound to q=1..79; every resulting full-patch lower bound is at or above the q=93 exact rational-dual plus binary-witness incumbent",
+    "monotonicity_derived_lower_bound_rows": 79,
+    "q_domain": [
+      0,
+      93
+    ]
+  },
+  "retained_operational_stops": [
+    "results/android/continuous-relaxation-stop-v1.json",
+    "results/android/strengthened-root-lp-global-presolve-v1.json"
+  ],
+  "saving_bytes": 11525,
+  "saving_percent": 4.574465551595209,
+  "status": "exact_global_q_0_through_93"
+}

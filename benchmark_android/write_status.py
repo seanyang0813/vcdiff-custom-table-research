@@ -36,12 +36,15 @@ def main() -> None:
         "nonexact_attempts": failures,
         "operational_diagnostics": [
             "results/android/fixed-q1-diagnostic-v1.json",
-            "results/android/continuous-relaxation-stop-v1.json"
+            "results/android/continuous-relaxation-stop-v1.json",
+            "results/android/strengthened-root-lp-global-presolve-v1.json",
+            "results/android/e6b-fixed-q-bound-replay-v1.json",
+            "results/android/mmrl-q93-witness-stop-v1.json"
         ],
         "evidence_boundary": (
-            "One exact favorable DEX pair is an anecdote, not held-out preregistered "
-            "generalization. No predictor, table bank, production prototype, or "
-            "Superpack claim is authorized."
+            f"{len(exact)} exact DEX pairs are insufficient for the preregistered "
+            "30-pair coverage gate. No predictor, table bank, production prototype, "
+            "or Superpack claim is authorized."
         ),
     }
     JSON_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
@@ -67,17 +70,31 @@ def main() -> None:
                 "",
             ]
         )
+    if failures:
+        lines.extend(["## Nonexact attempts", ""])
+        for row in failures:
+            lines.extend(
+                [
+                    f"`{row['pair_id']}`: stopped without an exact pair label "
+                    f"(`{row['status']}`). The retained q={row['attempted_physical_slots']} "
+                    f"bound is {row['q93_full_patch_bytes_integer_lower_bound']:,} bytes; "
+                    "it is not an attained optimum.",
+                    "",
+                ]
+            )
     lines.extend(
         [
-            "## Scaling stop",
+            "## Exact-oracle scaling recovery",
             "",
-            "The second scheduled pair has 70,913 logical instructions. Global binary "
-            "SCIP was stopped at 8.5 GiB RSS; the continuous-path relaxation was stopped "
-            "at 8.8 GiB without a bound. Fixed q=1 proved exactly but required 438 seconds "
-            "and 5.67 GiB, so q=0..93 enumeration is not practical.",
+            "The second scheduled pair has 70,913 logical instructions. Earlier global "
+            "SCIP attempts were stopped at 8.5--8.8 GiB RSS and remain nonresults. The "
+            "replacement proof removes LP-redundant aggregate big-M rows, replays exact "
+            "rational dual vectors, uses q-monotonicity to transfer the q=80 bound to "
+            "q=1..79, and matches q=93 with a binary decoded witness.",
             "",
-            "The next required step is a problem-specific exact decomposition or stronger "
-            "certificate. Approximate solver outputs will not be used as oracle labels.",
+            "This certificate architecture has passed on the scaling trigger, but the "
+            "preregistered corpus still requires at least 30 exact independent pairs. "
+            "Approximate solver outputs will not be used as oracle labels.",
             "",
             "No predictor, reusable table bank, deployment experiment, or Superpack claim "
             "is supported at this stage.",

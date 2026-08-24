@@ -1,0 +1,257 @@
+{
+  "diagnostic": {
+    "activation_rows": 76286,
+    "common_denominator_trials": [
+      {
+        "deficit_numerator": 648,
+        "denominator": 1,
+        "dual_numerator": 54916,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4978864126973297,
+        "target_numerator": 55564
+      },
+      {
+        "deficit_numerator": 856,
+        "denominator": 2,
+        "dual_numerator": 110272,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4989639474161043,
+        "target_numerator": 111128
+      },
+      {
+        "deficit_numerator": 1071,
+        "denominator": 3,
+        "dual_numerator": 165621,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4974451035900629,
+        "target_numerator": 166692
+      },
+      {
+        "deficit_numerator": 1237,
+        "denominator": 4,
+        "dual_numerator": 221019,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.499386650416918,
+        "target_numerator": 222256
+      },
+      {
+        "deficit_numerator": 1175,
+        "denominator": 5,
+        "dual_numerator": 276645,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49820757389021875,
+        "target_numerator": 277820
+      },
+      {
+        "deficit_numerator": 1445,
+        "denominator": 6,
+        "dual_numerator": 331939,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49880994879724483,
+        "target_numerator": 333384
+      },
+      {
+        "deficit_numerator": 1630,
+        "denominator": 8,
+        "dual_numerator": 442882,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49828893285707565,
+        "target_numerator": 444512
+      },
+      {
+        "deficit_numerator": 1578,
+        "denominator": 10,
+        "dual_numerator": 554062,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4986843717395999,
+        "target_numerator": 555640
+      },
+      {
+        "deficit_numerator": 2199,
+        "denominator": 12,
+        "dual_numerator": 664569,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4996270033822494,
+        "target_numerator": 666768
+      },
+      {
+        "deficit_numerator": 4376,
+        "denominator": 16,
+        "dual_numerator": 884648,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4972834273587434,
+        "target_numerator": 889024
+      },
+      {
+        "deficit_numerator": 1346,
+        "denominator": 24,
+        "dual_numerator": 1332190,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49969440563382506,
+        "target_numerator": 1333536
+      },
+      {
+        "deficit_numerator": 1157,
+        "denominator": 32,
+        "dual_numerator": 1776891,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4967903164116301,
+        "target_numerator": 1778048
+      },
+      {
+        "deficit_numerator": 750,
+        "denominator": 48,
+        "dual_numerator": 2666322,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4998477573836695,
+        "target_numerator": 2667072
+      },
+      {
+        "deficit_numerator": 1955,
+        "denominator": 64,
+        "dual_numerator": 3554141,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49699375288961534,
+        "target_numerator": 3556096
+      },
+      {
+        "deficit_numerator": 707,
+        "denominator": 96,
+        "dual_numerator": 5333437,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.498876727315654,
+        "target_numerator": 5334144
+      },
+      {
+        "deficit_numerator": 1178,
+        "denominator": 128,
+        "dual_numerator": 7111014,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4993409531090123,
+        "target_numerator": 7112192
+      },
+      {
+        "deficit_numerator": 1223,
+        "denominator": 192,
+        "dual_numerator": 10667065,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4985989991122324,
+        "target_numerator": 10668288
+      },
+      {
+        "deficit_numerator": 2068,
+        "denominator": 256,
+        "dual_numerator": 14222316,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4994243576696249,
+        "target_numerator": 14224384
+      },
+      {
+        "deficit_numerator": 2221,
+        "denominator": 384,
+        "dual_numerator": 21334355,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49925279269126577,
+        "target_numerator": 21336576
+      },
+      {
+        "deficit_numerator": 1575,
+        "denominator": 512,
+        "dual_numerator": 28447193,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4999013859263073,
+        "target_numerator": 28448768
+      },
+      {
+        "deficit_numerator": 1151,
+        "denominator": 768,
+        "dual_numerator": 42672001,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4993092552897451,
+        "target_numerator": 42673152
+      },
+      {
+        "deficit_numerator": 1586,
+        "denominator": 1024,
+        "dual_numerator": 56895950,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.49980052213425097,
+        "target_numerator": 56897536
+      },
+      {
+        "deficit_numerator": 1392,
+        "denominator": 2048,
+        "dual_numerator": 113793680,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4990719599268232,
+        "target_numerator": 113795072
+      },
+      {
+        "deficit_numerator": 3671,
+        "denominator": 4096,
+        "dual_numerator": 227586473,
+        "exact_target_attained": false,
+        "inequality_sign_feasible": true,
+        "maximum_scaled_rounding_error": 0.4972975989949191,
+        "target_numerator": 227590144
+      }
+    ],
+    "elapsed_seconds": 301.8554699209999,
+    "equality_rows": 70915,
+    "floating_dual_objective": 55563.855870170664,
+    "floating_primal_dual_gap": 5.791662260890007e-09,
+    "fractional_path_variables": 50215,
+    "fractional_selection_variables": 103,
+    "inequality_rows": 76358,
+    "maximum_dual_marginal_integer_distance": 0.49854059145295304,
+    "maximum_stationarity_residual": 8.731487755042622e-13,
+    "maximum_variable_fractionality": 0.5,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_candidate_attains_integer_dual": null,
+    "mip_candidate_attempted": false,
+    "mip_candidate_elapsed_seconds": null,
+    "mip_candidate_exactly_feasible": null,
+    "mip_candidate_message": null,
+    "mip_candidate_objective": null,
+    "mip_candidate_status": null,
+    "nonintegral_dual_marginals": 33132,
+    "objective": 55563.855870176456,
+    "objective_integer_distance": 0.14412982354406267,
+    "objective_nearest_integer": 55564,
+    "original_rows": 80911,
+    "path_variables": 159545,
+    "physical_slots": 93,
+    "removed_redundant_aggregate_rows": 9924,
+    "selection_variables": 10019,
+    "status": 0,
+    "success": true,
+    "variables": 169564
+  },
+  "evidence_boundary": "Floating-point continuous-relaxation scouting result only; not an integer optimum, exact lower bound, or preregistered corpus label.",
+  "format": "vcdiff-android-strengthened-root-lp-diagnostic-v1",
+  "model_kind": "global_q",
+  "trace": "benchmark_android/artifacts/fdroid-com.jstappdev.e6bflightcomputer-19-to-20/trace.json"
+}

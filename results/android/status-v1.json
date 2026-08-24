@@ -1,7 +1,26 @@
 {
-  "evidence_boundary": "One exact favorable DEX pair is an anecdote, not held-out preregistered generalization. No predictor, table bank, production prototype, or Superpack claim is authorized.",
-  "exact_pair_count": 1,
+  "evidence_boundary": "2 exact DEX pairs are insufficient for the preregistered 30-pair coverage gate. No predictor, table bank, production prototype, or Superpack claim is authorized.",
+  "exact_pair_count": 2,
   "exact_rows": [
+    {
+      "baseline_bytes": 251942,
+      "certificate": "benchmark_android/artifacts/fdroid-com.jstappdev.e6bflightcomputer-19-to-20/certificate.json",
+      "certificate_sha256": "5a5e054a2b4b02cf6e7874d3eb090f6821dc6ae7cfbe965065833c056b9721eb",
+      "finished_utc": "2026-08-24T12:23:34.356041+00:00",
+      "fixed_q_attained_exact_count": 1,
+      "fixed_q_direct_exact_lower_bound_count": 13,
+      "fixed_q_monotonicity_derived_bound_count": 79,
+      "fixed_q_total_with_default": 94,
+      "logical_instructions": 70913,
+      "oracle_bytes": 240417,
+      "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+      "physical_slots": 93,
+      "prior_scip_scaling_stop_retained": "results/android/continuous-relaxation-stop-v1.json",
+      "proof_backend": "q=80..92 replayed rational LP lower bounds; q=80 monotonicity transfer to q=1..79; q=93 matching binary witness; q=0 exact DP",
+      "saving_bytes": 11525,
+      "saving_percent": 4.574465551595209,
+      "status": "complete"
+    },
     {
       "baseline_bytes": 32517,
       "certificate": "benchmark_android/artifacts/fdroid-ohm.quickdice-45-to-48/certificate.json",
@@ -30,22 +49,23 @@
   "nonexact_attempt_count": 1,
   "nonexact_attempts": [
     {
-      "elapsed_seconds_approx": 1138,
-      "exact_label": null,
-      "log": "benchmark_android/work/fdroid-com.jstappdev.e6bflightcomputer-19-to-20.log",
-      "observed_process_rss_kb": 8496792,
-      "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
-      "reason": "total process RSS exceeded the intended solver resource boundary while SCIP internal accounting had not stopped; interrupted to avoid host OOM",
-      "scip_internal_memory_limit_mb": 6000,
-      "started_utc": "2026-08-24T09:23:14.721032+00:00",
-      "status": "external_memory_safety_stop",
-      "stopped_utc": "2026-08-24T09:42:12+00:00"
+      "attempted_physical_slots": 93,
+      "baseline_bytes": 627709,
+      "diagnostic": "results/android/mmrl-q93-witness-stop-v1.json",
+      "instruction_bytes_integer_lower_bound": 120730,
+      "logical_instructions": 165172,
+      "pair_id": "fdroid-com.dergoogler.mmrl-22020-to-32432",
+      "q93_full_patch_bytes_integer_lower_bound": 601568,
+      "status": "witness_search_runtime_stop"
     }
   ],
-  "not_yet_attempted_count": 38,
+  "not_yet_attempted_count": 37,
   "operational_diagnostics": [
     "results/android/fixed-q1-diagnostic-v1.json",
-    "results/android/continuous-relaxation-stop-v1.json"
+    "results/android/continuous-relaxation-stop-v1.json",
+    "results/android/strengthened-root-lp-global-presolve-v1.json",
+    "results/android/e6b-fixed-q-bound-replay-v1.json",
+    "results/android/mmrl-q93-witness-stop-v1.json"
   ],
   "predictor_or_table_bank_authorized": false,
   "status": "partial_nonconfirmatory"
