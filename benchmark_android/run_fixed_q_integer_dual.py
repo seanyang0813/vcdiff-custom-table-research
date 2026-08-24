@@ -33,6 +33,16 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--time-limit-seconds", type=float, default=1800.0)
     parser.add_argument("--bound-only", action="store_true")
+    parser.add_argument(
+        "--replay-bound",
+        action="store_true",
+        help="reuse and exactly replay this output directory's stored dual",
+    )
+    parser.add_argument(
+        "--candidate-presolve",
+        choices=("none", "on", "off", "both"),
+        default="both",
+    )
     arguments = parser.parse_args()
     arguments.output.mkdir(parents=True, exist_ok=True)
     proof_directory = arguments.output / "proof"
@@ -45,10 +55,18 @@ def main() -> None:
     source = source_path.read_bytes()
     target = target_path.read_bytes()
 
+    candidate_presolve_attempts = {
+        "none": (),
+        "on": (True,),
+        "off": (False,),
+        "both": (True, False),
+    }[arguments.candidate_presolve]
     constructor = IntegerDualAdapter(
         proof_directory=proof_directory,
         time_limit_seconds=arguments.time_limit_seconds,
+        candidate_presolve_attempts=candidate_presolve_attempts,
         bound_only=arguments.bound_only,
+        replay_bound_directory=(proof_directory if arguments.replay_bound else None),
     )
     original = optimizer.milp
     started = time.monotonic()
@@ -132,7 +150,14 @@ def main() -> None:
             "address_bytes": address_bytes,
             "construction_elapsed_seconds": construction_elapsed,
             "bound_calls": bound_calls_as_dicts(constructor.bound_calls),
+            "candidate_diagnostics": constructor.candidate_diagnostics,
+            "dual_source": (
+                "stored_exact_replay"
+                if arguments.replay_bound
+                else "floating_candidate_then_exact_replay"
+            ),
             "witness_search_skipped": arguments.bound_only,
+            "candidate_presolve_attempts": list(candidate_presolve_attempts),
             "nonattainment_reason": None if solve_error is None else str(solve_error),
         }
         result_path = arguments.output / "lower-bound.json"
@@ -200,6 +225,7 @@ def main() -> None:
         },
         "construction_elapsed_seconds": construction_elapsed,
         "constructor_calls": calls_as_dicts(constructor.calls),
+        "candidate_diagnostics": constructor.candidate_diagnostics,
         "replay_calls": calls_as_dicts(replay.calls),
     }
     result_path = arguments.output / "result.json"

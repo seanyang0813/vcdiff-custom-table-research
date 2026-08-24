@@ -1,0 +1,33 @@
+{
+  "baseline_bytes": 339039,
+  "candidate_diagnostic": {
+    "fractional_integer_variables": 54,
+    "fractional_variables": 36573,
+    "rounded_table_fixed_path_bytes": 80966,
+    "rounded_table_gap_above_instruction_lower_bound": 927,
+    "selection_sum": 93
+  },
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. Strengthened exact SCIP was interrupted at the host RSS safety boundary without an optimal result, so no fixed-q optimum or preregistered pair label is assigned.",
+  "exact_scip_attempt": {
+    "elapsed_seconds": 397.39,
+    "internal_memory_limit_mb": 5000,
+    "peak_rss_kb": 7819740,
+    "status": "userinterrupt_at_external_memory_safety_boundary"
+  },
+  "format": "vcdiff-android-fixed-q-scip-safety-stop-v1",
+  "instruction_bytes_integer_lower_bound": 80039,
+  "logical_instructions": 92239,
+  "model_fingerprint": "2735e725cb3bf1ed77f4b8e605d4c6674738ed5a9fdce8c49ffe174eadf6ee9e",
+  "pair_id": "fdroid-com.kolakek.pimiwidget-16-to-17",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "009e1aa8e96b255e6d806ce496692c8877ec51d475acaf8d09e7ebdf3eb55f92",
+  "q93_full_patch_bytes_integer_lower_bound": 321904,
+  "rational_dual_resource_observation": {
+    "elapsed_seconds": 65.79,
+    "lp_elapsed_seconds": 50.66294713499883,
+    "peak_rss_kb": 745600
+  },
+  "status": "nonexact_scip_external_memory_safety_stop",
+  "stop_reason": "Exact SCIP process RSS reached 7.46 GiB despite its 5,000 MB internal limit; it was interrupted before the established 8 GiB host-safety boundary.",
+  "trace_sha256": "1b52c940cdc146defad45a766b833a57e1e84b701e9d265fbab50d2dce661aba"
+}

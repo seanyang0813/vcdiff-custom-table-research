@@ -1,0 +1,27 @@
+{
+  "baseline_bytes": 791959,
+  "candidate_diagnostic": {
+    "fractional_integer_variables": 122,
+    "fractional_variables": 132824,
+    "rounded_table_fixed_path_bytes": 151733,
+    "rounded_table_gap_above_instruction_lower_bound": 2893,
+    "selection_sum": 93
+  },
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. The rounded table is a feasible diagnostic upper bound, not an exact optimum, and no preregistered pair label is assigned.",
+  "format": "vcdiff-android-fixed-q-root-gap-v1",
+  "instruction_bytes_integer_lower_bound": 148840,
+  "logical_instructions": 200428,
+  "model_fingerprint": "39b3c8b32659e1fae4fe01f736aa845fd4837326290f2da4c830c4a9cce20d48",
+  "pair_id": "fdroid-tibarj.tranquilstopwatch-16-to-17",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "09d3e1b80a48e883fe400dd954d026e943660aab408ded0df4a45614c2bcf945",
+  "q93_full_patch_bytes_integer_lower_bound": 764506,
+  "resource_observation": {
+    "elapsed_seconds": 466.42,
+    "lp_elapsed_seconds": 434.52350896999997,
+    "peak_rss_kb": 1427188
+  },
+  "status": "nonexact_fractional_root_gap",
+  "stop_reason": "The strengthened root relaxation has a material integer-attainment gap; exact decomposition or stronger cuts are required before a fixed-q or global label can be issued.",
+  "trace_sha256": "3fd10cea8f72f89f9d6010a4a4b550499c7dc3e4e7351b00422f3e212bb8edd9"
+}

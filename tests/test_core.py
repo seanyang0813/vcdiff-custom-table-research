@@ -192,6 +192,33 @@ def test_integer_dual_adapter_replays_fractional_bound_ceiling(tmp_path) -> None
     assert replayed.success
     assert replay.calls[0].exact_objective == 1
 
+    reuse_directory = tmp_path / "reuse"
+    bound_constructor = IntegerDualAdapter(
+        proof_directory=reuse_directory,
+        bound_only=True,
+    )
+    bound_result = bound_constructor(
+        c=objective,
+        integrality=integrality,
+        bounds=bounds,
+        constraints=constraints,
+    )
+    assert not bound_result.success
+    witness_constructor = IntegerDualAdapter(
+        proof_directory=reuse_directory,
+        replay_bound_directory=reuse_directory,
+        candidate_presolve_attempts=(True,),
+    )
+    witness_result = witness_constructor(
+        c=objective,
+        integrality=integrality,
+        bounds=bounds,
+        constraints=constraints,
+    )
+    assert witness_result.success
+    assert witness_constructor.bound_calls[0].lp_elapsed_seconds == 0.0
+    assert witness_constructor.calls[0].exact_objective == 1
+
 
 def test_default_table_patch_round_trips() -> None:
     window = _add_trace(count=3, size=18)

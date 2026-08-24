@@ -39,7 +39,13 @@ def main() -> None:
             "results/android/continuous-relaxation-stop-v1.json",
             "results/android/strengthened-root-lp-global-presolve-v1.json",
             "results/android/e6b-fixed-q-bound-replay-v1.json",
-            "results/android/mmrl-q93-witness-stop-v1.json"
+            "results/android/strengthened-scip-validation-v1.json",
+            "results/android/mmrl-q93-witness-stop-v1.json",
+            "results/android/icicle-q93-witness-stop-v1.json",
+            "results/android/tranquilstopwatch-q93-root-gap-v1.json",
+            "results/android/ariane-q93-root-gap-v1.json",
+            "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
+            "results/android/pathfinder-q93-root-gap-v1.json"
         ],
         "evidence_boundary": (
             f"{len(exact)} exact DEX pairs are insufficient for the preregistered "
@@ -95,6 +101,11 @@ def main() -> None:
             "This certificate architecture has passed on the scaling trigger, but the "
             "preregistered corpus still requires at least 30 exact independent pairs. "
             "Approximate solver outputs will not be used as oracle labels.",
+            "",
+            "A separate aggregate-free exact-SCIP formulation reproduced the QuickDice "
+            "q=83 and E6 q=93 fixed-q optima in one node while retaining continuous path "
+            "variables. It still reached a host memory safety stop on Pimi Widget, so it "
+            "is a bounded validation tool rather than a general scaling solution.",
             "",
             "No predictor, reusable table bank, deployment experiment, or Superpack claim "
             "is supported at this stage.",

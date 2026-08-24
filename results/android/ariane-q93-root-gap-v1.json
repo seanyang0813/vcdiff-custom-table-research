@@ -1,0 +1,27 @@
+{
+  "baseline_bytes": 821024,
+  "candidate_diagnostic": {
+    "fractional_integer_variables": 92,
+    "fractional_variables": 111550,
+    "rounded_table_fixed_path_bytes": 155701,
+    "rounded_table_gap_above_instruction_lower_bound": 1803,
+    "selection_sum": 93
+  },
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. The rounded table is a feasible diagnostic upper bound, not an exact optimum, and no preregistered pair label is assigned.",
+  "format": "vcdiff-android-fixed-q-root-gap-v1",
+  "instruction_bytes_integer_lower_bound": 153898,
+  "logical_instructions": 209309,
+  "model_fingerprint": "51019ed3cb82ebe56bcaadfdfd230a47c6a6415205e5147bc911616b1d674907",
+  "pair_id": "fdroid-oppen.gemini.ariane-39-to-42",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "f86ac8b1fb1152f489132402a317295706d498891764fd9b9602b0ad9065a8f1",
+  "q93_full_patch_bytes_integer_lower_bound": 789563,
+  "resource_observation": {
+    "elapsed_seconds": 449.24,
+    "lp_elapsed_seconds": 415.2875974390008,
+    "peak_rss_kb": 1469096
+  },
+  "status": "nonexact_fractional_root_gap",
+  "stop_reason": "The strengthened root relaxation has a material integer-attainment gap; the tested rounded-table path did not attain the lower bound.",
+  "trace_sha256": "3d08ee93ff35a22843002f858ec4eb3248fca0967d8e5527e631db72fc46ab53"
+}

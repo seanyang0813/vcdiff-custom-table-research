@@ -1,0 +1,32 @@
+{
+  "baseline_bytes": 489023,
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. Neither the capped witness MILP nor deterministic rounded-table fixed-path proposals attained it, so this is not an exact fixed-q optimum or preregistered pair label.",
+  "format": "vcdiff-android-fixed-q-witness-stop-v1",
+  "instruction_bytes_integer_lower_bound": 98578,
+  "logical_instructions": 133535,
+  "model_fingerprint": "d0d9448be80dcba2cd0f3ddd48126f8cb02fe6de0e6b10bb2b9928a123e173e5",
+  "pair_id": "fdroid-co.loubo.icicle-3-to-4",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "29f460a536f020a59915ae8145f56ee9417e71bffa025e737ed5322dd054d924",
+  "q93_full_patch_bytes_integer_lower_bound": 460307,
+  "resource_observations": [
+    {
+      "elapsed_seconds": 146.12,
+      "kind": "dual_construction_and_exact_replay",
+      "peak_rss_kb": 995560
+    },
+    {
+      "elapsed_seconds": 319.02,
+      "kind": "stored_dual_replay_and_capped_presolve_on_witness_search",
+      "peak_rss_kb": 1867516
+    },
+    {
+      "elapsed_seconds": 140.05,
+      "kind": "fresh_dual_construction_and_rounded_table_fixed_path_attempt",
+      "peak_rss_kb": 994332
+    }
+  ],
+  "status": "nonexact_witness_search_runtime_stop",
+  "stop_reason": "No exactly feasible binary vector attaining the replayed q=93 lower bound was obtained under the bounded witness strategies.",
+  "trace_sha256": "ad7a81a4342850254e6e43212203993ba2eda9c799499c2c2890082260bbde38"
+}

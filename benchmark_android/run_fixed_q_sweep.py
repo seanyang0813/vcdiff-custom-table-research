@@ -26,6 +26,12 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--time-limit-seconds", type=float, default=600.0)
     parser.add_argument("--bound-only", action="store_true")
+    parser.add_argument("--replay-bounds", action="store_true")
+    parser.add_argument(
+        "--candidate-presolve",
+        choices=("none", "on", "off", "both"),
+        default="both",
+    )
     arguments = parser.parse_args()
     if not 1 <= arguments.first_q <= arguments.last_q <= 93:
         raise ValueError("q range must lie in 1..93")
@@ -96,9 +102,13 @@ def main() -> None:
             str(output),
             "--time-limit-seconds",
             str(arguments.time_limit_seconds),
+            "--candidate-presolve",
+            arguments.candidate_presolve,
         ]
         if arguments.bound_only:
             command.append("--bound-only")
+        if arguments.replay_bounds:
+            command.append("--replay-bound")
         environment = dict(os.environ)
         environment["PYTHONPATH"] = f"{ROOT / 'src'}:{ROOT}"
         job_started = time.monotonic()

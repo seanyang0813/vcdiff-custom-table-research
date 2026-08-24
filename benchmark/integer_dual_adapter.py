@@ -19,6 +19,8 @@ import hashlib
 import json
 import time
 from dataclasses import asdict, dataclass
+from itertools import combinations
+from math import comb
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, Iterable
@@ -366,6 +368,104 @@ def _candidate_objective(model: _StandardModel, candidate: np.ndarray) -> int:
     )
 
 
+def _selection_cardinality_limit(model: _StandardModel) -> int:
+    selection = np.flatnonzero(model.integrality)
+    for row in range(model.inequality_matrix.shape[0]):
+        start = model.inequality_matrix.indptr[row]
+        end = model.inequality_matrix.indptr[row + 1]
+        columns = model.inequality_matrix.indices[start:end]
+        coefficients = model.inequality_matrix.data[start:end]
+        if (
+            len(columns) == len(selection)
+            and np.array_equal(columns, selection)
+            and np.all(coefficients == 1)
+        ):
+            limit = int(model.inequality_rhs[row])
+            if not 1 <= limit <= len(selection):
+                raise ValueError("unexpected selection-cardinality limit")
+            return limit
+    # Small direct adapter tests may omit the VCDIFF cardinality row.  In that
+    # generic case every binary selection variable is a valid upper limit.
+    return len(selection)
+
+
+def _rounded_selection_proposals(
+    model: _StandardModel,
+    lp_candidate: np.ndarray,
+    maximum_enumerated: int = 32,
+) -> tuple[tuple[int, ...], ...]:
+    """Propose a few binary tables near a fractional root solution."""
+
+    selection = np.flatnonzero(model.integrality)
+    values = np.asarray(lp_candidate[selection], dtype=float)
+    limit = _selection_cardinality_limit(model)
+    active_count = min(
+        limit,
+        max(1, int(np.ceil(float(np.sum(values)) - 1e-8))),
+    )
+    order = sorted(
+        range(len(selection)),
+        key=lambda index: (-float(values[index]), int(selection[index])),
+    )
+    proposals: list[tuple[int, ...]] = [
+        tuple(sorted(int(selection[index]) for index in order[:active_count]))
+    ]
+    ones = [index for index in order if values[index] >= 1.0 - 1e-7]
+    fractional = [
+        index for index in order if 1e-7 < values[index] < 1.0 - 1e-7
+    ]
+    needed = active_count - len(ones)
+    if (
+        0 <= needed <= len(fractional)
+        and len(fractional) <= 16
+        and comb(len(fractional), needed) <= maximum_enumerated
+    ):
+        for chosen_fractional in combinations(fractional, needed):
+            proposal = tuple(
+                sorted(
+                    int(selection[index])
+                    for index in (*ones, *chosen_fractional)
+                )
+            )
+            if proposal not in proposals:
+                proposals.append(proposal)
+    return tuple(proposals)
+
+
+def _fixed_selection_candidate(
+    model: _StandardModel,
+    selected: tuple[int, ...],
+    time_limit_seconds: float,
+) -> np.ndarray | None:
+    lower = model.lower_bounds.astype(float, copy=True)
+    upper = model.upper_bounds.astype(float, copy=True)
+    selection = np.flatnonzero(model.integrality)
+    lower[selection] = 0.0
+    upper[selection] = 0.0
+    if selected:
+        chosen = np.asarray(selected, dtype=np.int64)
+        lower[chosen] = 1.0
+        upper[chosen] = 1.0
+    result = linprog(
+        model.objective.astype(float),
+        A_ub=model.inequality_matrix,
+        b_ub=model.inequality_rhs,
+        A_eq=model.equality_matrix,
+        b_eq=model.equality_rhs,
+        bounds=list(zip(lower, upper, strict=True)),
+        method="highs-ds",
+        options={"presolve": True, "time_limit": time_limit_seconds},
+    )
+    if not result.success or result.x is None:
+        return None
+    try:
+        candidate = _rounded_integer(result.x, "fixed-selection LP candidate")
+        _candidate_objective(model, candidate)
+    except ValueError:
+        return None
+    return candidate
+
+
 def _rounded_integer(values: Any, label: str, tolerance: float = 1e-7) -> np.ndarray:
     array = np.asarray(values, dtype=float)
     rounded = np.rint(array)
@@ -520,7 +620,7 @@ def _read_and_verify_proof(
 def _read_and_verify_bound_proof(
     metadata_path: Path,
     model: _StandardModel,
-) -> tuple[int, int, Path, str]:
+) -> tuple[np.ndarray, np.ndarray, int, int, Path, str]:
     document = json.loads(metadata_path.read_text())
     if document.get("format") != "vcdiff-rational-lp-dual-bound-v1":
         raise ValueError("unexpected rational-dual bound proof format")
@@ -543,11 +643,18 @@ def _read_and_verify_bound_proof(
         != int(document["integer_lattice_lower_bound"])
     ):
         raise ValueError("rational-dual bound proof replay mismatch")
-    return numerator, denominator, vectors, vectors_hash
+    return (
+        equality_dual,
+        inequality_dual,
+        numerator,
+        denominator,
+        vectors,
+        vectors_hash,
+    )
 
 
 class IntegerDualAdapter:
-    """Construct and exactly replay an integer-dual fixed-q certificate."""
+    """Construct or reuse a dual bound, then certify an attaining witness."""
 
     def __init__(
         self,
@@ -557,14 +664,17 @@ class IntegerDualAdapter:
         lp_presolve_attempts: Iterable[bool] = (True, False),
         candidate_presolve_attempts: Iterable[bool] = (True, False),
         bound_only: bool = False,
+        replay_bound_directory: Path | None = None,
     ) -> None:
         self.proof_directory = proof_directory
         self.time_limit_seconds = time_limit_seconds
         self.lp_presolve_attempts = tuple(lp_presolve_attempts)
         self.candidate_presolve_attempts = tuple(candidate_presolve_attempts)
         self.bound_only = bound_only
+        self.replay_bound_directory = replay_bound_directory
         self.calls: list[IntegerDualCall] = []
         self.bound_calls: list[RationalDualBoundCall] = []
+        self.candidate_diagnostics: list[dict[str, Any]] = []
 
     def __call__(
         self,
@@ -590,108 +700,137 @@ class IntegerDualAdapter:
         exact_dual_denominator: int | None = None
         lp_elapsed = 0.0
         lp_errors: list[str] = []
-        for presolve in self.lp_presolve_attempts:
-            started = time.monotonic()
-            candidate_lp = linprog(
-                model.objective.astype(float),
-                A_ub=model.inequality_matrix,
-                b_ub=model.inequality_rhs,
-                A_eq=model.equality_matrix,
-                b_eq=model.equality_rhs,
-                bounds=list(
-                    zip(model.lower_bounds, model.upper_bounds, strict=True)
-                ),
-                method="highs-ds",
-                options={
-                    "presolve": presolve,
-                    "time_limit": self.time_limit_seconds,
-                },
+        bound_metadata: Path | None = None
+        bound_vectors: Path | None = None
+        bound_vectors_hash: str | None = None
+        if self.replay_bound_directory is not None:
+            bound_metadata = self.replay_bound_directory / (
+                f"bound-call-{len(self.bound_calls):03d}.json"
             )
-            lp_elapsed += time.monotonic() - started
-            if not candidate_lp.success or candidate_lp.x is None:
-                lp_errors.append(f"presolve={presolve}: {candidate_lp.message}")
-                continue
-            rational_candidate: tuple[np.ndarray, np.ndarray, int, int] | None = None
-            rational_errors: list[str] = []
-            for denominator in (
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                8,
-                10,
-                12,
-                16,
-                24,
-                32,
-                48,
-                64,
-                96,
-                128,
-                192,
-                256,
-                384,
-                512,
-                768,
-                1024,
-                2048,
-                4096,
-            ):
-                try:
-                    scaled_equality = np.asarray(
-                        candidate_lp.eqlin.marginals, dtype=float
-                    ) * denominator
-                    scaled_inequality = np.asarray(
-                        candidate_lp.ineqlin.marginals, dtype=float
-                    ) * denominator
-                    if not (
-                        np.all(np.isfinite(scaled_equality))
-                        and np.all(np.isfinite(scaled_inequality))
-                    ):
-                        raise ValueError("nonfinite floating dual proposal")
-                    proposed_equality = np.rint(scaled_equality).astype(np.int64)
-                    proposed_inequality = np.rint(scaled_inequality).astype(np.int64)
-                    proposed_numerator = _dual_numerator(
-                        model,
+            (
+                equality_dual,
+                inequality_dual,
+                exact_dual_numerator,
+                exact_dual_denominator,
+                bound_vectors,
+                bound_vectors_hash,
+            ) = _read_and_verify_bound_proof(bound_metadata, model)
+            exact_lower = _ceil_fraction(
+                exact_dual_numerator, exact_dual_denominator
+            )
+            lp_result = SimpleNamespace(
+                x=None,
+                fun=exact_dual_numerator / exact_dual_denominator,
+            )
+        else:
+            for presolve in self.lp_presolve_attempts:
+                started = time.monotonic()
+                candidate_lp = linprog(
+                    model.objective.astype(float),
+                    A_ub=model.inequality_matrix,
+                    b_ub=model.inequality_rhs,
+                    A_eq=model.equality_matrix,
+                    b_eq=model.equality_rhs,
+                    bounds=list(
+                        zip(model.lower_bounds, model.upper_bounds, strict=True)
+                    ),
+                    method="highs-ds",
+                    options={
+                        "presolve": presolve,
+                        "time_limit": self.time_limit_seconds,
+                    },
+                )
+                lp_elapsed += time.monotonic() - started
+                if not candidate_lp.success or candidate_lp.x is None:
+                    lp_errors.append(f"presolve={presolve}: {candidate_lp.message}")
+                    continue
+                rational_candidate: (
+                    tuple[np.ndarray, np.ndarray, int, int] | None
+                ) = None
+                rational_errors: list[str] = []
+                for denominator in (
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    8,
+                    10,
+                    12,
+                    16,
+                    24,
+                    32,
+                    48,
+                    64,
+                    96,
+                    128,
+                    192,
+                    256,
+                    384,
+                    512,
+                    768,
+                    1024,
+                    2048,
+                    4096,
+                ):
+                    try:
+                        scaled_equality = np.asarray(
+                            candidate_lp.eqlin.marginals, dtype=float
+                        ) * denominator
+                        scaled_inequality = np.asarray(
+                            candidate_lp.ineqlin.marginals, dtype=float
+                        ) * denominator
+                        if not (
+                            np.all(np.isfinite(scaled_equality))
+                            and np.all(np.isfinite(scaled_inequality))
+                        ):
+                            raise ValueError("nonfinite floating dual proposal")
+                        proposed_equality = np.rint(scaled_equality).astype(np.int64)
+                        proposed_inequality = np.rint(scaled_inequality).astype(
+                            np.int64
+                        )
+                        proposed_numerator = _dual_numerator(
+                            model,
+                            proposed_equality,
+                            proposed_inequality,
+                            denominator,
+                        )
+                    except (ValueError, OverflowError) as error:
+                        rational_errors.append(str(error))
+                        continue
+                    proposed = (
                         proposed_equality,
                         proposed_inequality,
+                        proposed_numerator,
                         denominator,
                     )
-                except (ValueError, OverflowError) as error:
-                    rational_errors.append(str(error))
+                    if rational_candidate is None or (
+                        proposed_numerator * rational_candidate[3]
+                        > rational_candidate[2] * denominator
+                    ):
+                        rational_candidate = proposed
+                if rational_candidate is None:
+                    lp_errors.append(
+                        f"presolve={presolve}: no replayable rationalized dual; "
+                        + "; ".join(rational_errors[-2:])
+                    )
                     continue
-                proposed = (
+                (
                     proposed_equality,
                     proposed_inequality,
                     proposed_numerator,
-                    denominator,
+                    proposed_denominator,
+                ) = rational_candidate
+                lp_result = candidate_lp
+                equality_dual = proposed_equality
+                inequality_dual = proposed_inequality
+                exact_dual_numerator = proposed_numerator
+                exact_dual_denominator = proposed_denominator
+                exact_lower = _ceil_fraction(
+                    proposed_numerator, proposed_denominator
                 )
-                if rational_candidate is None or (
-                    proposed_numerator * rational_candidate[3]
-                    > rational_candidate[2] * denominator
-                ):
-                    rational_candidate = proposed
-            if rational_candidate is None:
-                lp_errors.append(
-                    f"presolve={presolve}: no replayable rationalized dual; "
-                    + "; ".join(rational_errors[-2:])
-                )
-                continue
-            (
-                proposed_equality,
-                proposed_inequality,
-                proposed_numerator,
-                proposed_denominator,
-            ) = rational_candidate
-            lp_result = candidate_lp
-            equality_dual = proposed_equality
-            inequality_dual = proposed_inequality
-            exact_dual_numerator = proposed_numerator
-            exact_dual_denominator = proposed_denominator
-            exact_lower = _ceil_fraction(proposed_numerator, proposed_denominator)
-            break
+                break
         if lp_result is None or equality_dual is None or inequality_dual is None:
             return SimpleNamespace(
                 success=False,
@@ -704,10 +843,10 @@ class IntegerDualAdapter:
         assert exact_dual_numerator is not None
         assert exact_dual_denominator is not None
 
-        bound_metadata: Path | None = None
-        bound_vectors: Path | None = None
-        bound_vectors_hash: str | None = None
-        if self.proof_directory is not None:
+        if (
+            self.proof_directory is not None
+            and self.replay_bound_directory is None
+        ):
             bound_metadata, bound_vectors, bound_vectors_hash = _write_bound_proof(
                 self.proof_directory,
                 len(self.bound_calls),
@@ -717,12 +856,19 @@ class IntegerDualAdapter:
                 exact_dual_denominator,
                 exact_dual_numerator,
             )
-            replay_numerator, replay_denominator, _, _ = (
-                _read_and_verify_bound_proof(bound_metadata, model)
-            )
+            (
+                replay_equality,
+                replay_inequality,
+                replay_numerator,
+                replay_denominator,
+                _,
+                _,
+            ) = _read_and_verify_bound_proof(bound_metadata, model)
             if (
                 replay_numerator != exact_dual_numerator
                 or replay_denominator != exact_dual_denominator
+                or not np.array_equal(replay_equality, equality_dual)
+                or not np.array_equal(replay_inequality, inequality_dual)
             ):
                 raise AssertionError("fresh rational-dual bound failed replay")
         self.bound_calls.append(
@@ -748,7 +894,34 @@ class IntegerDualAdapter:
                 proof_vectors_sha256=bound_vectors_hash,
             )
         )
+        candidate_diagnostic: dict[str, Any] = {
+            "root_primal_available": lp_result.x is not None,
+            "fractional_variables": None,
+            "fractional_integer_variables": None,
+            "selection_sum": None,
+            "rounded_selection_attempts": [],
+            "mip_attempts": [],
+        }
+        if lp_result.x is not None:
+            root = np.asarray(lp_result.x, dtype=float)
+            fractionality = np.abs(root - np.rint(root))
+            candidate_diagnostic.update(
+                {
+                    "fractional_variables": int(
+                        np.count_nonzero(fractionality > 1e-7)
+                    ),
+                    "fractional_integer_variables": int(
+                        np.count_nonzero(
+                            fractionality[model.integrality != 0] > 1e-7
+                        )
+                    ),
+                    "selection_sum": float(
+                        np.sum(root[model.integrality != 0])
+                    ),
+                }
+            )
         if self.bound_only:
+            self.candidate_diagnostics.append(candidate_diagnostic)
             return SimpleNamespace(
                 success=False,
                 status="exact_rational_bound_only",
@@ -765,13 +938,52 @@ class IntegerDualAdapter:
         candidate_source = ""
         candidate_presolve: bool | None = None
         candidate_elapsed = 0.0
-        try:
-            proposed = _rounded_integer(lp_result.x, "LP primal")
-            if _candidate_objective(model, proposed) == exact_lower:
-                candidate = proposed
-                candidate_source = "integral_lp_primal"
-        except ValueError:
-            pass
+        if lp_result.x is not None:
+            try:
+                proposed = _rounded_integer(lp_result.x, "LP primal")
+                if _candidate_objective(model, proposed) == exact_lower:
+                    candidate = proposed
+                    candidate_source = "integral_lp_primal"
+            except ValueError:
+                pass
+
+        if candidate is None and lp_result.x is not None:
+            heuristic_deadline = time.monotonic() + min(
+                120.0, self.time_limit_seconds
+            )
+            for selected in _rounded_selection_proposals(model, lp_result.x):
+                remaining = heuristic_deadline - time.monotonic()
+                if remaining <= 0.0:
+                    break
+                started = time.monotonic()
+                proposed = _fixed_selection_candidate(
+                    model,
+                    selected,
+                    min(60.0, remaining),
+                )
+                elapsed = time.monotonic() - started
+                candidate_elapsed += elapsed
+                proposed_objective = (
+                    None
+                    if proposed is None
+                    else _candidate_objective(model, proposed)
+                )
+                candidate_diagnostic["rounded_selection_attempts"].append(
+                    {
+                        "selected_count": len(selected),
+                        "elapsed_seconds": elapsed,
+                        "exact_objective": proposed_objective,
+                        "attains_dual_ceiling": proposed_objective == exact_lower,
+                    }
+                )
+                if (
+                    proposed is not None
+                    and proposed_objective == exact_lower
+                ):
+                    candidate = proposed
+                    candidate_source = "rounded_lp_selection_fixed_path"
+                    candidate_presolve = True
+                    break
 
         if candidate is None:
             objective_row = csr_matrix(model.objective.reshape(1, -1))
@@ -808,20 +1020,35 @@ class IntegerDualAdapter:
                         "time_limit": self.time_limit_seconds,
                     },
                 )
-                candidate_elapsed += time.monotonic() - started
+                elapsed = time.monotonic() - started
+                candidate_elapsed += elapsed
+                attempt: dict[str, Any] = {
+                    "presolve": presolve,
+                    "elapsed_seconds": elapsed,
+                    "status": int(proposal.status),
+                    "message": str(proposal.message),
+                    "exact_objective": None,
+                    "attains_dual_ceiling": False,
+                }
                 if proposal.x is None:
+                    candidate_diagnostic["mip_attempts"].append(attempt)
                     continue
                 try:
                     proposed = _rounded_integer(proposal.x, "integer witness")
                     proposed_objective = _candidate_objective(model, proposed)
                 except ValueError:
+                    candidate_diagnostic["mip_attempts"].append(attempt)
                     continue
+                attempt["exact_objective"] = proposed_objective
+                attempt["attains_dual_ceiling"] = proposed_objective == exact_lower
+                candidate_diagnostic["mip_attempts"].append(attempt)
                 if proposed_objective == exact_lower:
                     candidate = proposed
                     candidate_source = "objective_bound_feasibility_milp"
                     candidate_presolve = presolve
                     break
         if candidate is None:
+            self.candidate_diagnostics.append(candidate_diagnostic)
             return SimpleNamespace(
                 success=False,
                 status=1,
@@ -835,6 +1062,7 @@ class IntegerDualAdapter:
         exact_upper = _candidate_objective(model, candidate)
         if exact_lower != exact_upper:
             raise AssertionError("verified integer dual and witness do not meet")
+        self.candidate_diagnostics.append(candidate_diagnostic)
 
         metadata: Path | None = None
         vectors: Path | None = None
@@ -991,7 +1219,7 @@ class RationalDualBoundReplayAdapter:
         metadata = (
             self.proof_directory / f"bound-call-{len(self.calls):03d}.json"
         )
-        numerator, denominator, vectors, vectors_hash = (
+        _, _, numerator, denominator, vectors, vectors_hash = (
             _read_and_verify_bound_proof(metadata, model)
         )
         document = json.loads(metadata.read_text())

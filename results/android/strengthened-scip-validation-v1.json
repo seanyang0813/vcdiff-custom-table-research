@@ -1,0 +1,46 @@
+{
+  "evidence_boundary": "These are exact fixed-q reproductions and one resource stop for a separate experimental formulation. They do not replace the frozen global q=0..93 protocol and do not add preregistered corpus labels.",
+  "exact_reproductions": [
+    {
+      "attained_patch_bytes": 30627,
+      "attained_patch_sha256": "bc39abaf3bc0bd8310e987696da41fc036073f3e22a688b6abd70adcf47196a1",
+      "elapsed_seconds": 5.372063699000137,
+      "exact_instruction_bytes": 3894,
+      "logical_instructions": 5828,
+      "model_fingerprint": "2b1dc1bb43d2ae1e9f49729453be2f1425fbc18504622b059f1a129b4c568a95",
+      "mps_sha256": "844e05718b9a9cd851d0568ffc05bf6a6cfb2be821cdf9aa38ffd8fd9baf68ac",
+      "nodes": 1,
+      "pair_id": "fdroid-ohm.quickdice-45-to-48",
+      "peak_rss_kb": 600384,
+      "physical_slots": 83,
+      "python_decoder_round_trip": true
+    },
+    {
+      "attained_patch_bytes": 240417,
+      "attained_patch_sha256": "d8b1ed6506903b9ec20872c8a11fe2fccd56f5e061bfd09d006b1d4c22460d58",
+      "elapsed_seconds": 177.73615622799844,
+      "exact_instruction_bytes": 54964,
+      "logical_instructions": 70913,
+      "model_fingerprint": "67743294f87677a796fb44a285fdb1a84c4b8d42f9851e39a04e8f6b86665534",
+      "mps_sha256": "8c76d2924e8128211a55419d6bf0711aa058459a3affe964983dedd5b12277d8",
+      "nodes": 1,
+      "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+      "peak_rss_kb": 5670628,
+      "physical_slots": 93,
+      "python_decoder_round_trip": true
+    }
+  ],
+  "format": "vcdiff-android-strengthened-scip-validation-v1",
+  "formulation": "Remove aggregate big-M activation rows, add each occurrence-to-selection implication, retain continuous path-flow variables, and retain binary table-selection variables.",
+  "resource_stop": {
+    "elapsed_seconds": 396.00393264599916,
+    "internal_memory_limit_mb": 5000,
+    "logical_instructions": 92239,
+    "model_fingerprint": "2735e725cb3bf1ed77f4b8e605d4c6674738ed5a9fdce8c49ffe174eadf6ee9e",
+    "pair_id": "fdroid-com.kolakek.pimiwidget-16-to-17",
+    "peak_rss_kb": 7819740,
+    "physical_slots": 93,
+    "status": "external_memory_safety_stop_without_exact_result"
+  },
+  "status": "validated_bounded_exact_reproductions_with_scaling_limit"
+}
