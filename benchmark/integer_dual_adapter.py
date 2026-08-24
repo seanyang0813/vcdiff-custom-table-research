@@ -686,6 +686,7 @@ class IntegerDualAdapter:
         options: dict[str, Any] | None = None,
     ) -> Any:
         del options
+        deadline = time.monotonic() + self.time_limit_seconds
         model = _standardize(
             c=c,
             integrality=integrality,
@@ -724,6 +725,10 @@ class IntegerDualAdapter:
             )
         else:
             for presolve in self.lp_presolve_attempts:
+                remaining = deadline - time.monotonic()
+                if remaining <= 0.0:
+                    lp_errors.append("global adapter time budget exhausted")
+                    break
                 started = time.monotonic()
                 candidate_lp = linprog(
                     model.objective.astype(float),
@@ -737,7 +742,7 @@ class IntegerDualAdapter:
                     method="highs-ds",
                     options={
                         "presolve": presolve,
-                        "time_limit": self.time_limit_seconds,
+                        "time_limit": remaining,
                     },
                 )
                 lp_elapsed += time.monotonic() - started
@@ -948,9 +953,7 @@ class IntegerDualAdapter:
                 pass
 
         if candidate is None and lp_result.x is not None:
-            heuristic_deadline = time.monotonic() + min(
-                120.0, self.time_limit_seconds
-            )
+            heuristic_deadline = min(deadline, time.monotonic() + 120.0)
             for selected in _rounded_selection_proposals(model, lp_result.x):
                 remaining = heuristic_deadline - time.monotonic()
                 if remaining <= 0.0:
@@ -994,6 +997,9 @@ class IntegerDualAdapter:
                 (model.inequality_rhs, np.asarray([exact_lower], dtype=np.int64))
             )
             for presolve in self.candidate_presolve_attempts:
+                remaining = deadline - time.monotonic()
+                if remaining <= 0.0:
+                    break
                 started = time.monotonic()
                 proposal = milp(
                     # The hard objective row makes this a feasibility question,
@@ -1017,7 +1023,7 @@ class IntegerDualAdapter:
                     options={
                         "mip_rel_gap": 0.0,
                         "presolve": presolve,
-                        "time_limit": self.time_limit_seconds,
+                        "time_limit": remaining,
                     },
                 )
                 elapsed = time.monotonic() - started

@@ -49,6 +49,7 @@ def main() -> None:
             "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
             "results/android/pathfinder-q93-root-gap-v1.json",
             "results/android/stardroid-q93-root-gap-v1.json",
+            "results/android/anecdote-q93-bound-timeout-v1.json",
         ],
         "evidence_boundary": (
             f"{len(exact)} exact DEX pairs are insufficient for the preregistered "
@@ -82,12 +83,18 @@ def main() -> None:
     if failures:
         lines.extend(["## Nonexact attempts", ""])
         for row in failures:
+            if "q93_full_patch_bytes_integer_lower_bound" in row:
+                detail = (
+                    f"The retained q={row['attempted_physical_slots']} bound is "
+                    f"{row['q93_full_patch_bytes_integer_lower_bound']:,} bytes; "
+                    "it is not an attained optimum."
+                )
+            else:
+                detail = "No exact fixed-q lower bound was produced."
             lines.extend(
                 [
                     f"`{row['pair_id']}`: stopped without an exact pair label "
-                    f"(`{row['status']}`). The retained q={row['attempted_physical_slots']} "
-                    f"bound is {row['q93_full_patch_bytes_integer_lower_bound']:,} bytes; "
-                    "it is not an attained optimum.",
+                    f"(`{row['status']}`). {detail}",
                     "",
                 ]
             )

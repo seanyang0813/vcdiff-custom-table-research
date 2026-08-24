@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import hashlib
 import itertools
+import time
+from types import SimpleNamespace
 
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint
 from scipy.sparse import csr_matrix
 
 import vcdiff_opt.optimizer as optimizer_module
+import benchmark.integer_dual_adapter as integer_dual_module
 from benchmark.integer_dual_adapter import (
     IntegerDualAdapter,
     IntegerDualReplayAdapter,
@@ -229,6 +232,37 @@ def test_integer_dual_adapter_replays_fractional_bound_ceiling(tmp_path) -> None
     assert witness_result.success
     assert witness_constructor.bound_calls[0].lp_elapsed_seconds == 0.0
     assert witness_constructor.calls[0].exact_objective == 1
+
+
+def test_integer_dual_adapter_enforces_one_global_time_budget(monkeypatch) -> None:
+    calls: list[float] = []
+
+    def timeout_candidate(*args, **kwargs):
+        del args
+        calls.append(float(kwargs["options"]["time_limit"]))
+        time.sleep(0.02)
+        return SimpleNamespace(success=False, x=None, message="bounded timeout")
+
+    monkeypatch.setattr(integer_dual_module, "linprog", timeout_candidate)
+    objective = np.asarray([0, 0, 1], dtype=float)
+    integrality = np.asarray([0, 0, 1], dtype=np.uint8)
+    constraints = LinearConstraint(
+        csr_matrix(np.asarray([[1, 1, 0], [1, 1, -2]], dtype=float)),
+        np.asarray([1, -np.inf]),
+        np.asarray([1, 0]),
+    )
+    adapter = IntegerDualAdapter(
+        time_limit_seconds=0.01,
+        lp_presolve_attempts=(True, False),
+    )
+    result = adapter(
+        c=objective,
+        integrality=integrality,
+        bounds=Bounds(np.zeros(3), np.ones(3)),
+        constraints=constraints,
+    )
+    assert not result.success
+    assert len(calls) == 1
 
 
 def test_default_table_patch_round_trips() -> None:

@@ -94,7 +94,7 @@
   "frozen_pair_count": 40,
   "material_signal_gate_passed": false,
   "minimum_exact_coverage_gate_passed": false,
-  "nonexact_attempt_count": 7,
+  "nonexact_attempt_count": 8,
   "nonexact_attempts": [
     {
       "attempted_physical_slots": 93,
@@ -138,6 +138,14 @@
     },
     {
       "attempted_physical_slots": 93,
+      "baseline_bytes": 1065017,
+      "diagnostic": "results/android/anecdote-q93-bound-timeout-v1.json",
+      "logical_instructions": 303893,
+      "pair_id": "fdroid-io.gresse.hugo.anecdote-22-to-23",
+      "status": "rational_dual_construction_timeout"
+    },
+    {
+      "attempted_physical_slots": 93,
       "baseline_bytes": 821024,
       "diagnostic": "results/android/ariane-q93-root-gap-v1.json",
       "instruction_bytes_integer_lower_bound": 153898,
@@ -167,7 +175,7 @@
       "status": "fractional_root_gap"
     }
   ],
-  "not_yet_attempted_count": 28,
+  "not_yet_attempted_count": 27,
   "operational_diagnostics": [
     "results/android/fixed-q1-diagnostic-v1.json",
     "results/android/continuous-relaxation-stop-v1.json",
@@ -182,7 +190,8 @@
     "results/android/ariane-q93-root-gap-v1.json",
     "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
     "results/android/pathfinder-q93-root-gap-v1.json",
-    "results/android/stardroid-q93-root-gap-v1.json"
+    "results/android/stardroid-q93-root-gap-v1.json",
+    "results/android/anecdote-q93-bound-timeout-v1.json"
   ],
   "predictor_or_table_bank_authorized": false,
   "status": "partial_nonconfirmatory"

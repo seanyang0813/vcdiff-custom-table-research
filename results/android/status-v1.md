@@ -2,7 +2,7 @@
 
 **Partial and nonconfirmatory.** The corpus is frozen at 40 independent F-Droid projects, but the preregistered minimum is 30 exact labels.
 
-Exact: 5/40. Nonexact attempted: 7. Not attempted: 28.
+Exact: 5/40. Nonexact attempted: 8. Not attempted: 27.
 
 ## Exact result available
 
@@ -33,6 +33,8 @@ Exact: 5/40. Nonexact attempted: 7. Not attempted: 28.
 `fdroid-com.google.android.stardroid-1704-to-1708`: stopped without an exact pair label (`fractional_root_gap`). The retained q=93 bound is 625,202 bytes; it is not an attained optimum.
 
 `fdroid-com.kolakek.pimiwidget-16-to-17`: stopped without an exact pair label (`scip_external_memory_safety_stop`). The retained q=93 bound is 321,904 bytes; it is not an attained optimum.
+
+`fdroid-io.gresse.hugo.anecdote-22-to-23`: stopped without an exact pair label (`rational_dual_construction_timeout`). No exact fixed-q lower bound was produced.
 
 `fdroid-oppen.gemini.ariane-39-to-42`: stopped without an exact pair label (`fractional_root_gap`). The retained q=93 bound is 789,563 bytes; it is not an attained optimum.
 

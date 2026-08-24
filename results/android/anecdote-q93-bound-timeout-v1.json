@@ -1,0 +1,17 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 1065017,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The run is only an operational scaling observation.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 303893,
+  "pair_id": "fdroid-io.gresse.hugo.anecdote-22-to-23",
+  "resource_observation": {
+    "elapsed_seconds": 665.17,
+    "peak_rss_kb": 1929840,
+    "requested_time_budget_seconds": 600
+  },
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "The first HiGHS dual-candidate solve reached its 600-second limit without a replayable bound. The adapter then exposed that its time limit was per presolve variant; the unintended second attempt was externally terminated and the adapter was corrected to enforce one global budget.",
+  "trace_sha256": "b80114d2dceef27b7f9eb29185906e252c4ea978a709b3f43940470e361b59fd"
+}
