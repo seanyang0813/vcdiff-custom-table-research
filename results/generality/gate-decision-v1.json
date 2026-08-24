@@ -1,0 +1,15 @@
+{
+  "deployment_prototype_authorized": false,
+  "format": "vcdiff-generality-gate-decision-v1",
+  "passes": false,
+  "preregistered_components": {
+    "grouped_classifier": "not evaluated",
+    "non_source_repetition": "not evaluated",
+    "project_repetition": "not evaluated",
+    "validation_selector": "not evaluated"
+  },
+  "reason": "oracle validity prerequisite failed before confirmatory metrics",
+  "status": "NOT EVALUATED",
+  "table_bank_authorized": false,
+  "validity_decision": "results/generality/validity-decision-v1.json"
+}

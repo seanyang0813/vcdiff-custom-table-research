@@ -1,0 +1,52 @@
+{
+  "evidence_boundary": "One exact favorable DEX pair is an anecdote, not held-out preregistered generalization. No predictor, table bank, production prototype, or Superpack claim is authorized.",
+  "exact_pair_count": 1,
+  "exact_rows": [
+    {
+      "baseline_bytes": 32517,
+      "certificate": "benchmark_android/artifacts/fdroid-ohm.quickdice-45-to-48/certificate.json",
+      "certificate_sha256": "86cacdd3b4b092fa4673a096ea041af57adc6776f8f535f6b43af2c3e251c7dc",
+      "elapsed_seconds": 620.6604489499987,
+      "finished_utc": "2026-08-24T09:23:14.720395+00:00",
+      "global_mps_sha256": "ef44f4af5cb59ef06824d061d605d68cdd288ac8f6cd7d211ea047557cef70d1",
+      "global_nodes": 3245,
+      "log": "benchmark_android/work/fdroid-ohm.quickdice-45-to-48.log",
+      "logical_instructions": 5828,
+      "oracle_bytes": 30627,
+      "pair_id": "fdroid-ohm.quickdice-45-to-48",
+      "peak_rss_kb": 753380,
+      "physical_slots": 83,
+      "reused": false,
+      "saving_bytes": 1890,
+      "saving_percent": 5.812344312205923,
+      "started_utc": "2026-08-24T09:12:54.059039+00:00",
+      "status": "complete"
+    }
+  ],
+  "format": "vcdiff-public-android-status-v1",
+  "frozen_pair_count": 40,
+  "material_signal_gate_passed": false,
+  "minimum_exact_coverage_gate_passed": false,
+  "nonexact_attempt_count": 1,
+  "nonexact_attempts": [
+    {
+      "elapsed_seconds_approx": 1138,
+      "exact_label": null,
+      "log": "benchmark_android/work/fdroid-com.jstappdev.e6bflightcomputer-19-to-20.log",
+      "observed_process_rss_kb": 8496792,
+      "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+      "reason": "total process RSS exceeded the intended solver resource boundary while SCIP internal accounting had not stopped; interrupted to avoid host OOM",
+      "scip_internal_memory_limit_mb": 6000,
+      "started_utc": "2026-08-24T09:23:14.721032+00:00",
+      "status": "external_memory_safety_stop",
+      "stopped_utc": "2026-08-24T09:42:12+00:00"
+    }
+  ],
+  "not_yet_attempted_count": 38,
+  "operational_diagnostics": [
+    "results/android/fixed-q1-diagnostic-v1.json",
+    "results/android/continuous-relaxation-stop-v1.json"
+  ],
+  "predictor_or_table_bank_authorized": false,
+  "status": "partial_nonconfirmatory"
+}

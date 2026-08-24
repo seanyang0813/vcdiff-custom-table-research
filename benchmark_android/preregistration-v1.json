@@ -1,0 +1,106 @@
+{
+  "decision_gates": {
+    "material_class_gate": "proceed to predictor/table-bank analysis only if at least 30 pairs are exact and at least 25% of exact pairs save >=1.0%; otherwise report negative or insufficient evidence",
+    "material_pair_threshold_percent": 1.0,
+    "minimum_exact_coverage": 30,
+    "production_gate": "requires material DEX oracle signal, held-out bank recovery, monotonic fallback, and acceptable measured overhead",
+    "table_bank_gate": "on project-held-out evaluation, a tiny bank must recover >=70% of aggregate exact-oracle saving and should target 80%"
+  },
+  "dex_bundle_format": {
+    "magic": "VCDIFF-DEX-BUNDLE-v1 followed by NUL",
+    "member_order": "classes.dex, classes2.dex, ... by numeric suffix",
+    "member_record": "u32 big-endian ASCII-name length, name, u64 big-endian data length, raw DEX",
+    "pairing_rule": "the complete old APK DEX bundle is the VCDIFF source and the complete new APK DEX bundle is the target; added/removed multidex members remain visible"
+  },
+  "evidence_boundary": "This is a public compiled-code surrogate study. It makes no claim about Meta-internal Superpack workloads, implementation, or performance.",
+  "forbidden_before_corpus_freeze": [
+    "VCDIFF trace generation",
+    "stock patch measurement",
+    "custom-table optimization",
+    "outcome-dependent candidate replacement"
+  ],
+  "format": "vcdiff-public-android-dex-preregistration-v1",
+  "index_authentication": {
+    "detached_signatures_verified": true,
+    "documentation": "https://f-droid.org/docs/Verifying_Downloaded_APK/",
+    "documented_primary_key_fingerprint": "37D2C98789D8311948394E3E41E7044E1DBA2E89",
+    "entry_manifest_hashes_match": true,
+    "signing_subkey_fingerprint": "802A9799016112346E1FEFF47A029E54DD5DCE7A"
+  },
+  "locked_inputs": {
+    "archive_index": {
+      "path": "benchmark_android/index/archive-index-v2.json",
+      "sha256": "51b8b081a8e322cc3824f0d8f1ca18fbe2b3d2917455ed2067a374140ee3d18b"
+    },
+    "archive_index_signature": {
+      "path": "benchmark_android/index/archive-index-v2.json.asc",
+      "sha256": "7ecc565804278af6be06a9509f5e6ef748188ea1cca6ccf32b5986a39e6e4d04"
+    },
+    "candidate_generator": {
+      "path": "benchmark_android/make_candidate_manifest.py",
+      "sha256": "0a612c0dfc2b75012e74222f4f873d072afefb3a85388e745c84587aee751082"
+    },
+    "candidate_manifest": {
+      "path": "benchmark_android/candidate-manifest-v1.json",
+      "sha256": "ad8b310621be65401ef736d0225597e854a9769af49887ec8f18a5b5753dab24"
+    },
+    "corpus_preparer": {
+      "path": "benchmark_android/prepare_corpus.py",
+      "sha256": "4f9bdbe23925bd2465b5ac91e7346b003fbea859ef3d2cd9027997693dbeb8c3"
+    },
+    "fdroid_public_key": {
+      "path": "benchmark_android/index/fdroid-admin-public-key.asc",
+      "sha256": "d99df9d4a60c2a21c180ad843513b262d2ce15904d2dfd4e3d71ac6331755a4c"
+    },
+    "repo_index": {
+      "path": "benchmark_android/index/repo-index-v2.json",
+      "sha256": "88f2027fa525cb0092ec49286573da356c75b8bd8ae1c98719ab21fbf6790de3"
+    },
+    "repo_index_signature": {
+      "path": "benchmark_android/index/repo-index-v2.json.asc",
+      "sha256": "814ca8c28e231afa4bc300f7764b5a486978ef6ce54b13025ca3ab486eb1010a"
+    },
+    "scip_amendment": {
+      "path": "benchmark/scip-validity-amendment-v2.json",
+      "sha256": "aa702364f37bc05b7684837504a3438ee5314448dbdbfd754cd5a7edf11c7e6d"
+    }
+  },
+  "oracle_protocol": {
+    "baseline": "frozen instrumented xdelta trace and stock patch settings",
+    "limits": "the exact-SCIP amendment limits apply independently to every pair",
+    "optimizer_scope": "frozen q=0..93 restricted table family",
+    "proof": "locked exact-SCIP amendment v2",
+    "required_checks": [
+      "SCIP exact optimal status and equal integral primal/dual",
+      "independent integral DP attainment",
+      "emitted patch byte count equals bound",
+      "strict Python decoder reconstructs target bundle",
+      "unchanged historical xdelta decoder reconstructs target bundle"
+    ],
+    "status_policy": "timeouts, OOMs, failures, and unsolved cases remain visible and receive no exact label"
+  },
+  "record_per_pair": [
+    "stock and exact-oracle bytes",
+    "absolute and percentage saving",
+    "q and selected pattern count",
+    "logical instruction count and DEX sizes/counts",
+    "wall time, peak RSS, solver nodes/status, model and artifact hashes",
+    "both decoder results"
+  ],
+  "registered_date": "2026-08-24",
+  "research_question": "Do real public Android DEX release updates exhibit material exact custom-VCDIFF-code-table gains on the frozen xdelta trace?",
+  "selection": {
+    "apk_requirements": [
+      "download SHA-256 and byte size equal the signed index",
+      "valid ZIP with CRC-valid members",
+      "one or more root classes.dex/classesN.dex members with standard DEX magic",
+      "at most 8 DEX members per APK",
+      "total raw DEX bytes per APK in [256 KiB, 12 MiB]"
+    ],
+    "candidate_order": "fixed candidate-manifest order; accept until 40 valid pairs; never replace or reorder based on a VCDIFF outcome",
+    "failure_policy": "record download, hash, ZIP, DEX, size, and count failures verbatim; continue in frozen rank order",
+    "target_pairs": 40,
+    "unit": "one old-to-new update from each distinct F-Droid package/project"
+  },
+  "status": "locked before any candidate APK was traced or optimized"
+}

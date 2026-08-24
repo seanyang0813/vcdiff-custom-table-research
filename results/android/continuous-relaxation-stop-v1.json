@@ -1,0 +1,12 @@
+{
+  "adapter_sha256": "ee5895d90cf5c7e85f79ba6c0b7355f09d64dff062d8a5dbc11f0255f9f4126f",
+  "evidence_boundary": "Operational negative result only. The run was interrupted without a bound or certificate and supplies no oracle label.",
+  "elapsed_seconds_approx": 1244,
+  "format": "vcdiff-android-continuous-relaxation-stop-v1",
+  "observed_process_rss_kb": 8838080,
+  "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+  "reason": "The continuous-path exact-SCIP diagnostic exceeded the external host-safety memory boundary without closing.",
+  "status": "external_memory_safety_stop",
+  "trace_instruction_count": 70913,
+  "trace_sha256": "18c2df4f4a81e6bb0c424edc2feca0544e909660d8234b1aac0d7bc885dad605"
+}

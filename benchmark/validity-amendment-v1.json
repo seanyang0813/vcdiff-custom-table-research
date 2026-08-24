@@ -1,0 +1,49 @@
+{
+  "evidence_label": "preregistered frozen corpus with a disclosed post-failure solver-validity amendment",
+  "format": "vcdiff-oracle-validity-amendment-v1",
+  "reason": "The frozen SciPy/HiGHS 1.2 presolve path returned a false zero-gap optimum. An exact corpus requires an independent integer proof.",
+  "registered_date": "2026-08-23",
+  "replacement_oracle": {
+    "adapter_path": "benchmark/cpsat_adapter.py",
+    "adapter_sha256": "8abe3b664590e0ae210a5d3993a071458b24e752efa1194d85b9d908f978d3e4",
+    "attainment_checks": [
+      "selected table independent integral DP equals proved instruction objective",
+      "emitted full patch bytes equal proved global patch objective",
+      "strict Python decoder reconstructs target",
+      "unchanged pinned historical xdelta decoder reconstructs target"
+    ],
+    "deterministic_construction": "SciPy/HiGHS 1.2 with presolve disabled supplies a hint only. Its rounded solution is returned only if it is integral, satisfies the original captured matrix with zero tolerance violation, and has the CP-SAT-proved objective.",
+    "failure_rule": "Any non-OPTIMAL status, unequal bound, nonintegral/nonoptimal hint, DP mismatch, patch mismatch, or decoder failure stops the whole confirmatory run.",
+    "hint_evidence_boundary": "The HiGHS hint supplies no lower bound and cannot establish optimality.",
+    "integer_translation": "All [0,1] parse, pattern, q, and varint-state variables are Boolean; all objective, matrix, and finite-bound coefficients must be exact integers.",
+    "model_generator": "the frozen optimizer builds the same fixed-q and global-q sparse 0/1 model",
+    "output_isolation": "all replacement certificates live under benchmark_artifacts_cpsat",
+    "proof_acceptance": "CP-SAT status OPTIMAL and integer objective equals integer best bound.",
+    "proof_solver": "OR-Tools CP-SAT 9.15.6755",
+    "proof_solver_workers": 8,
+    "requirements_path": "benchmark/cpsat-requirements.txt",
+    "requirements_sha256": "ac9353637ad017b70d98e1ed7ebd26597a9a36dfd9b54ce0b22741341031227a"
+  },
+  "sources": [
+    "https://developers.google.com/optimization/cp/cp_solver",
+    "https://github.com/scipy/scipy/issues/18907"
+  ],
+  "status": "locked before any non-trigger CP-SAT oracle run",
+  "trigger_evidence": {
+    "counterexample_path": "results/generality/optimizer-counterexamples/compressed-zstd-tar-gz-v1.5.4-to-v1.5.5-q1.json",
+    "counterexample_sha256": "6018f6edbacbe7fc9ec275352e08c7b71222616b0a7fa5f38341c11467a71cb9",
+    "prior_partial_certificates": "Ten old-HiGHS certificates existed before the stop. They remain diagnostic and are never reused by the replacement run.",
+    "recovery_diagnostic_path": "results/generality/cpsat-recovery-diagnostic-v1.json",
+    "recovery_diagnostic_sha256": "042d5449aafe1b9cd983ed71173182fadb594326bcf402abc487d7d150fd9f38"
+  },
+  "unchanged_scope": {
+    "analysis_spec_sha256": "1781e13d340835e43ee5d2c88e5965a7e7eeac5737dac3a09693e56063f86e3b",
+    "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+    "features_models_gates": "unchanged",
+    "optimizer_path": "src/vcdiff_opt/optimizer.py",
+    "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+    "outcome_selection": "none; replacement protocol applies to every frozen pair",
+    "pair_membership": "unchanged 48 frozen usable pairs",
+    "project_splits": "unchanged"
+  }
+}

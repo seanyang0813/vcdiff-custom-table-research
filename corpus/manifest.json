@@ -1,0 +1,60 @@
+{
+  "format": "vcdiff-real-corpus-v1",
+  "packing": "Git-tree pairs use scripts/make_git_tree_blob.py; the Win64 pair uses exact upstream release ZIP bytes",
+  "pairs": [
+    {
+      "id": "zstd-v1.5.6-to-v1.5.7",
+      "project": "Zstandard",
+      "repository": "https://github.com/facebook/zstd.git",
+      "source_ref": "v1.5.6",
+      "source_commit": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+      "source_file": "data/zstd-v1.5.6.treeblob",
+      "source_sha256": "80635c6ed80cd03c1d4dcd89f7fd20fd39d57ab49b4585c99cd257092e2fdbc3",
+      "target_ref": "v1.5.7",
+      "target_commit": "f8745da6ff1ad1e7bab384bd1f9d742439278e99",
+      "target_file": "data/zstd-v1.5.7.treeblob",
+      "target_sha256": "3a530857c5746125f9794e681a44897fa1f367bdc72ed38240c02057158977a2"
+    },
+    {
+      "id": "open-vcdiff-0.8.3-to-0.8.4",
+      "project": "Open-VCDIFF",
+      "repository": "https://github.com/google/open-vcdiff.git",
+      "source_ref": "openvcdiff-0.8.3",
+      "source_commit": "af81c060f9948a9e91d3364f2ddc53c1f56c4447",
+      "source_file": "data/open-vcdiff-0.8.3.treeblob",
+      "source_sha256": "ff63c523cbec00b3e05cda6f75df0fa3d11cf783c15b1ae3834b024b3c7e93be",
+      "target_ref": "openvcdiff-0.8.4",
+      "target_commit": "9af10d36e691c15dceff04419b9e3a71ec5d8bec",
+      "target_file": "data/open-vcdiff-0.8.4.treeblob",
+      "target_sha256": "d99d1974a967c9f77a7a0dea85e9d04d965fac222b3188c61e1b426bed9d7d3e"
+    },
+    {
+      "id": "xdelta-v3.0.10-to-v3.0.11",
+      "project": "xdelta",
+      "repository": "https://github.com/jmacd/xdelta-gpl.git",
+      "source_ref": "v3.0.10",
+      "source_commit": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+      "source_file": "data/xdelta-v3.0.10.treeblob",
+      "source_sha256": "467eff6ef64ced13cd2390d57af52ef719657a383dbc6ef02bc652bc99c64158",
+      "target_ref": "v3.0.11",
+      "target_commit": "81aebf78ae67c29f528088d65743643e5355e3d3",
+      "target_file": "data/xdelta-v3.0.11.treeblob",
+      "target_sha256": "99da53fe770e24af4e3d30462a09bda9aeba66e848b46db8b5b1cecd57825ced"
+    },
+    {
+      "id": "zstd-win64-v1.5.6-to-v1.5.7",
+      "project": "Zstandard Win64 ZIP",
+      "repository": "https://github.com/facebook/zstd/releases",
+      "source_ref": "v1.5.6 release asset",
+      "source_commit": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+      "source_url": "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-v1.5.6-win64.zip",
+      "source_file": "data/zstd-v1.5.6-win64.zip",
+      "source_sha256": "7b4eff6719990e38aca93a4844c2e86a1935090625c4611f7e89675e999c56cc",
+      "target_ref": "v1.5.7 release asset",
+      "target_commit": "f8745da6ff1ad1e7bab384bd1f9d742439278e99",
+      "target_url": "https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-v1.5.7-win64.zip",
+      "target_file": "data/zstd-v1.5.7-win64.zip",
+      "target_sha256": "acb4e8111511749dc7a3ebedca9b04190e37a17afeb73f55d4425dbf0b90fad9"
+    }
+  ]
+}

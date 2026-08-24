@@ -1,0 +1,88 @@
+diff --git a/xdelta3/xdelta3.c b/xdelta3/xdelta3.c
+index 5bbaf4d..dc0f27e 100644
+--- a/xdelta3/xdelta3.c
++++ b/xdelta3/xdelta3.c
+@@ -266,6 +266,14 @@
+ #define VCDIFF_TOOLS XD3_MAIN
+ #endif
+ 
++/* Research-only, opt-in trace of the logical instruction stream after
++ * xdelta's match selection and address-mode selection, but before code-table
++ * pairing.  Each record is prefixed so callers can safely filter unrelated
++ * diagnostics from stderr. */
++#ifndef XD3_TRACE_INSTRUCTIONS
++#define XD3_TRACE_INSTRUCTIONS 0
++#endif
++
+ #ifndef SECONDARY_FGK   /* one from the algorithm preservation department: */
+ #define SECONDARY_FGK 0 /* adaptive Huffman routines */
+ #endif
+@@ -2055,6 +2063,17 @@ static int xd3_iopt_finish_encoding(xd3_stream *stream, xd3_rinst *inst) {
+       return ret;
+     }
+ 
++#if XD3_TRACE_INSTRUCTIONS
++    fprintf(stderr,
++            "VCDIFF_TRACE {\"kind\":\"instruction\",\"window\":%" XD3_Q
++            "u,\"position\":%" XD3_W "u,\"type\":\"COPY\",\"size\":%" XD3_W
++            "u,\"mode\":%u,\"address\":%" XD3_W
++            "u,\"source_copy\":%s}\n",
++            stream->current_window, inst->pos, inst->size,
++            (unsigned)(inst->type - XD3_CPY), addr,
++            inst->xtra ? "true" : "false");
++#endif
++
+     IF_DEBUG2({
+       static int cnt;
+       DP(RINT "[iopt copy:%d] pos %" XD3_Q "u-%" XD3_Q "u addr %" XD3_Q
+@@ -2070,6 +2089,15 @@ static int xd3_iopt_finish_encoding(xd3_stream *stream, xd3_rinst *inst) {
+       return ret;
+     }
+ 
++#if XD3_TRACE_INSTRUCTIONS
++    fprintf(stderr,
++            "VCDIFF_TRACE {\"kind\":\"instruction\",\"window\":%" XD3_Q
++            "u,\"position\":%" XD3_W "u,\"type\":\"RUN\",\"size\":%" XD3_W
++            "u,\"mode\":0,\"byte\":%u}\n",
++            stream->current_window, inst->pos, inst->size,
++            (unsigned)inst->xtra);
++#endif
++
+     stream->n_run += 1;
+     stream->l_run += inst->size;
+ 
+@@ -2086,6 +2114,15 @@ static int xd3_iopt_finish_encoding(xd3_stream *stream, xd3_rinst *inst) {
+       return ret;
+     }
+ 
++
++#if XD3_TRACE_INSTRUCTIONS
++    fprintf(stderr,
++            "VCDIFF_TRACE {\"kind\":\"instruction\",\"window\":%" XD3_Q
++            "u,\"position\":%" XD3_W "u,\"type\":\"ADD\",\"size\":%" XD3_W
++            "u,\"mode\":0}\n",
++            stream->current_window, inst->pos, inst->size);
++#endif
++
+     stream->n_add += 1;
+     stream->l_add += inst->size;
+ 
+@@ -2623,6 +2660,18 @@ static int xd3_emit_hdr(xd3_stream *stream) {
+   inst_len = xd3_sizeof_output(INST_HEAD(stream));
+   addr_len = xd3_sizeof_output(ADDR_HEAD(stream));
+ 
++#if XD3_TRACE_INSTRUCTIONS
++  fprintf(stderr,
++          "VCDIFF_TRACE {\"kind\":\"window\",\"window\":%" XD3_Q
++          "u,\"target_offset\":%" XD3_Q "u,\"target_length\":%" XD3_W
++          "u,\"source_used\":%s,\"source_position\":%" XD3_Q
++          "u,\"source_length\":%" XD3_W "u}\n",
++          stream->current_window, stream->total_in, tgt_len,
++          vcd_source ? "true" : "false",
++          vcd_source ? stream->src->srcbase : (xoff_t)0,
++          vcd_source ? stream->src->srclen : (usize_t)0);
++#endif
++
+   /* The enc_len field is a redundency for future extensions. */
+   enc_len = (1 +
+              (xd3_sizeof_size(tgt_len) + xd3_sizeof_size(data_len) +

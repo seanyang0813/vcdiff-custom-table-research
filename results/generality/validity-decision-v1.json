@@ -1,0 +1,47 @@
+{
+  "certificate_count_before_abort": 10,
+  "certificate_pair_ids": [
+    "compressed-curl-tar-gz-8.11.0-to-8.11.1",
+    "compressed-curl-tar-gz-8.11.0-to-8.12.0",
+    "compressed-curl-tar-xz-8.11.0-to-8.11.1",
+    "compressed-curl-tar-xz-8.11.0-to-8.12.0",
+    "compressed-zstd-tar-gz-v1.5.4-to-v1.5.6",
+    "compressed-zstd-tar-zst-v1.5.4-to-v1.5.5",
+    "compressed-zstd-tar-zst-v1.5.4-to-v1.5.6",
+    "source-linux-v6.12-to-v6.13",
+    "source-linux-v6.12-to-v6.14",
+    "source-linux-v6.12-to-v6.15"
+  ],
+  "certificates_accepted_for_confirmatory_exact_distribution": 0,
+  "counterexample": {
+    "captured_matrix_maximum_violation": 0.0,
+    "feasible_dp_objective": 8258,
+    "no_presolve_dp": 8254,
+    "no_presolve_primal": 8254,
+    "pair_id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+    "path": "results/generality/optimizer-counterexamples/compressed-zstd-tar-gz-v1.5.4-to-v1.5.5-q1.json",
+    "physical_slots": 1,
+    "reported_dual": 8261,
+    "reported_gap": 0.0,
+    "reported_primal": 8261,
+    "sha256": "6018f6edbacbe7fc9ec275352e08c7b71222616b0a7fa5f38341c11467a71cb9"
+  },
+  "deployment_prototype_built": false,
+  "distribution_computed": false,
+  "format": "vcdiff-generality-validity-stop-v1",
+  "frozen_usable_pair_count": 48,
+  "locks": {
+    "analysis_spec_sha256": "1781e13d340835e43ee5d2c88e5965a7e7eeac5737dac3a09693e56063f86e3b",
+    "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+    "execution_deviations_sha256": "bce6308c8190fcb014c32464064706104030de937fb20ec2c297df9bcb1e4e28",
+    "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+    "preregistration_sha256": "f9e7e69a890dee02bd6f9226b7e0e0eb2692b4d2e723c563a1fd1ae1966c3cfb"
+  },
+  "next_authority_required": "A new goal must authorize changing the optimizer execution path, such as disabling HiGHS presolve and revalidating all exactness tests, before the 48-pair oracle sweep can restart.",
+  "predictor_models_fitted": false,
+  "preregistered_generality_gate_evaluated": false,
+  "preregistered_pair_count": 51,
+  "reason": "frozen optimizer produced a false zero-gap optimum under HiGHS presolve",
+  "status": "STOP",
+  "table_bank_built": false
+}

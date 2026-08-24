@@ -1,0 +1,103 @@
+{
+  "activation_strengthening_argument": "For each pattern, the frozen row is sum(x_i) <= M*y with 0<=x_i<=1 and binary y. If y=0, nonnegativity forces all x_i=0; if y=1, each added x_i<=y is the existing upper bound. Therefore the added inequalities preserve the integer feasible set.",
+  "adapter_path": "benchmark/scip_exact_adapter.py",
+  "adapter_sha256": "ee5895d90cf5c7e85f79ba6c0b7355f09d64dff062d8a5dbc11f0255f9f4126f",
+  "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+  "environment": {
+    "activation_links": "occurrence <= selected",
+    "all_model_variables_binary": true,
+    "exact_mode": true,
+    "numpy": "2.2.6",
+    "pyscipopt": "6.2.1",
+    "scip": "10.0.2",
+    "scipy": "1.13.0"
+  },
+  "evidence_boundary": "This validates exact SCIP on the trigger pair only and does not amend or complete the frozen corpus.",
+  "fixed_q1_recovery": {
+    "independent_dp": 8254,
+    "instruction_dual": 8254,
+    "instruction_primal": 8254,
+    "solver_call": {
+      "activation_link_constraints": 5074,
+      "best_bound": 8254,
+      "continuous_variables": 0,
+      "exact_mode": true,
+      "expanded_constraints": 13369,
+      "expanded_nonzeros": 35470,
+      "hint_objective": 8254,
+      "integer_variables": 13429,
+      "lp_seed": 0,
+      "memory_limit_mb": 6000.0,
+      "mps_sha256": "6a0f1ab464a5fa92c21dda5d297376425adc862ce4596f257ebedeabcd08e348",
+      "nodes": 1,
+      "nonzeros": 25322,
+      "objective": 8254,
+      "original_constraints": 8295,
+      "permutation_seed": 0,
+      "random_seed_shift": 0,
+      "returned_solution_source": "validated_scipy_no_presolve_hint",
+      "scip_version": "10.0.2",
+      "threads": 1,
+      "time_limit_seconds": 7200.0,
+      "variables": 13429
+    },
+    "table_sha256": "45c609720ad5c63f504b9f483f9e758e9a61271eb5bac7ebbe8913280bacce4b"
+  },
+  "format": "vcdiff-scip-exact-recovery-diagnostic-v1",
+  "frozen_optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+  "global_recovery": {
+    "historical_decoder": {
+      "command": [
+        "/home/seanyang/Documents/math/vcdiff/build/xdelta/xdelta3-rfc-custom-decoder",
+        "-d",
+        "-f",
+        "-s",
+        "/home/seanyang/Documents/math/vcdiff/benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "/tmp/vcdiff-scip-recovery-mg_1h1x9/patch.vcdiff",
+        "<temporary-output>"
+      ],
+      "decoded_sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+      "decoded_size": 2368543,
+      "returncode": 0,
+      "stderr": ""
+    },
+    "optimal_patch_bytes": 2227631,
+    "patch_dual": 2227631,
+    "patch_primal": 2227631,
+    "patch_sha256": "8132df491f2ac76c30a1404742aed8c09fdf739c52ca1b9a97ed6ce737d8b0e1",
+    "physical_slots": 85,
+    "saving_bytes": 299,
+    "solver_call": {
+      "activation_link_constraints": 5135,
+      "best_bound": 7990,
+      "continuous_variables": 0,
+      "exact_mode": true,
+      "expanded_constraints": 13503,
+      "expanded_nonzeros": 61223,
+      "hint_objective": 7990,
+      "integer_variables": 13619,
+      "lp_seed": 0,
+      "memory_limit_mb": 6000.0,
+      "mps_sha256": "af8b4528d427625fe72e614398be919da18629d9ce43aa2578ecd1fef8c1b41c",
+      "nodes": 87,
+      "nonzeros": 50954,
+      "objective": 7990,
+      "original_constraints": 8368,
+      "permutation_seed": 0,
+      "random_seed_shift": 0,
+      "returned_solution_source": "validated_scipy_no_presolve_hint",
+      "scip_version": "10.0.2",
+      "threads": 1,
+      "time_limit_seconds": 7200.0,
+      "variables": 13619
+    },
+    "stock_patch_bytes": 2227930
+  },
+  "old_invalid_result": {
+    "feasible_dp": 8258,
+    "reported_dual": 8261,
+    "reported_primal": 8261
+  },
+  "pair_id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+  "status": "validated on frozen counterexample only"
+}

@@ -1,0 +1,58 @@
+{
+  "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+  "captured_milp_feasible_vector": {
+    "maximum_constraint_violation": 0.0,
+    "nonzero_variables": 4858,
+    "objective_instruction_bytes": 8258
+  },
+  "category": "compressed",
+  "dp_beats_claimed_lower_bound_by_bytes": 3,
+  "emitted_patch_bytes": 2227974,
+  "format": "vcdiff-fixed-q-optimizer-counterexample-v1",
+  "independent_dp_instruction_bytes": 8258,
+  "logical_instruction_count": 4915,
+  "milp_instruction_dual": 8261,
+  "milp_instruction_primal": 8261,
+  "milp_reported_gap": 0.0,
+  "observed_candidate_count": 3518,
+  "optimizer_path": "src/vcdiff_opt/optimizer.py",
+  "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+  "pair_id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+  "physical_slots": 1,
+  "project": "zstd",
+  "replay_command": "PYTHONPATH=src python3 benchmark/capture_optimizer_counterexample.py --pair-id compressed-zstd-tar-gz-v1.5.4-to-v1.5.5 --physical-slots 1",
+  "same_model_without_highs_presolve": {
+    "independent_dp_instruction_bytes": 8254,
+    "instruction_dual": 8254,
+    "instruction_primal": 8254,
+    "reported_gap": 0.0,
+    "selected_patterns": [
+      {
+        "atoms": [
+          {
+            "mode": 0,
+            "size": 18,
+            "type": "ADD"
+          }
+        ]
+      }
+    ]
+  },
+  "selected_patterns": [
+    {
+      "atoms": [
+        {
+          "mode": 4,
+          "size": 20,
+          "type": "COPY"
+        }
+      ]
+    }
+  ],
+  "selected_table_sha256": "cfef983d35b8097f1079b6ee2122dc141944b9012a167f788acd57024b556c4f",
+  "source_sha256": "0f470992aedad543126d06efab344dc5f3e171893810455787d38347343a4424",
+  "status": "optimizer exactness invariant violated; pair has no accepted exact certificate",
+  "target_sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+  "trace_path": "benchmark_artifacts/compressed-zstd-tar-gz-v1.5.4-to-v1.5.5/trace.json",
+  "trace_sha256": "ff8a00e476b93940426993ba209ffb6eb56504428a1f70aaf65488bbac6fc587"
+}

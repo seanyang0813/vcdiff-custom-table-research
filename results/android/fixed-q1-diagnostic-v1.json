@@ -1,0 +1,25 @@
+{
+  "evidence_boundary": "Diagnostic fixed-q=1 proof only; not a global oracle label and not part of the preregistered DEX gain distribution.",
+  "elapsed_seconds": 438.1544155599986,
+  "format": "vcdiff-android-fixed-q1-scip-diagnostic-v1",
+  "instruction_bytes": 64540,
+  "instruction_dual_bound": 64540,
+  "max_rss_kb": 5669232,
+  "model": {
+    "activation_link_constraints": 63940,
+    "continuous_variables": 147199,
+    "integer_variables": 9856,
+    "mps_sha256": "de649b0fe55a41c8f25ff6f3210e5da660ab7b5f0823072e2fc2601382896d83",
+    "nodes": 1,
+    "variables": 157055
+  },
+  "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+  "q": 1,
+  "selected_pattern": {
+    "atoms": [
+      {"mode": 0, "size": 1, "type": "ADD"},
+      {"mode": 1, "size": 7, "type": "COPY"}
+    ]
+  },
+  "status": "exact_fixed_q_only"
+}

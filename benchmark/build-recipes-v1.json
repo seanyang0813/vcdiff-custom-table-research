@@ -1,0 +1,70 @@
+{
+  "format": "vcdiff-compiled-build-recipes-v1",
+  "locked_before_build_or_trace": true,
+  "common": {
+    "build_directory": "benchmark_work/compile/current",
+    "compiler": "gcc",
+    "environment": {
+      "LC_ALL": "C",
+      "SOURCE_DATE_EPOCH": "0",
+      "TZ": "UTC"
+    },
+    "parallel_jobs": 2,
+    "postprocess": "strip --strip-debug regular ELF outputs, preserve filenames and symlinks, then directory-blob-v1",
+    "purpose": "Compare uncompressed compiled code produced by one fixed local toolchain; absolute build path is identical for every release."
+  },
+  "recipes": {
+    "compiled_zstd_v1": {
+      "source": "pinned Git commit",
+      "commands": [
+        "make -j2 CC=gcc V=0 lib-release zstd-release"
+      ],
+      "outputs": [
+        "zstd",
+        "lib/libzstd.so*"
+      ]
+    },
+    "compiled_redis_v1": {
+      "source": "pinned Git commit",
+      "commands": [
+        "make -j2 MALLOC=libc BUILD_TLS=no OPTIMIZATION=-O2 CFLAGS=-g0"
+      ],
+      "outputs": [
+        "src/redis-server",
+        "src/redis-cli",
+        "src/redis-benchmark"
+      ]
+    },
+    "compiled_curl_v1": {
+      "source": "official release tar.gz matching the pinned tag",
+      "commands": [
+        "./configure --without-ssl --without-libpsl --without-zstd --without-brotli --without-libidn2 --disable-static --enable-shared --disable-manual --disable-docs",
+        "make -j2"
+      ],
+      "outputs": [
+        "src/.libs/curl",
+        "lib/.libs/libcurl.so*"
+      ]
+    },
+    "compiled_sqlite_v1": {
+      "source": "official sqlite-autoconf tar.gz matching the pinned version tag",
+      "commands": [
+        "./configure --disable-readline --disable-static --enable-shared",
+        "make -j2"
+      ],
+      "outputs": [
+        "sqlite3",
+        ".libs/libsqlite3.so*"
+      ]
+    },
+    "compiled_xdelta_v1": {
+      "source": "pinned Git commit",
+      "commands": [
+        "make -C xdelta3 -f Makefile.orig CC=gcc xdelta3"
+      ],
+      "outputs": [
+        "xdelta3/xdelta3"
+      ]
+    }
+  }
+}

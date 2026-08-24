@@ -1,0 +1,1823 @@
+{
+  "artifact_count": 67,
+  "artifacts": {
+    "benchmark_data/compiled/curl-8.11.0.bundle": {
+      "build_log": "benchmark_work/build-logs/curl-curl-8_11_0.log",
+      "build_log_sha256": "0c7857c9def161ac1ccf479a586657007a26d8ebadb7ebcad2abfcc9a0475411",
+      "build_recipe": "compiled_curl_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "264537d90e58d2b09dddc50944baf3c38e7089151c8986715e2aaeaaf2b8118f",
+      "build_source_size": 4167839,
+      "build_source_url": "https://curl.se/download/curl-8.11.0.tar.gz",
+      "category": "compiled",
+      "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+      "project": "curl",
+      "ref": "curl-8_11_0",
+      "sha256": "ee38ae9d8999e290c5292d451aa28de963aa9f3f3763eeae6fdecfeb0261d583",
+      "size": 931144,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/curl-8.11.1.bundle": {
+      "build_log": "benchmark_work/build-logs/curl-curl-8_11_1.log",
+      "build_log_sha256": "cab63249d62c04be2f9d654be939e5380716c1ec85b4c249588f86a6fb82bb60",
+      "build_recipe": "compiled_curl_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "a889ac9dbba3644271bd9d1302b5c22a088893719b72be3487bc3d401e5c4e80",
+      "build_source_size": 4169067,
+      "build_source_url": "https://curl.se/download/curl-8.11.1.tar.gz",
+      "category": "compiled",
+      "locator": "75a2079d5c28debb2eaa848ca9430f1fe0d7844c",
+      "project": "curl",
+      "ref": "curl-8_11_1",
+      "sha256": "cb0a20d9b9e1615d741e6dd385db48a020ae5193be0141ee173289e2b4583327",
+      "size": 931080,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/curl-8.12.0.bundle": {
+      "build_log": "benchmark_work/build-logs/curl-curl-8_12_0.log",
+      "build_log_sha256": "0417879bbb6a2904c890e8dc071575ba20c5716e68b242581ca190275f3fab08",
+      "build_recipe": "compiled_curl_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "b72ec874e403c90462dc3019c5b24cc3cdd895247402bf23893b3b59419353bc",
+      "build_source_size": 4195387,
+      "build_source_url": "https://curl.se/download/curl-8.12.0.tar.gz",
+      "category": "compiled",
+      "locator": "34cf9d54a46598c44938aa7598820484d7af7133",
+      "project": "curl",
+      "ref": "curl-8_12_0",
+      "sha256": "5fa2b06c72c39e150ca2964e50e3dab442ace028a8c8879257a539a2a295298a",
+      "size": 943496,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/redis-7.4.0.bundle": {
+      "build_log": "benchmark_work/build-logs/redis-7.4.0.log",
+      "build_log_sha256": "bb40e0d221a4644ffc9d3d4bffdf43026ae509b32d4e519d8940c6e571d8f46c",
+      "build_recipe": "compiled_redis_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+      "build_source_repository": "https://github.com/redis/redis.git",
+      "category": "compiled",
+      "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+      "project": "redis",
+      "ref": "7.4.0",
+      "sha256": "a0888546e5d400a601469a12e54918d18ebaf9e0d8ba79eeaa2d5b09866948a0",
+      "size": 3813889,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/redis-7.4.1.bundle": {
+      "build_log": "benchmark_work/build-logs/redis-7.4.1.log",
+      "build_log_sha256": "c5f280c16c0ca1d4e12a158b93a2a152fd6d8687993c9a895194e79ee27cef64",
+      "build_recipe": "compiled_redis_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "74b289a0e12f9f65a6daeec6a66cadc76792f644",
+      "build_source_repository": "https://github.com/redis/redis.git",
+      "category": "compiled",
+      "locator": "74b289a0e12f9f65a6daeec6a66cadc76792f644",
+      "project": "redis",
+      "ref": "7.4.1",
+      "sha256": "44c13affd69487279d417eb332368de5afa6c22e0cd6e55ee9b058e9899c946a",
+      "size": 3813889,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/redis-7.4.2.bundle": {
+      "build_log": "benchmark_work/build-logs/redis-7.4.2.log",
+      "build_log_sha256": "443b068178b2f4746dcbe5fdaafcad4eb93ac2e5d0c82b5a41701e8b95c52cdb",
+      "build_recipe": "compiled_redis_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "a0a6f23d997b024689ba157916837f493a593a34",
+      "build_source_repository": "https://github.com/redis/redis.git",
+      "category": "compiled",
+      "locator": "a0a6f23d997b024689ba157916837f493a593a34",
+      "project": "redis",
+      "ref": "7.4.2",
+      "sha256": "cdbeb7a1ef15885ef229a3cabec79aeaf931324abcf723cc512ac1bf4f94fc37",
+      "size": 3813993,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/sqlite-3.47.0.bundle": {
+      "build_log": "benchmark_work/build-logs/sqlite-version-3.47.0.log",
+      "build_log_sha256": "9d9af7035f3b62cc7084b73156fea18cca064871cd68fdb744816381ca694f9b",
+      "build_recipe": "compiled_sqlite_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "83eb21a6f6a649f506df8bd3aab85a08f7556ceed5dbd8dea743ea003fc3a957",
+      "build_source_size": 3324599,
+      "build_source_url": "https://www.sqlite.org/2024/sqlite-autoconf-3470000.tar.gz",
+      "category": "compiled",
+      "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+      "project": "sqlite",
+      "ref": "version-3.47.0",
+      "sha256": "2eb447b49702cb39ba63c8fdde4c1ea87b104d204455d588992c178c80703045",
+      "size": 3510610,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/sqlite-3.47.1.bundle": {
+      "build_log": "benchmark_work/build-logs/sqlite-version-3.47.1.log",
+      "build_log_sha256": "4df4bd643fbd582d6fe6d6c68fb48d245ae396d3a7d1810fe48dd0fcdab4a942",
+      "build_recipe": "compiled_sqlite_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "416a6f45bf2cacd494b208fdee1beda509abda951d5f47bc4f2792126f01b452",
+      "build_source_size": 3328564,
+      "build_source_url": "https://www.sqlite.org/2024/sqlite-autoconf-3470100.tar.gz",
+      "category": "compiled",
+      "locator": "0592ffed8244e2a8de0a2ab083fbf14335033922",
+      "project": "sqlite",
+      "ref": "version-3.47.1",
+      "sha256": "3f9cebfba77b4f5e2fa50b45761085574a7516445cd59335bf132ede16af23bc",
+      "size": 3510770,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/sqlite-3.48.0.bundle": {
+      "build_log": "benchmark_work/build-logs/sqlite-version-3.48.0.log",
+      "build_log_sha256": "84e5d851eb5d2f1c3a0c18e1007f99927cb258d153f699526f0cc7cc14071158",
+      "build_recipe": "compiled_sqlite_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_sha256": "ac992f7fca3989de7ed1fe99c16363f848794c8c32a158dafd4eb927a2e02fd5",
+      "build_source_size": 3337615,
+      "build_source_url": "https://www.sqlite.org/2025/sqlite-autoconf-3480000.tar.gz",
+      "category": "compiled",
+      "locator": "942c9587698715734715242737dba07ef296b0ef",
+      "project": "sqlite",
+      "ref": "version-3.48.0",
+      "sha256": "8a7738862bc7b6bccdf26af656aeb10da3b92adce7c3a156b8a6f2b735d2affd",
+      "size": 3520378,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/xdelta-v3.0.10.bundle": {
+      "build_log": "benchmark_work/build-logs/xdelta-v3.0.10.log",
+      "build_log_sha256": "5f60cd883778ca02af97573666e60a627bd95417bf183e3ffb5bddf0195d4b26",
+      "build_recipe": "compiled_xdelta_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+      "build_source_repository": "https://github.com/jmacd/xdelta-gpl.git",
+      "category": "compiled",
+      "locator": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+      "project": "xdelta",
+      "ref": "v3.0.10",
+      "sha256": "cd05eb940bf1c11de7fd0fb9ecba66ff29cc012b99cd2d305b0baac8db4a8761",
+      "size": 207954,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/xdelta-v3.0.11.bundle": {
+      "build_log": "benchmark_work/build-logs/xdelta-v3.0.11.log",
+      "build_log_sha256": "a31b70af638ed168927511a9697b953eca1ba51cfa19a1f0c840c16669a8ca60",
+      "build_recipe": "compiled_xdelta_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "81aebf78ae67c29f528088d65743643e5355e3d3",
+      "build_source_repository": "https://github.com/jmacd/xdelta-gpl.git",
+      "category": "compiled",
+      "locator": "81aebf78ae67c29f528088d65743643e5355e3d3",
+      "project": "xdelta",
+      "ref": "v3.0.11",
+      "sha256": "ef9b3da412333bf670d4f628b7b670d20bdee00869ab8fa9dec68b9ca0b73c0f",
+      "size": 207954,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/xdelta-v3.0.9.bundle": {
+      "build_log": "benchmark_work/build-logs/xdelta-v3.0.9.log",
+      "build_log_sha256": "303342eac4b6d841a317b96f35705f860488d15db3b5d8552dcb51b386ddef34",
+      "build_recipe": "compiled_xdelta_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+      "build_source_repository": "https://github.com/jmacd/xdelta-gpl.git",
+      "category": "compiled",
+      "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+      "project": "xdelta",
+      "ref": "v3.0.9",
+      "sha256": "a16a82ae63814c2302084891af38cb37759880bea5f72e10c8a6c0ae333ee60c",
+      "size": 207882,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/zstd-v1.5.4.bundle": {
+      "build_log": "benchmark_work/build-logs/zstd-v1.5.4.log",
+      "build_log_sha256": "0fea494db2345a8c780975f383c2eb16a1d57b367c8882bbb90dfdc16b4cdecd",
+      "build_recipe": "compiled_zstd_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "945f27758c0fd67b636103a38dbf050266c6b90a",
+      "build_source_repository": "https://github.com/facebook/zstd.git",
+      "category": "compiled",
+      "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+      "project": "zstd",
+      "ref": "v1.5.4",
+      "sha256": "1b79bc75cbe634e1e8278a29ecfcc57973d0950e869c223779fa4bad0ab2bbc1",
+      "size": 2191124,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/zstd-v1.5.5.bundle": {
+      "build_log": "benchmark_work/build-logs/zstd-v1.5.5.log",
+      "build_log_sha256": "4f9b192d99eb171b06c77e527cf5d470c36e35cb97651003dbeb2cfbe0e1f050",
+      "build_recipe": "compiled_zstd_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "63779c798237346c2b245c546c40b72a5a5913fe",
+      "build_source_repository": "https://github.com/facebook/zstd.git",
+      "category": "compiled",
+      "locator": "63779c798237346c2b245c546c40b72a5a5913fe",
+      "project": "zstd",
+      "ref": "v1.5.5",
+      "sha256": "3e929fdbe4f2dd105bc215ccbc2c1471cabe4a0d5b5d1d0acd753b1130bdb221",
+      "size": 2249700,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compiled/zstd-v1.5.6.bundle": {
+      "build_log": "benchmark_work/build-logs/zstd-v1.5.6.log",
+      "build_log_sha256": "f24b0b646c099dcebabc0a29dc242cfbceb40329243109d2ea3830007897c285",
+      "build_recipe": "compiled_zstd_v1",
+      "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+      "build_source_commit": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+      "build_source_repository": "https://github.com/facebook/zstd.git",
+      "category": "compiled",
+      "locator": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+      "project": "zstd",
+      "ref": "v1.5.6",
+      "sha256": "c74552698672e1f856ba1138ae1df96fb3e271b29511c2173edaba47bb3cb001",
+      "size": 2290804,
+      "toolchain": {
+        "gcc": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+        "libc": "ldd (Ubuntu GLIBC 2.35-0ubuntu3.14) 2.35",
+        "make": "GNU Make 4.3",
+        "strip": "GNU strip (GNU Binutils for Ubuntu) 2.38"
+      }
+    },
+    "benchmark_data/compressed/curl-8.11.0.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/9c9414f965880fbd-curl-8.11.0.tar.gz",
+      "download_sha256": "264537d90e58d2b09dddc50944baf3c38e7089151c8986715e2aaeaaf2b8118f",
+      "download_size": 4167839,
+      "locator": "https://curl.se/download/curl-8.11.0.tar.gz",
+      "project": "curl",
+      "ref": "8.11.0",
+      "sha256": "264537d90e58d2b09dddc50944baf3c38e7089151c8986715e2aaeaaf2b8118f",
+      "size": 4167839
+    },
+    "benchmark_data/compressed/curl-8.11.0.tar.xz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/22cdb8457de1a158-curl-8.11.0.tar.xz",
+      "download_sha256": "db59cf0d671ca6e7f5c2c5ec177084a33a79e04c97e71cf183a5cdea235054eb",
+      "download_size": 2750684,
+      "locator": "https://curl.se/download/curl-8.11.0.tar.xz",
+      "project": "curl",
+      "ref": "8.11.0",
+      "sha256": "db59cf0d671ca6e7f5c2c5ec177084a33a79e04c97e71cf183a5cdea235054eb",
+      "size": 2750684
+    },
+    "benchmark_data/compressed/curl-8.11.1.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/069e8119c40691d7-curl-8.11.1.tar.gz",
+      "download_sha256": "a889ac9dbba3644271bd9d1302b5c22a088893719b72be3487bc3d401e5c4e80",
+      "download_size": 4169067,
+      "locator": "https://curl.se/download/curl-8.11.1.tar.gz",
+      "project": "curl",
+      "ref": "8.11.1",
+      "sha256": "a889ac9dbba3644271bd9d1302b5c22a088893719b72be3487bc3d401e5c4e80",
+      "size": 4169067
+    },
+    "benchmark_data/compressed/curl-8.11.1.tar.xz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/83f9d8e27e8aedd6-curl-8.11.1.tar.xz",
+      "download_sha256": "c7ca7db48b0909743eaef34250da02c19bc61d4f1dcedd6603f109409536ab56",
+      "download_size": 2751236,
+      "locator": "https://curl.se/download/curl-8.11.1.tar.xz",
+      "project": "curl",
+      "ref": "8.11.1",
+      "sha256": "c7ca7db48b0909743eaef34250da02c19bc61d4f1dcedd6603f109409536ab56",
+      "size": 2751236
+    },
+    "benchmark_data/compressed/curl-8.12.0.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/ca9755f9906eee3f-curl-8.12.0.tar.gz",
+      "download_sha256": "b72ec874e403c90462dc3019c5b24cc3cdd895247402bf23893b3b59419353bc",
+      "download_size": 4195387,
+      "locator": "https://curl.se/download/curl-8.12.0.tar.gz",
+      "project": "curl",
+      "ref": "8.12.0",
+      "sha256": "b72ec874e403c90462dc3019c5b24cc3cdd895247402bf23893b3b59419353bc",
+      "size": 4195387
+    },
+    "benchmark_data/compressed/curl-8.12.0.tar.xz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/dbd8d0fb6d5412d2-curl-8.12.0.tar.xz",
+      "download_sha256": "9a4628c764be6b1a9909567c13e8e771041609df43b2158fcac4e05ea7097e5d",
+      "download_size": 2777552,
+      "locator": "https://curl.se/download/curl-8.12.0.tar.xz",
+      "project": "curl",
+      "ref": "8.12.0",
+      "sha256": "9a4628c764be6b1a9909567c13e8e771041609df43b2158fcac4e05ea7097e5d",
+      "size": 2777552
+    },
+    "benchmark_data/compressed/zstd-v1.5.4.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/65b982da95f1dff0-zstd-1.5.4.tar.gz",
+      "download_sha256": "0f470992aedad543126d06efab344dc5f3e171893810455787d38347343a4424",
+      "download_size": 2161536,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.gz",
+      "project": "zstd",
+      "ref": "v1.5.4",
+      "sha256": "0f470992aedad543126d06efab344dc5f3e171893810455787d38347343a4424",
+      "size": 2161536
+    },
+    "benchmark_data/compressed/zstd-v1.5.4.tar.zst": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/aa88aae7fc728ac6-zstd-1.5.4.tar.zst",
+      "download_sha256": "6925880b84aca086308c27036ef1c16e76817372301ead7c37f90e23567f704e",
+      "download_size": 1620303,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.zst",
+      "project": "zstd",
+      "ref": "v1.5.4",
+      "sha256": "6925880b84aca086308c27036ef1c16e76817372301ead7c37f90e23567f704e",
+      "size": 1620303
+    },
+    "benchmark_data/compressed/zstd-v1.5.5.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/ecea8a752b9f2522-zstd-1.5.5.tar.gz",
+      "download_sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+      "download_size": 2368543,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz",
+      "project": "zstd",
+      "ref": "v1.5.5",
+      "sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+      "size": 2368543
+    },
+    "benchmark_data/compressed/zstd-v1.5.5.tar.zst": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/45753de50afd031e-zstd-1.5.5.tar.zst",
+      "download_sha256": "ce264bca60eb2f0e99e4508cffd0d4d19dd362e84244d7fc941e79fa69ccf673",
+      "download_size": 1817544,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.zst",
+      "project": "zstd",
+      "ref": "v1.5.5",
+      "sha256": "ce264bca60eb2f0e99e4508cffd0d4d19dd362e84244d7fc941e79fa69ccf673",
+      "size": 1817544
+    },
+    "benchmark_data/compressed/zstd-v1.5.6.tar.gz": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/97e4eed126ece13e-zstd-1.5.6.tar.gz",
+      "download_sha256": "8c29e06cf42aacc1eafc4077ae2ec6c6fcb96a626157e0593d5e82a34fd403c1",
+      "download_size": 2406875,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-1.5.6.tar.gz",
+      "project": "zstd",
+      "ref": "v1.5.6",
+      "sha256": "8c29e06cf42aacc1eafc4077ae2ec6c6fcb96a626157e0593d5e82a34fd403c1",
+      "size": 2406875
+    },
+    "benchmark_data/compressed/zstd-v1.5.6.tar.zst": {
+      "category": "compressed",
+      "download_path": "benchmark_downloads/e955b0a81e1b18ba-zstd-1.5.6.tar.zst",
+      "download_sha256": "4aa8dd1c1115c0fd6b6b66c35c7f6ce7bd58cc1dfd3e4f175b45b39e84b14352",
+      "download_size": 1845516,
+      "locator": "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-1.5.6.tar.zst",
+      "project": "zstd",
+      "ref": "v1.5.6",
+      "sha256": "4aa8dd1c1115c0fd6b6b66c35c7f6ce7bd58cc1dfd3e4f175b45b39e84b14352",
+      "size": 1845516
+    },
+    "benchmark_data/source/curl-8.11.0.treeblob": {
+      "category": "source_tree",
+      "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+      "project": "curl",
+      "ref": "curl-8_11_0",
+      "sha256": "047eecaa134ac695ab52a5afc25431517494b3eb505ec7b87f0b774a50da2914",
+      "size": 17715575
+    },
+    "benchmark_data/source/curl-8.11.1.treeblob": {
+      "category": "source_tree",
+      "locator": "75a2079d5c28debb2eaa848ca9430f1fe0d7844c",
+      "project": "curl",
+      "ref": "curl-8_11_1",
+      "sha256": "9adc1fe3b35b70a60d98f2d489d108ce665aa4b488a64fefbe5e586bd7a2f07a",
+      "size": 17719789
+    },
+    "benchmark_data/source/curl-8.12.0.treeblob": {
+      "category": "source_tree",
+      "locator": "34cf9d54a46598c44938aa7598820484d7af7133",
+      "project": "curl",
+      "ref": "curl-8_12_0",
+      "sha256": "f67e9f1938f931e8c83422c75fea5ec12094c5c57ee2b6662b1585df82ba6d43",
+      "size": 17753073
+    },
+    "benchmark_data/source/curl-8.13.0.treeblob": {
+      "category": "source_tree",
+      "locator": "1c3149881769e7bd79b072e48374e4c2b3678b2f",
+      "project": "curl",
+      "ref": "curl-8_13_0",
+      "sha256": "26882310b4852a348e4fcb6f0033702cf6daf8e8ad911f57b75515342fad8cfa",
+      "size": 17824083
+    },
+    "benchmark_data/source/git-v2.48.0.treeblob": {
+      "category": "source_tree",
+      "locator": "fbe8d3079d4a96aeb4e4529cc93cc0043b759a05",
+      "project": "git",
+      "ref": "v2.48.0",
+      "sha256": "266ebb077b566120c3164ecc6cfb7a1244b2c8a12ccb59321da7832f3fec1c0e",
+      "size": 44867647
+    },
+    "benchmark_data/source/git-v2.48.1.treeblob": {
+      "category": "source_tree",
+      "locator": "f93ff170b93a1782659637824b25923245ac9dd1",
+      "project": "git",
+      "ref": "v2.48.1",
+      "sha256": "3300a7e0b643a65f9ab9274e2bada44fa4e4791df40d63c4c4bb336cc5b61f28",
+      "size": 44872719
+    },
+    "benchmark_data/source/git-v2.49.0.treeblob": {
+      "category": "source_tree",
+      "locator": "683c54c999c301c2cd6f715c411407c413b1d84e",
+      "project": "git",
+      "ref": "v2.49.0",
+      "sha256": "e3f63d3c5d1e1bf30cf3bc012b5f5811236a6b6d158882f07c3bfd9ca27980d5",
+      "size": 45162163
+    },
+    "benchmark_data/source/git-v2.50.0.treeblob": {
+      "category": "source_tree",
+      "locator": "16bd9f20a403117f2e0d9bcda6c6e621d3763e77",
+      "project": "git",
+      "ref": "v2.50.0",
+      "sha256": "4776314474ee1b189da6c00c9f3343363694167d22986c17e5fdb9d03170701b",
+      "size": 46073751
+    },
+    "benchmark_data/source/linux-v6.12.treeblob": {
+      "category": "source_tree",
+      "locator": "adc218676eef25575469234709c2d87185ca223a",
+      "project": "linux",
+      "ref": "v6.12",
+      "sha256": "4926e768933c8a8726ff65e901adb102879d34f33820c985107603b9ee506e9e",
+      "size": 13488539
+    },
+    "benchmark_data/source/linux-v6.13.treeblob": {
+      "category": "source_tree",
+      "locator": "ffd294d346d185b70e28b1a28abe367bbfe53c04",
+      "project": "linux",
+      "ref": "v6.13",
+      "sha256": "ef46048debd24aa3005c8786fd28654390257bde744e4c37586d00ee7c818c18",
+      "size": 13608848
+    },
+    "benchmark_data/source/linux-v6.14.treeblob": {
+      "category": "source_tree",
+      "locator": "38fec10eb60d687e30c8c6b5420d86e8149f7557",
+      "project": "linux",
+      "ref": "v6.14",
+      "sha256": "51145ceb7b6cc3c0505e0357cf49b3f978a621dbee54c1415dc3202bfdfb1b28",
+      "size": 13684210
+    },
+    "benchmark_data/source/linux-v6.15.treeblob": {
+      "category": "source_tree",
+      "locator": "0ff41df1cb268fc69e703a08a57ee14ae967d0ca",
+      "project": "linux",
+      "ref": "v6.15",
+      "sha256": "9b52bd73f787b1c5d3362e5c8df58175c5a37016c52e0b33fb29c20b4a2d5631",
+      "size": 13852371
+    },
+    "benchmark_data/source/llvm-19.1.0.treeblob": {
+      "category": "source_tree",
+      "locator": "a4bf6cd7cfb1a1421ba92bca9d017b49936c55e4",
+      "project": "llvm",
+      "ref": "llvmorg-19.1.0",
+      "sha256": "135a29042a255eccea09f57cd02403651d2f0d4881e899b0f2fd63d06258335c",
+      "size": 14272683
+    },
+    "benchmark_data/source/llvm-19.1.1.treeblob": {
+      "category": "source_tree",
+      "locator": "d401987fe349a87c53fe25829215b080b70c0c1a",
+      "project": "llvm",
+      "ref": "llvmorg-19.1.1",
+      "sha256": "3773d2e91130683e75a15b36c8c65dbd4a15977171d3106148e5bce3f51370e5",
+      "size": 14273295
+    },
+    "benchmark_data/source/llvm-19.1.2.treeblob": {
+      "category": "source_tree",
+      "locator": "7ba7d8e2f7b6445b60679da826210cdde29eaf8b",
+      "project": "llvm",
+      "ref": "llvmorg-19.1.2",
+      "sha256": "3c7ba41c1cf5a31d2bf5e463346c64d871e8fd69bf45fd26a19f5d0ec171e21b",
+      "size": 14273775
+    },
+    "benchmark_data/source/llvm-20.1.0.treeblob": {
+      "category": "source_tree",
+      "locator": "24a30daaa559829ad079f2ff7f73eb4e18095f88",
+      "project": "llvm",
+      "ref": "llvmorg-20.1.0",
+      "sha256": "e41f4b530e9512e380ce523845a48e4997f299aa3821418de804ed6721ec4e59",
+      "size": 15035621
+    },
+    "benchmark_data/source/open-vcdiff-0.8.1.treeblob": {
+      "category": "source_tree",
+      "locator": "0ec2259e3dc0e17698ac4bc586740f4a4c928ef1",
+      "project": "open-vcdiff",
+      "ref": "open-vcdiff-0.8.1",
+      "sha256": "e673e6cef73d2cf7bacbd16f554774ab10ac8786382642c6f2fe7de113bb29ad",
+      "size": 2495689
+    },
+    "benchmark_data/source/open-vcdiff-0.8.2.treeblob": {
+      "category": "source_tree",
+      "locator": "a1c5dad47485a8b117bd0852b3ead340dac37a8f",
+      "project": "open-vcdiff",
+      "ref": "openvcdiff-0.8.2",
+      "sha256": "8fc2e0cd4c5b7448b9389fbb9450c6cf70650e75de4368ed521786513e87bcf4",
+      "size": 2498632
+    },
+    "benchmark_data/source/open-vcdiff-0.8.3.treeblob": {
+      "category": "source_tree",
+      "locator": "af81c060f9948a9e91d3364f2ddc53c1f56c4447",
+      "project": "open-vcdiff",
+      "ref": "openvcdiff-0.8.3",
+      "sha256": "ff63c523cbec00b3e05cda6f75df0fa3d11cf783c15b1ae3834b024b3c7e93be",
+      "size": 2499351
+    },
+    "benchmark_data/source/open-vcdiff-0.8.4.treeblob": {
+      "category": "source_tree",
+      "locator": "9af10d36e691c15dceff04419b9e3a71ec5d8bec",
+      "project": "open-vcdiff",
+      "ref": "openvcdiff-0.8.4",
+      "sha256": "d99d1974a967c9f77a7a0dea85e9d04d965fac222b3188c61e1b426bed9d7d3e",
+      "size": 2606221
+    },
+    "benchmark_data/source/redis-7.4.0.treeblob": {
+      "category": "source_tree",
+      "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+      "project": "redis",
+      "ref": "7.4.0",
+      "sha256": "d07fe20c88db5818886f047d0d04dad8f277b9fac23ebb2f60338818b6c1cb02",
+      "size": 16145602
+    },
+    "benchmark_data/source/redis-7.4.1.treeblob": {
+      "category": "source_tree",
+      "locator": "74b289a0e12f9f65a6daeec6a66cadc76792f644",
+      "project": "redis",
+      "ref": "7.4.1",
+      "sha256": "72624c5d54f7e5f9699cc5057a77350f861ea139be033bae18fa0c8c984c955a",
+      "size": 16146654
+    },
+    "benchmark_data/source/redis-7.4.2.treeblob": {
+      "category": "source_tree",
+      "locator": "a0a6f23d997b024689ba157916837f493a593a34",
+      "project": "redis",
+      "ref": "7.4.2",
+      "sha256": "921b8b7cb51badc627c5a06f1db9af130d909d85c3f1107c2107fada28116e09",
+      "size": 16163385
+    },
+    "benchmark_data/source/redis-8.0.0.treeblob": {
+      "category": "source_tree",
+      "locator": "e91a340e241cf0abe3c6a0c254214fbe4aa1d95f",
+      "project": "redis",
+      "ref": "8.0.0",
+      "sha256": "4dbe6ad1f89ba14af6d893e5aa177192e749b55a25395d305b19f1b4a17d5aab",
+      "size": 17452971
+    },
+    "benchmark_data/source/xdelta-v3.0.10.treeblob": {
+      "category": "source_tree",
+      "locator": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+      "project": "xdelta",
+      "ref": "v3.0.10",
+      "sha256": "467eff6ef64ced13cd2390d57af52ef719657a383dbc6ef02bc652bc99c64158",
+      "size": 2154842
+    },
+    "benchmark_data/source/xdelta-v3.0.11.treeblob": {
+      "category": "source_tree",
+      "locator": "81aebf78ae67c29f528088d65743643e5355e3d3",
+      "project": "xdelta",
+      "ref": "v3.0.11",
+      "sha256": "99da53fe770e24af4e3d30462a09bda9aeba66e848b46db8b5b1cecd57825ced",
+      "size": 2157414
+    },
+    "benchmark_data/source/xdelta-v3.0.9.treeblob": {
+      "category": "source_tree",
+      "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+      "project": "xdelta",
+      "ref": "v3.0.9",
+      "sha256": "249a3ead5d0dee20b8752517636354ea1c8ccf63e4d0072c933bea94a60bca5f",
+      "size": 2163339
+    },
+    "benchmark_data/source/xdelta-v3.1.0.treeblob": {
+      "category": "source_tree",
+      "locator": "4b4aed71a959fe11852e45242bb6524be85d3709",
+      "project": "xdelta",
+      "ref": "v3.1.0",
+      "sha256": "1248469bdccae47ac797f945b71cd5e3cf579805a13e31911cefb6ce15288d74",
+      "size": 2368289
+    },
+    "benchmark_data/source/zstd-v1.5.4.treeblob": {
+      "category": "source_tree",
+      "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+      "project": "zstd",
+      "ref": "v1.5.4",
+      "sha256": "8a82ff6d5707ba76a4cfd55f139adbd743d837bf481c99e16b2668539a1caa05",
+      "size": 7650837
+    },
+    "benchmark_data/source/zstd-v1.5.5.treeblob": {
+      "category": "source_tree",
+      "locator": "63779c798237346c2b245c546c40b72a5a5913fe",
+      "project": "zstd",
+      "ref": "v1.5.5",
+      "sha256": "e3795433e1d4b3762fc2fb204633509ed63bc648868a3e5b0129d6cb44ed7845",
+      "size": 7980410
+    },
+    "benchmark_data/source/zstd-v1.5.6.treeblob": {
+      "category": "source_tree",
+      "locator": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+      "project": "zstd",
+      "ref": "v1.5.6",
+      "sha256": "80635c6ed80cd03c1d4dcd89f7fd20fd39d57ab49b4585c99cd257092e2fdbc3",
+      "size": 8277525
+    },
+    "benchmark_data/source/zstd-v1.5.7.treeblob": {
+      "category": "source_tree",
+      "locator": "f8745da6ff1ad1e7bab384bd1f9d742439278e99",
+      "project": "zstd",
+      "ref": "v1.5.7",
+      "sha256": "3a530857c5746125f9794e681a44897fa1f367bdc72ed38240c02057158977a2",
+      "size": 8383227
+    },
+    "benchmark_data/structured/tzdb-2024a.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/7a0daab8d019da17-tzdata2024a.tar.gz",
+      "download_sha256": "0d0434459acbd2059a7a8da1f3304a84a86591f6ed69c6248fffa502b6edffe3",
+      "download_size": 451270,
+      "locator": "https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz",
+      "project": "tzdb",
+      "ref": "2024a",
+      "sha256": "9ffe8e792c47d435cf14d7250c59c8b673c73898174af9075c3df75ee0954c75",
+      "size": 1329174
+    },
+    "benchmark_data/structured/tzdb-2024b.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/3f8689cad2a71d02-tzdata2024b.tar.gz",
+      "download_sha256": "70e754db126a8d0db3d16d6b4cb5f7ec1e04d5f261255e4558a67fe92d39e550",
+      "download_size": 459393,
+      "locator": "https://data.iana.org/time-zones/releases/tzdata2024b.tar.gz",
+      "project": "tzdb",
+      "ref": "2024b",
+      "sha256": "a1d7a37330c8354d41706f4b8bccf1a06078fc4411ace0fbeadfdd00d4b4ee87",
+      "size": 1353660
+    },
+    "benchmark_data/structured/tzdb-2025a.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/19a3a3a870eb0b37-tzdata2025a.tar.gz",
+      "download_sha256": "4d5fcbc72c7c450ebfe0b659bd0f1c02fbf52fd7f517a9ea13fe71c21eb5f0d0",
+      "download_size": 462943,
+      "locator": "https://data.iana.org/time-zones/releases/tzdata2025a.tar.gz",
+      "project": "tzdb",
+      "ref": "2025a",
+      "sha256": "969a6c5b3c50b8bb2e6cb09493cf5b1458e193e9b0b17e38cdac7d7b717205c1",
+      "size": 1364163
+    },
+    "benchmark_data/structured/tzdb-2025b.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/5227552f340f28c5-tzdata2025b.tar.gz",
+      "download_sha256": "11810413345fc7805017e27ea9fa4885fd74cd61b2911711ad038f5d28d71474",
+      "download_size": 464295,
+      "locator": "https://data.iana.org/time-zones/releases/tzdata2025b.tar.gz",
+      "project": "tzdb",
+      "ref": "2025b",
+      "sha256": "c9b00d8eba9f7102ffd48e2320f19f77b58cc46718b6ebc29d94dc5ac72bf9c6",
+      "size": 1369220
+    },
+    "benchmark_data/structured/unicode-15.0.0.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/9c7cd784d0f70189-UCD.zip",
+      "download_sha256": "5fbde400f3e687d25cc9b0a8d30d7619e76cb2f4c3e85ba9df8ec1312cb6718c",
+      "download_size": 7059105,
+      "locator": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
+      "project": "unicode",
+      "ref": "15.0.0",
+      "sha256": "400904ebdb9f1f9159ce5d0bfe5b7356ba72b3eb0b53d042077ff7e7c0b0f838",
+      "size": 34832611
+    },
+    "benchmark_data/structured/unicode-15.1.0.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/b3a3e7c1dda95f15-UCD.zip",
+      "download_sha256": "cb1c663d053926500cd501229736045752713a066bd75802098598b7a7056177",
+      "download_size": 8248819,
+      "locator": "https://www.unicode.org/Public/zipped/15.1.0/UCD.zip",
+      "project": "unicode",
+      "ref": "15.1.0",
+      "sha256": "0c349e11283791af0f1954fb4f9017da22a5e66ab3923ad5d5a38111282f9c81",
+      "size": 36624094
+    },
+    "benchmark_data/structured/unicode-16.0.0.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/f55c5c444f9e6a91-UCD.zip",
+      "download_sha256": "c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2",
+      "download_size": 9020779,
+      "locator": "https://www.unicode.org/Public/zipped/16.0.0/UCD.zip",
+      "project": "unicode",
+      "ref": "16.0.0",
+      "sha256": "d16179c41a578f95a70b6b41d0bf8ac3a2f7a087d1bbea7d5be1daff0cf16e2b",
+      "size": 41014180
+    },
+    "benchmark_data/structured/unicode-17.0.0.bundle": {
+      "category": "structured",
+      "download_path": "benchmark_downloads/8d1aeaf871f34dac-UCD.zip",
+      "download_sha256": "2066d1909b2ea93916ce092da1c0ee4808ea3ef8407c94b4f14f5b7eb263d28e",
+      "download_size": 9101877,
+      "locator": "https://www.unicode.org/Public/17.0.0/ucd/UCD.zip",
+      "project": "unicode",
+      "ref": "17.0.0",
+      "sha256": "9bfd18e4ad387c2da4c40724801aaeb5c5f4e1457fbaf89bcf5a2b66cdf4027e",
+      "size": 41503334
+    }
+  },
+  "build_recipes_sha256": "c2e5470d0173ce231b9a0d2b5ea95b5fbceebedcaf28b0c3b7c603ca754d3a7a",
+  "category_counts": {
+    "compiled": 10,
+    "compressed": 8,
+    "source_tree": 24,
+    "structured": 6
+  },
+  "deviations": [
+    {
+      "action": "exclude_pairs_without_replacement",
+      "affected_pair_ids": [
+        "source-sqlite-3.47.0-to-3.47.1",
+        "source-sqlite-3.47.0-to-3.48.0",
+        "source-sqlite-3.47.0-to-3.49.0"
+      ],
+      "date": "2026-08-23",
+      "outcome_observed": false,
+      "phase": "acquisition",
+      "reason": "The common preregistered full-tree SQLite 3.47.0 source artifact is 111287880 bytes, exceeding the frozen 67108864-byte one-window limit before any trace was generated.",
+      "replacement_assessment": "The corpus remains at 48 confirmatory pairs and SQLite remains represented by two preregistered compiled pairs. Narrowing the source scope after measuring its size would change the locked recipe, while a later same-project release cannot repair the oversized common source endpoint."
+    },
+    {
+      "action": "correct_locator",
+      "affected_artifact": "benchmark_data/structured/unicode-17.0.0.bundle",
+      "date": "2026-08-23",
+      "new_locator": "https://www.unicode.org/Public/17.0.0/ucd/UCD.zip",
+      "old_locator": "https://www.unicode.org/Public/zipped/17.0.0/UCD.zip",
+      "outcome_observed": false,
+      "phase": "acquisition",
+      "reason": "The preregistered legacy zipped URL returns HTTP 404; the same official Unicode 17.0.0 UCD.zip release asset is available at the versioned ucd URL (HTTP 200)."
+    },
+    {
+      "action": "equivalent_build_command",
+      "affected_recipe": "compiled_xdelta_v1",
+      "date": "2026-08-23",
+      "new_command": "gcc -Wall -Wshadow -fno-builtin -O3 xdelta3/xdelta3.c -lm -o xdelta3/xdelta3 -DREGRESSION_TEST=1 -DSECONDARY_DJW=1 -DSECONDARY_FGK=1 -DXD3_DEBUG=0 -DXD3_MAIN=1 -DXD3_POSIX=1 -DXD3_USE_LARGEFILE64=1",
+      "old_command": "make -C xdelta3 -f Makefile.orig CC=gcc xdelta3",
+      "outcome_observed": false,
+      "phase": "compiled acquisition",
+      "reason": "Makefile.orig exists at v3.0.9 but was removed by v3.0.10. The replacement is the literal upstream xdelta3 target compile/link command from that Makefile, with identical flags, and is applied to every compiled xdelta endpoint before tracing."
+    },
+    {
+      "action": "supply_configure_result",
+      "affected_recipe": "compiled_xdelta_v1",
+      "date": "2026-08-23",
+      "new_command_addition": "-DSIZEOF_SIZE_T=8",
+      "outcome_observed": false,
+      "phase": "compiled acquisition",
+      "reason": "The v3.0.10 and later headers require the configure-time SIZEOF_SIZE_T result. Autotools is unavailable in the frozen environment; sizeof(size_t)=8 on the recorded x86_64 GCC toolchain, so the uniform direct build supplies that exact configure result for every compiled xdelta endpoint."
+    }
+  ],
+  "deviations_sha256": "2f6f6e309cdee591f133e9cf7736c6415a25a1a0c9dccd6665e103fbf8b68f49",
+  "effective_pair_count": 48,
+  "excluded_pair_ids": [
+    "source-sqlite-3.47.0-to-3.47.1",
+    "source-sqlite-3.47.0-to-3.48.0",
+    "source-sqlite-3.47.0-to-3.49.0"
+  ],
+  "format": "vcdiff-generality-artifact-lock-v1",
+  "frozen_date": "2026-08-23",
+  "optimizer": {
+    "optimizer_path": "src/vcdiff_opt/optimizer.py",
+    "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+    "rule": "Do not modify the optimizer during the generality experiment.",
+    "table_family": "canonical q=0..93 prefix replacement of RFC opcodes 163..255",
+    "window_limit_bytes": 67108864
+  },
+  "outcome_state": "frozen before any confirmatory VCDIFF trace",
+  "pairs": [
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-linux-v6.12-to-v6.13",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "ref": "v6.12",
+        "sha256": "4926e768933c8a8726ff65e901adb102879d34f33820c985107603b9ee506e9e",
+        "size": 13488539
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.13.treeblob",
+        "ref": "v6.13",
+        "sha256": "ef46048debd24aa3005c8786fd28654390257bde744e4c37586d00ee7c818c18",
+        "size": 13608848
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-linux-v6.12-to-v6.14",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "ref": "v6.12",
+        "sha256": "4926e768933c8a8726ff65e901adb102879d34f33820c985107603b9ee506e9e",
+        "size": 13488539
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.14.treeblob",
+        "ref": "v6.14",
+        "sha256": "51145ceb7b6cc3c0505e0357cf49b3f978a621dbee54c1415dc3202bfdfb1b28",
+        "size": 13684210
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-linux-v6.12-to-v6.15",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "ref": "v6.12",
+        "sha256": "4926e768933c8a8726ff65e901adb102879d34f33820c985107603b9ee506e9e",
+        "size": 13488539
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.15.treeblob",
+        "ref": "v6.15",
+        "sha256": "9b52bd73f787b1c5d3362e5c8df58175c5a37016c52e0b33fb29c20b4a2d5631",
+        "size": 13852371
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-git-v2.48.0-to-v2.48.1",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "ref": "v2.48.0",
+        "sha256": "266ebb077b566120c3164ecc6cfb7a1244b2c8a12ccb59321da7832f3fec1c0e",
+        "size": 44867647
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.48.1.treeblob",
+        "ref": "v2.48.1",
+        "sha256": "3300a7e0b643a65f9ab9274e2bada44fa4e4791df40d63c4c4bb336cc5b61f28",
+        "size": 44872719
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-git-v2.48.0-to-v2.49.0",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "ref": "v2.48.0",
+        "sha256": "266ebb077b566120c3164ecc6cfb7a1244b2c8a12ccb59321da7832f3fec1c0e",
+        "size": 44867647
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.49.0.treeblob",
+        "ref": "v2.49.0",
+        "sha256": "e3f63d3c5d1e1bf30cf3bc012b5f5811236a6b6d158882f07c3bfd9ca27980d5",
+        "size": 45162163
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-git-v2.48.0-to-v2.50.0",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "ref": "v2.48.0",
+        "sha256": "266ebb077b566120c3164ecc6cfb7a1244b2c8a12ccb59321da7832f3fec1c0e",
+        "size": 44867647
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.50.0.treeblob",
+        "ref": "v2.50.0",
+        "sha256": "4776314474ee1b189da6c00c9f3343363694167d22986c17e5fdb9d03170701b",
+        "size": 46073751
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-curl-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "ref": "curl-8_11_0",
+        "sha256": "047eecaa134ac695ab52a5afc25431517494b3eb505ec7b87f0b774a50da2914",
+        "size": 17715575
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.11.1.treeblob",
+        "ref": "curl-8_11_1",
+        "sha256": "9adc1fe3b35b70a60d98f2d489d108ce665aa4b488a64fefbe5e586bd7a2f07a",
+        "size": 17719789
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-curl-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "ref": "curl-8_11_0",
+        "sha256": "047eecaa134ac695ab52a5afc25431517494b3eb505ec7b87f0b774a50da2914",
+        "size": 17715575
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.12.0.treeblob",
+        "ref": "curl-8_12_0",
+        "sha256": "f67e9f1938f931e8c83422c75fea5ec12094c5c57ee2b6662b1585df82ba6d43",
+        "size": 17753073
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-curl-8.11.0-to-8.13.0",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "ref": "curl-8_11_0",
+        "sha256": "047eecaa134ac695ab52a5afc25431517494b3eb505ec7b87f0b774a50da2914",
+        "size": 17715575
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.13.0.treeblob",
+        "ref": "curl-8_13_0",
+        "sha256": "26882310b4852a348e4fcb6f0033702cf6daf8e8ad911f57b75515342fad8cfa",
+        "size": 17824083
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-redis-7.4.0-to-7.4.1",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "ref": "7.4.0",
+        "sha256": "d07fe20c88db5818886f047d0d04dad8f277b9fac23ebb2f60338818b6c1cb02",
+        "size": 16145602
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-7.4.1.treeblob",
+        "ref": "7.4.1",
+        "sha256": "72624c5d54f7e5f9699cc5057a77350f861ea139be033bae18fa0c8c984c955a",
+        "size": 16146654
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-redis-7.4.0-to-7.4.2",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "ref": "7.4.0",
+        "sha256": "d07fe20c88db5818886f047d0d04dad8f277b9fac23ebb2f60338818b6c1cb02",
+        "size": 16145602
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-7.4.2.treeblob",
+        "ref": "7.4.2",
+        "sha256": "921b8b7cb51badc627c5a06f1db9af130d909d85c3f1107c2107fada28116e09",
+        "size": 16163385
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-redis-7.4.0-to-8.0.0",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "ref": "7.4.0",
+        "sha256": "d07fe20c88db5818886f047d0d04dad8f277b9fac23ebb2f60338818b6c1cb02",
+        "size": 16145602
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-8.0.0.treeblob",
+        "ref": "8.0.0",
+        "sha256": "4dbe6ad1f89ba14af6d893e5aa177192e749b55a25395d305b19f1b4a17d5aab",
+        "size": 17452971
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-llvm-19.1.0-to-19.1.1",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "ref": "llvmorg-19.1.0",
+        "sha256": "135a29042a255eccea09f57cd02403651d2f0d4881e899b0f2fd63d06258335c",
+        "size": 14272683
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-19.1.1.treeblob",
+        "ref": "llvmorg-19.1.1",
+        "sha256": "3773d2e91130683e75a15b36c8c65dbd4a15977171d3106148e5bce3f51370e5",
+        "size": 14273295
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-llvm-19.1.0-to-19.1.2",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "ref": "llvmorg-19.1.0",
+        "sha256": "135a29042a255eccea09f57cd02403651d2f0d4881e899b0f2fd63d06258335c",
+        "size": 14272683
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-19.1.2.treeblob",
+        "ref": "llvmorg-19.1.2",
+        "sha256": "3c7ba41c1cf5a31d2bf5e463346c64d871e8fd69bf45fd26a19f5d0ec171e21b",
+        "size": 14273775
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-llvm-19.1.0-to-20.1.0",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "ref": "llvmorg-19.1.0",
+        "sha256": "135a29042a255eccea09f57cd02403651d2f0d4881e899b0f2fd63d06258335c",
+        "size": 14272683
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-20.1.0.treeblob",
+        "ref": "llvmorg-20.1.0",
+        "sha256": "e41f4b530e9512e380ce523845a48e4997f299aa3821418de804ed6721ec4e59",
+        "size": 15035621
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-zstd-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "ref": "v1.5.4",
+        "sha256": "8a82ff6d5707ba76a4cfd55f139adbd743d837bf481c99e16b2668539a1caa05",
+        "size": 7650837
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.5.treeblob",
+        "ref": "v1.5.5",
+        "sha256": "e3795433e1d4b3762fc2fb204633509ed63bc648868a3e5b0129d6cb44ed7845",
+        "size": 7980410
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-zstd-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "ref": "v1.5.4",
+        "sha256": "8a82ff6d5707ba76a4cfd55f139adbd743d837bf481c99e16b2668539a1caa05",
+        "size": 7650837
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.6.treeblob",
+        "ref": "v1.5.6",
+        "sha256": "80635c6ed80cd03c1d4dcd89f7fd20fd39d57ab49b4585c99cd257092e2fdbc3",
+        "size": 8277525
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-zstd-v1.5.4-to-v1.5.7",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "ref": "v1.5.4",
+        "sha256": "8a82ff6d5707ba76a4cfd55f139adbd743d837bf481c99e16b2668539a1caa05",
+        "size": 7650837
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.7.treeblob",
+        "ref": "v1.5.7",
+        "sha256": "3a530857c5746125f9794e681a44897fa1f367bdc72ed38240c02057158977a2",
+        "size": 8383227
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-xdelta-v3.0.9-to-v3.0.10",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "ref": "v3.0.9",
+        "sha256": "249a3ead5d0dee20b8752517636354ea1c8ccf63e4d0072c933bea94a60bca5f",
+        "size": 2163339
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.10.treeblob",
+        "ref": "v3.0.10",
+        "sha256": "467eff6ef64ced13cd2390d57af52ef719657a383dbc6ef02bc652bc99c64158",
+        "size": 2154842
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-xdelta-v3.0.9-to-v3.0.11",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "ref": "v3.0.9",
+        "sha256": "249a3ead5d0dee20b8752517636354ea1c8ccf63e4d0072c933bea94a60bca5f",
+        "size": 2163339
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.11.treeblob",
+        "ref": "v3.0.11",
+        "sha256": "99da53fe770e24af4e3d30462a09bda9aeba66e848b46db8b5b1cecd57825ced",
+        "size": 2157414
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-xdelta-v3.0.9-to-v3.1.0",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "ref": "v3.0.9",
+        "sha256": "249a3ead5d0dee20b8752517636354ea1c8ccf63e4d0072c933bea94a60bca5f",
+        "size": 2163339
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.1.0.treeblob",
+        "ref": "v3.1.0",
+        "sha256": "1248469bdccae47ac797f945b71cd5e3cf579805a13e31911cefb6ce15288d74",
+        "size": 2368289
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.2",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "ref": "open-vcdiff-0.8.1",
+        "sha256": "e673e6cef73d2cf7bacbd16f554774ab10ac8786382642c6f2fe7de113bb29ad",
+        "size": 2495689
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.2.treeblob",
+        "ref": "openvcdiff-0.8.2",
+        "sha256": "8fc2e0cd4c5b7448b9389fbb9450c6cf70650e75de4368ed521786513e87bcf4",
+        "size": 2498632
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.3",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "ref": "open-vcdiff-0.8.1",
+        "sha256": "e673e6cef73d2cf7bacbd16f554774ab10ac8786382642c6f2fe7de113bb29ad",
+        "size": 2495689
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.3.treeblob",
+        "ref": "openvcdiff-0.8.3",
+        "sha256": "ff63c523cbec00b3e05cda6f75df0fa3d11cf783c15b1ae3834b024b3c7e93be",
+        "size": 2499351
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.4",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "ref": "open-vcdiff-0.8.1",
+        "sha256": "e673e6cef73d2cf7bacbd16f554774ab10ac8786382642c6f2fe7de113bb29ad",
+        "size": 2495689
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.4.treeblob",
+        "ref": "openvcdiff-0.8.4",
+        "sha256": "d99d1974a967c9f77a7a0dea85e9d04d965fac222b3188c61e1b426bed9d7d3e",
+        "size": 2606221
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-zstd-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "compiled_zstd_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.4.bundle",
+        "ref": "v1.5.4",
+        "sha256": "1b79bc75cbe634e1e8278a29ecfcc57973d0950e869c223779fa4bad0ab2bbc1",
+        "size": 2191124
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.5.bundle",
+        "ref": "v1.5.5",
+        "sha256": "3e929fdbe4f2dd105bc215ccbc2c1471cabe4a0d5b5d1d0acd753b1130bdb221",
+        "size": 2249700
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-zstd-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "compiled_zstd_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.4.bundle",
+        "ref": "v1.5.4",
+        "sha256": "1b79bc75cbe634e1e8278a29ecfcc57973d0950e869c223779fa4bad0ab2bbc1",
+        "size": 2191124
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.6.bundle",
+        "ref": "v1.5.6",
+        "sha256": "c74552698672e1f856ba1138ae1df96fb3e271b29511c2173edaba47bb3cb001",
+        "size": 2290804
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-curl-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "compiled_curl_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/curl-8.11.0.bundle",
+        "ref": "curl-8_11_0",
+        "sha256": "ee38ae9d8999e290c5292d451aa28de963aa9f3f3763eeae6fdecfeb0261d583",
+        "size": 931144
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/curl-8.11.1.bundle",
+        "ref": "curl-8_11_1",
+        "sha256": "cb0a20d9b9e1615d741e6dd385db48a020ae5193be0141ee173289e2b4583327",
+        "size": 931080
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-curl-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "compiled_curl_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/curl-8.11.0.bundle",
+        "ref": "curl-8_11_0",
+        "sha256": "ee38ae9d8999e290c5292d451aa28de963aa9f3f3763eeae6fdecfeb0261d583",
+        "size": 931144
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/curl-8.12.0.bundle",
+        "ref": "curl-8_12_0",
+        "sha256": "5fa2b06c72c39e150ca2964e50e3dab442ace028a8c8879257a539a2a295298a",
+        "size": 943496
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-redis-7.4.0-to-7.4.1",
+      "project": "redis",
+      "recipe": "compiled_redis_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/redis-7.4.0.bundle",
+        "ref": "7.4.0",
+        "sha256": "a0888546e5d400a601469a12e54918d18ebaf9e0d8ba79eeaa2d5b09866948a0",
+        "size": 3813889
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/redis-7.4.1.bundle",
+        "ref": "7.4.1",
+        "sha256": "44c13affd69487279d417eb332368de5afa6c22e0cd6e55ee9b058e9899c946a",
+        "size": 3813889
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-redis-7.4.0-to-7.4.2",
+      "project": "redis",
+      "recipe": "compiled_redis_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/redis-7.4.0.bundle",
+        "ref": "7.4.0",
+        "sha256": "a0888546e5d400a601469a12e54918d18ebaf9e0d8ba79eeaa2d5b09866948a0",
+        "size": 3813889
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/redis-7.4.2.bundle",
+        "ref": "7.4.2",
+        "sha256": "cdbeb7a1ef15885ef229a3cabec79aeaf931324abcf723cc512ac1bf4f94fc37",
+        "size": 3813993
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-sqlite-3.47.0-to-3.47.1",
+      "project": "sqlite",
+      "recipe": "compiled_sqlite_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.0.bundle",
+        "ref": "version-3.47.0",
+        "sha256": "2eb447b49702cb39ba63c8fdde4c1ea87b104d204455d588992c178c80703045",
+        "size": 3510610
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.1.bundle",
+        "ref": "version-3.47.1",
+        "sha256": "3f9cebfba77b4f5e2fa50b45761085574a7516445cd59335bf132ede16af23bc",
+        "size": 3510770
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-sqlite-3.47.0-to-3.48.0",
+      "project": "sqlite",
+      "recipe": "compiled_sqlite_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.0.bundle",
+        "ref": "version-3.47.0",
+        "sha256": "2eb447b49702cb39ba63c8fdde4c1ea87b104d204455d588992c178c80703045",
+        "size": 3510610
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/sqlite-3.48.0.bundle",
+        "ref": "version-3.48.0",
+        "sha256": "8a7738862bc7b6bccdf26af656aeb10da3b92adce7c3a156b8a6f2b735d2affd",
+        "size": 3520378
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-xdelta-v3.0.9-to-v3.0.10",
+      "project": "xdelta",
+      "recipe": "compiled_xdelta_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.9.bundle",
+        "ref": "v3.0.9",
+        "sha256": "a16a82ae63814c2302084891af38cb37759880bea5f72e10c8a6c0ae333ee60c",
+        "size": 207882
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.10.bundle",
+        "ref": "v3.0.10",
+        "sha256": "cd05eb940bf1c11de7fd0fb9ecba66ff29cc012b99cd2d305b0baac8db4a8761",
+        "size": 207954
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-xdelta-v3.0.9-to-v3.0.11",
+      "project": "xdelta",
+      "recipe": "compiled_xdelta_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.9.bundle",
+        "ref": "v3.0.9",
+        "sha256": "a16a82ae63814c2302084891af38cb37759880bea5f72e10c8a6c0ae333ee60c",
+        "size": 207882
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.11.bundle",
+        "ref": "v3.0.11",
+        "sha256": "ef9b3da412333bf670d4f628b7b670d20bdee00869ab8fa9dec68b9ca0b73c0f",
+        "size": 207954
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "near",
+      "id": "structured-unicode-15.0.0-to-15.1.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "ref": "15.0.0",
+        "sha256": "400904ebdb9f1f9159ce5d0bfe5b7356ba72b3eb0b53d042077ff7e7c0b0f838",
+        "size": 34832611
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/structured/unicode-15.1.0.bundle",
+        "ref": "15.1.0",
+        "sha256": "0c349e11283791af0f1954fb4f9017da22a5e66ab3923ad5d5a38111282f9c81",
+        "size": 36624094
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "medium",
+      "id": "structured-unicode-15.0.0-to-16.0.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "ref": "15.0.0",
+        "sha256": "400904ebdb9f1f9159ce5d0bfe5b7356ba72b3eb0b53d042077ff7e7c0b0f838",
+        "size": 34832611
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/structured/unicode-16.0.0.bundle",
+        "ref": "16.0.0",
+        "sha256": "d16179c41a578f95a70b6b41d0bf8ac3a2f7a087d1bbea7d5be1daff0cf16e2b",
+        "size": 41014180
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "far",
+      "id": "structured-unicode-15.0.0-to-17.0.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "ref": "15.0.0",
+        "sha256": "400904ebdb9f1f9159ce5d0bfe5b7356ba72b3eb0b53d042077ff7e7c0b0f838",
+        "size": 34832611
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/structured/unicode-17.0.0.bundle",
+        "ref": "17.0.0",
+        "sha256": "9bfd18e4ad387c2da4c40724801aaeb5c5f4e1457fbaf89bcf5a2b66cdf4027e",
+        "size": 41503334
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "near",
+      "id": "structured-tzdb-2024a-to-2024b",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "ref": "2024a",
+        "sha256": "9ffe8e792c47d435cf14d7250c59c8b673c73898174af9075c3df75ee0954c75",
+        "size": 1329174
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/structured/tzdb-2024b.bundle",
+        "ref": "2024b",
+        "sha256": "a1d7a37330c8354d41706f4b8bccf1a06078fc4411ace0fbeadfdd00d4b4ee87",
+        "size": 1353660
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "medium",
+      "id": "structured-tzdb-2024a-to-2025a",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "ref": "2024a",
+        "sha256": "9ffe8e792c47d435cf14d7250c59c8b673c73898174af9075c3df75ee0954c75",
+        "size": 1329174
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/structured/tzdb-2025a.bundle",
+        "ref": "2025a",
+        "sha256": "969a6c5b3c50b8bb2e6cb09493cf5b1458e193e9b0b17e38cdac7d7b717205c1",
+        "size": 1364163
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "far",
+      "id": "structured-tzdb-2024a-to-2025b",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "ref": "2024a",
+        "sha256": "9ffe8e792c47d435cf14d7250c59c8b673c73898174af9075c3df75ee0954c75",
+        "size": 1329174
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/structured/tzdb-2025b.bundle",
+        "ref": "2025b",
+        "sha256": "c9b00d8eba9f7102ffd48e2320f19f77b58cc46718b6ebc29d94dc5ac72bf9c6",
+        "size": 1369220
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "ref": "v1.5.4",
+        "sha256": "0f470992aedad543126d06efab344dc5f3e171893810455787d38347343a4424",
+        "size": 2161536
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.5.tar.gz",
+        "ref": "v1.5.5",
+        "sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+        "size": 2368543
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "ref": "v1.5.4",
+        "sha256": "0f470992aedad543126d06efab344dc5f3e171893810455787d38347343a4424",
+        "size": 2161536
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.6.tar.gz",
+        "ref": "v1.5.6",
+        "sha256": "8c29e06cf42aacc1eafc4077ae2ec6c6fcb96a626157e0593d5e82a34fd403c1",
+        "size": 2406875
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-zstd-tar-zst-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.zst",
+        "ref": "v1.5.4",
+        "sha256": "6925880b84aca086308c27036ef1c16e76817372301ead7c37f90e23567f704e",
+        "size": 1620303
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.5.tar.zst",
+        "ref": "v1.5.5",
+        "sha256": "ce264bca60eb2f0e99e4508cffd0d4d19dd362e84244d7fc941e79fa69ccf673",
+        "size": 1817544
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-zstd-tar-zst-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.zst",
+        "ref": "v1.5.4",
+        "sha256": "6925880b84aca086308c27036ef1c16e76817372301ead7c37f90e23567f704e",
+        "size": 1620303
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.6.tar.zst",
+        "ref": "v1.5.6",
+        "sha256": "4aa8dd1c1115c0fd6b6b66c35c7f6ce7bd58cc1dfd3e4f175b45b39e84b14352",
+        "size": 1845516
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-curl-tar-gz-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.gz",
+        "ref": "8.11.0",
+        "sha256": "264537d90e58d2b09dddc50944baf3c38e7089151c8986715e2aaeaaf2b8118f",
+        "size": 4167839
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.11.1.tar.gz",
+        "ref": "8.11.1",
+        "sha256": "a889ac9dbba3644271bd9d1302b5c22a088893719b72be3487bc3d401e5c4e80",
+        "size": 4169067
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-curl-tar-gz-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.gz",
+        "ref": "8.11.0",
+        "sha256": "264537d90e58d2b09dddc50944baf3c38e7089151c8986715e2aaeaaf2b8118f",
+        "size": 4167839
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.12.0.tar.gz",
+        "ref": "8.12.0",
+        "sha256": "b72ec874e403c90462dc3019c5b24cc3cdd895247402bf23893b3b59419353bc",
+        "size": 4195387
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-curl-tar-xz-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.xz",
+        "ref": "8.11.0",
+        "sha256": "db59cf0d671ca6e7f5c2c5ec177084a33a79e04c97e71cf183a5cdea235054eb",
+        "size": 2750684
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.11.1.tar.xz",
+        "ref": "8.11.1",
+        "sha256": "c7ca7db48b0909743eaef34250da02c19bc61d4f1dcedd6603f109409536ab56",
+        "size": 2751236
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-curl-tar-xz-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.xz",
+        "ref": "8.11.0",
+        "sha256": "db59cf0d671ca6e7f5c2c5ec177084a33a79e04c97e71cf183a5cdea235054eb",
+        "size": 2750684
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.12.0.tar.xz",
+        "ref": "8.12.0",
+        "sha256": "9a4628c764be6b1a9909567c13e8e771041609df43b2158fcac4e05ea7097e5d",
+        "size": 2777552
+      }
+    }
+  ],
+  "preregistration_sha256": "f9e7e69a890dee02bd6f9226b7e0e0eb2692b4d2e723c563a1fd1ae1966c3cfb",
+  "split_counts": {
+    "test": 10,
+    "train": 32,
+    "validation": 6
+  }
+}

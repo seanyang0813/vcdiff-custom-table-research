@@ -1,0 +1,2435 @@
+{
+  "candidates": [
+    {
+      "new": {
+        "added": 1735842457000,
+        "filename": "de.jepfa.yapm_200004.apk",
+        "section": "archive",
+        "sha256": "085fab53dac1b51c4a59973feb87a7f8432c30aea5ba080d6aecafca1e73e634",
+        "signers_sha256": [
+          "cbb8712de9d3178a01257de63f271e6432b5b499297f2463b9d0c0c02894aa8a"
+        ],
+        "size": 12084598,
+        "version_code": 200004,
+        "version_name": "2.0.4"
+      },
+      "old": {
+        "added": 1733740811000,
+        "filename": "de.jepfa.yapm_200003.apk",
+        "section": "archive",
+        "sha256": "be0b5bbd73887fe2690b052faf45da279cc0c2749a2731c8eef1c5145c290963",
+        "signers_sha256": [
+          "cbb8712de9d3178a01257de63f271e6432b5b499297f2463b9d0c0c02894aa8a"
+        ],
+        "size": 12113270,
+        "version_code": 200003,
+        "version_name": "2.0.3"
+      },
+      "package_id": "de.jepfa.yapm",
+      "project_name": "ANOTHERpass",
+      "rank_sha256": "0040c33be05c0536a90f7a94b5ffe1b23954948cf98513a042cb8d1bf4a6837f",
+      "source_code": "https://github.com/jenspfahl/ANOTHERpass"
+    },
+    {
+      "new": {
+        "added": 1773911418159,
+        "filename": "org.cryptomator.lite_3030.apk",
+        "section": "repo",
+        "sha256": "d5cb6c0bb40b5a82fe4ea5689599aa871bb725c25f0d6d1bde44120b696073b9",
+        "signers_sha256": [
+          "f7c3ec3b0d588d3cb52983e9eb1a7421c93d4339a286398e71d7b651e8d8ecdd"
+        ],
+        "size": 20585634,
+        "version_code": 3030,
+        "version_name": "1.12.3"
+      },
+      "old": {
+        "added": 1760082676000,
+        "filename": "org.cryptomator.lite_3020.apk",
+        "section": "repo",
+        "sha256": "a9cf6137960d710ed8dd5f229787e0431eddf221eaaaf849661f2eea2d2a9209",
+        "signers_sha256": [
+          "f7c3ec3b0d588d3cb52983e9eb1a7421c93d4339a286398e71d7b651e8d8ecdd"
+        ],
+        "size": 20577386,
+        "version_code": 3020,
+        "version_name": "1.12.2"
+      },
+      "package_id": "org.cryptomator.lite",
+      "project_name": "Cryptomator",
+      "rank_sha256": "0050e6022ed0f82ada23ce6da15383f8b78238921dfc129eb343c152b7dba0b0",
+      "source_code": "https://github.com/cryptomator/android"
+    },
+    {
+      "new": {
+        "added": 1656288000000,
+        "filename": "uk.co.yahoo.p1rpp.secondsclock_7.apk",
+        "section": "repo",
+        "sha256": "082c930f49e87ed1d2b745bb49d9fba72dce703fb0757d50e7ab41fe18aa4c29",
+        "signers_sha256": [
+          "b03cc71b423d288b503075777c3a7500fce60e7faccea4ae8d2ba925070e1d2c"
+        ],
+        "size": 2811276,
+        "version_code": 7,
+        "version_name": "2.3"
+      },
+      "old": {
+        "added": 1655424000000,
+        "filename": "uk.co.yahoo.p1rpp.secondsclock_6.apk",
+        "section": "repo",
+        "sha256": "74a1ffb1506170603ec2d197acfd01b6e6802ceabb6dff915e92bbeefa5ca8d8",
+        "signers_sha256": [
+          "b03cc71b423d288b503075777c3a7500fce60e7faccea4ae8d2ba925070e1d2c"
+        ],
+        "size": 2807180,
+        "version_code": 6,
+        "version_name": "2.2"
+      },
+      "package_id": "uk.co.yahoo.p1rpp.secondsclock",
+      "project_name": "SecondsClock",
+      "rank_sha256": "005b6e7c9f21b806693474cb0d949ddd4aa83b1da08cd7db799cb3dc99f3c127",
+      "source_code": "https://github.com/rparkins999/AndroidSecondsClock"
+    },
+    {
+      "new": {
+        "added": 1475020800000,
+        "filename": "com.nutomic.ensichat_17.apk",
+        "section": "archive",
+        "sha256": "acf1e2b0d70101ca703256732c0596fcadedc8eea16e9d2f40540fd6178c9e62",
+        "signers_sha256": [
+          "bcba590f453fe3c8311449491e17d949836f92d8357e8fd79ade02a82f0f182a"
+        ],
+        "size": 8090471,
+        "version_code": 17,
+        "version_name": "0.5.2"
+      },
+      "old": {
+        "added": 1474934400000,
+        "filename": "com.nutomic.ensichat_16.apk",
+        "section": "archive",
+        "sha256": "be9587df146593d9d5cf2390ad2a3371ab266e1d061158175ee5f4e0438159af",
+        "signers_sha256": [
+          "bcba590f453fe3c8311449491e17d949836f92d8357e8fd79ade02a82f0f182a"
+        ],
+        "size": 8091008,
+        "version_code": 16,
+        "version_name": "0.5.1"
+      },
+      "package_id": "com.nutomic.ensichat",
+      "project_name": "Ensichat",
+      "rank_sha256": "006ca208aeca0a548e021aeb9c3605998f0fa839271be16336ceb4dd8023ccdc",
+      "source_code": "https://github.com/Nutomic/ensichat"
+    },
+    {
+      "new": {
+        "added": 1786433443658,
+        "filename": "cloud.valetudo.companion_16.apk",
+        "section": "repo",
+        "sha256": "34081403401166111f5e99d3325d3d0bca81a5d9ad993517e55b4dfec49da64a",
+        "signers_sha256": [
+          "ceb103751a92793f5e0c314c46d712d4fa495449dbae189b5d2d7b981baa8f54"
+        ],
+        "size": 5059812,
+        "version_code": 16,
+        "version_name": "2026.08.0"
+      },
+      "old": {
+        "added": 1767805961000,
+        "filename": "cloud.valetudo.companion_15.apk",
+        "section": "repo",
+        "sha256": "d517cbc65c67322242a6619c078075275060c10d3b871d9b697dd703a237c5e2",
+        "signers_sha256": [
+          "ceb103751a92793f5e0c314c46d712d4fa495449dbae189b5d2d7b981baa8f54"
+        ],
+        "size": 3678433,
+        "version_code": 15,
+        "version_name": "2025.08.0"
+      },
+      "package_id": "cloud.valetudo.companion",
+      "project_name": "Valetudo Companion",
+      "rank_sha256": "00a2f7786ef62ca832fb73817feb846e45fa8db1e535af713a8fa08076a49e0f",
+      "source_code": "https://github.com/Hypfer/valetudo-companion"
+    },
+    {
+      "new": {
+        "added": 1723449969000,
+        "filename": "v4lpt.vpt.f006.yxn_102.apk",
+        "section": "repo",
+        "sha256": "1e7ed9752cd708b0242df61f6fa1f464957c13d9c5117b5318b3be2bee36f88d",
+        "signers_sha256": [
+          "27d27498c0fab528c3916568409c8497a3c337e118dcc0aa8c99193caac52e59"
+        ],
+        "size": 5069044,
+        "version_code": 102,
+        "version_name": "1.0.2"
+      },
+      "old": {
+        "added": 1721725587000,
+        "filename": "v4lpt.vpt.f006.yxn_100.apk",
+        "section": "repo",
+        "sha256": "5963742ea58c216d4484a448fcd091cf7471e07f2ca74825035d5f7be9cf49aa",
+        "signers_sha256": [
+          "27d27498c0fab528c3916568409c8497a3c337e118dcc0aa8c99193caac52e59"
+        ],
+        "size": 5068759,
+        "version_code": 100,
+        "version_name": "1.0.0"
+      },
+      "package_id": "v4lpt.vpt.f006.yxn",
+      "project_name": "Valentin's PowerTools #006 - Yes XOR No?",
+      "rank_sha256": "00a4f1b3abf3567abc739d18875819a8cc3bc48231907f1b77c2959d31d63c64",
+      "source_code": "https://github.com/v4lpt/YXN"
+    },
+    {
+      "new": {
+        "added": 1751329617000,
+        "filename": "de.christinecoenen.code.zapp_76.apk",
+        "section": "archive",
+        "sha256": "8cc86a6b9df01d1cceddc447f2187ac3eb14d600e32fe2d58d3165ec8b423154",
+        "signers_sha256": [
+          "3d6d0b902328be2bdda76786144eea3e35322cbd31cf7f47b6d9da2e3988b4a0"
+        ],
+        "size": 4296288,
+        "version_code": 76,
+        "version_name": "9.0.0"
+      },
+      "old": {
+        "added": 1727008187000,
+        "filename": "de.christinecoenen.code.zapp_74.apk",
+        "section": "archive",
+        "sha256": "7fe20b93b248307668919629926ac8b9e9648ad32c8919c80fdb5628afa5257c",
+        "signers_sha256": [
+          "3d6d0b902328be2bdda76786144eea3e35322cbd31cf7f47b6d9da2e3988b4a0"
+        ],
+        "size": 4242859,
+        "version_code": 74,
+        "version_name": "8.5.4"
+      },
+      "package_id": "de.christinecoenen.code.zapp",
+      "project_name": "Zapp",
+      "rank_sha256": "00c0f4ed71b99b9c535efbb10f172ffb49c720a49194c6fed0ed01bf454ca0e2",
+      "source_code": "https://github.com/mediathekview/zapp"
+    },
+    {
+      "new": {
+        "added": 1770478599000,
+        "filename": "tibarj.tranquilstopwatch_17.apk",
+        "section": "repo",
+        "sha256": "7bc31fae5cd2e9d815414dafb437f9a9a2fd21f4dc16d9929adc5fec962c5cb7",
+        "signers_sha256": [
+          "fe13fdfa891cc18426e6a361f2839067201a672b5cadd2bbddea8ce25d39a199"
+        ],
+        "size": 2492454,
+        "version_code": 17,
+        "version_name": "1.12.1"
+      },
+      "old": {
+        "added": 1769336565000,
+        "filename": "tibarj.tranquilstopwatch_16.apk",
+        "section": "repo",
+        "sha256": "802095e741ab282ce85b82d916fad4fb652e86b78617a0ffc0f662598f75604a",
+        "signers_sha256": [
+          "fe13fdfa891cc18426e6a361f2839067201a672b5cadd2bbddea8ce25d39a199"
+        ],
+        "size": 2478954,
+        "version_code": 16,
+        "version_name": "1.11.0"
+      },
+      "package_id": "tibarj.tranquilstopwatch",
+      "project_name": "Tranquil Stopwatch",
+      "rank_sha256": "00c869af90e96dc3f9207db4b7c00fef0f1aaf2af8038c84e59577e51e7a3c8a",
+      "source_code": "https://github.com/tibarj/tranquilstopwatch"
+    },
+    {
+      "new": {
+        "added": 1439337600000,
+        "filename": "co.loubo.icicle_4.apk",
+        "section": "archive",
+        "sha256": "0546e98283566dd8f86dcf18637ad8c98276695bdb13336c6f45a5a9f4c270e0",
+        "signers_sha256": [
+          "9fb496cec54e856b055083078b17a1fad577c9c7d6a27b66fabfffaaa8b0afd6"
+        ],
+        "size": 1195769,
+        "version_code": 4,
+        "version_name": "0.4"
+      },
+      "old": {
+        "added": 1426636800000,
+        "filename": "co.loubo.icicle_3.apk",
+        "section": "archive",
+        "sha256": "e5e1d71a980b0ed4f36343a56be4c2dae1ea579a7f7cfe4f24108715ac5d6380",
+        "signers_sha256": [
+          "9fb496cec54e856b055083078b17a1fad577c9c7d6a27b66fabfffaaa8b0afd6"
+        ],
+        "size": 1155890,
+        "version_code": 3,
+        "version_name": "0.3"
+      },
+      "package_id": "co.loubo.icicle",
+      "project_name": "Icicle for Freenet",
+      "rank_sha256": "00f6251ce98c5d5156859b4b0e4e34a8d55705d1d683bab12dfa0f48a81a45e2",
+      "source_code": "https://github.com/ArneBab/Icicle"
+    },
+    {
+      "new": {
+        "added": 1473897600000,
+        "filename": "ohm.quickdice_48.apk",
+        "section": "archive",
+        "sha256": "14a4caf7ac40036e9559fdf3456d18bfb2add4dd2ae548dacdf560604a3ee99e",
+        "signers_sha256": [
+          "da424e65e461659acc36d0150bf61feebd8400d73835a1fd9a7c41466f630c36"
+        ],
+        "size": 1481117,
+        "version_code": 48,
+        "version_name": "2.1.4"
+      },
+      "old": {
+        "added": 1473292800000,
+        "filename": "ohm.quickdice_45.apk",
+        "section": "archive",
+        "sha256": "32ae0d85a5a97534e6cdd565c44ca71d7ea0b7dab0ec0cb04834ad31b9cd3d48",
+        "signers_sha256": [
+          "da424e65e461659acc36d0150bf61feebd8400d73835a1fd9a7c41466f630c36"
+        ],
+        "size": 1480643,
+        "version_code": 45,
+        "version_name": "2.1.3"
+      },
+      "package_id": "ohm.quickdice",
+      "project_name": "Quick Dice Roller",
+      "rank_sha256": "0105fd0db894fb8dd38ac3f655d70d646fc1f43aac6aeccade00b3d173a5ebba",
+      "source_code": "https://github.com/Ohmnibus/quick-dice-roller"
+    },
+    {
+      "new": {
+        "added": 1723209381000,
+        "filename": "com.zionhuang.music_20.apk",
+        "section": "archive",
+        "sha256": "d6b63d3771df49fd4694ff78d0351e23903d20aa92e5c4d1612cf6ef4cc5f060",
+        "signers_sha256": [
+          "5d55f9086e9543ee4d9e5f50bd60595ed4e9ac842de334fde900f3c616e32af2"
+        ],
+        "size": 6251221,
+        "version_code": 20,
+        "version_name": "0.5.4"
+      },
+      "old": {
+        "added": 1694505523000,
+        "filename": "com.zionhuang.music_19.apk",
+        "section": "archive",
+        "sha256": "06216a336286fc6625b57d3e88d46d92e58957d2bdbc0a1378d07d019f643e08",
+        "signers_sha256": [
+          "5d55f9086e9543ee4d9e5f50bd60595ed4e9ac842de334fde900f3c616e32af2"
+        ],
+        "size": 6226873,
+        "version_code": 19,
+        "version_name": "0.5.3"
+      },
+      "package_id": "com.zionhuang.music",
+      "project_name": "InnerTune",
+      "rank_sha256": "010aeced9e2d68667416c4d57763f377906cfe69fc6fdb691ab72f2a4b3c6f36",
+      "source_code": "https://github.com/z-huang/InnerTune"
+    },
+    {
+      "new": {
+        "added": 1618876800000,
+        "filename": "com.mbestavros.geometricweather_26100.apk",
+        "section": "archive",
+        "sha256": "599b6493acf82cd73ef71ebc8d286c9a145d954595448e6b7de02234717281ff",
+        "signers_sha256": [
+          "43193214632a764bb7d9749751476057ed779e4e518207ba2f51eb87ec5bef9c"
+        ],
+        "size": 6798921,
+        "version_code": 26100,
+        "version_name": "2.610-foss"
+      },
+      "old": {
+        "added": 1604016000000,
+        "filename": "com.mbestavros.geometricweather_26068.apk",
+        "section": "archive",
+        "sha256": "30c7c935f107979360fe5f9a7a186b5aecaf1a80fad38208ce3a81901d1d15c6",
+        "signers_sha256": [
+          "43193214632a764bb7d9749751476057ed779e4e518207ba2f51eb87ec5bef9c"
+        ],
+        "size": 6761864,
+        "version_code": 26068,
+        "version_name": "2.608-foss"
+      },
+      "package_id": "com.mbestavros.geometricweather",
+      "project_name": "Geometric Weather",
+      "rank_sha256": "0110847612e4c627844511348503777dd8550b9d305a3a22d68a22cf1a8be527",
+      "source_code": "https://github.com/mbestavros/GeometricWeather"
+    },
+    {
+      "new": {
+        "added": 1558051200000,
+        "filename": "net.eneiluj.nextcloud.phonetrack_11.apk",
+        "section": "archive",
+        "sha256": "d431d230f5ffb7d41aef8efe951f04a8b3c360c4024e9051096c07437319faa8",
+        "signers_sha256": [
+          "a44e9cb3fd81c10faed875821837479ebc9cce60ac8af5deaf0ebf812ef9b534"
+        ],
+        "size": 6019925,
+        "version_code": 11,
+        "version_name": "0.0.11"
+      },
+      "old": {
+        "added": 1552435200000,
+        "filename": "net.eneiluj.nextcloud.phonetrack_10.apk",
+        "section": "archive",
+        "sha256": "c6bb8cd7296fc60d8b03bf6a7dc916427641f51bbae3d6d10eccd0ede36e6df0",
+        "signers_sha256": [
+          "a44e9cb3fd81c10faed875821837479ebc9cce60ac8af5deaf0ebf812ef9b534"
+        ],
+        "size": 4879941,
+        "version_code": 10,
+        "version_name": "0.0.10"
+      },
+      "package_id": "net.eneiluj.nextcloud.phonetrack",
+      "project_name": "PhoneTrack",
+      "rank_sha256": "01334ea0279ec0e4bb0df7f570b54aaf695e2be77bd2a5e4ab73aac6aac45731",
+      "source_code": "https://gitlab.com/eneiluj/phonetrack-android"
+    },
+    {
+      "new": {
+        "added": 1725146643000,
+        "filename": "cc.sovellus.vrcaa_200001.apk",
+        "section": "archive",
+        "sha256": "6f80d4842ca4daa58b428754e6d3ea099bf71f832dc290816b82ca0c35d4a0ac",
+        "signers_sha256": [
+          "9162d8a42283992c2eb5a71b20cc7200062b3694e22e4d0b0ecca9271ad7396a"
+        ],
+        "size": 14731454,
+        "version_code": 200001,
+        "version_name": "2.0.1"
+      },
+      "old": {
+        "added": 1724241470000,
+        "filename": "cc.sovellus.vrcaa_200000.apk",
+        "section": "archive",
+        "sha256": "f5b8275a33970f8376c5d26b765117b04ab1748716e6aadcbfa08a24c51becf7",
+        "signers_sha256": [
+          "9162d8a42283992c2eb5a71b20cc7200062b3694e22e4d0b0ecca9271ad7396a"
+        ],
+        "size": 14731454,
+        "version_code": 200000,
+        "version_name": "2.0.0"
+      },
+      "package_id": "cc.sovellus.vrcaa",
+      "project_name": "VRChat Android Assistant",
+      "rank_sha256": "014ab4bab574309d86c559fc10e2487bf1979035041de890fc9f4a9019fedb00",
+      "source_code": "https://github.com/Nyabsi/VRCAA"
+    },
+    {
+      "new": {
+        "added": 1766937285000,
+        "filename": "com.rtbishop.look4sat_323.apk",
+        "section": "archive",
+        "sha256": "f9d072930686cdd90700110e513c4106cad3a48a7cbdeaa5a97bcc155fa4a056",
+        "signers_sha256": [
+          "bca485cdb26a2d1d832a87e393995888c22a374c8f2febc553a7df574c3b6590"
+        ],
+        "size": 2346489,
+        "version_code": 323,
+        "version_name": "3.2.3"
+      },
+      "old": {
+        "added": 1759854807000,
+        "filename": "com.rtbishop.look4sat_322.apk",
+        "section": "archive",
+        "sha256": "c97c46395554ba95391630da1a094112dce7438aa6fbceb9ba81f2b9208a39ee",
+        "signers_sha256": [
+          "bca485cdb26a2d1d832a87e393995888c22a374c8f2febc553a7df574c3b6590"
+        ],
+        "size": 2338297,
+        "version_code": 322,
+        "version_name": "3.2.2"
+      },
+      "package_id": "com.rtbishop.look4sat",
+      "project_name": "Look4Sat: Satellite tracker",
+      "rank_sha256": "014bb2a874028f7dea48654cffea4c547ab308284c8b84d187c1176765e923a1",
+      "source_code": "https://github.com/rt-bishop/Look4Sat"
+    },
+    {
+      "new": {
+        "added": 1529539200000,
+        "filename": "com.fastaccess.github.libre_467.apk",
+        "section": "archive",
+        "sha256": "cce7ddd99ed4303b4803f5554b49dce81a505cd3feefd9356050280249528681",
+        "signers_sha256": [
+          "547593a2ab5b310fcf6d36e611d407b705f7cb595e3481ed13a6c4517ef7ed0e"
+        ],
+        "size": 6658054,
+        "version_code": 467,
+        "version_name": "4.6.7"
+      },
+      "old": {
+        "added": 1522454400000,
+        "filename": "com.fastaccess.github.libre_466.apk",
+        "section": "archive",
+        "sha256": "c85be3a7121a663e938a283b5d19f3f2ea1601a0ad069eab45c533710bd03998",
+        "signers_sha256": [
+          "547593a2ab5b310fcf6d36e611d407b705f7cb595e3481ed13a6c4517ef7ed0e"
+        ],
+        "size": 6662316,
+        "version_code": 466,
+        "version_name": "4.6.6"
+      },
+      "package_id": "com.fastaccess.github.libre",
+      "project_name": "FastHub-Libre",
+      "rank_sha256": "01af57efe93fc550a865cf471eabf098688817e2bafc52c728fdea3e3d423386",
+      "source_code": "https://github.com/thermatk/FastHub-Libre"
+    },
+    {
+      "new": {
+        "added": 1590796800000,
+        "filename": "hu.tagsoft.ttorrent.search_3.apk",
+        "section": "repo",
+        "sha256": "10a81f1cff5bc24595d6e2849d06d37647e8a9aea560b28eb67e834299802475",
+        "signers_sha256": [
+          "6a2164fe93544b4fbd549dd8d7682d69ec686d7e5e8e8c788c5748538e1cdd86"
+        ],
+        "size": 1353500,
+        "version_code": 3,
+        "version_name": "1.0.2"
+      },
+      "old": {
+        "added": 1589328000000,
+        "filename": "hu.tagsoft.ttorrent.search_2.apk",
+        "section": "repo",
+        "sha256": "8d6f73a8ea777e38e6e3661cada080dc465d2d0dcc1392efaea1d7ac11122ff6",
+        "signers_sha256": [
+          "6a2164fe93544b4fbd549dd8d7682d69ec686d7e5e8e8c788c5748538e1cdd86"
+        ],
+        "size": 1352734,
+        "version_code": 2,
+        "version_name": "1.0.1"
+      },
+      "package_id": "hu.tagsoft.ttorrent.search",
+      "project_name": "tTorrent search",
+      "rank_sha256": "01dc87736f6b7f2723087420c68b1bc5ef9e9c52f65b536548af0c5ad05adc13",
+      "source_code": "https://gitlab.com/tagsoft/ttorrent-search"
+    },
+    {
+      "new": {
+        "added": 1716420068000,
+        "filename": "org.fitchfamily.android.gsmlocation_74.apk",
+        "section": "repo",
+        "sha256": "a5f6c66d3c55dbede48edc5bb0644909987ba3b03ceaa90243633e403e402b99",
+        "signers_sha256": [
+          "7a8a916d204e93da705dd517b91ad19060fc0be01b491d476b13fd8818384fb1"
+        ],
+        "size": 2280126,
+        "version_code": 74,
+        "version_name": "1.5.4"
+      },
+      "old": {
+        "added": 1636070400000,
+        "filename": "org.fitchfamily.android.gsmlocation_73.apk",
+        "section": "repo",
+        "sha256": "9087f4e67b8b94d6601c9b2108eecd5c4fe176b9001c5955f4f28654025d8955",
+        "signers_sha256": [
+          "7a8a916d204e93da705dd517b91ad19060fc0be01b491d476b13fd8818384fb1"
+        ],
+        "size": 2271918,
+        "version_code": 73,
+        "version_name": "1.5.3"
+      },
+      "package_id": "org.fitchfamily.android.gsmlocation",
+      "project_name": "Local GSM Location - A local cell tower based back",
+      "rank_sha256": "01eff41b336afc7d9a895c4a6c6343e0de163958e17739e944ca2e7e985664f4",
+      "source_code": "https://gitlab.com/deveee/Local-GSM-Backend"
+    },
+    {
+      "new": {
+        "added": 1753369805000,
+        "filename": "de.devmil.muzei.bingimageofthedayartsource_18.apk",
+        "section": "repo",
+        "sha256": "af5cc1a85bd7c1f667afaea5c349ba6707e3ab56a01ffe68db2059daee899892",
+        "signers_sha256": [
+          "2f68f381dc9f286d79529590512753d8130c429477dddd268ccc22d4894a6fbd"
+        ],
+        "size": 2753214,
+        "version_code": 18,
+        "version_name": "2.3.2"
+      },
+      "old": {
+        "added": 1603065600000,
+        "filename": "de.devmil.muzei.bingimageofthedayartsource_9.apk",
+        "section": "repo",
+        "sha256": "fd451a3f9b5a293bdf3207953557ed9d3e20fbf6fbafe084c1b98bf5bfd96b8d",
+        "signers_sha256": [
+          "2f68f381dc9f286d79529590512753d8130c429477dddd268ccc22d4894a6fbd"
+        ],
+        "size": 2240280,
+        "version_code": 9,
+        "version_name": "2.0"
+      },
+      "package_id": "de.devmil.muzei.bingimageofthedayartsource",
+      "project_name": "Muzei - Bing Image of the Day",
+      "rank_sha256": "01f31b58ccee5f539f168fc0816ef3050982a9ce9a762cd80f57ab2a4ddcf15c",
+      "source_code": "https://github.com/devmil/muzei-bingimageoftheday"
+    },
+    {
+      "new": {
+        "added": 1584316800000,
+        "filename": "com.vadimfrolov.duorem_6.apk",
+        "section": "repo",
+        "sha256": "bdba406c2b6573fcaca18eb5a02ba7b1728338f81b430e44214b899b7155602f",
+        "signers_sha256": [
+          "49bd1389a9719ad22462fb4495d79c495990377811324b73274fab891a6f25e7"
+        ],
+        "size": 2055795,
+        "version_code": 6,
+        "version_name": "1.1.4"
+      },
+      "old": {
+        "added": 1527379200000,
+        "filename": "com.vadimfrolov.duorem_5.apk",
+        "section": "repo",
+        "sha256": "e02e0c8002a917fedc5620a14c45ed812644b9bddb76fe62e14d50114caaea4f",
+        "signers_sha256": [
+          "49bd1389a9719ad22462fb4495d79c495990377811324b73274fab891a6f25e7"
+        ],
+        "size": 2064547,
+        "version_code": 5,
+        "version_name": "1.1.3"
+      },
+      "package_id": "com.vadimfrolov.duorem",
+      "project_name": "Duorem",
+      "rank_sha256": "0214ada4f8b1e5a6ac2355736b717afbd12c16f55085ca544d41555eee2407de",
+      "source_code": "https://github.com/fralik/Duorem"
+    },
+    {
+      "new": {
+        "added": 1518739200000,
+        "filename": "com.nbossard.packlist_19.apk",
+        "section": "repo",
+        "sha256": "97bdc66594550afd3255c869bab8ae2272cc7ed5f2a3a25a064679f6cf06137e",
+        "signers_sha256": [
+          "ba72130174434b9cda307f5f631cd2b98b64a9ffd4fc0ef6ad33543955397ee1"
+        ],
+        "size": 2496491,
+        "version_code": 19,
+        "version_name": "0.13"
+      },
+      "old": {
+        "added": 1512345600000,
+        "filename": "com.nbossard.packlist_18.apk",
+        "section": "repo",
+        "sha256": "cff27d50447362b1e67c669346d7b2afd3bdec7e7e84ed2197dbb4f83b8f378b",
+        "signers_sha256": [
+          "ba72130174434b9cda307f5f631cd2b98b64a9ffd4fc0ef6ad33543955397ee1"
+        ],
+        "size": 2466332,
+        "version_code": 18,
+        "version_name": "0.12"
+      },
+      "package_id": "com.nbossard.packlist",
+      "project_name": "packlist",
+      "rank_sha256": "02246b3a2f2cce3fba1a583f1b5131741cf1de260d919498e6aeb2cd4b2ed3ac",
+      "source_code": "https://github.com/nbossard/packlist"
+    },
+    {
+      "new": {
+        "added": 1681145699000,
+        "filename": "fr.gouv.android.stopcovid_584.apk",
+        "section": "archive",
+        "sha256": "6773fcd02c2b72be517a3a99676b95cef8b1300db1144f17ba63d2d5c0e6cb6d",
+        "signers_sha256": [
+          "597f78213186292d40a610cf379fdf7be969f58d2d84dbddc2a0b29c0ea92a8b"
+        ],
+        "size": 24617298,
+        "version_code": 584,
+        "version_name": "6.0.0"
+      },
+      "old": {
+        "added": 1657411200000,
+        "filename": "fr.gouv.android.stopcovid_583.apk",
+        "section": "archive",
+        "sha256": "6afe1c5fa5c6dacf9821ca2f6e881d07a95f987c77e130c3eea8425141f11f11",
+        "signers_sha256": [
+          "597f78213186292d40a610cf379fdf7be969f58d2d84dbddc2a0b29c0ea92a8b"
+        ],
+        "size": 24367735,
+        "version_code": 583,
+        "version_name": "4.5.0"
+      },
+      "package_id": "fr.gouv.android.stopcovid",
+      "project_name": "TousAntiCovid",
+      "rank_sha256": "023180af0a24dc83d7abf1014997b79e6d2d5edb23747cc65d0a8d020fc04edd",
+      "source_code": "https://gitlab.inria.fr/stopcovid19/stopcovid-android"
+    },
+    {
+      "new": {
+        "added": 1624147200000,
+        "filename": "org.shadowice.flocke.andotp_39.apk",
+        "section": "archive",
+        "sha256": "4558eae858ac3205cf856240479450b69436dff3dac84fbb01a5022b6070a1a7",
+        "signers_sha256": [
+          "987ccce4a1fa8ab28cd6ea1bedf129cbb31b8db24ee434fd6e3619adc924a122"
+        ],
+        "size": 7360802,
+        "version_code": 39,
+        "version_name": "0.9.0.1"
+      },
+      "old": {
+        "added": 1623369600000,
+        "filename": "org.shadowice.flocke.andotp_38.apk",
+        "section": "archive",
+        "sha256": "bee24ba83c2865412ec580164a56b6efda985bc02b093cc1c4d610f0a7cb4ed4",
+        "signers_sha256": [
+          "987ccce4a1fa8ab28cd6ea1bedf129cbb31b8db24ee434fd6e3619adc924a122"
+        ],
+        "size": 7360802,
+        "version_code": 38,
+        "version_name": "0.9.0"
+      },
+      "package_id": "org.shadowice.flocke.andotp",
+      "project_name": "andOTP",
+      "rank_sha256": "025048861d149d704ba147ce15da35159ba3c10df4e53115c58bfb8a7da22fe1",
+      "source_code": "https://github.com/andOTP/andOTP"
+    },
+    {
+      "new": {
+        "added": 1786866775484,
+        "filename": "com.google.android.stardroid_1708.apk",
+        "section": "repo",
+        "sha256": "6ef676cc3765bfcf5b6a23777246d25d4da0bb1f36df1e459d0ccdbafb0b07ae",
+        "signers_sha256": [
+          "066b05d01ea5b4998074ceab1ccca5bf42711995edc6aedbfa311e5620f1e442"
+        ],
+        "size": 19706550,
+        "version_code": 1708,
+        "version_name": "1.18.1:Eclipse"
+      },
+      "old": {
+        "added": 1786433443658,
+        "filename": "com.google.android.stardroid_1704.apk",
+        "section": "repo",
+        "sha256": "9dc63a85103f2f8be0d51b307f477f50d3c0d80e1782b9ec890bf55ad39bd273",
+        "signers_sha256": [
+          "066b05d01ea5b4998074ceab1ccca5bf42711995edc6aedbfa311e5620f1e442"
+        ],
+        "size": 19694262,
+        "version_code": 1704,
+        "version_name": "1.18.0:Eclipse"
+      },
+      "package_id": "com.google.android.stardroid",
+      "project_name": "Sky Map",
+      "rank_sha256": "02613bc202eefa5a497f085505898fc636d8a6fbd9da549359193eed9572fc70",
+      "source_code": "https://github.com/sky-map-team/stardroid"
+    },
+    {
+      "new": {
+        "added": 1766530505000,
+        "filename": "com.jstappdev.e6bflightcomputer_20.apk",
+        "section": "repo",
+        "sha256": "4ad6dc9d56d693006787c263a227c76fb007c6e86a9f8ed791dde03dccf4d86b",
+        "signers_sha256": [
+          "660a1d0cdcf16e1d7495aa4c0e484feb7b28e06a4b91cb04cf9fe8a12852760c"
+        ],
+        "size": 1966638,
+        "version_code": 20,
+        "version_name": "2.0"
+      },
+      "old": {
+        "added": 1765750595000,
+        "filename": "com.jstappdev.e6bflightcomputer_19.apk",
+        "section": "repo",
+        "sha256": "b5320cba413a9b027230e9c86231bc32927a6880f1088a0e96c8eda1f2a2df28",
+        "signers_sha256": [
+          "660a1d0cdcf16e1d7495aa4c0e484feb7b28e06a4b91cb04cf9fe8a12852760c"
+        ],
+        "size": 1965658,
+        "version_code": 19,
+        "version_name": "1.8"
+      },
+      "package_id": "com.jstappdev.e6bflightcomputer",
+      "project_name": "E6B Flight Computer",
+      "rank_sha256": "0267b7cdd01a9c18d57af0042f889c5da0a7bfe069c20ccc29c32de9ea7598af",
+      "source_code": "https://github.com/j05t/e6b"
+    },
+    {
+      "new": {
+        "added": 1465257600000,
+        "filename": "com.ilm.sandwich_35.apk",
+        "section": "archive",
+        "sha256": "4b1e5a6187682c400e636199b31e17c32580a91e0efb9671cce238cafb925ba4",
+        "signers_sha256": [
+          "95047312e74a9dbc74240f3fccb8223074ba7dc47405c3d01648146a498f3822"
+        ],
+        "size": 3187795,
+        "version_code": 35,
+        "version_name": "2.2.4f"
+      },
+      "old": {
+        "added": 1464220800000,
+        "filename": "com.ilm.sandwich_34.apk",
+        "section": "archive",
+        "sha256": "e17ced8df85827503726bf29305e2e0432c4d5f685b58e66bd8aaf18ebc0a861",
+        "signers_sha256": [
+          "95047312e74a9dbc74240f3fccb8223074ba7dc47405c3d01648146a498f3822"
+        ],
+        "size": 3187628,
+        "version_code": 34,
+        "version_name": "2.2.2f"
+      },
+      "package_id": "com.ilm.sandwich",
+      "project_name": "SmartNavi",
+      "rank_sha256": "0276c68833fba4d410ddec671ef129e9dbee39eaabb02d0715d572c848a09db0",
+      "source_code": "https://github.com/Phantast/smartnavi"
+    },
+    {
+      "new": {
+        "added": 1784533482676,
+        "filename": "tech.techlore.plexus_219.apk",
+        "section": "repo",
+        "sha256": "64eb09d4e73f6523f66092a096184720ac250ba4a737c788e0294e6cd18ec0cf",
+        "signers_sha256": [
+          "f02b66e8e6183704c3fd6ae0632f6240de8eec0d6bdbe917731c41ab8c7d9aab"
+        ],
+        "size": 3464742,
+        "version_code": 219,
+        "version_name": "2.1.9"
+      },
+      "old": {
+        "added": 1775212141130,
+        "filename": "tech.techlore.plexus_217.apk",
+        "section": "archive",
+        "sha256": "df8ca44bb501ad990a6de529d61b600b5f81e9edde94961a91d038d6f0329f09",
+        "signers_sha256": [
+          "f02b66e8e6183704c3fd6ae0632f6240de8eec0d6bdbe917731c41ab8c7d9aab"
+        ],
+        "size": 3662730,
+        "version_code": 217,
+        "version_name": "2.1.7"
+      },
+      "package_id": "tech.techlore.plexus",
+      "project_name": "Plexus",
+      "rank_sha256": "027aa6f98995e6eff8b6758d6b03ea7c3add39d26db2fad1ff3adfa6c497f06e",
+      "source_code": "https://github.com/techlore/Plexus-app"
+    },
+    {
+      "new": {
+        "added": 1433721600000,
+        "filename": "com.phg.constellations_10005.apk",
+        "section": "archive",
+        "sha256": "49fa12a41f1005577793d62f339648ab73d0184ee3b2928f2274ee76c9df5738",
+        "signers_sha256": [
+          "78943d5708d5b5e8de87439e049da00e7d779f563f489195e23488036a3bda4c"
+        ],
+        "size": 10060476,
+        "version_code": 10005,
+        "version_name": "2.0.3"
+      },
+      "old": {
+        "added": 1433721600000,
+        "filename": "com.phg.constellations_10004.apk",
+        "section": "archive",
+        "sha256": "1dae5506c64163c7a2ad6a9c24579c517ae6b425b3f378b2ff4a3000fcede4a9",
+        "signers_sha256": [
+          "78943d5708d5b5e8de87439e049da00e7d779f563f489195e23488036a3bda4c"
+        ],
+        "size": 10059769,
+        "version_code": 10004,
+        "version_name": "2.0.2"
+      },
+      "package_id": "com.phg.constellations",
+      "project_name": "Constellations",
+      "rank_sha256": "027b91356b2d77c6725432ab9899140c598c4fda7be9536c6f256e51c4c85adf",
+      "source_code": "https://github.com/Kent1/Manille"
+    },
+    {
+      "new": {
+        "added": 1787506623262,
+        "filename": "be.ppareit.swiftp_free_30203.apk",
+        "section": "repo",
+        "sha256": "c2e27abd86cb01a5306172595e45f4f3715566a436fefcaec4c33ac97627cff6",
+        "signers_sha256": [
+          "1141115127d21941a960860bcda28b87da6088bf8a4d38a6ae749ad0ccbaf4a5"
+        ],
+        "size": 7189886,
+        "version_code": 30203,
+        "version_name": "3.2.3"
+      },
+      "old": {
+        "added": 1602460800000,
+        "filename": "be.ppareit.swiftp_free_30100.apk",
+        "section": "repo",
+        "sha256": "49b8977f3d04a9a184114ade4c7c8bf22e39542974af908e89c608b8b374ce92",
+        "signers_sha256": [
+          "1141115127d21941a960860bcda28b87da6088bf8a4d38a6ae749ad0ccbaf4a5"
+        ],
+        "size": 2753738,
+        "version_code": 30100,
+        "version_name": "3.1"
+      },
+      "package_id": "be.ppareit.swiftp_free",
+      "project_name": "FTP Server (Free)",
+      "rank_sha256": "02a284f2370060a60ac49681963d60606c4a75a406e35462073fa2f53c7029ba",
+      "source_code": "https://github.com/ppareit/swiftp"
+    },
+    {
+      "new": {
+        "added": 1631145600000,
+        "filename": "de.csicar.ning_201.apk",
+        "section": "archive",
+        "sha256": "c180553aa9fb67d7254653947c1201fc8f9d8bf451fdd0d63bc68c561a75fd2c",
+        "signers_sha256": [
+          "114b2b5cde7d51424a9de0ad402d99dd99b7a94a33973f88e59beb912ac6e23b"
+        ],
+        "size": 4954506,
+        "version_code": 201,
+        "version_name": "2.0.1"
+      },
+      "old": {
+        "added": 1630195200000,
+        "filename": "de.csicar.ning_200.apk",
+        "section": "archive",
+        "sha256": "4e77678869c9ace108a6471e58a459c51a616b6545bc0e6eea405d0cf2b9314b",
+        "signers_sha256": [
+          "114b2b5cde7d51424a9de0ad402d99dd99b7a94a33973f88e59beb912ac6e23b"
+        ],
+        "size": 4929027,
+        "version_code": 200,
+        "version_name": "2.0.0"
+      },
+      "package_id": "de.csicar.ning",
+      "project_name": "Ning",
+      "rank_sha256": "02af415113c21d603a46c31777073b4c3c7546486c02f23c724b0d1b457521fa",
+      "source_code": "https://github.com/csicar/Ning"
+    },
+    {
+      "new": {
+        "added": 1429056000000,
+        "filename": "org.evilsoft.pathfinder.reference_38.apk",
+        "section": "archive",
+        "sha256": "2fa3103eb91f446aadd22b1c340b05f7221b5f1ea74078cb42255fbdf067dbf8",
+        "signers_sha256": [
+          "faf569782ccbddcf00c3693952ee5add84d2ff68f27d4b48f772cd03b6bf1846"
+        ],
+        "size": 23089778,
+        "version_code": 38,
+        "version_name": "1.4.0"
+      },
+      "old": {
+        "added": 1413417600000,
+        "filename": "org.evilsoft.pathfinder.reference_36.apk",
+        "section": "archive",
+        "sha256": "41ddaaefc3278030c75b3ae7017eb71e1ceaa6038a4fd27a5adeda981f796e63",
+        "signers_sha256": [
+          "faf569782ccbddcf00c3693952ee5add84d2ff68f27d4b48f772cd03b6bf1846"
+        ],
+        "size": 21525362,
+        "version_code": 36,
+        "version_name": "1.3.0"
+      },
+      "package_id": "org.evilsoft.pathfinder.reference",
+      "project_name": "Masterwork Tools: Pathfinder Open Reference",
+      "rank_sha256": "02c566c4220c494380974a9bfc2861f63ecb79ca7642a091e23ac803b2831d4a",
+      "source_code": "https://github.com/devonjones/PathfinderOpenReference"
+    },
+    {
+      "new": {
+        "added": 1723974847000,
+        "filename": "v4lpt.vpt.f005.rsd_104.apk",
+        "section": "repo",
+        "sha256": "db0fab23a3cd34ebc508ef0cb43e440b541eb61eed6bf6f500704282fb1e1c81",
+        "signers_sha256": [
+          "ed16f1367474b7d90c4c1253ac96c0cf6210b442db76263ed62fa34e715ea274"
+        ],
+        "size": 5200449,
+        "version_code": 104,
+        "version_name": "1.0.4"
+      },
+      "old": {
+        "added": 1723449967000,
+        "filename": "v4lpt.vpt.f005.rsd_103.apk",
+        "section": "repo",
+        "sha256": "c2ee26769e60208224e273c74d85fe141a86a401243ec33fb46d17b946ac9ef0",
+        "signers_sha256": [
+          "ed16f1367474b7d90c4c1253ac96c0cf6210b442db76263ed62fa34e715ea274"
+        ],
+        "size": 5200449,
+        "version_code": 103,
+        "version_name": "1.0.3"
+      },
+      "package_id": "v4lpt.vpt.f005.rsd",
+      "project_name": "Valentin's PowerTools #005 - Roll Some Dice ",
+      "rank_sha256": "02e21b587cd2468d18444b178bd098ed196fb992bbe421fef20442c04aaada51",
+      "source_code": "https://github.com/v4lpt/RSD"
+    },
+    {
+      "new": {
+        "added": 1618099200000,
+        "filename": "oppen.gemini.ariane_42.apk",
+        "section": "archive",
+        "sha256": "fd77d2e1d401bf50172836350e1f5afcf07d1aedaf69ea4de864ad8c8143b4a2",
+        "signers_sha256": [
+          "9ab24487192ef616a679946b1d82d12bedbb1c3a9793b2c6bd021adac784fd98"
+        ],
+        "size": 2535584,
+        "version_code": 42,
+        "version_name": "2.4.0"
+      },
+      "old": {
+        "added": 1613865600000,
+        "filename": "oppen.gemini.ariane_39.apk",
+        "section": "archive",
+        "sha256": "8f4c0221f97330a146c8ff52da164346eb273f838677b41c03cd8b48ae9d035f",
+        "signers_sha256": [
+          "9ab24487192ef616a679946b1d82d12bedbb1c3a9793b2c6bd021adac784fd98"
+        ],
+        "size": 2393434,
+        "version_code": 39,
+        "version_name": "2.3.7"
+      },
+      "package_id": "oppen.gemini.ariane",
+      "project_name": "Ariane",
+      "rank_sha256": "02e4d1a61d3d525e754bd43eb7b8633d64a31d3509e8101149ee8accffa388a8",
+      "source_code": "https://codeberg.org/oppenlab/Ariane"
+    },
+    {
+      "new": {
+        "added": 1569628800000,
+        "filename": "com.jellyshack.block6_7.apk",
+        "section": "archive",
+        "sha256": "98ae9fb6ca2d27c7e158eca99d85237e23e23e27e0b293821ea3439efb967f82",
+        "signers_sha256": [
+          "aac07f709380ad658d7e99617b83c8e967f6657b4ce8d12097542910928ade08"
+        ],
+        "size": 2389722,
+        "version_code": 7,
+        "version_name": "1.6"
+      },
+      "old": {
+        "added": 1569369600000,
+        "filename": "com.jellyshack.block6_6.apk",
+        "section": "archive",
+        "sha256": "eded492fb5031e4e60d9d048327f4a7a64fd0889bb0f18d34e6dd7035fe86a1a",
+        "signers_sha256": [
+          "aac07f709380ad658d7e99617b83c8e967f6657b4ce8d12097542910928ade08"
+        ],
+        "size": 2389134,
+        "version_code": 6,
+        "version_name": "1.5"
+      },
+      "package_id": "com.jellyshack.block6",
+      "project_name": "Block6",
+      "rank_sha256": "02f1cdecbd38ec0087032029732e6fa372f62cd558387413990627ab329ea6db",
+      "source_code": "https://github.com/travistynes/block6"
+    },
+    {
+      "new": {
+        "added": 1785752073103,
+        "filename": "de.bahnhoefe.deutschlands.bahnhofsfotos_99.apk",
+        "section": "repo",
+        "sha256": "3810f6814f5f0d158467da6ebb2ca5e1b07bfcd50168e5ffe465450745c8b600",
+        "signers_sha256": [
+          "88352051351be1cc46a202f3a1b493e7a446a7f3f50fd22ebcd8657c358e9ef8"
+        ],
+        "size": 9270869,
+        "version_code": 99,
+        "version_name": "16.6.0"
+      },
+      "old": {
+        "added": 1785080297767,
+        "filename": "de.bahnhoefe.deutschlands.bahnhofsfotos_98.apk",
+        "section": "repo",
+        "sha256": "b44d2c66f2096f23267790e893908e5f669aa489209a2333f333cd707c66b0ca",
+        "signers_sha256": [
+          "88352051351be1cc46a202f3a1b493e7a446a7f3f50fd22ebcd8657c358e9ef8"
+        ],
+        "size": 9270841,
+        "version_code": 98,
+        "version_name": "16.5.0"
+      },
+      "package_id": "de.bahnhoefe.deutschlands.bahnhofsfotos",
+      "project_name": "Railway station photos",
+      "rank_sha256": "0317efdbb67b6087cdbb8ef8a93c495d5b66fc1e290913d3a6f9b2b483d5e8ec",
+      "source_code": "https://codeberg.org/RailwayStations/RSAndroidApp"
+    },
+    {
+      "new": {
+        "added": 1690423854000,
+        "filename": "com.chooloo.www.koler_82.apk",
+        "section": "repo",
+        "sha256": "3c35766c1b988b2af485c3a03ff08d1e3042feb76b40b2dcdb54481aaf9c5a11",
+        "signers_sha256": [
+          "0cc70c534520c0e9937afa7ffe1bde586c32f9ebb66126e6a1dea3d8f47db76e"
+        ],
+        "size": 5042508,
+        "version_code": 82,
+        "version_name": "v1.6.1"
+      },
+      "old": {
+        "added": 1656806400000,
+        "filename": "com.chooloo.www.koler_79.apk",
+        "section": "repo",
+        "sha256": "72d59fa938141328404c2af44a9442f17b3b58a3c467f95997d5bfd8e6f1e0c3",
+        "signers_sha256": [
+          "0cc70c534520c0e9937afa7ffe1bde586c32f9ebb66126e6a1dea3d8f47db76e"
+        ],
+        "size": 8042590,
+        "version_code": 79,
+        "version_name": "v1.5.0"
+      },
+      "package_id": "com.chooloo.www.koler",
+      "project_name": "Koler",
+      "rank_sha256": "0319ad6f1ffd5179ef86e3a7d0f4f1322ebf823fe1fa355779994d896037004d",
+      "source_code": "https://github.com/Chooloo/koler"
+    },
+    {
+      "new": {
+        "added": 1587254400000,
+        "filename": "me.jfenn.alarmio_21.apk",
+        "section": "archive",
+        "sha256": "64168b0dc616856d9493ced2da2b1eb3291e323887e2fd48bace5e3da2cda8b1",
+        "signers_sha256": [
+          "aeaad6823d325f3b3e7db43b1240134bc0413057f992dbd915d9bd22b9bb3ab0"
+        ],
+        "size": 5888977,
+        "version_code": 21,
+        "version_name": "1.0.5"
+      },
+      "old": {
+        "added": 1571356800000,
+        "filename": "me.jfenn.alarmio_20.apk",
+        "section": "archive",
+        "sha256": "7685c42f808526f23031b60593249a705d7b11f2bd5c6f1b823495b9277c6398",
+        "signers_sha256": [
+          "aeaad6823d325f3b3e7db43b1240134bc0413057f992dbd915d9bd22b9bb3ab0"
+        ],
+        "size": 2522652,
+        "version_code": 20,
+        "version_name": "1.0.4"
+      },
+      "package_id": "me.jfenn.alarmio",
+      "project_name": "Alarmio",
+      "rank_sha256": "033b67ea27844a635139f7f8595dd95cb08b6cfaf07df9897952045435192617",
+      "source_code": "https://github.com/fennifith/Alarmio"
+    },
+    {
+      "new": {
+        "added": 1744557451000,
+        "filename": "com.futsch1.medtimer_109.apk",
+        "section": "archive",
+        "sha256": "c852e3fccbc26d058b907ffe26abff96ff2120024bee4263b0231703b04f1554",
+        "signers_sha256": [
+          "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84"
+        ],
+        "size": 24856091,
+        "version_code": 109,
+        "version_name": "1.16.9"
+      },
+      "old": {
+        "added": 1744209047000,
+        "filename": "com.futsch1.medtimer_108.apk",
+        "section": "archive",
+        "sha256": "4524bbef1a44c3a86d37dc8b17cf603f7a90c225ceaad9483fe04a19a76968bd",
+        "signers_sha256": [
+          "69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84"
+        ],
+        "size": 24860187,
+        "version_code": 108,
+        "version_name": "1.16.8"
+      },
+      "package_id": "com.futsch1.medtimer",
+      "project_name": "MedTimer: Med & Pill Reminder",
+      "rank_sha256": "033c22449bc930420b40b826b837fd5dde72b1710039c4e42288a93904a351bc",
+      "source_code": "https://github.com/Futsch1/medTimer"
+    },
+    {
+      "new": {
+        "added": 1509667200000,
+        "filename": "com.onest8.onetimepad_202.apk",
+        "section": "archive",
+        "sha256": "9f78b68d68100376fdc758a234dbbee68d81cb42054b1c91537b9d38b273d110",
+        "signers_sha256": [
+          "3b04ab063aac95b9b7b32cec013a6dc8bd8eae09ee39fb524c50700da5b144c1"
+        ],
+        "size": 2200297,
+        "version_code": 202,
+        "version_name": "0.2.2"
+      },
+      "old": {
+        "added": 1479168000000,
+        "filename": "com.onest8.onetimepad_201.apk",
+        "section": "archive",
+        "sha256": "efdf467dad176f9d29f40d1d64c2981030e942aa18166ed4bdd93ded730bbe4d",
+        "signers_sha256": [
+          "3b04ab063aac95b9b7b32cec013a6dc8bd8eae09ee39fb524c50700da5b144c1"
+        ],
+        "size": 1954158,
+        "version_code": 201,
+        "version_name": "0.2.1"
+      },
+      "package_id": "com.onest8.onetimepad",
+      "project_name": "OneTimePad",
+      "rank_sha256": "0344ca5c14d8604df4ccdb8833294e92023a73342ea9e092e7e787fb11911ab9",
+      "source_code": "https://github.com/kckrinke/onetimepad"
+    },
+    {
+      "new": {
+        "added": 1588377600000,
+        "filename": "org.kknickkk.spider_13.apk",
+        "section": "repo",
+        "sha256": "6081491a2d997b044577765f372ed21a9d0544183007121de4bb8957a87ad344",
+        "signers_sha256": [
+          "f219c814bb2b772faf7c364e4b34111a812739ca74011dab7cf4aa22fac349e2"
+        ],
+        "size": 2100931,
+        "version_code": 13,
+        "version_name": "0.2.2"
+      },
+      "old": {
+        "added": 1578960000000,
+        "filename": "org.kknickkk.spider_12.apk",
+        "section": "repo",
+        "sha256": "ad1622bd2b810ba1817275c952c7a499ec98f7a44750b846f37d710224b0e26f",
+        "signers_sha256": [
+          "f219c814bb2b772faf7c364e4b34111a812739ca74011dab7cf4aa22fac349e2"
+        ],
+        "size": 2100492,
+        "version_code": 12,
+        "version_name": "0.2.1"
+      },
+      "package_id": "org.kknickkk.spider",
+      "project_name": "Spider",
+      "rank_sha256": "0385b4b245a25731bc4b8873d0acbbdcc5572df0084423148da131d0b62f277f",
+      "source_code": "https://github.com/nickdurante/Spider"
+    },
+    {
+      "new": {
+        "added": 1777400200706,
+        "filename": "com.kolakek.pimiwidget_17.apk",
+        "section": "archive",
+        "sha256": "f508788ab471a27560aca3562817317214d9b6abc4a28dcd125505d6964eb059",
+        "signers_sha256": [
+          "1f72b6445ff6e026648a9fba57acaf66a1a5a2760ab8934c1c12cc78b4fe4ada"
+        ],
+        "size": 2885305,
+        "version_code": 17,
+        "version_name": "1.8.0"
+      },
+      "old": {
+        "added": 1776983920317,
+        "filename": "com.kolakek.pimiwidget_16.apk",
+        "section": "archive",
+        "sha256": "be307c95816c6ba25c801e59393e3117a7c55ae199981b6723363dbd0d23d128",
+        "signers_sha256": [
+          "1f72b6445ff6e026648a9fba57acaf66a1a5a2760ab8934c1c12cc78b4fe4ada"
+        ],
+        "size": 2882705,
+        "version_code": 16,
+        "version_name": "1.7.0"
+      },
+      "package_id": "com.kolakek.pimiwidget",
+      "project_name": "Pimi widget",
+      "rank_sha256": "03be1c1bdb6665448e8c7ec6edaa13e4745eca86bd856ba0968e300bbfed9d7a",
+      "source_code": "https://github.com/kolakek/pimi-widget"
+    },
+    {
+      "new": {
+        "added": 1702926650000,
+        "filename": "it.feio.android.omninotes.foss_331.apk",
+        "section": "repo",
+        "sha256": "b39ce6942f208194ad47e40830c6d3f4ef8fea8f3f57a16f3cd72d98a9f0d5fd",
+        "signers_sha256": [
+          "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3"
+        ],
+        "size": 7635718,
+        "version_code": 331,
+        "version_name": "6.3.1"
+      },
+      "old": {
+        "added": 1702222757000,
+        "filename": "it.feio.android.omninotes.foss_330.apk",
+        "section": "repo",
+        "sha256": "3017b653ac53b9abd787cb5df3ff52aa53e24fb2563fbc1934ed78c7da0a30f6",
+        "signers_sha256": [
+          "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3"
+        ],
+        "size": 7652102,
+        "version_code": 330,
+        "version_name": "6.3.0"
+      },
+      "package_id": "it.feio.android.omninotes.foss",
+      "project_name": "Omni Notes",
+      "rank_sha256": "03e9f12415213e0e182049003b21ef5488009bee77255e3bd0d767ae99e4b80b",
+      "source_code": "https://github.com/federicoiosue/Omni-Notes"
+    },
+    {
+      "new": {
+        "added": 1494028800000,
+        "filename": "io.gresse.hugo.anecdote_23.apk",
+        "section": "repo",
+        "sha256": "7ce6030b81be649452107bd7cbfa6f3b1f2402a3e1bf3c366b03c7d8f54eb17a",
+        "signers_sha256": [
+          "bca827e36a9749a15f08270fcb6a9708e42d482411eb63a03d758211d7b781cf"
+        ],
+        "size": 1896431,
+        "version_code": 23,
+        "version_name": "1.1.5"
+      },
+      "old": {
+        "added": 1482364800000,
+        "filename": "io.gresse.hugo.anecdote_22.apk",
+        "section": "repo",
+        "sha256": "e0b8b52f274350cc3f95620f34b4db04ea2cc83dd192c3d52261c5e7030d5282",
+        "signers_sha256": [
+          "bca827e36a9749a15f08270fcb6a9708e42d482411eb63a03d758211d7b781cf"
+        ],
+        "size": 1897091,
+        "version_code": 22,
+        "version_name": "1.1.4"
+      },
+      "package_id": "io.gresse.hugo.anecdote",
+      "project_name": "Anecdote",
+      "rank_sha256": "03ef9ed680a3bcc98f010c933b8a0e60d639c513a677f80fda1332972e6a0c7a",
+      "source_code": "https://github.com/HugoGresse/Anecdote"
+    },
+    {
+      "new": {
+        "added": 1784660797434,
+        "filename": "com.msb.bluecheese_303.apk",
+        "section": "repo",
+        "sha256": "273bf472c40d4d15dfb26cd0a5468178d21a7d3fa0ce17eed4389665ed624a43",
+        "signers_sha256": [
+          "f66ea88f9464bba2511f82e609e40cebc86d4aeb8cc5542af1aa2a78058e8aa1"
+        ],
+        "size": 10741240,
+        "version_code": 303,
+        "version_name": "3.0.3"
+      },
+      "old": {
+        "added": 1760611062000,
+        "filename": "com.msb.bluecheese_6.apk",
+        "section": "repo",
+        "sha256": "0bbf4c535202dd1d65efb0457361a64192eed93b66dd88dba2f34e772fefa774",
+        "signers_sha256": [
+          "f66ea88f9464bba2511f82e609e40cebc86d4aeb8cc5542af1aa2a78058e8aa1"
+        ],
+        "size": 10667409,
+        "version_code": 6,
+        "version_name": "3.0.2"
+      },
+      "package_id": "com.msb.bluecheese",
+      "project_name": "Bluecheese",
+      "rank_sha256": "041393ea4f2268d7c36fa835459ad01392bd79c2473672c4152396d1bfc82d0c",
+      "source_code": "https://github.com/msbCyricTohoku/Bluecheese-fdroid"
+    },
+    {
+      "new": {
+        "added": 1727007509000,
+        "filename": "com.dergoogler.mmrl_32432.apk",
+        "section": "archive",
+        "sha256": "bfe18498e90e345c00862778a74cb873a3d152f894a9f50fed02aad134ac7569",
+        "signers_sha256": [
+          "7d9d5b2ae804002ff44b2e3e179092283c4bcae4f86d7d8f3f18c9d18c4744ee"
+        ],
+        "size": 4024883,
+        "version_code": 32432,
+        "version_name": "3.24.32"
+      },
+      "old": {
+        "added": 1720459660000,
+        "filename": "com.dergoogler.mmrl_22020.apk",
+        "section": "archive",
+        "sha256": "0d3ff2928336b6c7e043884f12623c77a39c706f577cf622f56cb936baf79935",
+        "signers_sha256": [
+          "7d9d5b2ae804002ff44b2e3e179092283c4bcae4f86d7d8f3f18c9d18c4744ee"
+        ],
+        "size": 4123786,
+        "version_code": 22020,
+        "version_name": "2.20.20"
+      },
+      "package_id": "com.dergoogler.mmrl",
+      "project_name": "MMRL",
+      "rank_sha256": "043959b6a5ea160e7d8e94e81d8bfa70f9ffb3d58aebca4148f9bd7f343ff8c5",
+      "source_code": "https://github.com/DerGoogler/MMRL"
+    },
+    {
+      "new": {
+        "added": 1766794391000,
+        "filename": "de.c3nav.droid_18040700.apk",
+        "section": "repo",
+        "sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+        "signers_sha256": [
+          "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4"
+        ],
+        "size": 4858841,
+        "version_code": 18040700,
+        "version_name": "4.7.0"
+      },
+      "old": {
+        "added": 1735842441000,
+        "filename": "de.c3nav.droid_14040501.apk",
+        "section": "repo",
+        "sha256": "b1f264583067e125c736a92255010bac24f68638e1713ba356d4addf6ff5c85b",
+        "signers_sha256": [
+          "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4"
+        ],
+        "size": 4830720,
+        "version_code": 14040501,
+        "version_name": "4.5.1"
+      },
+      "package_id": "de.c3nav.droid",
+      "project_name": "c3nav",
+      "rank_sha256": "044914b97d1b413db6f8ae490928ea058181e1496a0b24b55800b702f3f774a5",
+      "source_code": "https://github.com/c3nav/c3nav-android/"
+    },
+    {
+      "new": {
+        "added": 1628899200000,
+        "filename": "hashengineering.groestlcoin.wallet_test_81401.apk",
+        "section": "archive",
+        "sha256": "402cc6d8bc02b9b8bc39f1e0fec2112830f7073ac82199120983c55499bbed01",
+        "signers_sha256": [
+          "f4553ee5af3cce355b5fa77a6fa7c55c4323c7d7f2d9242f9c7f37bf6298f415"
+        ],
+        "size": 3490260,
+        "version_code": 81401,
+        "version_name": "8.14.1"
+      },
+      "old": {
+        "added": 1580515200000,
+        "filename": "hashengineering.groestlcoin.wallet_test_73804.apk",
+        "section": "archive",
+        "sha256": "e900dcdb96189bc3da9a2bedc4cc1ecbad907d36d99e9b88ea7a14ec63b7b32c",
+        "signers_sha256": [
+          "f4553ee5af3cce355b5fa77a6fa7c55c4323c7d7f2d9242f9c7f37bf6298f415"
+        ],
+        "size": 2959944,
+        "version_code": 73804,
+        "version_name": "7.38.1"
+      },
+      "package_id": "hashengineering.groestlcoin.wallet_test",
+      "project_name": "Groestlcoin Wallet TestNet",
+      "rank_sha256": "04592ac577538307613ecc263d9d35edb872dd5210d2928a9e3a47e15c9c8d3c",
+      "source_code": "https://github.com/Groestlcoin/groestlcoin-wallet"
+    },
+    {
+      "new": {
+        "added": 1637020800000,
+        "filename": "gal.sli.singal_21.apk",
+        "section": "repo",
+        "sha256": "616a9b520f11d501004a78e7aa564d8b89344278da9d164dc7276a1d0300b1e7",
+        "signers_sha256": [
+          "345473b256d42a23c9c4150e838583af64ede2a7814e71a54bb9681e3cced1cc"
+        ],
+        "size": 4721694,
+        "version_code": 21,
+        "version_name": "2.1"
+      },
+      "old": {
+        "added": 1630195200000,
+        "filename": "gal.sli.singal_20.apk",
+        "section": "repo",
+        "sha256": "0a71f79e77d7e87fde7d252521357a8edb7ae7ec612e892502707a8393f86f29",
+        "signers_sha256": [
+          "345473b256d42a23c9c4150e838583af64ede2a7814e71a54bb9681e3cced1cc"
+        ],
+        "size": 4721751,
+        "version_code": 20,
+        "version_name": "2.0"
+      },
+      "package_id": "gal.sli.singal",
+      "project_name": "SinGal Dictionary",
+      "rank_sha256": "04761fbdab1b1f16673ad02a66fe3219825ac15440b2fb05f7293b5534c520a2",
+      "source_code": "https://github.com/xavier-gz/singal"
+    },
+    {
+      "new": {
+        "added": 1565654400000,
+        "filename": "com.kgurgul.cpuinfo_40303.apk",
+        "section": "archive",
+        "sha256": "d0715cb33af787483c03d38980bf001d48503dce1bb36ff36a94138ab6ea945f",
+        "signers_sha256": [
+          "1a7057023b8e70775a4d3f86f9c51cff1ffb3551aa24279f3eaa32f1bb1037e6"
+        ],
+        "size": 2630179,
+        "version_code": 40303,
+        "version_name": "4.3.3"
+      },
+      "old": {
+        "added": 1562544000000,
+        "filename": "com.kgurgul.cpuinfo_40302.apk",
+        "section": "archive",
+        "sha256": "1082dab4a26c1c62e8c5c5ed6e15014992cc00f332afa39a35191a2d54da150e",
+        "signers_sha256": [
+          "1a7057023b8e70775a4d3f86f9c51cff1ffb3551aa24279f3eaa32f1bb1037e6"
+        ],
+        "size": 2625156,
+        "version_code": 40302,
+        "version_name": "4.3.2"
+      },
+      "package_id": "com.kgurgul.cpuinfo",
+      "project_name": "CPU Info",
+      "rank_sha256": "049fec6ee397f522d96874fb045f017a9fa4e5b96d004d6a89f101a5957aa54c",
+      "source_code": "https://github.com/kamgurgul/cpu-info"
+    },
+    {
+      "new": {
+        "added": 1659398400000,
+        "filename": "eu.lepiller.nani_16.apk",
+        "section": "repo",
+        "sha256": "b2e37a1ff829eda1ca4077f1a81c555bfc7400ad82ae55c8daa482b18771b2a3",
+        "signers_sha256": [
+          "99187ca5267d4964e3fc9ee382486eaec07f1888094a67ce239ff85fb12d3018"
+        ],
+        "size": 5192473,
+        "version_code": 16,
+        "version_name": "0.5.2"
+      },
+      "old": {
+        "added": 1658620800000,
+        "filename": "eu.lepiller.nani_15.apk",
+        "section": "repo",
+        "sha256": "66386f7ca0c2231313853d2e9a890837a0ad053ba728be8ef8c7043f7e854ec4",
+        "signers_sha256": [
+          "99187ca5267d4964e3fc9ee382486eaec07f1888094a67ce239ff85fb12d3018"
+        ],
+        "size": 5192473,
+        "version_code": 15,
+        "version_name": "0.5.1"
+      },
+      "package_id": "eu.lepiller.nani",
+      "project_name": "Nani?",
+      "rank_sha256": "04a17c6ec152bb29f53546edfe60071f6fff623d6e950306c6b8485e933f353c",
+      "source_code": "https://framagit.org/nani-project/nani-app"
+    },
+    {
+      "new": {
+        "added": 1525305600000,
+        "filename": "com.cgogolin.library_63.apk",
+        "section": "archive",
+        "sha256": "16253b232faa9f5b762ae4b701f39e62044e5618b8dfcc25c01fcb67b557cf25",
+        "signers_sha256": [
+          "f5cbf03829f8d60d58b26bd38be010dbc7c74747fd090298aed93a1e1f3bd517"
+        ],
+        "size": 1251632,
+        "version_code": 63,
+        "version_name": "6.2"
+      },
+      "old": {
+        "added": 1522886400000,
+        "filename": "com.cgogolin.library_61.apk",
+        "section": "archive",
+        "sha256": "0ff74d88fd230bbdbe750d353fa13bb7d77abaf603d9e5aa752a4177e40b9d48",
+        "signers_sha256": [
+          "f5cbf03829f8d60d58b26bd38be010dbc7c74747fd090298aed93a1e1f3bd517"
+        ],
+        "size": 1250099,
+        "version_code": 61,
+        "version_name": "6.1"
+      },
+      "package_id": "com.cgogolin.library",
+      "project_name": "Library",
+      "rank_sha256": "04a25e10c2f8af957e02434780ee7d358de8015caa81776719c5a9b0c4a83533",
+      "source_code": "https://github.com/cgogolin/library"
+    },
+    {
+      "new": {
+        "added": 1548547200000,
+        "filename": "org.basketbuilddownloader_13.apk",
+        "section": "archive",
+        "sha256": "481954bf16922c76d844589163fe8cfa3f9ed3443ed05704b48752a649383540",
+        "signers_sha256": [
+          "c39e60044e15b919ba2864474d88facf16df75f7a466376c98c2cdfab97c419a"
+        ],
+        "size": 1775682,
+        "version_code": 13,
+        "version_name": "0.4.3"
+      },
+      "old": {
+        "added": 1525564800000,
+        "filename": "org.basketbuilddownloader_12.apk",
+        "section": "archive",
+        "sha256": "1a45dfa87f06851edfe1ca7d96a44db7e6dcfdba92fca29dea9c29cb060cfdc7",
+        "signers_sha256": [
+          "c39e60044e15b919ba2864474d88facf16df75f7a466376c98c2cdfab97c419a"
+        ],
+        "size": 2264391,
+        "version_code": 12,
+        "version_name": "0.4.2"
+      },
+      "package_id": "org.basketbuilddownloader",
+      "project_name": "BasketBuild Downloader",
+      "rank_sha256": "04a3dbd4e68b13a28cdf4a4439745cfc214effcd8ae6c3bc113767e38e73bf57",
+      "source_code": "https://github.com/daktak/basketbuild_downloader"
+    },
+    {
+      "new": {
+        "added": 1497312000000,
+        "filename": "fr.unix_experience.owncloud_sms_50.apk",
+        "section": "archive",
+        "sha256": "9101fd72540332b4820aad51b53777c693cce0dfb69b0cc38549d1cef1a0fbfc",
+        "signers_sha256": [
+          "3f65435618eedd24102a4d8272ecb85594825c3f6aed77f084228ed3634548ed"
+        ],
+        "size": 2295278,
+        "version_code": 50,
+        "version_name": "1.1.0"
+      },
+      "old": {
+        "added": 1494374400000,
+        "filename": "fr.unix_experience.owncloud_sms_49.apk",
+        "section": "archive",
+        "sha256": "36c6c549fdf0dd92c0081ae0dcc4aae47dd3c24916ac3bc85766dae9760bf21d",
+        "signers_sha256": [
+          "3f65435618eedd24102a4d8272ecb85594825c3f6aed77f084228ed3634548ed"
+        ],
+        "size": 2276798,
+        "version_code": 49,
+        "version_name": "1.0.1"
+      },
+      "package_id": "fr.unix_experience.owncloud_sms",
+      "project_name": "Nextcloud SMS",
+      "rank_sha256": "04aec9a3ddbd28de01f6988f199abf79295394b88fd7e0d919f3c2ebad77a06e",
+      "source_code": "https://github.com/nerzhul/ncsms-android"
+    },
+    {
+      "new": {
+        "added": 1706302520000,
+        "filename": "de.msal.muzei.nationalgeographic_20405.apk",
+        "section": "repo",
+        "sha256": "1a0028c93298a2d3adba6a35ca3ec9b88cc787183e0d5ac4eb4458624a731d60",
+        "signers_sha256": [
+          "62d165d2457167e4a75cc8592886274680decb7aa444f6e3b29d16439dfe2dcf"
+        ],
+        "size": 3450664,
+        "version_code": 20405,
+        "version_name": "2.4.5"
+      },
+      "old": {
+        "added": 1683677238000,
+        "filename": "de.msal.muzei.nationalgeographic_20404.apk",
+        "section": "repo",
+        "sha256": "17deee8b25aeab47c0437125285f08d51054851f766254323e9610bdec218ffb",
+        "signers_sha256": [
+          "62d165d2457167e4a75cc8592886274680decb7aa444f6e3b29d16439dfe2dcf"
+        ],
+        "size": 3327410,
+        "version_code": 20404,
+        "version_name": "2.4.4"
+      },
+      "package_id": "de.msal.muzei.nationalgeographic",
+      "project_name": "National Geographic for Muzei",
+      "rank_sha256": "04b3fc39b08985393cc9fb028bb3e554ee1be017131a584a58e4d2a2f44f6b6b",
+      "source_code": "https://github.com/sal0max/muzei-nationalgeographic"
+    },
+    {
+      "new": {
+        "added": 1473552000000,
+        "filename": "de.bitsharesmunich.smartcoinswallet_187.apk",
+        "section": "archive",
+        "sha256": "641f4d01ddb578034042e56af7695bab9a9138ab979b87803b97e6bfc7031979",
+        "signers_sha256": [
+          "5c98374962df357d51aaa0474c02ba7987238785e2734fde2e68f62263e5cd0f"
+        ],
+        "size": 5807698,
+        "version_code": 187,
+        "version_name": "1.0.6"
+      },
+      "old": {
+        "added": 1471219200000,
+        "filename": "de.bitsharesmunich.smartcoinswallet_186.apk",
+        "section": "archive",
+        "sha256": "ac98c4956b8890430f7a630fc9f564cdbb3a8ed0a54598afe8395b86bc902314",
+        "signers_sha256": [
+          "5c98374962df357d51aaa0474c02ba7987238785e2734fde2e68f62263e5cd0f"
+        ],
+        "size": 5824987,
+        "version_code": 186,
+        "version_name": "1.0.5"
+      },
+      "package_id": "de.bitsharesmunich.smartcoinswallet",
+      "project_name": "Smartcoins Wallet",
+      "rank_sha256": "04cec7ee7ea0207347b2b934861f4efccb83e8f57d42120ddd9d38c55660bba3",
+      "source_code": "https://github.com/kenCode-de/smartcoins-wallet"
+    },
+    {
+      "new": {
+        "added": 1749987634000,
+        "filename": "one.zagura.IonLauncher_18.apk",
+        "section": "repo",
+        "sha256": "ca06ce206cfd5e8cd73db295a0019b5819b35d773f61db63764fed36cd97225e",
+        "signers_sha256": [
+          "5dd9783fc42df0c5dab998ecd6b21f2c3008b0326b6cf1bcb6b9447332ef66db"
+        ],
+        "size": 1610645,
+        "version_code": 18,
+        "version_name": "y25-v3"
+      },
+      "old": {
+        "added": 1745607609000,
+        "filename": "one.zagura.IonLauncher_17.apk",
+        "section": "repo",
+        "sha256": "6f766a1814c1416623e8197a1bf1ede75763552ba1c83932509fe9072bc45c64",
+        "signers_sha256": [
+          "5dd9783fc42df0c5dab998ecd6b21f2c3008b0326b6cf1bcb6b9447332ef66db"
+        ],
+        "size": 1602948,
+        "version_code": 17,
+        "version_name": "y25-v2"
+      },
+      "package_id": "one.zagura.IonLauncher",
+      "project_name": "Ion Launcher",
+      "rank_sha256": "04e291cc32d768f8de29858487e8bfe104995d635e31dedea10b5e8cf3a72fcd",
+      "source_code": "https://codeberg.org/zagura/ion-launcher"
+    },
+    {
+      "new": {
+        "added": 1437868800000,
+        "filename": "com.dalthed.tucan_38.apk",
+        "section": "archive",
+        "sha256": "6eff8da59b1f1ca149391fc40504958a900613e44e209760b3965ee85736a29d",
+        "signers_sha256": [
+          "9c02947c0604c97a0954153045864c635e28a04c55471746aee0bc7f1229403e"
+        ],
+        "size": 1817946,
+        "version_code": 38,
+        "version_name": "0.4.2"
+      },
+      "old": {
+        "added": 1421366400000,
+        "filename": "com.dalthed.tucan_37.apk",
+        "section": "archive",
+        "sha256": "ce1c48af19df0034743e80b624e3ce2a4d1ccd801650ec98155def1f4ba82a42",
+        "signers_sha256": [
+          "9c02947c0604c97a0954153045864c635e28a04c55471746aee0bc7f1229403e"
+        ],
+        "size": 1344606,
+        "version_code": 37,
+        "version_name": "0.4.1"
+      },
+      "package_id": "com.dalthed.tucan",
+      "project_name": "TuCanMobile",
+      "rank_sha256": "04e35ed6dc3235da35e9ce51a088a8abc3bb0c6c4a3dca4961dd267342a3f298",
+      "source_code": "https://github.com/Tyde/TuCanMobile"
+    },
+    {
+      "new": {
+        "added": 1787313768252,
+        "filename": "com.foxdebug.acode_1007.apk",
+        "section": "repo",
+        "sha256": "659733fed5b5a7d8ca5d236b996667bde68f38a5acc8ea967970c430f3e05d89",
+        "signers_sha256": [
+          "4ad655ec828b607be7a37dde5d41753e8f332778c21efab8845f44df72de5fff"
+        ],
+        "size": 16748327,
+        "version_code": 1007,
+        "version_name": "1.13.1"
+      },
+      "old": {
+        "added": 1786965289566,
+        "filename": "com.foxdebug.acode_1006.apk",
+        "section": "repo",
+        "sha256": "939a159ff546d7bfa73cdb3e3885b0e40ee3a2ba000e188d13126479212d45ce",
+        "signers_sha256": [
+          "4ad655ec828b607be7a37dde5d41753e8f332778c21efab8845f44df72de5fff"
+        ],
+        "size": 16748327,
+        "version_code": 1006,
+        "version_name": "1.13.0"
+      },
+      "package_id": "com.foxdebug.acode",
+      "project_name": "Acode IDE: Terminal & AI Code",
+      "rank_sha256": "0528179636311ed15022af33602ab5aa3014124bc1203bf0bd30e3c223bfc38a",
+      "source_code": "https://github.com/deadlyjack/Acode"
+    },
+    {
+      "new": {
+        "added": 1783681349598,
+        "filename": "com.seeker.seekprivacy_11.apk",
+        "section": "repo",
+        "sha256": "0d29f17f52aa2f8698938c851a0cb0badac79e947270d0502cddfcf49c44a5d4",
+        "signers_sha256": [
+          "2bee8f8b45ad591fb130f9a1152f2e5f2fafd3a04b64366b5b673805d42f9e35"
+        ],
+        "size": 8264892,
+        "version_code": 11,
+        "version_name": "3.5.0"
+      },
+      "old": {
+        "added": 1780441838659,
+        "filename": "com.seeker.seekprivacy_10.apk",
+        "section": "repo",
+        "sha256": "d5d4bb479dddf9450d2151009e51e405d2b593334e2e0940c0290dc54fdddce5",
+        "signers_sha256": [
+          "2bee8f8b45ad591fb130f9a1152f2e5f2fafd3a04b64366b5b673805d42f9e35"
+        ],
+        "size": 7184731,
+        "version_code": 10,
+        "version_name": "3.0.5"
+      },
+      "package_id": "com.seeker.seekprivacy",
+      "project_name": "SeekPrivacy",
+      "rank_sha256": "0564c05362698a2195e969ea0b576a9fb1f43501d66128c621a1cf2c2dc4ce25",
+      "source_code": "https://github.com/duckniii/SeekPrivacy"
+    },
+    {
+      "new": {
+        "added": 1547337600000,
+        "filename": "com.gmail.afonsotrepa.pocketgopher_2.apk",
+        "section": "archive",
+        "sha256": "7e22553a2a2149de245b25888b5fadf4e54de3c53122c6fa12bef3a43889e83c",
+        "signers_sha256": [
+          "8baf53a8540ada070f3172036888e15efea77b418aff4ada2d8b80b7f54af3b7"
+        ],
+        "size": 2035714,
+        "version_code": 2,
+        "version_name": "1.2.4"
+      },
+      "old": {
+        "added": 1512604800000,
+        "filename": "com.gmail.afonsotrepa.pocketgopher_1.apk",
+        "section": "archive",
+        "sha256": "9a8f5da3cd1b382d26d264a466eaae2cfecd5b4584d7b597dc7f6eba05b917be",
+        "signers_sha256": [
+          "8baf53a8540ada070f3172036888e15efea77b418aff4ada2d8b80b7f54af3b7"
+        ],
+        "size": 2041060,
+        "version_code": 1,
+        "version_name": "1.2.3"
+      },
+      "package_id": "com.gmail.afonsotrepa.pocketgopher",
+      "project_name": "Pocket Gopher",
+      "rank_sha256": "0597046afdd5ae42850e92d5129aecbfa43c7d5d01651ada710e6ab2ad315173",
+      "source_code": "https://github.com/afonsotrepa/PocketGopher"
+    },
+    {
+      "new": {
+        "added": 1440374400000,
+        "filename": "me.guillaumin.android.osmtracker_37.apk",
+        "section": "archive",
+        "sha256": "40d143e8c01b65a19c21e8621405abc41bd465c302a7b7d3dbd74337bcb20c46",
+        "signers_sha256": [
+          "a5249800c9abd313358c9c5b9d4204e61120ec71bbf5565db295dd3edd3dbf35"
+        ],
+        "size": 1482986,
+        "version_code": 37,
+        "version_name": "0.6.11"
+      },
+      "old": {
+        "added": 1438214400000,
+        "filename": "me.guillaumin.android.osmtracker_36.apk",
+        "section": "archive",
+        "sha256": "b2bf199bc49fbee57b932097e299e08cea651c02b7ded8998fcba3601e0c8ab7",
+        "signers_sha256": [
+          "a5249800c9abd313358c9c5b9d4204e61120ec71bbf5565db295dd3edd3dbf35"
+        ],
+        "size": 1467979,
+        "version_code": 36,
+        "version_name": "0.6.10"
+      },
+      "package_id": "me.guillaumin.android.osmtracker",
+      "project_name": "OSMTracker",
+      "rank_sha256": "05a8f5052e9a71ad1b67f50b2577360224afddcd39fc42eb1be6e72125aaee68",
+      "source_code": "https://github.com/labexp/osmtracker-android"
+    },
+    {
+      "new": {
+        "added": 1693968161000,
+        "filename": "org.mattvchandler.progressbars_190020102.apk",
+        "section": "repo",
+        "sha256": "362415dec379e64bafa69fe4dd4df62d732226993ea62965c54965041354ce4b",
+        "signers_sha256": [
+          "cd74dd8ccb9645c8a465d0e80da63fe934ff878107a15c8e1860cbd99dc8a14e"
+        ],
+        "size": 2531079,
+        "version_code": 190020102,
+        "version_name": "2.1.2"
+      },
+      "old": {
+        "added": 1583366400000,
+        "filename": "org.mattvchandler.progressbars_190020101.apk",
+        "section": "repo",
+        "sha256": "ef8faea31fc12525b6cf5f2654ca08ae67271ee1c4786d3558317aee5993cf64",
+        "signers_sha256": [
+          "cd74dd8ccb9645c8a465d0e80da63fe934ff878107a15c8e1860cbd99dc8a14e"
+        ],
+        "size": 2009030,
+        "version_code": 190020101,
+        "version_name": "2.1.1"
+      },
+      "package_id": "org.mattvchandler.progressbars",
+      "project_name": "ProgressBars",
+      "rank_sha256": "05f4b89087cd9fa94b0278b20ba817e6e5e3fb2bfabe56463abe24c61ddea821",
+      "source_code": "https://github.com/mattvchandler/progressbars"
+    },
+    {
+      "new": {
+        "added": 1662508800000,
+        "filename": "info.metadude.android.libreoffice.schedule_89.apk",
+        "section": "archive",
+        "sha256": "e8aa1d140ccde2ae12aa492484e11424402433529c75632fca12be6db51bee54",
+        "signers_sha256": [
+          "00ef5a1539900d32262c44349b939368282febbe5a2755cf39569a82eca2e711"
+        ],
+        "size": 4331980,
+        "version_code": 89,
+        "version_name": "1.55.0-LibreOffice-Edition"
+      },
+      "old": {
+        "added": 1631318400000,
+        "filename": "info.metadude.android.libreoffice.schedule_84.apk",
+        "section": "archive",
+        "sha256": "10300615957ab639d90ab52ef85706a01d96ce42fe6f1bbd904f5e0efb99f866",
+        "signers_sha256": [
+          "00ef5a1539900d32262c44349b939368282febbe5a2755cf39569a82eca2e711"
+        ],
+        "size": 3833692,
+        "version_code": 84,
+        "version_name": "1.52.0-LibreOffice-Edition"
+      },
+      "package_id": "info.metadude.android.libreoffice.schedule",
+      "project_name": "LibreOffice 2024 Schedule",
+      "rank_sha256": "05fa450e1f12c136b3a3f4129c3287d07991aa981651f7c9db53083f2a0ebcc5",
+      "source_code": "https://github.com/johnjohndoe/CampFahrplan"
+    },
+    {
+      "new": {
+        "added": 1752589012000,
+        "filename": "com.anysoftkeyboard.languagepack.german_6158.apk",
+        "section": "repo",
+        "sha256": "dbcb595aefe81c1ebaec7fb877ab3287aedac01c7f4ba74600864ff05480a709",
+        "signers_sha256": [
+          "b11a565eac7d5eb2321b0416b52a842bbcf9db606410757346dcaa4599958890"
+        ],
+        "size": 6679043,
+        "version_code": 6158,
+        "version_name": "5.1.6158"
+      },
+      "old": {
+        "added": 1624492800000,
+        "filename": "com.anysoftkeyboard.languagepack.german_2908.apk",
+        "section": "repo",
+        "sha256": "c8a63daca2e3c73218f74ba3fe427835e28c84adb13c74654d9b8843ac24cafd",
+        "signers_sha256": [
+          "b11a565eac7d5eb2321b0416b52a842bbcf9db606410757346dcaa4599958890"
+        ],
+        "size": 3767353,
+        "version_code": 2908,
+        "version_name": "4.0.1396"
+      },
+      "package_id": "com.anysoftkeyboard.languagepack.german",
+      "project_name": "German for AnySoftKeyboard",
+      "rank_sha256": "0603e57d3a145da81e9558f5b3610c8956d6693a9e0e91b3505cdfcc359fd176",
+      "source_code": "https://github.com/AnySoftKeyboard/AnySoftKeyboard"
+    },
+    {
+      "new": {
+        "added": 1492387200000,
+        "filename": "re.jcg.playmusicexporter_110.apk",
+        "section": "archive",
+        "sha256": "ef249c84ca968c33fe366d56c7ea6aa055d0512e964190425dcfe06ff6ddcda0",
+        "signers_sha256": [
+          "2082a64c2b9ae88aaa4958ed98d4da986d18b45b143aad0cd60321fb1ec58ba6"
+        ],
+        "size": 1753285,
+        "version_code": 110,
+        "version_name": "0.9.6.0"
+      },
+      "old": {
+        "added": 1490313600000,
+        "filename": "re.jcg.playmusicexporter_109.apk",
+        "section": "archive",
+        "sha256": "e3847c39c22d07aa0d07fd12f126a9b4867cb4be99286b97e3b454c5df45ef55",
+        "signers_sha256": [
+          "2082a64c2b9ae88aaa4958ed98d4da986d18b45b143aad0cd60321fb1ec58ba6"
+        ],
+        "size": 1709925,
+        "version_code": 109,
+        "version_name": "0.9.5.2"
+      },
+      "package_id": "re.jcg.playmusicexporter",
+      "project_name": "Play Music Exporter",
+      "rank_sha256": "0614544113be7a569af1939f27645a937c169753db94d3ee1ec403681321372b",
+      "source_code": "https://github.com/playmusicexporter/playmusicexporter"
+    },
+    {
+      "new": {
+        "added": 1745607461000,
+        "filename": "de.mwarning.memento_211.apk",
+        "section": "repo",
+        "sha256": "c7b13059c33e08242b64615a4aa45e13f07956c47baefbfba18d3ef2c00dad1f",
+        "signers_sha256": [
+          "59b66dc182423b42e23c4884fe5f3deb21abeabe0fac693f6efd7e87c5ae4a9d"
+        ],
+        "size": 2025451,
+        "version_code": 211,
+        "version_name": "2.1.1"
+      },
+      "old": {
+        "added": 1744925603000,
+        "filename": "de.mwarning.memento_210.apk",
+        "section": "repo",
+        "sha256": "8b4e6eac550de78fc4a0ccef6ca90ef38ed573e4ebbb5aa85c90bb136079f3ae",
+        "signers_sha256": [
+          "59b66dc182423b42e23c4884fe5f3deb21abeabe0fac693f6efd7e87c5ae4a9d"
+        ],
+        "size": 2025395,
+        "version_code": 210,
+        "version_name": "2.1.0"
+      },
+      "package_id": "de.mwarning.memento",
+      "project_name": "Memento",
+      "rank_sha256": "061b3d0498898686be4324251c11aefd3bf14242fc5abec74f02eb4885d6ea9e",
+      "source_code": "https://github.com/mwarning/Memento"
+    },
+    {
+      "new": {
+        "added": 1411948800000,
+        "filename": "org.mysociety.FixMyStreet_39.apk",
+        "section": "archive",
+        "sha256": "e6f451514b6594c5a9cbad85ed40f2e7017a897cd3ce7bcf09bff2f7ebe0bc17",
+        "signers_sha256": [
+          "622f2351e919fadd61b39917cd37b6d561d6b43c9499629b0ab5b71fcc84df8f"
+        ],
+        "size": 1233264,
+        "version_code": 39,
+        "version_name": "2.0.4"
+      },
+      "old": {
+        "added": 1401408000000,
+        "filename": "org.mysociety.FixMyStreet_36.apk",
+        "section": "archive",
+        "sha256": "1010c6b080f50a1c0f7eb9672422c7c482240de6de0399ac65eb19987b172b90",
+        "signers_sha256": [
+          "622f2351e919fadd61b39917cd37b6d561d6b43c9499629b0ab5b71fcc84df8f"
+        ],
+        "size": 1233256,
+        "version_code": 36,
+        "version_name": "2.0.1"
+      },
+      "package_id": "org.mysociety.FixMyStreet",
+      "project_name": "FixMyStreet",
+      "rank_sha256": "062890ec29347c9d43b5817b15b62698b6c0b838fdca1c93ed828409f86ccd73",
+      "source_code": "https://github.com/mysociety/fixmystreet-mobile"
+    },
+    {
+      "new": {
+        "added": 1657324800000,
+        "filename": "app.fedilab.nitterizemelite_33.apk",
+        "section": "repo",
+        "sha256": "30ae40611f5fbbce0772e3c26d4103d98d62ed22b7dd83736219ace083b1bc46",
+        "signers_sha256": [
+          "6582a3d58d169a612ce9398f612847d8184d4c2b7a43e86a3549f9174b903fe7"
+        ],
+        "size": 3714928,
+        "version_code": 33,
+        "version_name": "1.30.0"
+      },
+      "old": {
+        "added": 1635465600000,
+        "filename": "app.fedilab.nitterizemelite_32.apk",
+        "section": "repo",
+        "sha256": "7c8135e64e6d4e3558dc870f459cdf159c31166799f17d85809b528f1d55feda",
+        "signers_sha256": [
+          "6582a3d58d169a612ce9398f612847d8184d4c2b7a43e86a3549f9174b903fe7"
+        ],
+        "size": 3732264,
+        "version_code": 32,
+        "version_name": "1.20.0"
+      },
+      "package_id": "app.fedilab.nitterizemelite",
+      "project_name": "UntrackMe Lite",
+      "rank_sha256": "06330c61a250d75943542a6592e9672c33f4c998e6e8129782f368a696cecfa4",
+      "source_code": "https://framagit.org/tom79/nitterizeme"
+    },
+    {
+      "new": {
+        "added": 1628121600000,
+        "filename": "dev.msfjarvis.aps_11350.apk",
+        "section": "archive",
+        "sha256": "9ea4d42dcb559a5ba22cb5fbc3d868cd237f0e51932ec087c56ea6fdac008788",
+        "signers_sha256": [
+          "53e2b31bb344e44bcd1b9210bdc46c666aae5bdffd820c015b36e4184d8e3c86"
+        ],
+        "size": 4505228,
+        "version_code": 11350,
+        "version_name": "1.13.5"
+      },
+      "old": {
+        "added": 1616716800000,
+        "filename": "dev.msfjarvis.aps_11340.apk",
+        "section": "archive",
+        "sha256": "1be2d4aeab865d4c1743d63c76c378f9a7ed2d1746c8bcab232008fc4ba4956c",
+        "signers_sha256": [
+          "53e2b31bb344e44bcd1b9210bdc46c666aae5bdffd820c015b36e4184d8e3c86"
+        ],
+        "size": 4505228,
+        "version_code": 11340,
+        "version_name": "1.13.4"
+      },
+      "package_id": "dev.msfjarvis.aps",
+      "project_name": "Password Store",
+      "rank_sha256": "06413ff735fd4bd65ecf78dfa867cd3600d2332cee5943d2eb487e1c3eff2dda",
+      "source_code": "https://github.com/android-password-store/Android-Password-Store"
+    },
+    {
+      "new": {
+        "added": 1668500481000,
+        "filename": "com.ebaschiera.triplecamel_17.apk",
+        "section": "repo",
+        "sha256": "50ed7833c7051b71c836fefb92e5a79b18d4d046dbd6ef56bf1d3186d8b1785e",
+        "signers_sha256": [
+          "869b02dba91bf4043cac84ceb5b16026a0e3650e5820e0d78447a88bccd87a4f"
+        ],
+        "size": 2832526,
+        "version_code": 17,
+        "version_name": "1.0.16"
+      },
+      "old": {
+        "added": 1657324800000,
+        "filename": "com.ebaschiera.triplecamel_16.apk",
+        "section": "repo",
+        "sha256": "8f38d9340af4e8a09e2736bccac4c9dab2b96c8f9bcaa401dd937661eccd05de",
+        "signers_sha256": [
+          "869b02dba91bf4043cac84ceb5b16026a0e3650e5820e0d78447a88bccd87a4f"
+        ],
+        "size": 1606927,
+        "version_code": 16,
+        "version_name": "1.0.15"
+      },
+      "package_id": "com.ebaschiera.triplecamel",
+      "project_name": "TripleCamel",
+      "rank_sha256": "0657d36de38f861331e9a5721f162d690465457b48892788e79d9c4925058bf3",
+      "source_code": "https://github.com/ebaschiera/TripleCamel"
+    },
+    {
+      "new": {
+        "added": 1721724356000,
+        "filename": "com.machiav3lli.fdroid_1017.apk",
+        "section": "archive",
+        "sha256": "a7e54d8622f077c11a1e464bd7955b5ae6fef3821d98338b01597f2d49695113",
+        "signers_sha256": [
+          "6d8fa0e2d8f4c1d811b85cc733e87d5dac666740c5d73238e2375b81a11761b5"
+        ],
+        "size": 5462361,
+        "version_code": 1017,
+        "version_name": "1.0.5"
+      },
+      "old": {
+        "added": 1720871359000,
+        "filename": "com.machiav3lli.fdroid_1016.apk",
+        "section": "archive",
+        "sha256": "ac6bd629e4bea56592536d504b021dcf415dba3960ee0a03b78383e1236d6b4a",
+        "signers_sha256": [
+          "6d8fa0e2d8f4c1d811b85cc733e87d5dac666740c5d73238e2375b81a11761b5"
+        ],
+        "size": 5450073,
+        "version_code": 1016,
+        "version_name": "1.0.4"
+      },
+      "package_id": "com.machiav3lli.fdroid",
+      "project_name": "Neo Store",
+      "rank_sha256": "065b657dbbac4902962797ddb73bf25fec453d699f27cee65aabfc194474978b",
+      "source_code": "https://github.com/NeoApplications/Neo-Store"
+    },
+    {
+      "new": {
+        "added": 1775422458666,
+        "filename": "de.luhmer.owncloudnewsreader_196.apk",
+        "section": "repo",
+        "sha256": "529f25f74afb4e83d956dd72355c5788c3e18aac55f46ab0f2c81d10f0361c17",
+        "signers_sha256": [
+          "c6e3a1a20a7e021829d4f51b36cb27fa815f2a9c2213d980e26a31b49e78ea75"
+        ],
+        "size": 4081103,
+        "version_code": 196,
+        "version_name": "0.9.9.95"
+      },
+      "old": {
+        "added": 1769443589000,
+        "filename": "de.luhmer.owncloudnewsreader_195.apk",
+        "section": "repo",
+        "sha256": "cd0585828e086288bf9cc100cfee65aa5e94c30a01c3a5f3b590a36738d7715d",
+        "signers_sha256": [
+          "c6e3a1a20a7e021829d4f51b36cb27fa815f2a9c2213d980e26a31b49e78ea75"
+        ],
+        "size": 4869306,
+        "version_code": 195,
+        "version_name": "0.9.9.94"
+      },
+      "package_id": "de.luhmer.owncloudnewsreader",
+      "project_name": "Nextcloud News",
+      "rank_sha256": "06731f020d2f286e535b02a39857969fbfac75966f0fa4f082c43c9b86fdb120",
+      "source_code": "https://github.com/nextcloud/news-android"
+    },
+    {
+      "new": {
+        "added": 1617926400000,
+        "filename": "au.id.micolous.farebot_3920.apk",
+        "section": "repo",
+        "sha256": "5139dd6b3c57c6722361c8177bcb431073beb70c7c9337be0503a49cf5f02203",
+        "signers_sha256": [
+          "b49429ad658c7bdb6e568c53a5a0a72b45a47a11316b68db55c32868c9ca1d80"
+        ],
+        "size": 7924942,
+        "version_code": 3920,
+        "version_name": "3.0.0"
+      },
+      "old": {
+        "added": 1582934400000,
+        "filename": "au.id.micolous.farebot_2005.apk",
+        "section": "repo",
+        "sha256": "aa77f5916350747fa089272500eb8a310a0a8e40c3ea6a5b0ddb31db27eea60d",
+        "signers_sha256": [
+          "b49429ad658c7bdb6e568c53a5a0a72b45a47a11316b68db55c32868c9ca1d80"
+        ],
+        "size": 4673892,
+        "version_code": 2005,
+        "version_name": "2.9.37"
+      },
+      "package_id": "au.id.micolous.farebot",
+      "project_name": "Metrodroid",
+      "rank_sha256": "06a004fbf41f90d039a06d45461a7a643a55ec5e70211e606dc88ebede843203",
+      "source_code": "https://github.com/metrodroid/metrodroid"
+    },
+    {
+      "new": {
+        "added": 1747214519000,
+        "filename": "com.openathena_48.apk",
+        "section": "archive",
+        "sha256": "4d0726675108682833d47f068cf4ca2a0e04d10f9da8a9a87da97a5d19189c95",
+        "signers_sha256": [
+          "4faa6dab09f9d15ac204ea8b8c056ccaf8c52993007cd643001a3d3497c7944b"
+        ],
+        "size": 24576568,
+        "version_code": 48,
+        "version_name": "0.24.0"
+      },
+      "old": {
+        "added": 1739294909000,
+        "filename": "com.openathena_46.apk",
+        "section": "archive",
+        "sha256": "a66ea998e72ba65a7eff233502a3875ced373ca45017bfb94588d81e5748277b",
+        "signers_sha256": [
+          "4faa6dab09f9d15ac204ea8b8c056ccaf8c52993007cd643001a3d3497c7944b"
+        ],
+        "size": 24575836,
+        "version_code": 46,
+        "version_name": "0.23.0"
+      },
+      "package_id": "com.openathena",
+      "project_name": "OpenAthena\u2122 for Android",
+      "rank_sha256": "06dc9abda6b426e53ae86bfe8a8b3ad2713b6e0eac47db41d9c832b41c31cfcd",
+      "source_code": "https://github.com/Theta-Limited/OpenAthenaAndroid"
+    },
+    {
+      "new": {
+        "added": 1623974400000,
+        "filename": "org.strawberryforum.pollywog_2.apk",
+        "section": "repo",
+        "sha256": "53ae54ad85df96bba37564158eb23141f3207c254fab89a54e25f5a83737fc67",
+        "signers_sha256": [
+          "beff87cbea98408fb216a47e44db8352f246bdb1d3cf8b5d3392dd459fb70a47"
+        ],
+        "size": 1255806,
+        "version_code": 2,
+        "version_name": "0.2"
+      },
+      "old": {
+        "added": 1489536000000,
+        "filename": "org.strawberryforum.pollywog_1.apk",
+        "section": "repo",
+        "sha256": "e66c87a30bd1b6a5ceb7aca101772d24ba52a93bd79bc3d33ce12e61f7ce7c5d",
+        "signers_sha256": [
+          "beff87cbea98408fb216a47e44db8352f246bdb1d3cf8b5d3392dd459fb70a47"
+        ],
+        "size": 1379134,
+        "version_code": 1,
+        "version_name": "0.1"
+      },
+      "package_id": "org.strawberryforum.pollywog",
+      "project_name": "Pollywog",
+      "rank_sha256": "06f6a2ea5c8e15328604a72ad64e45e7923f8efe139ab473c60850b279e3a16b",
+      "source_code": "https://github.com/huckleberrypie/pollywog"
+    },
+    {
+      "new": {
+        "added": 1541980800000,
+        "filename": "mkg20001.net.samremote_10100.apk",
+        "section": "repo",
+        "sha256": "bbdf604888e92c83eb4494976e8a77499556897499e2194e4bdfbf467d549cba",
+        "signers_sha256": [
+          "683e0f23ca8aa73406047036bc45f739bc91d6170df7e5e13e68c6e23e8843c2"
+        ],
+        "size": 1830172,
+        "version_code": 10100,
+        "version_name": "1.1"
+      },
+      "old": {
+        "added": 1536624000000,
+        "filename": "mkg20001.net.samremote_1.apk",
+        "section": "repo",
+        "sha256": "67d185d87e5ca960b4a413d9e6ebe9ae026c9a7239273fe1db3726623a2d1d71",
+        "signers_sha256": [
+          "683e0f23ca8aa73406047036bc45f739bc91d6170df7e5e13e68c6e23e8843c2"
+        ],
+        "size": 1684153,
+        "version_code": 1,
+        "version_name": "1.0"
+      },
+      "package_id": "mkg20001.net.samremote",
+      "project_name": "Sam Remote",
+      "rank_sha256": "071c1088431081d55ba5b9a2460533048af5f5242e915d2e20d3aa1242b3bea9",
+      "source_code": "https://github.com/mkg20001/SamRemote"
+    },
+    {
+      "new": {
+        "added": 1666947921000,
+        "filename": "com.manuelmaly.hn_26.apk",
+        "section": "repo",
+        "sha256": "c28190b6eea63d8de5658020d25790315d5af11a5b8592319c30ef7c507ea79a",
+        "signers_sha256": [
+          "5dd24ff3672c390eba08a2b01aea9a10cf184a305e1156d7d913d656462b55ef"
+        ],
+        "size": 3127653,
+        "version_code": 26,
+        "version_name": "1.9.16"
+      },
+      "old": {
+        "added": 1472169600000,
+        "filename": "com.manuelmaly.hn_25.apk",
+        "section": "repo",
+        "sha256": "baf998e23ec887b3da81456148f1a58a15d65418df47a9fa5632fab981516ddf",
+        "signers_sha256": [
+          "5dd24ff3672c390eba08a2b01aea9a10cf184a305e1156d7d913d656462b55ef"
+        ],
+        "size": 1108364,
+        "version_code": 25,
+        "version_name": "1.9.15"
+      },
+      "package_id": "com.manuelmaly.hn",
+      "project_name": "HN",
+      "rank_sha256": "073fcf0a6a6de289ee623b579abc89929f9f005d7ff06e0de5b65770e72c6fa7",
+      "source_code": "https://github.com/manmal/hn-android"
+    },
+    {
+      "new": {
+        "added": 1585872000000,
+        "filename": "au.com.wallaceit.reddinator_68.apk",
+        "section": "repo",
+        "sha256": "c3751de467a138e27d6d34c6f249033b1a6f9ca307b2715c168e9c146c851003",
+        "signers_sha256": [
+          "090f7466c2f622ff0d6aa9415343b8324261a9b2c70a485398c031c8c627df39"
+        ],
+        "size": 3367335,
+        "version_code": 68,
+        "version_name": "3.22.4"
+      },
+      "old": {
+        "added": 1518739200000,
+        "filename": "au.com.wallaceit.reddinator_64.apk",
+        "section": "repo",
+        "sha256": "978a9496ac258cca2a367d67a760a8f9f910d05295077b1d6ddebc3957012dab",
+        "signers_sha256": [
+          "090f7466c2f622ff0d6aa9415343b8324261a9b2c70a485398c031c8c627df39"
+        ],
+        "size": 3329182,
+        "version_code": 64,
+        "version_name": "3.21.4"
+      },
+      "package_id": "au.com.wallaceit.reddinator",
+      "project_name": "Reddinator",
+      "rank_sha256": "0770e5ba6c4564e6a1445d59ee08bb098a046b3b308779c2081dcae82e51f80f",
+      "source_code": "https://github.com/micwallace/reddinator"
+    },
+    {
+      "new": {
+        "added": 1710601098000,
+        "filename": "rasel.lunar.launcher_38.apk",
+        "section": "repo",
+        "sha256": "a26f249718905bb18d9f149a33e68051bd24827db5f3f34ad5c75e6d14610596",
+        "signers_sha256": [
+          "dae33f41f34a3c4cc00fe4f24d48677c4b309537de0dfcd23fc3a826134c75fc"
+        ],
+        "size": 2661165,
+        "version_code": 38,
+        "version_name": "2.8.2"
+      },
+      "old": {
+        "added": 1705319020000,
+        "filename": "rasel.lunar.launcher_37.apk",
+        "section": "repo",
+        "sha256": "bc40781aca351cc08362104bd071d6ecd8c013e677f53909d6f49422e79c7c96",
+        "signers_sha256": [
+          "dae33f41f34a3c4cc00fe4f24d48677c4b309537de0dfcd23fc3a826134c75fc"
+        ],
+        "size": 2666262,
+        "version_code": 37,
+        "version_name": "2.8.1.1"
+      },
+      "package_id": "rasel.lunar.launcher",
+      "project_name": "Lunar Launcher",
+      "rank_sha256": "07877e7c2a81c6b7fb1fb76c621b3104cd326bd189684daddecee8dbb13b723e",
+      "source_code": "https://github.com/iamrasel/lunar-launcher"
+    },
+    {
+      "new": {
+        "added": 1696462961000,
+        "filename": "net.xisberto.timerpx_9.apk",
+        "section": "repo",
+        "sha256": "8747e21ddce38f7b716bff74fc0c7e327fe5e3476ddc5db6b5449189a37d3980",
+        "signers_sha256": [
+          "ad91a62593fa2340dab7fb50c953eba258465160bc2b4b30c49146ba5c43173b"
+        ],
+        "size": 2415320,
+        "version_code": 9,
+        "version_name": "1.4.1"
+      },
+      "old": {
+        "added": 1672338394000,
+        "filename": "net.xisberto.timerpx_7.apk",
+        "section": "repo",
+        "sha256": "6f16f15aaa86ca5755b11cbaee213fa6c065e777f32c197dbc06a063b6d81d24",
+        "signers_sha256": [
+          "ad91a62593fa2340dab7fb50c953eba258465160bc2b4b30c49146ba5c43173b"
+        ],
+        "size": 2269099,
+        "version_code": 7,
+        "version_name": "1.3.0"
+      },
+      "package_id": "net.xisberto.timerpx",
+      "project_name": "Timer +X",
+      "rank_sha256": "07ab8de535c9d9e387ea3daab1985f0e68b298a388d5391d2eb191f988e90b43",
+      "source_code": "https://gitlab.com/humbertofraga/timerx"
+    }
+  ],
+  "eligible_project_count": 2399,
+  "exclusion_counts": {
+    "fewer_than_two_unambiguous_releases": 4084,
+    "no_https_source_code": 45
+  },
+  "format": "vcdiff-public-android-candidate-manifest-v1",
+  "index_inputs": {
+    "archive": {
+      "sha256": "51b8b081a8e322cc3824f0d8f1ca18fbe2b3d2917455ed2067a374140ee3d18b",
+      "url": "https://f-droid.org/archive/index-v2.json"
+    },
+    "repo": {
+      "sha256": "88f2027fa525cb0092ec49286573da356c75b8bd8ae1c98719ab21fbf6790de3",
+      "url": "https://f-droid.org/repo/index-v2.json"
+    }
+  },
+  "metadata_eligibility": [
+    "package has an HTTPS public sourceCode URL",
+    "APK filename ends .apk and index SHA-256 is present",
+    "APK size is between 1,000,000 and 25,000,000 bytes inclusive",
+    "manifest nativecode is absent or empty (universal managed-code APK)",
+    "releaseChannels is absent or empty",
+    "versionName and integer versionCode are present",
+    "exactly one eligible APK exists for each retained versionCode",
+    "old/new are the latest two retained versionCodes",
+    "old/new signer fingerprint lists are identical"
+  ],
+  "ordering": "ascending SHA256(sampling_seed + NUL + package_id), then package_id",
+  "recorded_candidate_count": 80,
+  "sampling_seed": "vcdiff-public-dex-preregistered-v1",
+  "selection_status": "ordered candidates only; no APK was traced or optimized before this manifest"
+}

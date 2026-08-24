@@ -1,0 +1,160 @@
+{
+  "conditional_table_bank": {
+    "bank_sizes": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "candidate_tables": "unique nondefault exact-oracle tables from training pairs only",
+    "construction": "deterministic forward greedy selection maximizing aggregate training bytes saved versus stock under best-of-bank plus stock fallback; table SHA-256 breaks ties",
+    "deployment_prototype": "only after the table-bank test is complete and the generality gate passed",
+    "monotonic_fallback": "for every pair emit the smallest of stock and every bank-table encoding",
+    "run_only_if_all_generality_gate_components_pass": true,
+    "test_metric": "aggregate test bank savings / aggregate positive test oracle savings",
+    "validation_choice": "choose the smallest bank reaching aggregate validation oracle capture >=0.70; if none does, choose maximum validation capture, then smaller bank"
+  },
+  "distribution_analysis": {
+    "balanced_means": "project-balanced mean averages project means equally; category-balanced mean averages category means equally",
+    "change_distance": "within each project/category baseline group, report near/medium/far values and Spearman correlation of ordinal distance 1/2/3 with savings",
+    "pair_summary": "median, quartiles, mean, min, max, and threshold fractions",
+    "thresholds": [
+      0.003,
+      0.01,
+      0.02
+    ]
+  },
+  "feature_definitions": {
+    "entropy": "base-2 Shannon entropy of empirical signature frequencies",
+    "herfindahl": "sum of squared empirical signature probabilities",
+    "instruction_density": "logical instruction count / target output MiB",
+    "instruction_signature": "TYPE:SIZE:MODE, with MODE=0 for ADD and RUN",
+    "instruction_size_bins": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5-8",
+      "9-16",
+      "17-32",
+      "33-64",
+      "65-127",
+      "128-255",
+      "256+"
+    ],
+    "normalized_entropy": "entropy/log2(number of positive-frequency signatures), or zero for <=1 signature",
+    "oracle_saving_fraction": "(stock patch bytes - exact oracle patch bytes) / stock patch bytes",
+    "pair_signature": "ordered adjacent instruction signatures within one window",
+    "quantiles": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.99,
+      1.0
+    ],
+    "r_i": "stock instruction-section bytes / stock patch bytes",
+    "stock_only_rule": "Predictor columns are computed from artifact sizes and the stock xdelta3 fixed logical trace. Oracle/table fields are labels only.",
+    "table_transmission_cost": "oracle file-header bytes - default file-header bytes",
+    "top_k": [
+      1,
+      4,
+      8,
+      16,
+      32,
+      64,
+      93
+    ],
+    "top_k_mass": "mass of the k most frequent signatures",
+    "top_k_ties": "descending frequency, then lexicographic signature",
+    "top_pair_coverage": "For the k most frequent pair signatures, dynamic programming chooses a maximum-cardinality nonoverlapping set of their occurrences; divide the number of covered logical instructions by instruction count."
+  },
+  "format": "vcdiff-generality-analysis-spec-v1",
+  "frozen_date": "2026-08-23",
+  "generality_gate": {
+    "all_required": {
+      "grouped_classifier": "selected training grouped out-of-fold ROC AUC >=0.75",
+      "non_source_repetition": "at least 2 compiled or structured pairs save >=1%",
+      "project_repetition": "at least 3 confirmatory projects have >=1 pair saving >=1%",
+      "validation_selector": "validation precision >=0.70 and recall >=0.40"
+    },
+    "undefined_metric_rule": "an undefined required metric fails its gate component"
+  },
+  "locks": {
+    "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+    "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+    "preregistration_sha256": "f9e7e69a890dee02bd6f9226b7e0e0eb2692b4d2e723c563a1fd1ae1966c3cfb"
+  },
+  "oracle_run": {
+    "decoder": "unchanged historical xdelta3 custom-table decoder",
+    "diagnostic_max_slots": 1,
+    "global_max_slots": 93,
+    "one_target_window": true,
+    "required_solver_gap": 0.0
+  },
+  "outcome_state": "frozen before any confirmatory VCDIFF trace",
+  "predictive_protocol": {
+    "classifiers": {
+      "instruction_fraction_logistic": {
+        "C": 1.0,
+        "max_iter": 10000
+      },
+      "ridge_logistic": {
+        "C_values": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ],
+        "max_iter": 10000
+      },
+      "tree": {
+        "max_depth": 3,
+        "min_samples_leaf": 2,
+        "random_state": 0
+      }
+    },
+    "favorable_label": "oracle saving fraction >= 0.01",
+    "model_selection": "Regression minimizes grouped-CV MAE, tie-broken by higher Spearman then fixed listed order. Classification maximizes grouped out-of-fold ROC AUC, tie-broken by average precision then fixed listed order.",
+    "regressors": {
+      "instruction_fraction_linear": "ordinary least squares on r_i only",
+      "ridge": {
+        "alphas": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ]
+      },
+      "tree": {
+        "max_depth": 3,
+        "min_samples_leaf": 2,
+        "random_state": 0
+      }
+    },
+    "standardization": "fit median imputation and standardization inside each training fold",
+    "test_groups": [
+      "open-vcdiff",
+      "sqlite",
+      "xdelta"
+    ],
+    "test_rule": "After model and threshold are fixed on train/validation, evaluate test projects once.",
+    "training_cv": "LeaveOneGroupOut by project on training projects",
+    "training_groups": [
+      "curl",
+      "git",
+      "linux",
+      "redis",
+      "tzdb",
+      "zstd"
+    ],
+    "validation_groups": [
+      "llvm",
+      "unicode"
+    ],
+    "validation_threshold": "Among unique predicted probabilities plus endpoints, choose the threshold with precision >=0.70 that maximizes recall, then precision, then threshold."
+  }
+}

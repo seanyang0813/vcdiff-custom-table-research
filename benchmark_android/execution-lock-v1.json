@@ -1,0 +1,84 @@
+{
+  "format": "vcdiff-public-android-execution-lock-v1",
+  "locked_inputs": {
+    "android_study_runner": {
+      "path": "benchmark_android/run_study.py",
+      "sha256": "b49ff2fdf101372e02e7c8498f2920580badc463084bd9bc592778d0ea431bc7"
+    },
+    "corpus": {
+      "path": "benchmark_android/corpus-lock-v1.json",
+      "sha256": "18e0e686948ea313ad5961582688e3f9e95ed55be0f4a373b993712ab66d9739"
+    },
+    "corpus_runner": {
+      "path": "benchmark_android/run_corpus.py",
+      "sha256": "797092314bb4622306bd7c0aa55584d5babafa3f232004f85b069ea4723bc822"
+    },
+    "historical_decoder": {
+      "path": "build/xdelta/xdelta3-rfc-custom-decoder",
+      "sha256": "8db442a6b62a6d57f51c42c1c3e56e5a611b51b5375b2d5e0a23f49e3188076c"
+    },
+    "preregistration": {
+      "path": "benchmark_android/preregistration-v1.json",
+      "sha256": "bffc001a5414ff2574c1676bfb3086fff053e68935559c12de1e4ffbd5be90d6"
+    },
+    "scip_amendment": {
+      "path": "benchmark/scip-validity-amendment-v2.json",
+      "sha256": "aa702364f37bc05b7684837504a3438ee5314448dbdbfd754cd5a7edf11c7e6d"
+    },
+    "scip_study_runner": {
+      "path": "benchmark/run_scip_study.py",
+      "sha256": "6a9fd0d49c4bd7d673044c893526524019a82f4949c85d92fadb9418c6d044be"
+    },
+    "trace_binary": {
+      "path": "build/xdelta/xdelta3-trace",
+      "sha256": "ccc5c27422f2add6a9338a5022da22ad5908514b381a62e9fb33dbfc2c93b9a6"
+    }
+  },
+  "ordering": "ascending max(old_bundle_bytes,new_bundle_bytes), then frozen candidate rank, then pair id; uses no VCDIFF trace or outcome",
+  "registered_date": "2026-08-24",
+  "resource_and_failure_policy": "locked exact-SCIP 6 GB and 7200 second per-model limits; serial execution; 14700 second outer process limit; every non-complete status remains visible",
+  "schedule": [
+    "fdroid-ohm.quickdice-45-to-48",
+    "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+    "fdroid-com.dergoogler.mmrl-22020-to-32432",
+    "fdroid-co.loubo.icicle-3-to-4",
+    "fdroid-tibarj.tranquilstopwatch-16-to-17",
+    "fdroid-oppen.gemini.ariane-39-to-42",
+    "fdroid-com.kolakek.pimiwidget-16-to-17",
+    "fdroid-hu.tagsoft.ttorrent.search-2-to-3",
+    "fdroid-org.evilsoft.pathfinder.reference-36-to-38",
+    "fdroid-com.rtbishop.look4sat-322-to-323",
+    "fdroid-com.google.android.stardroid-1704-to-1708",
+    "fdroid-com.phg.constellations-10004-to-10005",
+    "fdroid-io.gresse.hugo.anecdote-22-to-23",
+    "fdroid-com.kgurgul.cpuinfo-40302-to-40303",
+    "fdroid-org.kknickkk.spider-12-to-13",
+    "fdroid-com.vadimfrolov.duorem-5-to-6",
+    "fdroid-tech.techlore.plexus-217-to-219",
+    "fdroid-com.onest8.onetimepad-201-to-202",
+    "fdroid-org.fitchfamily.android.gsmlocation-73-to-74",
+    "fdroid-com.jellyshack.block6-6-to-7",
+    "fdroid-com.nbossard.packlist-18-to-19",
+    "fdroid-com.ilm.sandwich-34-to-35",
+    "fdroid-uk.co.yahoo.p1rpp.secondsclock-6-to-7",
+    "fdroid-hashengineering.groestlcoin.wallet_test-73804-to-81401",
+    "fdroid-gal.sli.singal-20-to-21",
+    "fdroid-de.christinecoenen.code.zapp-74-to-76",
+    "fdroid-it.feio.android.omninotes.foss-330-to-331",
+    "fdroid-de.devmil.muzei.bingimageofthedayartsource-9-to-18",
+    "fdroid-org.shadowice.flocke.andotp-38-to-39",
+    "fdroid-com.zionhuang.music-19-to-20",
+    "fdroid-de.c3nav.droid-14040501-to-18040700",
+    "fdroid-de.csicar.ning-200-to-201",
+    "fdroid-net.eneiluj.nextcloud.phonetrack-10-to-11",
+    "fdroid-com.fastaccess.github.libre-466-to-467",
+    "fdroid-com.msb.bluecheese-6-to-303",
+    "fdroid-cloud.valetudo.companion-15-to-16",
+    "fdroid-v4lpt.vpt.f005.rsd-103-to-104",
+    "fdroid-v4lpt.vpt.f006.yxn-100-to-102",
+    "fdroid-me.jfenn.alarmio-20-to-21",
+    "fdroid-com.chooloo.www.koler-79-to-82"
+  ],
+  "status": "locked before any frozen Android pair was traced or optimized",
+  "stop_policy": "seek all 40; after at least 30 exact pairs, apply the preregistered signal gate. Do not substitute bounded results for exact labels."
+}

@@ -1,0 +1,1205 @@
+{
+  "conditional_table_bank_protocol": {
+    "bank_sizes": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "monotonicity": "encode/evaluate stock and selected fixed table and emit the smaller; no patch may grow when selection is enabled",
+    "primary_metric": "aggregate held-out bank savings / aggregate held-out oracle savings",
+    "run_only_if_generality_gate_passes": true,
+    "target_capture": [
+      0.7,
+      0.8
+    ],
+    "test": "evaluate once on test projects with no refitting",
+    "training": "derive candidates only from training-project oracle tables/traces",
+    "validation": "choose bank size and selector threshold on validation projects"
+  },
+  "format": "vcdiff-generality-preregistration-v1",
+  "frozen_oracle": {
+    "optimizer_path": "src/vcdiff_opt/optimizer.py",
+    "optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+    "rule": "Do not modify the optimizer during the generality experiment.",
+    "table_family": "canonical q=0..93 prefix replacement of RFC opcodes 163..255",
+    "window_limit_bytes": 67108864
+  },
+  "generality_gate_for_table_bank": {
+    "all_required": [
+      "at least three confirmatory projects have one or more pairs saving >=1%",
+      "at least two compiled or structured pairs save >=1%",
+      "the project-held-out favorable classifier reaches ROC AUC >=0.75",
+      "a validation-tuned selector reaches precision >=0.70 at recall >=0.40"
+    ],
+    "failure_action": "Do not build a deployment prototype; report the kill result and retain the oracle/benchmark as the research artifact."
+  },
+  "known_exploratory_pairs_excluded_from_confirmatory_metrics": [
+    "zstd-v1.5.6-to-v1.5.7-tree",
+    "open-vcdiff-0.8.3-to-0.8.4-tree",
+    "xdelta-v3.0.10-to-v3.0.11-tree",
+    "zstd-v1.5.6-to-v1.5.7-win64-zip"
+  ],
+  "objective": "Estimate the distribution and structural predictors of exact restricted VCDIFF custom-table savings, then conditionally test a reusable table bank.",
+  "pairs": [
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-linux-v6.12-to-v6.13",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "locator": "adc218676eef25575469234709c2d87185ca223a",
+        "ref": "v6.12",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.13.treeblob",
+        "locator": "ffd294d346d185b70e28b1a28abe367bbfe53c04",
+        "ref": "v6.13",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-linux-v6.12-to-v6.14",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "locator": "adc218676eef25575469234709c2d87185ca223a",
+        "ref": "v6.12",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.14.treeblob",
+        "locator": "38fec10eb60d687e30c8c6b5420d86e8149f7557",
+        "ref": "v6.14",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-linux-v6.12-to-v6.15",
+      "project": "linux",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/linux-v6.12.treeblob",
+        "locator": "adc218676eef25575469234709c2d87185ca223a",
+        "ref": "v6.12",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/linux-v6.15.treeblob",
+        "locator": "0ff41df1cb268fc69e703a08a57ee14ae967d0ca",
+        "ref": "v6.15",
+        "repository": "https://github.com/torvalds/linux.git",
+        "scope": "kernel"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-git-v2.48.0-to-v2.48.1",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "locator": "fbe8d3079d4a96aeb4e4529cc93cc0043b759a05",
+        "ref": "v2.48.0",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.48.1.treeblob",
+        "locator": "f93ff170b93a1782659637824b25923245ac9dd1",
+        "ref": "v2.48.1",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-git-v2.48.0-to-v2.49.0",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "locator": "fbe8d3079d4a96aeb4e4529cc93cc0043b759a05",
+        "ref": "v2.48.0",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.49.0.treeblob",
+        "locator": "683c54c999c301c2cd6f715c411407c413b1d84e",
+        "ref": "v2.49.0",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-git-v2.48.0-to-v2.50.0",
+      "project": "git",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/git-v2.48.0.treeblob",
+        "locator": "fbe8d3079d4a96aeb4e4529cc93cc0043b759a05",
+        "ref": "v2.48.0",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/git-v2.50.0.treeblob",
+        "locator": "16bd9f20a403117f2e0d9bcda6c6e621d3763e77",
+        "ref": "v2.50.0",
+        "repository": "https://github.com/git/git.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-sqlite-3.47.0-to-3.47.1",
+      "project": "sqlite",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/sqlite-3.47.0.treeblob",
+        "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+        "ref": "version-3.47.0",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/sqlite-3.47.1.treeblob",
+        "locator": "0592ffed8244e2a8de0a2ab083fbf14335033922",
+        "ref": "version-3.47.1",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-sqlite-3.47.0-to-3.48.0",
+      "project": "sqlite",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/sqlite-3.47.0.treeblob",
+        "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+        "ref": "version-3.47.0",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/sqlite-3.48.0.treeblob",
+        "locator": "942c9587698715734715242737dba07ef296b0ef",
+        "ref": "version-3.48.0",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-sqlite-3.47.0-to-3.49.0",
+      "project": "sqlite",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/sqlite-3.47.0.treeblob",
+        "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+        "ref": "version-3.47.0",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/sqlite-3.49.0.treeblob",
+        "locator": "659bafd05dee789298074283ce857e27e65ef675",
+        "ref": "version-3.49.0",
+        "repository": "https://github.com/sqlite/sqlite.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-curl-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+        "ref": "curl-8_11_0",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.11.1.treeblob",
+        "locator": "75a2079d5c28debb2eaa848ca9430f1fe0d7844c",
+        "ref": "curl-8_11_1",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-curl-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+        "ref": "curl-8_11_0",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.12.0.treeblob",
+        "locator": "34cf9d54a46598c44938aa7598820484d7af7133",
+        "ref": "curl-8_12_0",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-curl-8.11.0-to-8.13.0",
+      "project": "curl",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/curl-8.11.0.treeblob",
+        "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+        "ref": "curl-8_11_0",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/curl-8.13.0.treeblob",
+        "locator": "1c3149881769e7bd79b072e48374e4c2b3678b2f",
+        "ref": "curl-8_13_0",
+        "repository": "https://github.com/curl/curl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-redis-7.4.0-to-7.4.1",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+        "ref": "7.4.0",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-7.4.1.treeblob",
+        "locator": "74b289a0e12f9f65a6daeec6a66cadc76792f644",
+        "ref": "7.4.1",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-redis-7.4.0-to-7.4.2",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+        "ref": "7.4.0",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-7.4.2.treeblob",
+        "locator": "a0a6f23d997b024689ba157916837f493a593a34",
+        "ref": "7.4.2",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-redis-7.4.0-to-8.0.0",
+      "project": "redis",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/redis-7.4.0.treeblob",
+        "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+        "ref": "7.4.0",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/redis-8.0.0.treeblob",
+        "locator": "e91a340e241cf0abe3c6a0c254214fbe4aa1d95f",
+        "ref": "8.0.0",
+        "repository": "https://github.com/redis/redis.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-llvm-19.1.0-to-19.1.1",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "locator": "a4bf6cd7cfb1a1421ba92bca9d017b49936c55e4",
+        "ref": "llvmorg-19.1.0",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-19.1.1.treeblob",
+        "locator": "d401987fe349a87c53fe25829215b080b70c0c1a",
+        "ref": "llvmorg-19.1.1",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-llvm-19.1.0-to-19.1.2",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "locator": "a4bf6cd7cfb1a1421ba92bca9d017b49936c55e4",
+        "ref": "llvmorg-19.1.0",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-19.1.2.treeblob",
+        "locator": "7ba7d8e2f7b6445b60679da826210cdde29eaf8b",
+        "ref": "llvmorg-19.1.2",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-llvm-19.1.0-to-20.1.0",
+      "project": "llvm",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/llvm-19.1.0.treeblob",
+        "locator": "a4bf6cd7cfb1a1421ba92bca9d017b49936c55e4",
+        "ref": "llvmorg-19.1.0",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      },
+      "split": "validation",
+      "target": {
+        "artifact": "benchmark_data/source/llvm-20.1.0.treeblob",
+        "locator": "24a30daaa559829ad079f2ff7f73eb4e18095f88",
+        "ref": "llvmorg-20.1.0",
+        "repository": "https://github.com/llvm/llvm-project.git",
+        "scope": "llvm/lib/Transforms"
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-zstd-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+        "ref": "v1.5.4",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.5.treeblob",
+        "locator": "63779c798237346c2b245c546c40b72a5a5913fe",
+        "ref": "v1.5.5",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-zstd-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+        "ref": "v1.5.4",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.6.treeblob",
+        "locator": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+        "ref": "v1.5.6",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-zstd-v1.5.4-to-v1.5.7",
+      "project": "zstd",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/zstd-v1.5.4.treeblob",
+        "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+        "ref": "v1.5.4",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/source/zstd-v1.5.7.treeblob",
+        "locator": "f8745da6ff1ad1e7bab384bd1f9d742439278e99",
+        "ref": "v1.5.7",
+        "repository": "https://github.com/facebook/zstd.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-xdelta-v3.0.9-to-v3.0.10",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+        "ref": "v3.0.9",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.10.treeblob",
+        "locator": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+        "ref": "v3.0.10",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-xdelta-v3.0.9-to-v3.0.11",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+        "ref": "v3.0.9",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.11.treeblob",
+        "locator": "81aebf78ae67c29f528088d65743643e5355e3d3",
+        "ref": "v3.0.11",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-xdelta-v3.0.9-to-v3.1.0",
+      "project": "xdelta",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/xdelta-v3.0.9.treeblob",
+        "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+        "ref": "v3.0.9",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/xdelta-v3.1.0.treeblob",
+        "locator": "4b4aed71a959fe11852e45242bb6524be85d3709",
+        "ref": "v3.1.0",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "near",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.2",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "locator": "0ec2259e3dc0e17698ac4bc586740f4a4c928ef1",
+        "ref": "open-vcdiff-0.8.1",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.2.treeblob",
+        "locator": "a1c5dad47485a8b117bd0852b3ead340dac37a8f",
+        "ref": "openvcdiff-0.8.2",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "medium",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.3",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "locator": "0ec2259e3dc0e17698ac4bc586740f4a4c928ef1",
+        "ref": "open-vcdiff-0.8.1",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.3.treeblob",
+        "locator": "af81c060f9948a9e91d3364f2ddc53c1f56c4447",
+        "ref": "openvcdiff-0.8.3",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "source_tree",
+      "distance": "far",
+      "id": "source-open-vcdiff-0.8.1-to-0.8.4",
+      "project": "open-vcdiff",
+      "recipe": "git_tree_blob_v1",
+      "source": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.1.treeblob",
+        "locator": "0ec2259e3dc0e17698ac4bc586740f4a4c928ef1",
+        "ref": "open-vcdiff-0.8.1",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/source/open-vcdiff-0.8.4.treeblob",
+        "locator": "9af10d36e691c15dceff04419b9e3a71ec5d8bec",
+        "ref": "openvcdiff-0.8.4",
+        "repository": "https://github.com/google/open-vcdiff.git",
+        "scope": null
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-zstd-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "compiled_zstd_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.4.bundle",
+        "build_recipe": "compiled_zstd_v1",
+        "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+        "ref": "v1.5.4",
+        "repository": "https://github.com/facebook/zstd.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.5.bundle",
+        "build_recipe": "compiled_zstd_v1",
+        "locator": "63779c798237346c2b245c546c40b72a5a5913fe",
+        "ref": "v1.5.5",
+        "repository": "https://github.com/facebook/zstd.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-zstd-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "compiled_zstd_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.4.bundle",
+        "build_recipe": "compiled_zstd_v1",
+        "locator": "945f27758c0fd67b636103a38dbf050266c6b90a",
+        "ref": "v1.5.4",
+        "repository": "https://github.com/facebook/zstd.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/zstd-v1.5.6.bundle",
+        "build_recipe": "compiled_zstd_v1",
+        "locator": "794ea1b0afca0f020f4e57b6732332231fb23c70",
+        "ref": "v1.5.6",
+        "repository": "https://github.com/facebook/zstd.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-curl-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "compiled_curl_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/curl-8.11.0.bundle",
+        "build_recipe": "compiled_curl_v1",
+        "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+        "ref": "curl-8_11_0",
+        "repository": "https://github.com/curl/curl.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/curl-8.11.1.bundle",
+        "build_recipe": "compiled_curl_v1",
+        "locator": "75a2079d5c28debb2eaa848ca9430f1fe0d7844c",
+        "ref": "curl-8_11_1",
+        "repository": "https://github.com/curl/curl.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-curl-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "compiled_curl_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/curl-8.11.0.bundle",
+        "build_recipe": "compiled_curl_v1",
+        "locator": "b1ef0e1a01c0bb6ee5367bd9c186a603bde3615a",
+        "ref": "curl-8_11_0",
+        "repository": "https://github.com/curl/curl.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/curl-8.12.0.bundle",
+        "build_recipe": "compiled_curl_v1",
+        "locator": "34cf9d54a46598c44938aa7598820484d7af7133",
+        "ref": "curl-8_12_0",
+        "repository": "https://github.com/curl/curl.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-redis-7.4.0-to-7.4.1",
+      "project": "redis",
+      "recipe": "compiled_redis_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/redis-7.4.0.bundle",
+        "build_recipe": "compiled_redis_v1",
+        "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+        "ref": "7.4.0",
+        "repository": "https://github.com/redis/redis.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/redis-7.4.1.bundle",
+        "build_recipe": "compiled_redis_v1",
+        "locator": "74b289a0e12f9f65a6daeec6a66cadc76792f644",
+        "ref": "7.4.1",
+        "repository": "https://github.com/redis/redis.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-redis-7.4.0-to-7.4.2",
+      "project": "redis",
+      "recipe": "compiled_redis_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/redis-7.4.0.bundle",
+        "build_recipe": "compiled_redis_v1",
+        "locator": "c9d29f6a918c335bc1778d9f68e521c1bbb36a0f",
+        "ref": "7.4.0",
+        "repository": "https://github.com/redis/redis.git"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compiled/redis-7.4.2.bundle",
+        "build_recipe": "compiled_redis_v1",
+        "locator": "a0a6f23d997b024689ba157916837f493a593a34",
+        "ref": "7.4.2",
+        "repository": "https://github.com/redis/redis.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-sqlite-3.47.0-to-3.47.1",
+      "project": "sqlite",
+      "recipe": "compiled_sqlite_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.0.bundle",
+        "build_recipe": "compiled_sqlite_v1",
+        "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+        "ref": "version-3.47.0",
+        "repository": "https://github.com/sqlite/sqlite.git"
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.1.bundle",
+        "build_recipe": "compiled_sqlite_v1",
+        "locator": "0592ffed8244e2a8de0a2ab083fbf14335033922",
+        "ref": "version-3.47.1",
+        "repository": "https://github.com/sqlite/sqlite.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-sqlite-3.47.0-to-3.48.0",
+      "project": "sqlite",
+      "recipe": "compiled_sqlite_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/sqlite-3.47.0.bundle",
+        "build_recipe": "compiled_sqlite_v1",
+        "locator": "f5fb820c0f4781337faf02ed871be68d13a83d94",
+        "ref": "version-3.47.0",
+        "repository": "https://github.com/sqlite/sqlite.git"
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/sqlite-3.48.0.bundle",
+        "build_recipe": "compiled_sqlite_v1",
+        "locator": "942c9587698715734715242737dba07ef296b0ef",
+        "ref": "version-3.48.0",
+        "repository": "https://github.com/sqlite/sqlite.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "near",
+      "id": "compiled-xdelta-v3.0.9-to-v3.0.10",
+      "project": "xdelta",
+      "recipe": "compiled_xdelta_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.9.bundle",
+        "build_recipe": "compiled_xdelta_v1",
+        "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+        "ref": "v3.0.9",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git"
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.10.bundle",
+        "build_recipe": "compiled_xdelta_v1",
+        "locator": "c6493c5a57e1edc95fa27123e86fe14c3695f284",
+        "ref": "v3.0.10",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git"
+      }
+    },
+    {
+      "category": "compiled",
+      "distance": "medium",
+      "id": "compiled-xdelta-v3.0.9-to-v3.0.11",
+      "project": "xdelta",
+      "recipe": "compiled_xdelta_v1",
+      "source": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.9.bundle",
+        "build_recipe": "compiled_xdelta_v1",
+        "locator": "63c9404c28dbcde26a730f1c62b70e0994b240cc",
+        "ref": "v3.0.9",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git"
+      },
+      "split": "test",
+      "target": {
+        "artifact": "benchmark_data/compiled/xdelta-v3.0.11.bundle",
+        "build_recipe": "compiled_xdelta_v1",
+        "locator": "81aebf78ae67c29f528088d65743643e5355e3d3",
+        "ref": "v3.0.11",
+        "repository": "https://github.com/jmacd/xdelta-gpl.git"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "near",
+      "id": "structured-unicode-15.0.0-to-15.1.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
+        "ref": "15.0.0"
+      },
+      "split": "validation",
+      "target": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-15.1.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/15.1.0/UCD.zip",
+        "ref": "15.1.0"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "medium",
+      "id": "structured-unicode-15.0.0-to-16.0.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
+        "ref": "15.0.0"
+      },
+      "split": "validation",
+      "target": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-16.0.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/16.0.0/UCD.zip",
+        "ref": "16.0.0"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "far",
+      "id": "structured-unicode-15.0.0-to-17.0.0",
+      "project": "unicode",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-15.0.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
+        "ref": "15.0.0"
+      },
+      "split": "validation",
+      "target": {
+        "archive_kind": "zip",
+        "artifact": "benchmark_data/structured/unicode-17.0.0.bundle",
+        "locator": "https://www.unicode.org/Public/zipped/17.0.0/UCD.zip",
+        "ref": "17.0.0"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "near",
+      "id": "structured-tzdb-2024a-to-2024b",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz",
+        "ref": "2024a"
+      },
+      "split": "train",
+      "target": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2024b.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2024b.tar.gz",
+        "ref": "2024b"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "medium",
+      "id": "structured-tzdb-2024a-to-2025a",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz",
+        "ref": "2024a"
+      },
+      "split": "train",
+      "target": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2025a.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2025a.tar.gz",
+        "ref": "2025a"
+      }
+    },
+    {
+      "category": "structured",
+      "distance": "far",
+      "id": "structured-tzdb-2024a-to-2025b",
+      "project": "tzdb",
+      "recipe": "unpack_and_directory_bundle_v1",
+      "source": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2024a.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz",
+        "ref": "2024a"
+      },
+      "split": "train",
+      "target": {
+        "archive_kind": "tar.gz",
+        "artifact": "benchmark_data/structured/tzdb-2025b.bundle",
+        "locator": "https://data.iana.org/time-zones/releases/tzdata2025b.tar.gz",
+        "ref": "2025b"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.gz",
+        "ref": "v1.5.4"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.5.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.gz",
+        "ref": "v1.5.5"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.gz",
+        "ref": "v1.5.4"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.6.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-1.5.6.tar.gz",
+        "ref": "v1.5.6"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-zstd-tar-zst-v1.5.4-to-v1.5.5",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.zst",
+        "format": "tar.zst",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.zst",
+        "ref": "v1.5.4"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.5.tar.zst",
+        "format": "tar.zst",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.5/zstd-1.5.5.tar.zst",
+        "ref": "v1.5.5"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-zstd-tar-zst-v1.5.4-to-v1.5.6",
+      "project": "zstd",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.4.tar.zst",
+        "format": "tar.zst",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.4/zstd-1.5.4.tar.zst",
+        "ref": "v1.5.4"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/zstd-v1.5.6.tar.zst",
+        "format": "tar.zst",
+        "locator": "https://github.com/facebook/zstd/releases/download/v1.5.6/zstd-1.5.6.tar.zst",
+        "ref": "v1.5.6"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-curl-tar-gz-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://curl.se/download/curl-8.11.0.tar.gz",
+        "ref": "8.11.0"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.11.1.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://curl.se/download/curl-8.11.1.tar.gz",
+        "ref": "8.11.1"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-curl-tar-gz-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://curl.se/download/curl-8.11.0.tar.gz",
+        "ref": "8.11.0"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.12.0.tar.gz",
+        "format": "tar.gz",
+        "locator": "https://curl.se/download/curl-8.12.0.tar.gz",
+        "ref": "8.12.0"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "near",
+      "id": "compressed-curl-tar-xz-8.11.0-to-8.11.1",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.xz",
+        "format": "tar.xz",
+        "locator": "https://curl.se/download/curl-8.11.0.tar.xz",
+        "ref": "8.11.0"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.11.1.tar.xz",
+        "format": "tar.xz",
+        "locator": "https://curl.se/download/curl-8.11.1.tar.xz",
+        "ref": "8.11.1"
+      }
+    },
+    {
+      "category": "compressed",
+      "distance": "medium",
+      "id": "compressed-curl-tar-xz-8.11.0-to-8.12.0",
+      "project": "curl",
+      "recipe": "exact_upstream_release_bytes_v1",
+      "source": {
+        "artifact": "benchmark_data/compressed/curl-8.11.0.tar.xz",
+        "format": "tar.xz",
+        "locator": "https://curl.se/download/curl-8.11.0.tar.xz",
+        "ref": "8.11.0"
+      },
+      "split": "train",
+      "target": {
+        "artifact": "benchmark_data/compressed/curl-8.12.0.tar.xz",
+        "format": "tar.xz",
+        "locator": "https://curl.se/download/curl-8.12.0.tar.xz",
+        "ref": "8.12.0"
+      }
+    }
+  ],
+  "predictive_analysis": {
+    "grouping": "all cross-validation and final splits group by project",
+    "inputs": "stock-trace features only; oracle fields are labels and never predictors",
+    "metrics": [
+      "MAE and Spearman correlation for savings fraction",
+      "ROC AUC, average precision, precision, recall, and Brier score for favorable label",
+      "selector byte regret and false-positive size regressions before monotonic fallback"
+    ],
+    "prespecified_models": [
+      "instruction-fraction-only linear baseline",
+      "standardized ridge regression on cheap features",
+      "depth-3 decision tree on cheap features",
+      "logistic counterparts for the >=1% favorable label"
+    ],
+    "threshold_tuning": "training projects fit models; validation projects choose threshold; test projects are touched once"
+  },
+  "primary_endpoints": {
+    "core_hypothesis": "Savings increase with stock instruction-byte fraction, instruction density, and concentrated reusable single/pair patterns, provided repetitions amortize the transmitted custom table.",
+    "distribution": [
+      "median and quartiles of exact savings fraction",
+      "fraction of pairs saving at least 0.3%, 1%, and 2%",
+      "project- and category-balanced means",
+      "change-distance trends within project"
+    ],
+    "favorable_label": "exact oracle saving fraction >= 0.01"
+  },
+  "project_splits": {
+    "curl": "train",
+    "git": "train",
+    "linux": "train",
+    "llvm": "validation",
+    "open-vcdiff": "test",
+    "redis": "train",
+    "sqlite": "test",
+    "tzdb": "train",
+    "unicode": "validation",
+    "xdelta": "test",
+    "zstd": "train"
+  },
+  "registered_date": "2026-08-23",
+  "required_stock_trace_features": [
+    "instruction_bytes / stock_patch_bytes",
+    "logical instruction count and instructions per output MiB",
+    "ADD/COPY/RUN counts and fractions",
+    "COPY mode histogram",
+    "instruction-size histogram and quantiles",
+    "top adjacent-pair frequencies",
+    "maximum nonoverlapping instruction coverage by top k pairs for k=1,4,8,16,32,64,93",
+    "Shannon entropy, normalized entropy, Herfindahl index, and top-k mass for singles and pairs",
+    "custom-table transmission cost",
+    "exact oracle bytes and savings"
+  ],
+  "sampling": {
+    "category_counts": {
+      "compiled": 10,
+      "compressed": 8,
+      "source_tree": 27,
+      "structured": 6
+    },
+    "pair_count": 51,
+    "replacement_rule": "If an endpoint is unavailable or cannot be built, replace only with the chronologically next release from the same project/category using the same recipe, before tracing it, and append the reason to deviations.jsonl. Never replace based on compression outcome.",
+    "selection_rule": "Releases, scopes, formats, and build recipes were selected before tracing; no confirmatory pair was chosen or dropped based on trace or oracle outcome.",
+    "size_rule": "Artifacts must be nonempty and at most 64 MiB. Fixed Linux and LLVM subtrees are used to satisfy the one-window limit without outcome selection."
+  },
+  "status": "locked before any confirmatory pair was traced"
+}

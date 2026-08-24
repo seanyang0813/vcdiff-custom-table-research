@@ -1,0 +1,92 @@
+{
+  "activation_strengthening": {
+    "added_rows": "x_occurrence <= y_pattern",
+    "executable_test": "tests/test_core.py::test_activation_links_preserve_binary_selection_feasible_set",
+    "proof": "The frozen row is sum_i x_i <= M*y with 0<=x_i<=1 and binary y. For y=0, nonnegativity forces every x_i=0. For y=1, every added row is the existing x_i<=1 bound. Thus the integer feasible set is unchanged; only fractional relaxations are tightened."
+  },
+  "evidence_label": "preregistered frozen corpus with disclosed post-failure exact-SCIP solver amendment",
+  "format": "vcdiff-exact-scip-validity-amendment-v2",
+  "host_record": {
+    "evidence_boundary": "operational record, not a portability guarantee",
+    "machine": "x86_64",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "processor": "x86_64"
+  },
+  "pre_freeze_trigger": {
+    "path": "results/generality/scip-exact-recovery-diagnostic-v1.json",
+    "sha256": "e4c4ae60a06db58998463cc50ca87e2f318bd437b6785c8b47da2614aa0af3ed"
+  },
+  "proof_backend": {
+    "acceptance": "SCIP exact mode status optimal, equal integral primal and dual, independent DP attainment, emitted-byte equality, and successful strict-Python plus unchanged-historical-xdelta decode",
+    "adapter": {
+      "path": "benchmark/scip_exact_adapter.py",
+      "sha256": "ee5895d90cf5c7e85f79ba6c0b7355f09d64dff062d8a5dbc11f0255f9f4126f"
+    },
+    "candidate_hint": "SciPy/HiGHS with presolve disabled supplies only a validated feasible construction and no proof bound.",
+    "corpus_runner": {
+      "path": "benchmark/run_scip_corpus.py",
+      "sha256": "876a0394c48f661e3739c386727a1fe2d4f74a1111f531c8ba5527083daadc50"
+    },
+    "environment_lock": {
+      "path": "benchmark/scip-environment-explicit-v1.txt",
+      "sha256": "9e963073d25d5e7ecc0d48e569877aca218c6a7a2b292caf3a1e6209b3b32f0c"
+    },
+    "exact_mode": true,
+    "failure_accounting": "Every timeout, memory limit, process failure, or unsolved status is retained in the corpus state and never used as an exact oracle label.",
+    "library_sha256": {
+      "libgmp.so.10.5.0": "71a072c91addce36c8abd431c35a0662f942bd373b04305f06d4878066323f87",
+      "libmpfr.so.6.2.2": "3c17d6de615c27377c6a2fb2dd273f7ce2271a8a08e8c0cf0688f428c36d258f",
+      "libscip.so.10.0.2": "bf4825d4df68c2a57bc7ffacfcdde39df67bb13ef54f08399f28703cd65d4355"
+    },
+    "model": "same frozen sparse model, with every intended [0,1] parse, pattern, slot, and varint-state variable explicitly binary",
+    "python_sha256": "7ca0c0d0f93a8b97c1265891ea1b2788da6cd1f938ab07658dbdaf708f804d74",
+    "settings": {
+      "limits/memory_mb": 6000,
+      "limits/time_seconds_per_model": 7200,
+      "lp/threads": 1,
+      "parallel/maxnthreads": 1,
+      "randomization/lpseed": 0,
+      "randomization/permutationseed": 0,
+      "randomization/permuteconss": false,
+      "randomization/permutevars": false,
+      "randomization/randomseedshift": 0
+    },
+    "solver": "SCIP 10.0.2 through PySCIPOpt 6.2.1",
+    "study_runner": {
+      "path": "benchmark/run_scip_study.py",
+      "sha256": "6a9fd0d49c4bd7d673044c893526524019a82f4949c85d92fadb9418c6d044be"
+    }
+  },
+  "reason": "The locked CP-SAT amendment is exact but exceeded practical host memory on larger frozen traces. Exact SCIP preserves exact proof semantics with a lower-memory formulation.",
+  "registered_date": "2026-08-24",
+  "required_revalidation_before_inference": [
+    "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+    "source-linux-v6.12-to-v6.13",
+    "source-linux-v6.12-to-v6.14",
+    "source-linux-v6.12-to-v6.15",
+    "source-git-v2.48.0-to-v2.48.1",
+    "source-git-v2.48.0-to-v2.49.0"
+  ],
+  "status": "locked before any previously unsolved corpus outcome was run with exact SCIP",
+  "unchanged_scope": {
+    "analysis_and_decision_gates": "unchanged",
+    "analysis_spec": {
+      "path": "benchmark/analysis-spec-v1.json",
+      "sha256": "1781e13d340835e43ee5d2c88e5965a7e7eeac5737dac3a09693e56063f86e3b"
+    },
+    "artifact_lock": {
+      "path": "benchmark/artifact-lock-v1.json",
+      "sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69"
+    },
+    "optimizer": {
+      "path": "src/vcdiff_opt/optimizer.py",
+      "sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51"
+    },
+    "outcome_selection": "none",
+    "pair_membership": "unchanged 48 frozen usable pairs / 67 artifacts",
+    "prior_amendment": {
+      "path": "benchmark/validity-amendment-v1.json",
+      "sha256": "735d60e20244bb4c100e788c1d79d4248d59fdb0ef2795ced618fbf76c6b3e6d"
+    }
+  }
+}

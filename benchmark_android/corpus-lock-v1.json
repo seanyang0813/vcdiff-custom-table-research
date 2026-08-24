@@ -1,0 +1,3115 @@
+{
+  "accepted_pair_count": 40,
+  "bundle_format": {
+    "magic": "VCDIFF-DEX-BUNDLE-v1 followed by NUL",
+    "member_order": "classes.dex, classes2.dex, ... by numeric suffix",
+    "member_record": "u32 big-endian ASCII-name length, name, u64 big-endian data length, raw DEX",
+    "pairing_rule": "the complete old APK DEX bundle is the VCDIFF source and the complete new APK DEX bundle is the target; added/removed multidex members remain visible"
+  },
+  "candidate_manifest_sha256": "ad8b310621be65401ef736d0225597e854a9769af49887ec8f18a5b5753dab24",
+  "exclusion_count": 9,
+  "exclusions": [
+    {
+      "candidate_rank": 0,
+      "package_id": "de.jepfa.yapm",
+      "reason": "ValueError('total DEX bytes 24440292 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 1,
+      "package_id": "org.cryptomator.lite",
+      "reason": "ValueError('total DEX bytes 30904176 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 3,
+      "package_id": "com.nutomic.ensichat",
+      "reason": "ValueError('total DEX bytes 17885388 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 11,
+      "package_id": "com.mbestavros.geometricweather",
+      "reason": "RuntimeError(\"https://f-droid.org/archive/com.mbestavros.geometricweather_26068.apk: sha256 8cdaf1cacbbf95ca72774471b26cbd039df7b4e2a29784178ff6826d2ec886c4; https://ftp.fau.de/fdroid/archive/com.mbestavros.geometricweather_26068.apk: <HTTPError 404: 'Not Found'>\")"
+    },
+    {
+      "candidate_rank": 13,
+      "package_id": "cc.sovellus.vrcaa",
+      "reason": "ValueError('total DEX bytes 47722204 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 21,
+      "package_id": "fr.gouv.android.stopcovid",
+      "reason": "ValueError('total DEX bytes 13597580 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 28,
+      "package_id": "be.ppareit.swiftp_free",
+      "reason": "ValueError('total DEX bytes 12946632 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 34,
+      "package_id": "de.bahnhoefe.deutschlands.bahnhofsfotos",
+      "reason": "ValueError('total DEX bytes 16651368 outside [262144,12582912]')"
+    },
+    {
+      "candidate_rank": 37,
+      "package_id": "com.futsch1.medtimer",
+      "reason": "ValueError('total DEX bytes 14167808 outside [262144,12582912]')"
+    }
+  ],
+  "format": "vcdiff-public-android-dex-corpus-lock-v1",
+  "outcome_blinding": "No VCDIFF trace, patch, feature, or custom-table optimization was run while selecting and freezing this corpus.",
+  "pairs": [
+    {
+      "candidate_rank": 2,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/uk.co.yahoo.p1rpp.secondsclock/new-7.apk",
+          "reused": false,
+          "sha256": "082c930f49e87ed1d2b745bb49d9fba72dce703fb0757d50e7ab41fe18aa4c29",
+          "size": 2811276,
+          "url": "https://f-droid.org/repo/uk.co.yahoo.p1rpp.secondsclock_7.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "9b9154a3fd509c7f3a3f8b8ae8cbb240eb402f4d67431289430bbd90aef81a7a",
+              "size": 4083444
+            }
+          ],
+          "dex_total_bytes": 4083444,
+          "path": "benchmark_android/data/uk.co.yahoo.p1rpp.secondsclock/new-7.dexbundle",
+          "sha256": "52a45be2720c050325d9d694983a246b629ef03b4cd92ea7390c7137ef6177a6",
+          "size": 4083488
+        },
+        "release": {
+          "added": 1656288000000,
+          "filename": "uk.co.yahoo.p1rpp.secondsclock_7.apk",
+          "section": "repo",
+          "sha256": "082c930f49e87ed1d2b745bb49d9fba72dce703fb0757d50e7ab41fe18aa4c29",
+          "signers_sha256": [
+            "b03cc71b423d288b503075777c3a7500fce60e7faccea4ae8d2ba925070e1d2c"
+          ],
+          "size": 2811276,
+          "version_code": 7,
+          "version_name": "2.3"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/uk.co.yahoo.p1rpp.secondsclock/old-6.apk",
+          "reused": false,
+          "sha256": "74a1ffb1506170603ec2d197acfd01b6e6802ceabb6dff915e92bbeefa5ca8d8",
+          "size": 2807180,
+          "url": "https://f-droid.org/repo/uk.co.yahoo.p1rpp.secondsclock_6.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "20e454073ed93c63572d55bb522ced8f52962af91cc267a39db6949df6c04b7d",
+              "size": 4083456
+            }
+          ],
+          "dex_total_bytes": 4083456,
+          "path": "benchmark_android/data/uk.co.yahoo.p1rpp.secondsclock/old-6.dexbundle",
+          "sha256": "d85b2b277892650711718fa5361dd57e78505a2e2993e8a901cb91925741422f",
+          "size": 4083500
+        },
+        "release": {
+          "added": 1655424000000,
+          "filename": "uk.co.yahoo.p1rpp.secondsclock_6.apk",
+          "section": "repo",
+          "sha256": "74a1ffb1506170603ec2d197acfd01b6e6802ceabb6dff915e92bbeefa5ca8d8",
+          "signers_sha256": [
+            "b03cc71b423d288b503075777c3a7500fce60e7faccea4ae8d2ba925070e1d2c"
+          ],
+          "size": 2807180,
+          "version_code": 6,
+          "version_name": "2.2"
+        }
+      },
+      "package_id": "uk.co.yahoo.p1rpp.secondsclock",
+      "pair_id": "fdroid-uk.co.yahoo.p1rpp.secondsclock-6-to-7",
+      "project_name": "SecondsClock",
+      "source_code": "https://github.com/rparkins999/AndroidSecondsClock"
+    },
+    {
+      "candidate_rank": 4,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/cloud.valetudo.companion/new-16.apk",
+          "reused": false,
+          "sha256": "34081403401166111f5e99d3325d3d0bca81a5d9ad993517e55b4dfec49da64a",
+          "size": 5059812,
+          "url": "https://f-droid.org/repo/cloud.valetudo.companion_16.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f119cf14361e21d714a75daf3bd138744604d6edea8d64d147c1e139ce2a5506",
+              "size": 9224692
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "e46ecfdfe1dcfd0ea5b13452417072efc8a71f1e199b8751a4bd23b3853b73cf",
+              "size": 2320
+            }
+          ],
+          "dex_total_bytes": 9227012,
+          "path": "benchmark_android/data/cloud.valetudo.companion/new-16.dexbundle",
+          "sha256": "25575da81ca24d0f8b4dea818071af18bfefad7653d608d2d62b780dc06000f4",
+          "size": 9227080
+        },
+        "release": {
+          "added": 1786433443658,
+          "filename": "cloud.valetudo.companion_16.apk",
+          "section": "repo",
+          "sha256": "34081403401166111f5e99d3325d3d0bca81a5d9ad993517e55b4dfec49da64a",
+          "signers_sha256": [
+            "ceb103751a92793f5e0c314c46d712d4fa495449dbae189b5d2d7b981baa8f54"
+          ],
+          "size": 5059812,
+          "version_code": 16,
+          "version_name": "2026.08.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/cloud.valetudo.companion/old-15.apk",
+          "reused": false,
+          "sha256": "d517cbc65c67322242a6619c078075275060c10d3b871d9b697dd703a237c5e2",
+          "size": 3678433,
+          "url": "https://f-droid.org/repo/cloud.valetudo.companion_15.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "4ae4b6241575e34aba03d397164360ed38e382a00ca376a2cfa520f0bcf7f1b6",
+              "size": 6800124
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "9285ea6d51b16e010b01354073bbc2c1b85366877c9fa74c0aecc413e70ca455",
+              "size": 1696
+            }
+          ],
+          "dex_total_bytes": 6801820,
+          "path": "benchmark_android/data/cloud.valetudo.companion/old-15.dexbundle",
+          "sha256": "6a3b751225388dfa6dda820f7beefcc811fb6588f44efa4c600fa40cac3683b0",
+          "size": 6801888
+        },
+        "release": {
+          "added": 1767805961000,
+          "filename": "cloud.valetudo.companion_15.apk",
+          "section": "repo",
+          "sha256": "d517cbc65c67322242a6619c078075275060c10d3b871d9b697dd703a237c5e2",
+          "signers_sha256": [
+            "ceb103751a92793f5e0c314c46d712d4fa495449dbae189b5d2d7b981baa8f54"
+          ],
+          "size": 3678433,
+          "version_code": 15,
+          "version_name": "2025.08.0"
+        }
+      },
+      "package_id": "cloud.valetudo.companion",
+      "pair_id": "fdroid-cloud.valetudo.companion-15-to-16",
+      "project_name": "Valetudo Companion",
+      "source_code": "https://github.com/Hypfer/valetudo-companion"
+    },
+    {
+      "candidate_rank": 5,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/v4lpt.vpt.f006.yxn/new-102.apk",
+          "reused": false,
+          "sha256": "1e7ed9752cd708b0242df61f6fa1f464957c13d9c5117b5318b3be2bee36f88d",
+          "size": 5069044,
+          "url": "https://f-droid.org/repo/v4lpt.vpt.f006.yxn_102.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "342a145b441393a745b4e845124631d45377d75dcc5791285acde09a67fe3ab6",
+              "size": 9326388
+            }
+          ],
+          "dex_total_bytes": 9326388,
+          "path": "benchmark_android/data/v4lpt.vpt.f006.yxn/new-102.dexbundle",
+          "sha256": "c0daecba0940db10c9d8b5ca65ca40ab79bbe94823e5c5940241afdd98112f1f",
+          "size": 9326432
+        },
+        "release": {
+          "added": 1723449969000,
+          "filename": "v4lpt.vpt.f006.yxn_102.apk",
+          "section": "repo",
+          "sha256": "1e7ed9752cd708b0242df61f6fa1f464957c13d9c5117b5318b3be2bee36f88d",
+          "signers_sha256": [
+            "27d27498c0fab528c3916568409c8497a3c337e118dcc0aa8c99193caac52e59"
+          ],
+          "size": 5069044,
+          "version_code": 102,
+          "version_name": "1.0.2"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/v4lpt.vpt.f006.yxn/old-100.apk",
+          "reused": false,
+          "sha256": "5963742ea58c216d4484a448fcd091cf7471e07f2ca74825035d5f7be9cf49aa",
+          "size": 5068759,
+          "url": "https://f-droid.org/repo/v4lpt.vpt.f006.yxn_100.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "51a6ed2a2a7af876b16b57d0322b3d473f112aff788ba1f91f96fa0d5137a87f",
+              "size": 9326372
+            }
+          ],
+          "dex_total_bytes": 9326372,
+          "path": "benchmark_android/data/v4lpt.vpt.f006.yxn/old-100.dexbundle",
+          "sha256": "f327bf7048b1b0e89102f4c1c6d50a68675a6474790f12c5b40acee3cccf32c7",
+          "size": 9326416
+        },
+        "release": {
+          "added": 1721725587000,
+          "filename": "v4lpt.vpt.f006.yxn_100.apk",
+          "section": "repo",
+          "sha256": "5963742ea58c216d4484a448fcd091cf7471e07f2ca74825035d5f7be9cf49aa",
+          "signers_sha256": [
+            "27d27498c0fab528c3916568409c8497a3c337e118dcc0aa8c99193caac52e59"
+          ],
+          "size": 5068759,
+          "version_code": 100,
+          "version_name": "1.0.0"
+        }
+      },
+      "package_id": "v4lpt.vpt.f006.yxn",
+      "pair_id": "fdroid-v4lpt.vpt.f006.yxn-100-to-102",
+      "project_name": "Valentin's PowerTools #006 - Yes XOR No?",
+      "source_code": "https://github.com/v4lpt/YXN"
+    },
+    {
+      "candidate_rank": 6,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/de.christinecoenen.code.zapp/new-76.apk",
+          "reused": false,
+          "sha256": "8cc86a6b9df01d1cceddc447f2187ac3eb14d600e32fe2d58d3165ec8b423154",
+          "size": 4296288,
+          "url": "https://f-droid.org/archive/de.christinecoenen.code.zapp_76.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f6135bca3f1306829c2579984d7a8a0fb5c5f44de4eeaaf26874161c6fae2970",
+              "size": 4661492
+            }
+          ],
+          "dex_total_bytes": 4661492,
+          "path": "benchmark_android/data/de.christinecoenen.code.zapp/new-76.dexbundle",
+          "sha256": "4bcb0f8f15049a1df29b90712f3d6fe97a4f1dbdc9832e6b7a814e31382f7cf0",
+          "size": 4661536
+        },
+        "release": {
+          "added": 1751329617000,
+          "filename": "de.christinecoenen.code.zapp_76.apk",
+          "section": "archive",
+          "sha256": "8cc86a6b9df01d1cceddc447f2187ac3eb14d600e32fe2d58d3165ec8b423154",
+          "signers_sha256": [
+            "3d6d0b902328be2bdda76786144eea3e35322cbd31cf7f47b6d9da2e3988b4a0"
+          ],
+          "size": 4296288,
+          "version_code": 76,
+          "version_name": "9.0.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/de.christinecoenen.code.zapp/old-74.apk",
+          "reused": false,
+          "sha256": "7fe20b93b248307668919629926ac8b9e9648ad32c8919c80fdb5628afa5257c",
+          "size": 4242859,
+          "url": "https://f-droid.org/archive/de.christinecoenen.code.zapp_74.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a1e81a1e395b4e22a35e0f6dc8c1daf6f582f8eb2d4fe598a1fac72c65f471be",
+              "size": 4600384
+            }
+          ],
+          "dex_total_bytes": 4600384,
+          "path": "benchmark_android/data/de.christinecoenen.code.zapp/old-74.dexbundle",
+          "sha256": "0c8e367ee88321cfdb3411341ef3d598cde624d714d50e7dea25ab15dc57927a",
+          "size": 4600428
+        },
+        "release": {
+          "added": 1727008187000,
+          "filename": "de.christinecoenen.code.zapp_74.apk",
+          "section": "archive",
+          "sha256": "7fe20b93b248307668919629926ac8b9e9648ad32c8919c80fdb5628afa5257c",
+          "signers_sha256": [
+            "3d6d0b902328be2bdda76786144eea3e35322cbd31cf7f47b6d9da2e3988b4a0"
+          ],
+          "size": 4242859,
+          "version_code": 74,
+          "version_name": "8.5.4"
+        }
+      },
+      "package_id": "de.christinecoenen.code.zapp",
+      "pair_id": "fdroid-de.christinecoenen.code.zapp-74-to-76",
+      "project_name": "Zapp",
+      "source_code": "https://github.com/mediathekview/zapp"
+    },
+    {
+      "candidate_rank": 7,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/tibarj.tranquilstopwatch/new-17.apk",
+          "reused": false,
+          "sha256": "7bc31fae5cd2e9d815414dafb437f9a9a2fd21f4dc16d9929adc5fec962c5cb7",
+          "size": 2492454,
+          "url": "https://f-droid.org/repo/tibarj.tranquilstopwatch_17.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "7299148a624eb5df76d7c242283600269c8362ceb3ad7df71684ca9052b00128",
+              "size": 1538588
+            }
+          ],
+          "dex_total_bytes": 1538588,
+          "path": "benchmark_android/data/tibarj.tranquilstopwatch/new-17.dexbundle",
+          "sha256": "2909e8a70505fc367838d6b6c1fb51682cfc43f26879606af783e36899c7741c",
+          "size": 1538632
+        },
+        "release": {
+          "added": 1770478599000,
+          "filename": "tibarj.tranquilstopwatch_17.apk",
+          "section": "repo",
+          "sha256": "7bc31fae5cd2e9d815414dafb437f9a9a2fd21f4dc16d9929adc5fec962c5cb7",
+          "signers_sha256": [
+            "fe13fdfa891cc18426e6a361f2839067201a672b5cadd2bbddea8ce25d39a199"
+          ],
+          "size": 2492454,
+          "version_code": 17,
+          "version_name": "1.12.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/tibarj.tranquilstopwatch/old-16.apk",
+          "reused": false,
+          "sha256": "802095e741ab282ce85b82d916fad4fb652e86b78617a0ffc0f662598f75604a",
+          "size": 2478954,
+          "url": "https://f-droid.org/repo/tibarj.tranquilstopwatch_16.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f454ca845fc00995bdf92b920800d5d11169d39c08156059d3424c9441156011",
+              "size": 1527812
+            }
+          ],
+          "dex_total_bytes": 1527812,
+          "path": "benchmark_android/data/tibarj.tranquilstopwatch/old-16.dexbundle",
+          "sha256": "40f33393210326e7376a85a557b404888883f21ec05ca2a4b3443d644f723104",
+          "size": 1527856
+        },
+        "release": {
+          "added": 1769336565000,
+          "filename": "tibarj.tranquilstopwatch_16.apk",
+          "section": "repo",
+          "sha256": "802095e741ab282ce85b82d916fad4fb652e86b78617a0ffc0f662598f75604a",
+          "signers_sha256": [
+            "fe13fdfa891cc18426e6a361f2839067201a672b5cadd2bbddea8ce25d39a199"
+          ],
+          "size": 2478954,
+          "version_code": 16,
+          "version_name": "1.11.0"
+        }
+      },
+      "package_id": "tibarj.tranquilstopwatch",
+      "pair_id": "fdroid-tibarj.tranquilstopwatch-16-to-17",
+      "project_name": "Tranquil Stopwatch",
+      "source_code": "https://github.com/tibarj/tranquilstopwatch"
+    },
+    {
+      "candidate_rank": 8,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/co.loubo.icicle/new-4.apk",
+          "reused": false,
+          "sha256": "0546e98283566dd8f86dcf18637ad8c98276695bdb13336c6f45a5a9f4c270e0",
+          "size": 1195769,
+          "url": "https://f-droid.org/archive/co.loubo.icicle_4.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "c9c35dac1620fa6284cecaaaf844c2374d53d8e41b62282358d5750ee0cac7e9",
+              "size": 1535200
+            }
+          ],
+          "dex_total_bytes": 1535200,
+          "path": "benchmark_android/data/co.loubo.icicle/new-4.dexbundle",
+          "sha256": "cd3dd009d64d07d17d3171c189d3cda0be276df6d1f7148cee348b2c665fbaff",
+          "size": 1535244
+        },
+        "release": {
+          "added": 1439337600000,
+          "filename": "co.loubo.icicle_4.apk",
+          "section": "archive",
+          "sha256": "0546e98283566dd8f86dcf18637ad8c98276695bdb13336c6f45a5a9f4c270e0",
+          "signers_sha256": [
+            "9fb496cec54e856b055083078b17a1fad577c9c7d6a27b66fabfffaaa8b0afd6"
+          ],
+          "size": 1195769,
+          "version_code": 4,
+          "version_name": "0.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/co.loubo.icicle/old-3.apk",
+          "reused": false,
+          "sha256": "e5e1d71a980b0ed4f36343a56be4c2dae1ea579a7f7cfe4f24108715ac5d6380",
+          "size": 1155890,
+          "url": "https://f-droid.org/archive/co.loubo.icicle_3.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "19771e8f7cf83c7ea4f8f37b9e4ccb32f03cef0f7257d557f1d8c73322594d83",
+              "size": 1501252
+            }
+          ],
+          "dex_total_bytes": 1501252,
+          "path": "benchmark_android/data/co.loubo.icicle/old-3.dexbundle",
+          "sha256": "958f90ce612ce5f872f6b287a7dc4d0887c50698982f7e607c057bd9d66a27b8",
+          "size": 1501296
+        },
+        "release": {
+          "added": 1426636800000,
+          "filename": "co.loubo.icicle_3.apk",
+          "section": "archive",
+          "sha256": "e5e1d71a980b0ed4f36343a56be4c2dae1ea579a7f7cfe4f24108715ac5d6380",
+          "signers_sha256": [
+            "9fb496cec54e856b055083078b17a1fad577c9c7d6a27b66fabfffaaa8b0afd6"
+          ],
+          "size": 1155890,
+          "version_code": 3,
+          "version_name": "0.3"
+        }
+      },
+      "package_id": "co.loubo.icicle",
+      "pair_id": "fdroid-co.loubo.icicle-3-to-4",
+      "project_name": "Icicle for Freenet",
+      "source_code": "https://github.com/ArneBab/Icicle"
+    },
+    {
+      "candidate_rank": 9,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/ohm.quickdice/new-48.apk",
+          "reused": false,
+          "sha256": "14a4caf7ac40036e9559fdf3456d18bfb2add4dd2ae548dacdf560604a3ee99e",
+          "size": 1481117,
+          "url": "https://f-droid.org/archive/ohm.quickdice_48.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "3ca3e00bd2394232afb1857ef02d5e912fbfed98dece407a0fa3188267178950",
+              "size": 542184
+            }
+          ],
+          "dex_total_bytes": 542184,
+          "path": "benchmark_android/data/ohm.quickdice/new-48.dexbundle",
+          "sha256": "7a253c055cfea6b96f0df81f3cb3b8b5684a9237eb2493c1781ac79f76ed9c9c",
+          "size": 542228
+        },
+        "release": {
+          "added": 1473897600000,
+          "filename": "ohm.quickdice_48.apk",
+          "section": "archive",
+          "sha256": "14a4caf7ac40036e9559fdf3456d18bfb2add4dd2ae548dacdf560604a3ee99e",
+          "signers_sha256": [
+            "da424e65e461659acc36d0150bf61feebd8400d73835a1fd9a7c41466f630c36"
+          ],
+          "size": 1481117,
+          "version_code": 48,
+          "version_name": "2.1.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/ohm.quickdice/old-45.apk",
+          "reused": false,
+          "sha256": "32ae0d85a5a97534e6cdd565c44ca71d7ea0b7dab0ec0cb04834ad31b9cd3d48",
+          "size": 1480643,
+          "url": "https://f-droid.org/archive/ohm.quickdice_45.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "040dfc87cd404fc29d53b8bfdf47d0eafc06d9c93582d3b4bfd0ceba973126d9",
+              "size": 542148
+            }
+          ],
+          "dex_total_bytes": 542148,
+          "path": "benchmark_android/data/ohm.quickdice/old-45.dexbundle",
+          "sha256": "9aa44d751eb9d66e0c828e1eaf2a936a802e03a03ea52a897f016ebdb17705f8",
+          "size": 542192
+        },
+        "release": {
+          "added": 1473292800000,
+          "filename": "ohm.quickdice_45.apk",
+          "section": "archive",
+          "sha256": "32ae0d85a5a97534e6cdd565c44ca71d7ea0b7dab0ec0cb04834ad31b9cd3d48",
+          "signers_sha256": [
+            "da424e65e461659acc36d0150bf61feebd8400d73835a1fd9a7c41466f630c36"
+          ],
+          "size": 1480643,
+          "version_code": 45,
+          "version_name": "2.1.3"
+        }
+      },
+      "package_id": "ohm.quickdice",
+      "pair_id": "fdroid-ohm.quickdice-45-to-48",
+      "project_name": "Quick Dice Roller",
+      "source_code": "https://github.com/Ohmnibus/quick-dice-roller"
+    },
+    {
+      "candidate_rank": 10,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.zionhuang.music/new-20.apk",
+          "reused": false,
+          "sha256": "d6b63d3771df49fd4694ff78d0351e23903d20aa92e5c4d1612cf6ef4cc5f060",
+          "size": 6251221,
+          "url": "https://f-droid.org/archive/com.zionhuang.music_20.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "d7b7e49c32ae252eb40567dde169b83fb7d1f7cfdcd2a50d440135c8ac800575",
+              "size": 6967684
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "9f0422a1d6e5ed254f2d21195e6aeb7adf30db2e707418e9268d35991c5cbbb5",
+              "size": 105612
+            }
+          ],
+          "dex_total_bytes": 7073296,
+          "path": "benchmark_android/data/com.zionhuang.music/new-20.dexbundle",
+          "sha256": "db52372907967b882c4630dd9270f71af231d1ce95d8ead1355ec7c1eb9fcc04",
+          "size": 7073364
+        },
+        "release": {
+          "added": 1723209381000,
+          "filename": "com.zionhuang.music_20.apk",
+          "section": "archive",
+          "sha256": "d6b63d3771df49fd4694ff78d0351e23903d20aa92e5c4d1612cf6ef4cc5f060",
+          "signers_sha256": [
+            "5d55f9086e9543ee4d9e5f50bd60595ed4e9ac842de334fde900f3c616e32af2"
+          ],
+          "size": 6251221,
+          "version_code": 20,
+          "version_name": "0.5.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.zionhuang.music/old-19.apk",
+          "reused": false,
+          "sha256": "06216a336286fc6625b57d3e88d46d92e58957d2bdbc0a1378d07d019f643e08",
+          "size": 6226873,
+          "url": "https://f-droid.org/archive/com.zionhuang.music_19.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "bbc383280d074917d6f6bac385542997f09bb56951ff6ac023736cf7d5783e7f",
+              "size": 6928156
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "9f0422a1d6e5ed254f2d21195e6aeb7adf30db2e707418e9268d35991c5cbbb5",
+              "size": 105612
+            }
+          ],
+          "dex_total_bytes": 7033768,
+          "path": "benchmark_android/data/com.zionhuang.music/old-19.dexbundle",
+          "sha256": "8f4889d8cf339de916d22a1dead824abb1e044efbd4b7541b8f0851008b16f94",
+          "size": 7033836
+        },
+        "release": {
+          "added": 1694505523000,
+          "filename": "com.zionhuang.music_19.apk",
+          "section": "archive",
+          "sha256": "06216a336286fc6625b57d3e88d46d92e58957d2bdbc0a1378d07d019f643e08",
+          "signers_sha256": [
+            "5d55f9086e9543ee4d9e5f50bd60595ed4e9ac842de334fde900f3c616e32af2"
+          ],
+          "size": 6226873,
+          "version_code": 19,
+          "version_name": "0.5.3"
+        }
+      },
+      "package_id": "com.zionhuang.music",
+      "pair_id": "fdroid-com.zionhuang.music-19-to-20",
+      "project_name": "InnerTune",
+      "source_code": "https://github.com/z-huang/InnerTune"
+    },
+    {
+      "candidate_rank": 12,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/net.eneiluj.nextcloud.phonetrack/new-11.apk",
+          "reused": false,
+          "sha256": "d431d230f5ffb7d41aef8efe951f04a8b3c360c4024e9051096c07437319faa8",
+          "size": 6019925,
+          "url": "https://f-droid.org/archive/net.eneiluj.nextcloud.phonetrack_11.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "13004bb2de44e3c321e419f1d8c36df30d88389e03c4651544db2d780b2a37ad",
+              "size": 8252216
+            }
+          ],
+          "dex_total_bytes": 8252216,
+          "path": "benchmark_android/data/net.eneiluj.nextcloud.phonetrack/new-11.dexbundle",
+          "sha256": "0c35f3cbbdd34c212dfeb1efbe05cddc5377eb273d5c78766be8a6729b2847da",
+          "size": 8252260
+        },
+        "release": {
+          "added": 1558051200000,
+          "filename": "net.eneiluj.nextcloud.phonetrack_11.apk",
+          "section": "archive",
+          "sha256": "d431d230f5ffb7d41aef8efe951f04a8b3c360c4024e9051096c07437319faa8",
+          "signers_sha256": [
+            "a44e9cb3fd81c10faed875821837479ebc9cce60ac8af5deaf0ebf812ef9b534"
+          ],
+          "size": 6019925,
+          "version_code": 11,
+          "version_name": "0.0.11"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/net.eneiluj.nextcloud.phonetrack/old-10.apk",
+          "reused": false,
+          "sha256": "c6bb8cd7296fc60d8b03bf6a7dc916427641f51bbae3d6d10eccd0ede36e6df0",
+          "size": 4879941,
+          "url": "https://f-droid.org/archive/net.eneiluj.nextcloud.phonetrack_10.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "e758c884d445d04d65101a548478d1af1fc191f639c8eec267e749539dfe848a",
+              "size": 6002328
+            }
+          ],
+          "dex_total_bytes": 6002328,
+          "path": "benchmark_android/data/net.eneiluj.nextcloud.phonetrack/old-10.dexbundle",
+          "sha256": "eece498941d6cd502274647e85d0677c20e975d282e98f243d0743e48518d49a",
+          "size": 6002372
+        },
+        "release": {
+          "added": 1552435200000,
+          "filename": "net.eneiluj.nextcloud.phonetrack_10.apk",
+          "section": "archive",
+          "sha256": "c6bb8cd7296fc60d8b03bf6a7dc916427641f51bbae3d6d10eccd0ede36e6df0",
+          "signers_sha256": [
+            "a44e9cb3fd81c10faed875821837479ebc9cce60ac8af5deaf0ebf812ef9b534"
+          ],
+          "size": 4879941,
+          "version_code": 10,
+          "version_name": "0.0.10"
+        }
+      },
+      "package_id": "net.eneiluj.nextcloud.phonetrack",
+      "pair_id": "fdroid-net.eneiluj.nextcloud.phonetrack-10-to-11",
+      "project_name": "PhoneTrack",
+      "source_code": "https://gitlab.com/eneiluj/phonetrack-android"
+    },
+    {
+      "candidate_rank": 14,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.rtbishop.look4sat/new-323.apk",
+          "reused": false,
+          "sha256": "f9d072930686cdd90700110e513c4106cad3a48a7cbdeaa5a97bcc155fa4a056",
+          "size": 2346489,
+          "url": "https://f-droid.org/archive/com.rtbishop.look4sat_323.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "987e7c1265c725c8b21e64af4d2fda0e59e58f1666b7d0b8a625cc9a348dedb7",
+              "size": 1979132
+            }
+          ],
+          "dex_total_bytes": 1979132,
+          "path": "benchmark_android/data/com.rtbishop.look4sat/new-323.dexbundle",
+          "sha256": "715fd841184f3f8128732e6ad2191295b79636876121c913b68588b4cf62a9c4",
+          "size": 1979176
+        },
+        "release": {
+          "added": 1766937285000,
+          "filename": "com.rtbishop.look4sat_323.apk",
+          "section": "archive",
+          "sha256": "f9d072930686cdd90700110e513c4106cad3a48a7cbdeaa5a97bcc155fa4a056",
+          "signers_sha256": [
+            "bca485cdb26a2d1d832a87e393995888c22a374c8f2febc553a7df574c3b6590"
+          ],
+          "size": 2346489,
+          "version_code": 323,
+          "version_name": "3.2.3"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.rtbishop.look4sat/old-322.apk",
+          "reused": false,
+          "sha256": "c97c46395554ba95391630da1a094112dce7438aa6fbceb9ba81f2b9208a39ee",
+          "size": 2338297,
+          "url": "https://f-droid.org/archive/com.rtbishop.look4sat_322.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "210eb43022500b881e35d04f6be616d78910329ec5454dc47dc7fad4e8452fea",
+              "size": 1979132
+            }
+          ],
+          "dex_total_bytes": 1979132,
+          "path": "benchmark_android/data/com.rtbishop.look4sat/old-322.dexbundle",
+          "sha256": "91f10a1bbe98a6ca4e828b1315e17cc0f4f54c6217b737c7a4d46406683d12f4",
+          "size": 1979176
+        },
+        "release": {
+          "added": 1759854807000,
+          "filename": "com.rtbishop.look4sat_322.apk",
+          "section": "archive",
+          "sha256": "c97c46395554ba95391630da1a094112dce7438aa6fbceb9ba81f2b9208a39ee",
+          "signers_sha256": [
+            "bca485cdb26a2d1d832a87e393995888c22a374c8f2febc553a7df574c3b6590"
+          ],
+          "size": 2338297,
+          "version_code": 322,
+          "version_name": "3.2.2"
+        }
+      },
+      "package_id": "com.rtbishop.look4sat",
+      "pair_id": "fdroid-com.rtbishop.look4sat-322-to-323",
+      "project_name": "Look4Sat: Satellite tracker",
+      "source_code": "https://github.com/rt-bishop/Look4Sat"
+    },
+    {
+      "candidate_rank": 15,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.fastaccess.github.libre/new-467.apk",
+          "reused": false,
+          "sha256": "cce7ddd99ed4303b4803f5554b49dce81a505cd3feefd9356050280249528681",
+          "size": 6658054,
+          "url": "https://f-droid.org/archive/com.fastaccess.github.libre_467.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "4afb087dfafb8e0b9705973722febc3ffc0c264469a339f9301c7a8107072136",
+              "size": 8266192
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "a861e0411a6dcfcbc2d239ad5995106439f3069e58e609e81dc90e4cb75bc0f4",
+              "size": 81720
+            }
+          ],
+          "dex_total_bytes": 8347912,
+          "path": "benchmark_android/data/com.fastaccess.github.libre/new-467.dexbundle",
+          "sha256": "110bce64774d69e4f043bb79f043b7a4a995e21ffe6d17916b7bd64036f949bd",
+          "size": 8347980
+        },
+        "release": {
+          "added": 1529539200000,
+          "filename": "com.fastaccess.github.libre_467.apk",
+          "section": "archive",
+          "sha256": "cce7ddd99ed4303b4803f5554b49dce81a505cd3feefd9356050280249528681",
+          "signers_sha256": [
+            "547593a2ab5b310fcf6d36e611d407b705f7cb595e3481ed13a6c4517ef7ed0e"
+          ],
+          "size": 6658054,
+          "version_code": 467,
+          "version_name": "4.6.7"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.fastaccess.github.libre/old-466.apk",
+          "reused": false,
+          "sha256": "c85be3a7121a663e938a283b5d19f3f2ea1601a0ad069eab45c533710bd03998",
+          "size": 6662316,
+          "url": "https://f-droid.org/archive/com.fastaccess.github.libre_466.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "d6616434a74792533eedbc60802bd1978bf3070c5d2a042d8401f704774d869c",
+              "size": 8264052
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "418317fb932ae3b41538a699aa5660d9580b807609b23324862cda99671d71a2",
+              "size": 81724
+            }
+          ],
+          "dex_total_bytes": 8345776,
+          "path": "benchmark_android/data/com.fastaccess.github.libre/old-466.dexbundle",
+          "sha256": "6061454ce05336cdb19bcd30d0daf9bf4de0d319c00a1f07ce0063fc0a6a28eb",
+          "size": 8345844
+        },
+        "release": {
+          "added": 1522454400000,
+          "filename": "com.fastaccess.github.libre_466.apk",
+          "section": "archive",
+          "sha256": "c85be3a7121a663e938a283b5d19f3f2ea1601a0ad069eab45c533710bd03998",
+          "signers_sha256": [
+            "547593a2ab5b310fcf6d36e611d407b705f7cb595e3481ed13a6c4517ef7ed0e"
+          ],
+          "size": 6662316,
+          "version_code": 466,
+          "version_name": "4.6.6"
+        }
+      },
+      "package_id": "com.fastaccess.github.libre",
+      "pair_id": "fdroid-com.fastaccess.github.libre-466-to-467",
+      "project_name": "FastHub-Libre",
+      "source_code": "https://github.com/thermatk/FastHub-Libre"
+    },
+    {
+      "candidate_rank": 16,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/hu.tagsoft.ttorrent.search/new-3.apk",
+          "reused": false,
+          "sha256": "10a81f1cff5bc24595d6e2849d06d37647e8a9aea560b28eb67e834299802475",
+          "size": 1353500,
+          "url": "https://f-droid.org/repo/hu.tagsoft.ttorrent.search_3.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "41e97c32f13b1349be3f6adec931e9500fc6bb4d80c2c1e3f41e65378a8e510b",
+              "size": 1724460
+            }
+          ],
+          "dex_total_bytes": 1724460,
+          "path": "benchmark_android/data/hu.tagsoft.ttorrent.search/new-3.dexbundle",
+          "sha256": "73c43f5498361640e343087789e5109661d657466c70d2f6afba4e4b43e5d12b",
+          "size": 1724504
+        },
+        "release": {
+          "added": 1590796800000,
+          "filename": "hu.tagsoft.ttorrent.search_3.apk",
+          "section": "repo",
+          "sha256": "10a81f1cff5bc24595d6e2849d06d37647e8a9aea560b28eb67e834299802475",
+          "signers_sha256": [
+            "6a2164fe93544b4fbd549dd8d7682d69ec686d7e5e8e8c788c5748538e1cdd86"
+          ],
+          "size": 1353500,
+          "version_code": 3,
+          "version_name": "1.0.2"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/hu.tagsoft.ttorrent.search/old-2.apk",
+          "reused": false,
+          "sha256": "8d6f73a8ea777e38e6e3661cada080dc465d2d0dcc1392efaea1d7ac11122ff6",
+          "size": 1352734,
+          "url": "https://f-droid.org/repo/hu.tagsoft.ttorrent.search_2.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f59a575def5a42cdf11f2da3c66ac3ab4e6781d13aa6fd225cbc1ae2d46d2a14",
+              "size": 1724460
+            }
+          ],
+          "dex_total_bytes": 1724460,
+          "path": "benchmark_android/data/hu.tagsoft.ttorrent.search/old-2.dexbundle",
+          "sha256": "d66118d2ab19d7d42e677e06ef50e99e8d5db3eae0e01a43b9498676e70841b4",
+          "size": 1724504
+        },
+        "release": {
+          "added": 1589328000000,
+          "filename": "hu.tagsoft.ttorrent.search_2.apk",
+          "section": "repo",
+          "sha256": "8d6f73a8ea777e38e6e3661cada080dc465d2d0dcc1392efaea1d7ac11122ff6",
+          "signers_sha256": [
+            "6a2164fe93544b4fbd549dd8d7682d69ec686d7e5e8e8c788c5748538e1cdd86"
+          ],
+          "size": 1352734,
+          "version_code": 2,
+          "version_name": "1.0.1"
+        }
+      },
+      "package_id": "hu.tagsoft.ttorrent.search",
+      "pair_id": "fdroid-hu.tagsoft.ttorrent.search-2-to-3",
+      "project_name": "tTorrent search",
+      "source_code": "https://gitlab.com/tagsoft/ttorrent-search"
+    },
+    {
+      "candidate_rank": 17,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/org.fitchfamily.android.gsmlocation/new-74.apk",
+          "reused": false,
+          "sha256": "a5f6c66d3c55dbede48edc5bb0644909987ba3b03ceaa90243633e403e402b99",
+          "size": 2280126,
+          "url": "https://f-droid.org/repo/org.fitchfamily.android.gsmlocation_74.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "5baa26c4c14b76095f5aa3b6c14279b721dd5e80a86bdd2a0c47666d6266adc0",
+              "size": 3592620
+            }
+          ],
+          "dex_total_bytes": 3592620,
+          "path": "benchmark_android/data/org.fitchfamily.android.gsmlocation/new-74.dexbundle",
+          "sha256": "af4128a2ff62c11b1f9cbcc1f8beefb836c8953fd5bebed61f3cda69614cd8f0",
+          "size": 3592664
+        },
+        "release": {
+          "added": 1716420068000,
+          "filename": "org.fitchfamily.android.gsmlocation_74.apk",
+          "section": "repo",
+          "sha256": "a5f6c66d3c55dbede48edc5bb0644909987ba3b03ceaa90243633e403e402b99",
+          "signers_sha256": [
+            "7a8a916d204e93da705dd517b91ad19060fc0be01b491d476b13fd8818384fb1"
+          ],
+          "size": 2280126,
+          "version_code": 74,
+          "version_name": "1.5.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/org.fitchfamily.android.gsmlocation/old-73.apk",
+          "reused": false,
+          "sha256": "9087f4e67b8b94d6601c9b2108eecd5c4fe176b9001c5955f4f28654025d8955",
+          "size": 2271918,
+          "url": "https://f-droid.org/repo/org.fitchfamily.android.gsmlocation_73.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "eab7bed7b6dad36c9d94088f20042f0c6a0db15606ef17822397fd2ab349e289",
+              "size": 3591444
+            }
+          ],
+          "dex_total_bytes": 3591444,
+          "path": "benchmark_android/data/org.fitchfamily.android.gsmlocation/old-73.dexbundle",
+          "sha256": "9e7f8f3fc523a144c270ebb36db3ef6dc4499f02618d41e1c6c53d7e7f8bcc26",
+          "size": 3591488
+        },
+        "release": {
+          "added": 1636070400000,
+          "filename": "org.fitchfamily.android.gsmlocation_73.apk",
+          "section": "repo",
+          "sha256": "9087f4e67b8b94d6601c9b2108eecd5c4fe176b9001c5955f4f28654025d8955",
+          "signers_sha256": [
+            "7a8a916d204e93da705dd517b91ad19060fc0be01b491d476b13fd8818384fb1"
+          ],
+          "size": 2271918,
+          "version_code": 73,
+          "version_name": "1.5.3"
+        }
+      },
+      "package_id": "org.fitchfamily.android.gsmlocation",
+      "pair_id": "fdroid-org.fitchfamily.android.gsmlocation-73-to-74",
+      "project_name": "Local GSM Location - A local cell tower based back",
+      "source_code": "https://gitlab.com/deveee/Local-GSM-Backend"
+    },
+    {
+      "candidate_rank": 18,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/de.devmil.muzei.bingimageofthedayartsource/new-18.apk",
+          "reused": false,
+          "sha256": "af5cc1a85bd7c1f667afaea5c349ba6707e3ab56a01ffe68db2059daee899892",
+          "size": 2753214,
+          "url": "https://f-droid.org/repo/de.devmil.muzei.bingimageofthedayartsource_18.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "2a26bba021fe9126b4622d2acc0c8513230635cf890fc08f6dc417d4440e3ee3",
+              "size": 6090920
+            }
+          ],
+          "dex_total_bytes": 6090920,
+          "path": "benchmark_android/data/de.devmil.muzei.bingimageofthedayartsource/new-18.dexbundle",
+          "sha256": "015795ad77c339d83dc40fa5edd23fdceed3580b79c12e3e2a3d74792693dca6",
+          "size": 6090964
+        },
+        "release": {
+          "added": 1753369805000,
+          "filename": "de.devmil.muzei.bingimageofthedayartsource_18.apk",
+          "section": "repo",
+          "sha256": "af5cc1a85bd7c1f667afaea5c349ba6707e3ab56a01ffe68db2059daee899892",
+          "signers_sha256": [
+            "2f68f381dc9f286d79529590512753d8130c429477dddd268ccc22d4894a6fbd"
+          ],
+          "size": 2753214,
+          "version_code": 18,
+          "version_name": "2.3.2"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/de.devmil.muzei.bingimageofthedayartsource/old-9.apk",
+          "reused": false,
+          "sha256": "fd451a3f9b5a293bdf3207953557ed9d3e20fbf6fbafe084c1b98bf5bfd96b8d",
+          "size": 2240280,
+          "url": "https://f-droid.org/repo/de.devmil.muzei.bingimageofthedayartsource_9.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "66b2160235ce7221fda1a1bb8d36b80375827c7cda6a50cfcb7348a55d441c42",
+              "size": 4750844
+            }
+          ],
+          "dex_total_bytes": 4750844,
+          "path": "benchmark_android/data/de.devmil.muzei.bingimageofthedayartsource/old-9.dexbundle",
+          "sha256": "253f65ce4892baa9e935bdd86092ac9146dbc60d28cff6c6b2be5486771ac01f",
+          "size": 4750888
+        },
+        "release": {
+          "added": 1603065600000,
+          "filename": "de.devmil.muzei.bingimageofthedayartsource_9.apk",
+          "section": "repo",
+          "sha256": "fd451a3f9b5a293bdf3207953557ed9d3e20fbf6fbafe084c1b98bf5bfd96b8d",
+          "signers_sha256": [
+            "2f68f381dc9f286d79529590512753d8130c429477dddd268ccc22d4894a6fbd"
+          ],
+          "size": 2240280,
+          "version_code": 9,
+          "version_name": "2.0"
+        }
+      },
+      "package_id": "de.devmil.muzei.bingimageofthedayartsource",
+      "pair_id": "fdroid-de.devmil.muzei.bingimageofthedayartsource-9-to-18",
+      "project_name": "Muzei - Bing Image of the Day",
+      "source_code": "https://github.com/devmil/muzei-bingimageoftheday"
+    },
+    {
+      "candidate_rank": 19,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.vadimfrolov.duorem/new-6.apk",
+          "reused": false,
+          "sha256": "bdba406c2b6573fcaca18eb5a02ba7b1728338f81b430e44214b899b7155602f",
+          "size": 2055795,
+          "url": "https://f-droid.org/repo/com.vadimfrolov.duorem_6.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "ca4c0d2a70df31d5d06b9fcc226495e91e27dc79b5ca18f45d3cdecf2c42ea97",
+              "size": 3205348
+            }
+          ],
+          "dex_total_bytes": 3205348,
+          "path": "benchmark_android/data/com.vadimfrolov.duorem/new-6.dexbundle",
+          "sha256": "e8947ca80740b6fb991379052ab0605852c2c0479314a4ff877d2c8ebafe68f4",
+          "size": 3205392
+        },
+        "release": {
+          "added": 1584316800000,
+          "filename": "com.vadimfrolov.duorem_6.apk",
+          "section": "repo",
+          "sha256": "bdba406c2b6573fcaca18eb5a02ba7b1728338f81b430e44214b899b7155602f",
+          "signers_sha256": [
+            "49bd1389a9719ad22462fb4495d79c495990377811324b73274fab891a6f25e7"
+          ],
+          "size": 2055795,
+          "version_code": 6,
+          "version_name": "1.1.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.vadimfrolov.duorem/old-5.apk",
+          "reused": false,
+          "sha256": "e02e0c8002a917fedc5620a14c45ed812644b9bddb76fe62e14d50114caaea4f",
+          "size": 2064547,
+          "url": "https://f-droid.org/repo/com.vadimfrolov.duorem_5.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "669b00cb42c7f5df0f0fc2c6475c1fa1c6d689e2cf68652a4fd771a133992e16",
+              "size": 3246924
+            }
+          ],
+          "dex_total_bytes": 3246924,
+          "path": "benchmark_android/data/com.vadimfrolov.duorem/old-5.dexbundle",
+          "sha256": "2e10e2f30b1f1522de605aa0bfb8e5654a549dd7bfbfe9ff03ad57feaa28d356",
+          "size": 3246968
+        },
+        "release": {
+          "added": 1527379200000,
+          "filename": "com.vadimfrolov.duorem_5.apk",
+          "section": "repo",
+          "sha256": "e02e0c8002a917fedc5620a14c45ed812644b9bddb76fe62e14d50114caaea4f",
+          "signers_sha256": [
+            "49bd1389a9719ad22462fb4495d79c495990377811324b73274fab891a6f25e7"
+          ],
+          "size": 2064547,
+          "version_code": 5,
+          "version_name": "1.1.3"
+        }
+      },
+      "package_id": "com.vadimfrolov.duorem",
+      "pair_id": "fdroid-com.vadimfrolov.duorem-5-to-6",
+      "project_name": "Duorem",
+      "source_code": "https://github.com/fralik/Duorem"
+    },
+    {
+      "candidate_rank": 20,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.nbossard.packlist/new-19.apk",
+          "reused": false,
+          "sha256": "97bdc66594550afd3255c869bab8ae2272cc7ed5f2a3a25a064679f6cf06137e",
+          "size": 2496491,
+          "url": "https://f-droid.org/repo/com.nbossard.packlist_19.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "e2896e46f3ebff039d131510f45d4b1d91b056297305e831c1018dd74cfc8212",
+              "size": 3757436
+            }
+          ],
+          "dex_total_bytes": 3757436,
+          "path": "benchmark_android/data/com.nbossard.packlist/new-19.dexbundle",
+          "sha256": "4af95d970247e82d3a4ebcf0d58103335dba933291bbe80e54e11aaa1f55fc06",
+          "size": 3757480
+        },
+        "release": {
+          "added": 1518739200000,
+          "filename": "com.nbossard.packlist_19.apk",
+          "section": "repo",
+          "sha256": "97bdc66594550afd3255c869bab8ae2272cc7ed5f2a3a25a064679f6cf06137e",
+          "signers_sha256": [
+            "ba72130174434b9cda307f5f631cd2b98b64a9ffd4fc0ef6ad33543955397ee1"
+          ],
+          "size": 2496491,
+          "version_code": 19,
+          "version_name": "0.13"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.nbossard.packlist/old-18.apk",
+          "reused": false,
+          "sha256": "cff27d50447362b1e67c669346d7b2afd3bdec7e7e84ed2197dbb4f83b8f378b",
+          "size": 2466332,
+          "url": "https://f-droid.org/repo/com.nbossard.packlist_18.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "421d9dbb1ae0ea356bd9becc1dd867c3325577fa8598b0356fee03a9937609c5",
+              "size": 3751204
+            }
+          ],
+          "dex_total_bytes": 3751204,
+          "path": "benchmark_android/data/com.nbossard.packlist/old-18.dexbundle",
+          "sha256": "40bccaaf37be1e8e3ac412c54e4e407e684319c4a4d2c003fa4cf3713eb407e5",
+          "size": 3751248
+        },
+        "release": {
+          "added": 1512345600000,
+          "filename": "com.nbossard.packlist_18.apk",
+          "section": "repo",
+          "sha256": "cff27d50447362b1e67c669346d7b2afd3bdec7e7e84ed2197dbb4f83b8f378b",
+          "signers_sha256": [
+            "ba72130174434b9cda307f5f631cd2b98b64a9ffd4fc0ef6ad33543955397ee1"
+          ],
+          "size": 2466332,
+          "version_code": 18,
+          "version_name": "0.12"
+        }
+      },
+      "package_id": "com.nbossard.packlist",
+      "pair_id": "fdroid-com.nbossard.packlist-18-to-19",
+      "project_name": "packlist",
+      "source_code": "https://github.com/nbossard/packlist"
+    },
+    {
+      "candidate_rank": 22,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/org.shadowice.flocke.andotp/new-39.apk",
+          "reused": false,
+          "sha256": "4558eae858ac3205cf856240479450b69436dff3dac84fbb01a5022b6070a1a7",
+          "size": 7360802,
+          "url": "https://f-droid.org/archive/org.shadowice.flocke.andotp_39.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "c498a4cf8e7dcdc06b5c736144413b8bbd468366a5d27733967247e3583de114",
+              "size": 6191404
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "3747bb18905053d946f719cfdb4a7b168356399aec274889ac6f1d47ebeb4f9d",
+              "size": 367920
+            }
+          ],
+          "dex_total_bytes": 6559324,
+          "path": "benchmark_android/data/org.shadowice.flocke.andotp/new-39.dexbundle",
+          "sha256": "8e2166a25bb94e9d59d6840322420d4bf31cfbfe2b2ddeac852de86a02cc1be4",
+          "size": 6559392
+        },
+        "release": {
+          "added": 1624147200000,
+          "filename": "org.shadowice.flocke.andotp_39.apk",
+          "section": "archive",
+          "sha256": "4558eae858ac3205cf856240479450b69436dff3dac84fbb01a5022b6070a1a7",
+          "signers_sha256": [
+            "987ccce4a1fa8ab28cd6ea1bedf129cbb31b8db24ee434fd6e3619adc924a122"
+          ],
+          "size": 7360802,
+          "version_code": 39,
+          "version_name": "0.9.0.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/org.shadowice.flocke.andotp/old-38.apk",
+          "reused": false,
+          "sha256": "bee24ba83c2865412ec580164a56b6efda985bc02b093cc1c4d610f0a7cb4ed4",
+          "size": 7360802,
+          "url": "https://f-droid.org/archive/org.shadowice.flocke.andotp_38.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "8d89ffa1ee5913997bf4e60d9a8cfe5ad6a2e74c5d882dd45ce738a24e3039b5",
+              "size": 6191380
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "72967b1b4d06bdf40109049d60cf3eb9a45bc9bd6ea26333bc846ddc9d180c83",
+              "size": 367920
+            }
+          ],
+          "dex_total_bytes": 6559300,
+          "path": "benchmark_android/data/org.shadowice.flocke.andotp/old-38.dexbundle",
+          "sha256": "2531720a882f5b9cfc223ec25625f4e8cf67c581d6e9130932f42e50b85d5e0c",
+          "size": 6559368
+        },
+        "release": {
+          "added": 1623369600000,
+          "filename": "org.shadowice.flocke.andotp_38.apk",
+          "section": "archive",
+          "sha256": "bee24ba83c2865412ec580164a56b6efda985bc02b093cc1c4d610f0a7cb4ed4",
+          "signers_sha256": [
+            "987ccce4a1fa8ab28cd6ea1bedf129cbb31b8db24ee434fd6e3619adc924a122"
+          ],
+          "size": 7360802,
+          "version_code": 38,
+          "version_name": "0.9.0"
+        }
+      },
+      "package_id": "org.shadowice.flocke.andotp",
+      "pair_id": "fdroid-org.shadowice.flocke.andotp-38-to-39",
+      "project_name": "andOTP",
+      "source_code": "https://github.com/andOTP/andOTP"
+    },
+    {
+      "candidate_rank": 23,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.google.android.stardroid/new-1708.apk",
+          "reused": false,
+          "sha256": "6ef676cc3765bfcf5b6a23777246d25d4da0bb1f36df1e459d0ccdbafb0b07ae",
+          "size": 19706550,
+          "url": "https://f-droid.org/repo/com.google.android.stardroid_1708.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "e8ac79485a6bfbac4ed435186dc45b6a885e1fc3ea41b51db8a32cfc93764d97",
+              "size": 2065268
+            }
+          ],
+          "dex_total_bytes": 2065268,
+          "path": "benchmark_android/data/com.google.android.stardroid/new-1708.dexbundle",
+          "sha256": "4bb9ff972aaf09ed59da40d74976fdf381ab2d4784dd53a6056ab8e90efd6ff7",
+          "size": 2065312
+        },
+        "release": {
+          "added": 1786866775484,
+          "filename": "com.google.android.stardroid_1708.apk",
+          "section": "repo",
+          "sha256": "6ef676cc3765bfcf5b6a23777246d25d4da0bb1f36df1e459d0ccdbafb0b07ae",
+          "signers_sha256": [
+            "066b05d01ea5b4998074ceab1ccca5bf42711995edc6aedbfa311e5620f1e442"
+          ],
+          "size": 19706550,
+          "version_code": 1708,
+          "version_name": "1.18.1:Eclipse"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.google.android.stardroid/old-1704.apk",
+          "reused": false,
+          "sha256": "9dc63a85103f2f8be0d51b307f477f50d3c0d80e1782b9ec890bf55ad39bd273",
+          "size": 19694262,
+          "url": "https://f-droid.org/repo/com.google.android.stardroid_1704.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "66ef38420c7e2ae4d1929bafe871c81740c90430c70f066ac0e9d82d8a1979e1",
+              "size": 2058680
+            }
+          ],
+          "dex_total_bytes": 2058680,
+          "path": "benchmark_android/data/com.google.android.stardroid/old-1704.dexbundle",
+          "sha256": "f898dfa44a592a8ea526ac04b484e3093bde40cf7666d4d9ba5e3b5f3f4bc3d6",
+          "size": 2058724
+        },
+        "release": {
+          "added": 1786433443658,
+          "filename": "com.google.android.stardroid_1704.apk",
+          "section": "repo",
+          "sha256": "9dc63a85103f2f8be0d51b307f477f50d3c0d80e1782b9ec890bf55ad39bd273",
+          "signers_sha256": [
+            "066b05d01ea5b4998074ceab1ccca5bf42711995edc6aedbfa311e5620f1e442"
+          ],
+          "size": 19694262,
+          "version_code": 1704,
+          "version_name": "1.18.0:Eclipse"
+        }
+      },
+      "package_id": "com.google.android.stardroid",
+      "pair_id": "fdroid-com.google.android.stardroid-1704-to-1708",
+      "project_name": "Sky Map",
+      "source_code": "https://github.com/sky-map-team/stardroid"
+    },
+    {
+      "candidate_rank": 24,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.jstappdev.e6bflightcomputer/new-20.apk",
+          "reused": false,
+          "sha256": "4ad6dc9d56d693006787c263a227c76fb007c6e86a9f8ed791dde03dccf4d86b",
+          "size": 1966638,
+          "url": "https://f-droid.org/repo/com.jstappdev.e6bflightcomputer_20.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "6c2061fba26f51a72657d11543166b947efbdbf290ba67151f833c6da4bad7ff",
+              "size": 953632
+            }
+          ],
+          "dex_total_bytes": 953632,
+          "path": "benchmark_android/data/com.jstappdev.e6bflightcomputer/new-20.dexbundle",
+          "sha256": "11019f59b9075feeac14ddeacf815492f6143ccc3a9fd184a9318215579e80fa",
+          "size": 953676
+        },
+        "release": {
+          "added": 1766530505000,
+          "filename": "com.jstappdev.e6bflightcomputer_20.apk",
+          "section": "repo",
+          "sha256": "4ad6dc9d56d693006787c263a227c76fb007c6e86a9f8ed791dde03dccf4d86b",
+          "signers_sha256": [
+            "660a1d0cdcf16e1d7495aa4c0e484feb7b28e06a4b91cb04cf9fe8a12852760c"
+          ],
+          "size": 1966638,
+          "version_code": 20,
+          "version_name": "2.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.jstappdev.e6bflightcomputer/old-19.apk",
+          "reused": false,
+          "sha256": "b5320cba413a9b027230e9c86231bc32927a6880f1088a0e96c8eda1f2a2df28",
+          "size": 1965658,
+          "url": "https://f-droid.org/repo/com.jstappdev.e6bflightcomputer_19.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "ba6533f58703f83f8df462e775e506f18e77b2d244cb6fb76418eeca6747d60f",
+              "size": 953216
+            }
+          ],
+          "dex_total_bytes": 953216,
+          "path": "benchmark_android/data/com.jstappdev.e6bflightcomputer/old-19.dexbundle",
+          "sha256": "3cba6e4c1e2761d7118c21d2b2cf64648c53e0d7788c7d2f393ef3ae16f110a8",
+          "size": 953260
+        },
+        "release": {
+          "added": 1765750595000,
+          "filename": "com.jstappdev.e6bflightcomputer_19.apk",
+          "section": "repo",
+          "sha256": "b5320cba413a9b027230e9c86231bc32927a6880f1088a0e96c8eda1f2a2df28",
+          "signers_sha256": [
+            "660a1d0cdcf16e1d7495aa4c0e484feb7b28e06a4b91cb04cf9fe8a12852760c"
+          ],
+          "size": 1965658,
+          "version_code": 19,
+          "version_name": "1.8"
+        }
+      },
+      "package_id": "com.jstappdev.e6bflightcomputer",
+      "pair_id": "fdroid-com.jstappdev.e6bflightcomputer-19-to-20",
+      "project_name": "E6B Flight Computer",
+      "source_code": "https://github.com/j05t/e6b"
+    },
+    {
+      "candidate_rank": 25,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.ilm.sandwich/new-35.apk",
+          "reused": false,
+          "sha256": "4b1e5a6187682c400e636199b31e17c32580a91e0efb9671cce238cafb925ba4",
+          "size": 3187795,
+          "url": "https://f-droid.org/archive/com.ilm.sandwich_35.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "401bbddd21fa9c57216f5ce20d18ed8609b2ad42b671a50847b5fdc1e8167ee7",
+              "size": 3851312
+            }
+          ],
+          "dex_total_bytes": 3851312,
+          "path": "benchmark_android/data/com.ilm.sandwich/new-35.dexbundle",
+          "sha256": "8566c81fe1230c6670cbf429a9206012c9d7fda9837c7d35bb845edb8a09945d",
+          "size": 3851356
+        },
+        "release": {
+          "added": 1465257600000,
+          "filename": "com.ilm.sandwich_35.apk",
+          "section": "archive",
+          "sha256": "4b1e5a6187682c400e636199b31e17c32580a91e0efb9671cce238cafb925ba4",
+          "signers_sha256": [
+            "95047312e74a9dbc74240f3fccb8223074ba7dc47405c3d01648146a498f3822"
+          ],
+          "size": 3187795,
+          "version_code": 35,
+          "version_name": "2.2.4f"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.ilm.sandwich/old-34.apk",
+          "reused": false,
+          "sha256": "e17ced8df85827503726bf29305e2e0432c4d5f685b58e66bd8aaf18ebc0a861",
+          "size": 3187628,
+          "url": "https://f-droid.org/archive/com.ilm.sandwich_34.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "968a4bd5a363ec08a08d832b8f855ac30fe862a91a4a9112d6bcb49bc8e460b7",
+              "size": 3851220
+            }
+          ],
+          "dex_total_bytes": 3851220,
+          "path": "benchmark_android/data/com.ilm.sandwich/old-34.dexbundle",
+          "sha256": "b3363a78ef479f92dff726b26ad1e4b05970ef441786e948e8b646577891def3",
+          "size": 3851264
+        },
+        "release": {
+          "added": 1464220800000,
+          "filename": "com.ilm.sandwich_34.apk",
+          "section": "archive",
+          "sha256": "e17ced8df85827503726bf29305e2e0432c4d5f685b58e66bd8aaf18ebc0a861",
+          "signers_sha256": [
+            "95047312e74a9dbc74240f3fccb8223074ba7dc47405c3d01648146a498f3822"
+          ],
+          "size": 3187628,
+          "version_code": 34,
+          "version_name": "2.2.2f"
+        }
+      },
+      "package_id": "com.ilm.sandwich",
+      "pair_id": "fdroid-com.ilm.sandwich-34-to-35",
+      "project_name": "SmartNavi",
+      "source_code": "https://github.com/Phantast/smartnavi"
+    },
+    {
+      "candidate_rank": 26,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/tech.techlore.plexus/new-219.apk",
+          "reused": false,
+          "sha256": "64eb09d4e73f6523f66092a096184720ac250ba4a737c788e0294e6cd18ec0cf",
+          "size": 3464742,
+          "url": "https://f-droid.org/repo/tech.techlore.plexus_219.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "0f5cb8c24407ce05061f853d0acff93276569d5d02db0409323aca12aaa86b76",
+              "size": 3450208
+            }
+          ],
+          "dex_total_bytes": 3450208,
+          "path": "benchmark_android/data/tech.techlore.plexus/new-219.dexbundle",
+          "sha256": "a1338bf492655c5e999a3907fdeea443f5779f7e0e9e6e109c227dd7f3a9ac6e",
+          "size": 3450252
+        },
+        "release": {
+          "added": 1784533482676,
+          "filename": "tech.techlore.plexus_219.apk",
+          "section": "repo",
+          "sha256": "64eb09d4e73f6523f66092a096184720ac250ba4a737c788e0294e6cd18ec0cf",
+          "signers_sha256": [
+            "f02b66e8e6183704c3fd6ae0632f6240de8eec0d6bdbe917731c41ab8c7d9aab"
+          ],
+          "size": 3464742,
+          "version_code": 219,
+          "version_name": "2.1.9"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/tech.techlore.plexus/old-217.apk",
+          "reused": false,
+          "sha256": "df8ca44bb501ad990a6de529d61b600b5f81e9edde94961a91d038d6f0329f09",
+          "size": 3662730,
+          "url": "https://f-droid.org/archive/tech.techlore.plexus_217.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "69882e758f3fa753a2ce6264168b4d743dfeb01636b8869c3fc202e8a79051a8",
+              "size": 3480828
+            }
+          ],
+          "dex_total_bytes": 3480828,
+          "path": "benchmark_android/data/tech.techlore.plexus/old-217.dexbundle",
+          "sha256": "e138c03c62bede3834a2b398461d4c312f7ffe47139b998a177dd749af04d28e",
+          "size": 3480872
+        },
+        "release": {
+          "added": 1775212141130,
+          "filename": "tech.techlore.plexus_217.apk",
+          "section": "archive",
+          "sha256": "df8ca44bb501ad990a6de529d61b600b5f81e9edde94961a91d038d6f0329f09",
+          "signers_sha256": [
+            "f02b66e8e6183704c3fd6ae0632f6240de8eec0d6bdbe917731c41ab8c7d9aab"
+          ],
+          "size": 3662730,
+          "version_code": 217,
+          "version_name": "2.1.7"
+        }
+      },
+      "package_id": "tech.techlore.plexus",
+      "pair_id": "fdroid-tech.techlore.plexus-217-to-219",
+      "project_name": "Plexus",
+      "source_code": "https://github.com/techlore/Plexus-app"
+    },
+    {
+      "candidate_rank": 27,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.phg.constellations/new-10005.apk",
+          "reused": false,
+          "sha256": "49fa12a41f1005577793d62f339648ab73d0184ee3b2928f2274ee76c9df5738",
+          "size": 10060476,
+          "url": "https://f-droid.org/archive/com.phg.constellations_10005.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "5e772bbd55e0d7a33f4d566621a6abd0046cdb121b78fed233f24771f44378e1",
+              "size": 2490308
+            }
+          ],
+          "dex_total_bytes": 2490308,
+          "path": "benchmark_android/data/com.phg.constellations/new-10005.dexbundle",
+          "sha256": "5a3228375831199131c560167a9ac40979946d5da2d120e055d8f6a9abc2bc73",
+          "size": 2490352
+        },
+        "release": {
+          "added": 1433721600000,
+          "filename": "com.phg.constellations_10005.apk",
+          "section": "archive",
+          "sha256": "49fa12a41f1005577793d62f339648ab73d0184ee3b2928f2274ee76c9df5738",
+          "signers_sha256": [
+            "78943d5708d5b5e8de87439e049da00e7d779f563f489195e23488036a3bda4c"
+          ],
+          "size": 10060476,
+          "version_code": 10005,
+          "version_name": "2.0.3"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.phg.constellations/old-10004.apk",
+          "reused": false,
+          "sha256": "1dae5506c64163c7a2ad6a9c24579c517ae6b425b3f378b2ff4a3000fcede4a9",
+          "size": 10059769,
+          "url": "https://f-droid.org/archive/com.phg.constellations_10004.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "cff451237239b61c441020027a7ca4bb7490e5450179db2e21478d6b5f8e58a4",
+              "size": 2490200
+            }
+          ],
+          "dex_total_bytes": 2490200,
+          "path": "benchmark_android/data/com.phg.constellations/old-10004.dexbundle",
+          "sha256": "14ea8b85fbeeae29ac0fcc759e784c03dda29c731859b69bc4b12ba2f99af7a3",
+          "size": 2490244
+        },
+        "release": {
+          "added": 1433721600000,
+          "filename": "com.phg.constellations_10004.apk",
+          "section": "archive",
+          "sha256": "1dae5506c64163c7a2ad6a9c24579c517ae6b425b3f378b2ff4a3000fcede4a9",
+          "signers_sha256": [
+            "78943d5708d5b5e8de87439e049da00e7d779f563f489195e23488036a3bda4c"
+          ],
+          "size": 10059769,
+          "version_code": 10004,
+          "version_name": "2.0.2"
+        }
+      },
+      "package_id": "com.phg.constellations",
+      "pair_id": "fdroid-com.phg.constellations-10004-to-10005",
+      "project_name": "Constellations",
+      "source_code": "https://github.com/Kent1/Manille"
+    },
+    {
+      "candidate_rank": 29,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/de.csicar.ning/new-201.apk",
+          "reused": false,
+          "sha256": "c180553aa9fb67d7254653947c1201fc8f9d8bf451fdd0d63bc68c561a75fd2c",
+          "size": 4954506,
+          "url": "https://f-droid.org/archive/de.csicar.ning_201.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "6ae697c13db74202b634444aa2c1290ca5ebb26c2641a18c20040277237bb56a",
+              "size": 7801948
+            }
+          ],
+          "dex_total_bytes": 7801948,
+          "path": "benchmark_android/data/de.csicar.ning/new-201.dexbundle",
+          "sha256": "fbc5ddf8d00ba3fba08aafa7ad3e7136ced8b281899032d7a767bf62157488f8",
+          "size": 7801992
+        },
+        "release": {
+          "added": 1631145600000,
+          "filename": "de.csicar.ning_201.apk",
+          "section": "archive",
+          "sha256": "c180553aa9fb67d7254653947c1201fc8f9d8bf451fdd0d63bc68c561a75fd2c",
+          "signers_sha256": [
+            "114b2b5cde7d51424a9de0ad402d99dd99b7a94a33973f88e59beb912ac6e23b"
+          ],
+          "size": 4954506,
+          "version_code": 201,
+          "version_name": "2.0.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/de.csicar.ning/old-200.apk",
+          "reused": false,
+          "sha256": "4e77678869c9ace108a6471e58a459c51a616b6545bc0e6eea405d0cf2b9314b",
+          "size": 4929027,
+          "url": "https://f-droid.org/archive/de.csicar.ning_200.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a18389582f5a17995338231ea9f26676b6de4b618b1de7a959aa5b0e750da438",
+              "size": 7600356
+            }
+          ],
+          "dex_total_bytes": 7600356,
+          "path": "benchmark_android/data/de.csicar.ning/old-200.dexbundle",
+          "sha256": "91eab43a2794885e2bb4884a8e0b0ff316d6cf8e4d995e791530bf1c11325978",
+          "size": 7600400
+        },
+        "release": {
+          "added": 1630195200000,
+          "filename": "de.csicar.ning_200.apk",
+          "section": "archive",
+          "sha256": "4e77678869c9ace108a6471e58a459c51a616b6545bc0e6eea405d0cf2b9314b",
+          "signers_sha256": [
+            "114b2b5cde7d51424a9de0ad402d99dd99b7a94a33973f88e59beb912ac6e23b"
+          ],
+          "size": 4929027,
+          "version_code": 200,
+          "version_name": "2.0.0"
+        }
+      },
+      "package_id": "de.csicar.ning",
+      "pair_id": "fdroid-de.csicar.ning-200-to-201",
+      "project_name": "Ning",
+      "source_code": "https://github.com/csicar/Ning"
+    },
+    {
+      "candidate_rank": 30,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/org.evilsoft.pathfinder.reference/new-38.apk",
+          "reused": false,
+          "sha256": "2fa3103eb91f446aadd22b1c340b05f7221b5f1ea74078cb42255fbdf067dbf8",
+          "size": 23089778,
+          "url": "https://f-droid.org/archive/org.evilsoft.pathfinder.reference_38.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "650c5e58285b8a5edd8219abe558a21cf0deaf9a7cfe7b13cc9ead1562a80732",
+              "size": 1838876
+            }
+          ],
+          "dex_total_bytes": 1838876,
+          "path": "benchmark_android/data/org.evilsoft.pathfinder.reference/new-38.dexbundle",
+          "sha256": "5e83f59f6659aa29b64c07ad2cdf535e048931d762fda4e010f5d359931362d0",
+          "size": 1838920
+        },
+        "release": {
+          "added": 1429056000000,
+          "filename": "org.evilsoft.pathfinder.reference_38.apk",
+          "section": "archive",
+          "sha256": "2fa3103eb91f446aadd22b1c340b05f7221b5f1ea74078cb42255fbdf067dbf8",
+          "signers_sha256": [
+            "faf569782ccbddcf00c3693952ee5add84d2ff68f27d4b48f772cd03b6bf1846"
+          ],
+          "size": 23089778,
+          "version_code": 38,
+          "version_name": "1.4.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/org.evilsoft.pathfinder.reference/old-36.apk",
+          "reused": false,
+          "sha256": "41ddaaefc3278030c75b3ae7017eb71e1ceaa6038a4fd27a5adeda981f796e63",
+          "size": 21525362,
+          "url": "https://f-droid.org/archive/org.evilsoft.pathfinder.reference_36.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "7a34578b562f09916e4899e2b9b3781dac0943dfb80297980039d360e26a5103",
+              "size": 1837516
+            }
+          ],
+          "dex_total_bytes": 1837516,
+          "path": "benchmark_android/data/org.evilsoft.pathfinder.reference/old-36.dexbundle",
+          "sha256": "a17871fd1cfee84b9b77ab2b7f8e50c204436e8ecc52283f0c03b8ee4018e230",
+          "size": 1837560
+        },
+        "release": {
+          "added": 1413417600000,
+          "filename": "org.evilsoft.pathfinder.reference_36.apk",
+          "section": "archive",
+          "sha256": "41ddaaefc3278030c75b3ae7017eb71e1ceaa6038a4fd27a5adeda981f796e63",
+          "signers_sha256": [
+            "faf569782ccbddcf00c3693952ee5add84d2ff68f27d4b48f772cd03b6bf1846"
+          ],
+          "size": 21525362,
+          "version_code": 36,
+          "version_name": "1.3.0"
+        }
+      },
+      "package_id": "org.evilsoft.pathfinder.reference",
+      "pair_id": "fdroid-org.evilsoft.pathfinder.reference-36-to-38",
+      "project_name": "Masterwork Tools: Pathfinder Open Reference",
+      "source_code": "https://github.com/devonjones/PathfinderOpenReference"
+    },
+    {
+      "candidate_rank": 31,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/v4lpt.vpt.f005.rsd/new-104.apk",
+          "reused": false,
+          "sha256": "db0fab23a3cd34ebc508ef0cb43e440b541eb61eed6bf6f500704282fb1e1c81",
+          "size": 5200449,
+          "url": "https://f-droid.org/repo/v4lpt.vpt.f005.rsd_104.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "e513d9b58e0ff2b602ff19e2f1829710d3c39bbee3a60aaab4adac938cb5bcfa",
+              "size": 9326356
+            }
+          ],
+          "dex_total_bytes": 9326356,
+          "path": "benchmark_android/data/v4lpt.vpt.f005.rsd/new-104.dexbundle",
+          "sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27",
+          "size": 9326400
+        },
+        "release": {
+          "added": 1723974847000,
+          "filename": "v4lpt.vpt.f005.rsd_104.apk",
+          "section": "repo",
+          "sha256": "db0fab23a3cd34ebc508ef0cb43e440b541eb61eed6bf6f500704282fb1e1c81",
+          "signers_sha256": [
+            "ed16f1367474b7d90c4c1253ac96c0cf6210b442db76263ed62fa34e715ea274"
+          ],
+          "size": 5200449,
+          "version_code": 104,
+          "version_name": "1.0.4"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/v4lpt.vpt.f005.rsd/old-103.apk",
+          "reused": false,
+          "sha256": "c2ee26769e60208224e273c74d85fe141a86a401243ec33fb46d17b946ac9ef0",
+          "size": 5200449,
+          "url": "https://f-droid.org/repo/v4lpt.vpt.f005.rsd_103.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "e513d9b58e0ff2b602ff19e2f1829710d3c39bbee3a60aaab4adac938cb5bcfa",
+              "size": 9326356
+            }
+          ],
+          "dex_total_bytes": 9326356,
+          "path": "benchmark_android/data/v4lpt.vpt.f005.rsd/old-103.dexbundle",
+          "sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27",
+          "size": 9326400
+        },
+        "release": {
+          "added": 1723449967000,
+          "filename": "v4lpt.vpt.f005.rsd_103.apk",
+          "section": "repo",
+          "sha256": "c2ee26769e60208224e273c74d85fe141a86a401243ec33fb46d17b946ac9ef0",
+          "signers_sha256": [
+            "ed16f1367474b7d90c4c1253ac96c0cf6210b442db76263ed62fa34e715ea274"
+          ],
+          "size": 5200449,
+          "version_code": 103,
+          "version_name": "1.0.3"
+        }
+      },
+      "package_id": "v4lpt.vpt.f005.rsd",
+      "pair_id": "fdroid-v4lpt.vpt.f005.rsd-103-to-104",
+      "project_name": "Valentin's PowerTools #005 - Roll Some Dice ",
+      "source_code": "https://github.com/v4lpt/RSD"
+    },
+    {
+      "candidate_rank": 32,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/oppen.gemini.ariane/new-42.apk",
+          "reused": false,
+          "sha256": "fd77d2e1d401bf50172836350e1f5afcf07d1aedaf69ea4de864ad8c8143b4a2",
+          "size": 2535584,
+          "url": "https://f-droid.org/archive/oppen.gemini.ariane_42.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "924b5e1a4e08a517235677f63663ab5a2b93aaf04c647d6465624706195522f7",
+              "size": 1614796
+            }
+          ],
+          "dex_total_bytes": 1614796,
+          "path": "benchmark_android/data/oppen.gemini.ariane/new-42.dexbundle",
+          "sha256": "7e1e76071ae489c93e05c44871c535b5dbc030b56774b46aaec48fd1ccc32c85",
+          "size": 1614840
+        },
+        "release": {
+          "added": 1618099200000,
+          "filename": "oppen.gemini.ariane_42.apk",
+          "section": "archive",
+          "sha256": "fd77d2e1d401bf50172836350e1f5afcf07d1aedaf69ea4de864ad8c8143b4a2",
+          "signers_sha256": [
+            "9ab24487192ef616a679946b1d82d12bedbb1c3a9793b2c6bd021adac784fd98"
+          ],
+          "size": 2535584,
+          "version_code": 42,
+          "version_name": "2.4.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/oppen.gemini.ariane/old-39.apk",
+          "reused": false,
+          "sha256": "8f4c0221f97330a146c8ff52da164346eb273f838677b41c03cd8b48ae9d035f",
+          "size": 2393434,
+          "url": "https://f-droid.org/archive/oppen.gemini.ariane_39.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "4ec9d9991f22157d9ad14f9c45da3b30bfc7deeda01cc5b21d1c95f9fb10676e",
+              "size": 1613932
+            }
+          ],
+          "dex_total_bytes": 1613932,
+          "path": "benchmark_android/data/oppen.gemini.ariane/old-39.dexbundle",
+          "sha256": "24d04627d4e3ccef2d7ad09107dd8c73cdbd698bc4dd00adde8bfed8ab1854dd",
+          "size": 1613976
+        },
+        "release": {
+          "added": 1613865600000,
+          "filename": "oppen.gemini.ariane_39.apk",
+          "section": "archive",
+          "sha256": "8f4c0221f97330a146c8ff52da164346eb273f838677b41c03cd8b48ae9d035f",
+          "signers_sha256": [
+            "9ab24487192ef616a679946b1d82d12bedbb1c3a9793b2c6bd021adac784fd98"
+          ],
+          "size": 2393434,
+          "version_code": 39,
+          "version_name": "2.3.7"
+        }
+      },
+      "package_id": "oppen.gemini.ariane",
+      "pair_id": "fdroid-oppen.gemini.ariane-39-to-42",
+      "project_name": "Ariane",
+      "source_code": "https://codeberg.org/oppenlab/Ariane"
+    },
+    {
+      "candidate_rank": 33,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.jellyshack.block6/new-7.apk",
+          "reused": false,
+          "sha256": "98ae9fb6ca2d27c7e158eca99d85237e23e23e27e0b293821ea3439efb967f82",
+          "size": 2389722,
+          "url": "https://f-droid.org/archive/com.jellyshack.block6_7.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a6fbcf2759ce73fb8330a4c83c7cff108f823f343ed43c201c6a86495a2f6619",
+              "size": 3610840
+            }
+          ],
+          "dex_total_bytes": 3610840,
+          "path": "benchmark_android/data/com.jellyshack.block6/new-7.dexbundle",
+          "sha256": "3716a040cb64588f58b30cf32079756df3943ecd43c215cd2a5dd78331d19146",
+          "size": 3610884
+        },
+        "release": {
+          "added": 1569628800000,
+          "filename": "com.jellyshack.block6_7.apk",
+          "section": "archive",
+          "sha256": "98ae9fb6ca2d27c7e158eca99d85237e23e23e27e0b293821ea3439efb967f82",
+          "signers_sha256": [
+            "aac07f709380ad658d7e99617b83c8e967f6657b4ce8d12097542910928ade08"
+          ],
+          "size": 2389722,
+          "version_code": 7,
+          "version_name": "1.6"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.jellyshack.block6/old-6.apk",
+          "reused": false,
+          "sha256": "eded492fb5031e4e60d9d048327f4a7a64fd0889bb0f18d34e6dd7035fe86a1a",
+          "size": 2389134,
+          "url": "https://f-droid.org/archive/com.jellyshack.block6_6.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "09eeffee012b47647dad458a56f5273689854e82d64e045c0f5b6714f0a8c799",
+              "size": 3609532
+            }
+          ],
+          "dex_total_bytes": 3609532,
+          "path": "benchmark_android/data/com.jellyshack.block6/old-6.dexbundle",
+          "sha256": "3e375a05d833bd9eca65927a1a38d7560dd7c4a487ab0b7c91509e4988f3f856",
+          "size": 3609576
+        },
+        "release": {
+          "added": 1569369600000,
+          "filename": "com.jellyshack.block6_6.apk",
+          "section": "archive",
+          "sha256": "eded492fb5031e4e60d9d048327f4a7a64fd0889bb0f18d34e6dd7035fe86a1a",
+          "signers_sha256": [
+            "aac07f709380ad658d7e99617b83c8e967f6657b4ce8d12097542910928ade08"
+          ],
+          "size": 2389134,
+          "version_code": 6,
+          "version_name": "1.5"
+        }
+      },
+      "package_id": "com.jellyshack.block6",
+      "pair_id": "fdroid-com.jellyshack.block6-6-to-7",
+      "project_name": "Block6",
+      "source_code": "https://github.com/travistynes/block6"
+    },
+    {
+      "candidate_rank": 35,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.chooloo.www.koler/new-82.apk",
+          "reused": false,
+          "sha256": "3c35766c1b988b2af485c3a03ff08d1e3042feb76b40b2dcdb54481aaf9c5a11",
+          "size": 5042508,
+          "url": "https://f-droid.org/repo/com.chooloo.www.koler_82.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a3dfe37bce7806a8eb33d69c22e8d7a7d1f7174c354eb591e311e22ebb5aadf7",
+              "size": 3334220
+            }
+          ],
+          "dex_total_bytes": 3334220,
+          "path": "benchmark_android/data/com.chooloo.www.koler/new-82.dexbundle",
+          "sha256": "5c3c29342e306270d64cd03a52763a799530f6da98114b7b55ff8c2756c469e8",
+          "size": 3334264
+        },
+        "release": {
+          "added": 1690423854000,
+          "filename": "com.chooloo.www.koler_82.apk",
+          "section": "repo",
+          "sha256": "3c35766c1b988b2af485c3a03ff08d1e3042feb76b40b2dcdb54481aaf9c5a11",
+          "signers_sha256": [
+            "0cc70c534520c0e9937afa7ffe1bde586c32f9ebb66126e6a1dea3d8f47db76e"
+          ],
+          "size": 5042508,
+          "version_code": 82,
+          "version_name": "v1.6.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.chooloo.www.koler/old-79.apk",
+          "reused": false,
+          "sha256": "72d59fa938141328404c2af44a9442f17b3b58a3c467f95997d5bfd8e6f1e0c3",
+          "size": 8042590,
+          "url": "https://f-droid.org/repo/com.chooloo.www.koler_79.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "827b296bd32b7d934a828fe36d264a8ff42c72af8ebb64ae07e04929d3d90bcc",
+              "size": 7247872
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "3f10726871a68e34b7d84133bcba16a799e3ec891bee1f8f22e411c4fb71cbf2",
+              "size": 5046492
+            }
+          ],
+          "dex_total_bytes": 12294364,
+          "path": "benchmark_android/data/com.chooloo.www.koler/old-79.dexbundle",
+          "sha256": "76be6df6a879cd20b0a536213d23ee2343f3e56e6667062771a9066ce3955032",
+          "size": 12294432
+        },
+        "release": {
+          "added": 1656806400000,
+          "filename": "com.chooloo.www.koler_79.apk",
+          "section": "repo",
+          "sha256": "72d59fa938141328404c2af44a9442f17b3b58a3c467f95997d5bfd8e6f1e0c3",
+          "signers_sha256": [
+            "0cc70c534520c0e9937afa7ffe1bde586c32f9ebb66126e6a1dea3d8f47db76e"
+          ],
+          "size": 8042590,
+          "version_code": 79,
+          "version_name": "v1.5.0"
+        }
+      },
+      "package_id": "com.chooloo.www.koler",
+      "pair_id": "fdroid-com.chooloo.www.koler-79-to-82",
+      "project_name": "Koler",
+      "source_code": "https://github.com/Chooloo/koler"
+    },
+    {
+      "candidate_rank": 36,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/me.jfenn.alarmio/new-21.apk",
+          "reused": false,
+          "sha256": "64168b0dc616856d9493ced2da2b1eb3291e323887e2fd48bace5e3da2cda8b1",
+          "size": 5888977,
+          "url": "https://f-droid.org/archive/me.jfenn.alarmio_21.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "788c47f8290b6742ce61b403087171d8b5b794d8e8cfada3712e05f69f9d50be",
+              "size": 9018984
+            },
+            {
+              "name": "classes2.dex",
+              "sha256": "f2c61dbd504e9b387c4a49f1ae738176a6e4c928bb72b59e52e03e6a37fe023d",
+              "size": 2349852
+            }
+          ],
+          "dex_total_bytes": 11368836,
+          "path": "benchmark_android/data/me.jfenn.alarmio/new-21.dexbundle",
+          "sha256": "2cc2a28b040677eaf64a6c4187f5a41590b18aef0f7d358dd876114d342510e6",
+          "size": 11368904
+        },
+        "release": {
+          "added": 1587254400000,
+          "filename": "me.jfenn.alarmio_21.apk",
+          "section": "archive",
+          "sha256": "64168b0dc616856d9493ced2da2b1eb3291e323887e2fd48bace5e3da2cda8b1",
+          "signers_sha256": [
+            "aeaad6823d325f3b3e7db43b1240134bc0413057f992dbd915d9bd22b9bb3ab0"
+          ],
+          "size": 5888977,
+          "version_code": 21,
+          "version_name": "1.0.5"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/me.jfenn.alarmio/old-20.apk",
+          "reused": false,
+          "sha256": "7685c42f808526f23031b60593249a705d7b11f2bd5c6f1b823495b9277c6398",
+          "size": 2522652,
+          "url": "https://f-droid.org/archive/me.jfenn.alarmio_20.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "5a7932dc7710f0075b8974db976cdd02ac320b574ea29e73ec5b3ba5de15baec",
+              "size": 2996312
+            }
+          ],
+          "dex_total_bytes": 2996312,
+          "path": "benchmark_android/data/me.jfenn.alarmio/old-20.dexbundle",
+          "sha256": "746b504b528b52323d080928ed6937a4c46172eac4a8e018e4c31e65e5f4e636",
+          "size": 2996356
+        },
+        "release": {
+          "added": 1571356800000,
+          "filename": "me.jfenn.alarmio_20.apk",
+          "section": "archive",
+          "sha256": "7685c42f808526f23031b60593249a705d7b11f2bd5c6f1b823495b9277c6398",
+          "signers_sha256": [
+            "aeaad6823d325f3b3e7db43b1240134bc0413057f992dbd915d9bd22b9bb3ab0"
+          ],
+          "size": 2522652,
+          "version_code": 20,
+          "version_name": "1.0.4"
+        }
+      },
+      "package_id": "me.jfenn.alarmio",
+      "pair_id": "fdroid-me.jfenn.alarmio-20-to-21",
+      "project_name": "Alarmio",
+      "source_code": "https://github.com/fennifith/Alarmio"
+    },
+    {
+      "candidate_rank": 38,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.onest8.onetimepad/new-202.apk",
+          "reused": false,
+          "sha256": "9f78b68d68100376fdc758a234dbbee68d81cb42054b1c91537b9d38b273d110",
+          "size": 2200297,
+          "url": "https://f-droid.org/archive/com.onest8.onetimepad_202.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "523c450ed399577abb921a8b0e4bbddbd15ca04346ab4a2931b7b5e3b112715d",
+              "size": 3555416
+            }
+          ],
+          "dex_total_bytes": 3555416,
+          "path": "benchmark_android/data/com.onest8.onetimepad/new-202.dexbundle",
+          "sha256": "114763227f5c510ce35c87ee3debef94069a9a8cbd56179f2a50449b63b1b43e",
+          "size": 3555460
+        },
+        "release": {
+          "added": 1509667200000,
+          "filename": "com.onest8.onetimepad_202.apk",
+          "section": "archive",
+          "sha256": "9f78b68d68100376fdc758a234dbbee68d81cb42054b1c91537b9d38b273d110",
+          "signers_sha256": [
+            "3b04ab063aac95b9b7b32cec013a6dc8bd8eae09ee39fb524c50700da5b144c1"
+          ],
+          "size": 2200297,
+          "version_code": 202,
+          "version_name": "0.2.2"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.onest8.onetimepad/old-201.apk",
+          "reused": false,
+          "sha256": "efdf467dad176f9d29f40d1d64c2981030e942aa18166ed4bdd93ded730bbe4d",
+          "size": 1954158,
+          "url": "https://f-droid.org/archive/com.onest8.onetimepad_201.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a1037f37ea383b9f58813f6f212338dec347d39faf7ed8c037b97c6fa5f90aac",
+              "size": 3202676
+            }
+          ],
+          "dex_total_bytes": 3202676,
+          "path": "benchmark_android/data/com.onest8.onetimepad/old-201.dexbundle",
+          "sha256": "f2ddd5a7c8a2a4550634a9e72d0f9d37ea6e61ffd4b7d7f5e72436956bd68983",
+          "size": 3202720
+        },
+        "release": {
+          "added": 1479168000000,
+          "filename": "com.onest8.onetimepad_201.apk",
+          "section": "archive",
+          "sha256": "efdf467dad176f9d29f40d1d64c2981030e942aa18166ed4bdd93ded730bbe4d",
+          "signers_sha256": [
+            "3b04ab063aac95b9b7b32cec013a6dc8bd8eae09ee39fb524c50700da5b144c1"
+          ],
+          "size": 1954158,
+          "version_code": 201,
+          "version_name": "0.2.1"
+        }
+      },
+      "package_id": "com.onest8.onetimepad",
+      "pair_id": "fdroid-com.onest8.onetimepad-201-to-202",
+      "project_name": "OneTimePad",
+      "source_code": "https://github.com/kckrinke/onetimepad"
+    },
+    {
+      "candidate_rank": 39,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/org.kknickkk.spider/new-13.apk",
+          "reused": false,
+          "sha256": "6081491a2d997b044577765f372ed21a9d0544183007121de4bb8957a87ad344",
+          "size": 2100931,
+          "url": "https://f-droid.org/repo/org.kknickkk.spider_13.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "5b97bc5c259769500704c1fb8f2f52514f50d8fc8dba9bf1bd12ef0781ed390b",
+              "size": 3078596
+            }
+          ],
+          "dex_total_bytes": 3078596,
+          "path": "benchmark_android/data/org.kknickkk.spider/new-13.dexbundle",
+          "sha256": "e3d7dbf3a72feae695cca089c0a345ef8c2bb4238134dc07211af555e3669b06",
+          "size": 3078640
+        },
+        "release": {
+          "added": 1588377600000,
+          "filename": "org.kknickkk.spider_13.apk",
+          "section": "repo",
+          "sha256": "6081491a2d997b044577765f372ed21a9d0544183007121de4bb8957a87ad344",
+          "signers_sha256": [
+            "f219c814bb2b772faf7c364e4b34111a812739ca74011dab7cf4aa22fac349e2"
+          ],
+          "size": 2100931,
+          "version_code": 13,
+          "version_name": "0.2.2"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/org.kknickkk.spider/old-12.apk",
+          "reused": false,
+          "sha256": "ad1622bd2b810ba1817275c952c7a499ec98f7a44750b846f37d710224b0e26f",
+          "size": 2100492,
+          "url": "https://f-droid.org/repo/org.kknickkk.spider_12.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f0e1813a6b336bc7972103b327bc97dd20cb35a4456c5aedde6bc704bf6bb976",
+              "size": 3077804
+            }
+          ],
+          "dex_total_bytes": 3077804,
+          "path": "benchmark_android/data/org.kknickkk.spider/old-12.dexbundle",
+          "sha256": "32282970bbd1001e24177fcffa851cf0fd5580adb37609f80d17df2403e3793a",
+          "size": 3077848
+        },
+        "release": {
+          "added": 1578960000000,
+          "filename": "org.kknickkk.spider_12.apk",
+          "section": "repo",
+          "sha256": "ad1622bd2b810ba1817275c952c7a499ec98f7a44750b846f37d710224b0e26f",
+          "signers_sha256": [
+            "f219c814bb2b772faf7c364e4b34111a812739ca74011dab7cf4aa22fac349e2"
+          ],
+          "size": 2100492,
+          "version_code": 12,
+          "version_name": "0.2.1"
+        }
+      },
+      "package_id": "org.kknickkk.spider",
+      "pair_id": "fdroid-org.kknickkk.spider-12-to-13",
+      "project_name": "Spider",
+      "source_code": "https://github.com/nickdurante/Spider"
+    },
+    {
+      "candidate_rank": 40,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.kolakek.pimiwidget/new-17.apk",
+          "reused": false,
+          "sha256": "f508788ab471a27560aca3562817317214d9b6abc4a28dcd125505d6964eb059",
+          "size": 2885305,
+          "url": "https://f-droid.org/archive/com.kolakek.pimiwidget_17.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "3220c857ba5efb2afa7a62161e4c1b6bccba049f4a6778b6498a00df8b40a8ae",
+              "size": 1675108
+            }
+          ],
+          "dex_total_bytes": 1675108,
+          "path": "benchmark_android/data/com.kolakek.pimiwidget/new-17.dexbundle",
+          "sha256": "64534c6b1348eac7a585209a1764475f448945884b4caf669fee79e7f6efbab6",
+          "size": 1675152
+        },
+        "release": {
+          "added": 1777400200706,
+          "filename": "com.kolakek.pimiwidget_17.apk",
+          "section": "archive",
+          "sha256": "f508788ab471a27560aca3562817317214d9b6abc4a28dcd125505d6964eb059",
+          "signers_sha256": [
+            "1f72b6445ff6e026648a9fba57acaf66a1a5a2760ab8934c1c12cc78b4fe4ada"
+          ],
+          "size": 2885305,
+          "version_code": 17,
+          "version_name": "1.8.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.kolakek.pimiwidget/old-16.apk",
+          "reused": false,
+          "sha256": "be307c95816c6ba25c801e59393e3117a7c55ae199981b6723363dbd0d23d128",
+          "size": 2882705,
+          "url": "https://f-droid.org/archive/com.kolakek.pimiwidget_16.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "47506467000c03e48232b6c68e1783426318f81255dd0b3fa3553f22b939db28",
+              "size": 1675176
+            }
+          ],
+          "dex_total_bytes": 1675176,
+          "path": "benchmark_android/data/com.kolakek.pimiwidget/old-16.dexbundle",
+          "sha256": "6a500e3c62a4d64591b34580634e957c91850a81964bb1c3fd71d331e9dd8b4c",
+          "size": 1675220
+        },
+        "release": {
+          "added": 1776983920317,
+          "filename": "com.kolakek.pimiwidget_16.apk",
+          "section": "archive",
+          "sha256": "be307c95816c6ba25c801e59393e3117a7c55ae199981b6723363dbd0d23d128",
+          "signers_sha256": [
+            "1f72b6445ff6e026648a9fba57acaf66a1a5a2760ab8934c1c12cc78b4fe4ada"
+          ],
+          "size": 2882705,
+          "version_code": 16,
+          "version_name": "1.7.0"
+        }
+      },
+      "package_id": "com.kolakek.pimiwidget",
+      "pair_id": "fdroid-com.kolakek.pimiwidget-16-to-17",
+      "project_name": "Pimi widget",
+      "source_code": "https://github.com/kolakek/pimi-widget"
+    },
+    {
+      "candidate_rank": 41,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/it.feio.android.omninotes.foss/new-331.apk",
+          "reused": false,
+          "sha256": "b39ce6942f208194ad47e40830c6d3f4ef8fea8f3f57a16f3cd72d98a9f0d5fd",
+          "size": 7635718,
+          "url": "https://f-droid.org/repo/it.feio.android.omninotes.foss_331.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "fad955b5e21007c233a22122309a5dc81e0eb53a8ebb1d2c3927202f103e7b57",
+              "size": 5797188
+            }
+          ],
+          "dex_total_bytes": 5797188,
+          "path": "benchmark_android/data/it.feio.android.omninotes.foss/new-331.dexbundle",
+          "sha256": "5c5d6df5c9af35ce429f3411a83ee2dceffa991dfa0cb7dd9479f1a14034e0f3",
+          "size": 5797232
+        },
+        "release": {
+          "added": 1702926650000,
+          "filename": "it.feio.android.omninotes.foss_331.apk",
+          "section": "repo",
+          "sha256": "b39ce6942f208194ad47e40830c6d3f4ef8fea8f3f57a16f3cd72d98a9f0d5fd",
+          "signers_sha256": [
+            "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3"
+          ],
+          "size": 7635718,
+          "version_code": 331,
+          "version_name": "6.3.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/it.feio.android.omninotes.foss/old-330.apk",
+          "reused": false,
+          "sha256": "3017b653ac53b9abd787cb5df3ff52aa53e24fb2563fbc1934ed78c7da0a30f6",
+          "size": 7652102,
+          "url": "https://f-droid.org/repo/it.feio.android.omninotes.foss_330.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "4070d55ae57ea29ed2388db9ea52a4db816fbd3e4b12e996160036e1cdee4e0a",
+              "size": 5812740
+            }
+          ],
+          "dex_total_bytes": 5812740,
+          "path": "benchmark_android/data/it.feio.android.omninotes.foss/old-330.dexbundle",
+          "sha256": "7eb41041ee1a378c9933ba1df6f45cf9c5ea45c29e6846c4c4a0763d8c1d7adb",
+          "size": 5812784
+        },
+        "release": {
+          "added": 1702222757000,
+          "filename": "it.feio.android.omninotes.foss_330.apk",
+          "section": "repo",
+          "sha256": "3017b653ac53b9abd787cb5df3ff52aa53e24fb2563fbc1934ed78c7da0a30f6",
+          "signers_sha256": [
+            "1eee2ba979fb762329c998193df3705c325115c351aeb4caa5631bad7a6702a3"
+          ],
+          "size": 7652102,
+          "version_code": 330,
+          "version_name": "6.3.0"
+        }
+      },
+      "package_id": "it.feio.android.omninotes.foss",
+      "pair_id": "fdroid-it.feio.android.omninotes.foss-330-to-331",
+      "project_name": "Omni Notes",
+      "source_code": "https://github.com/federicoiosue/Omni-Notes"
+    },
+    {
+      "candidate_rank": 42,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/io.gresse.hugo.anecdote/new-23.apk",
+          "reused": false,
+          "sha256": "7ce6030b81be649452107bd7cbfa6f3b1f2402a3e1bf3c366b03c7d8f54eb17a",
+          "size": 1896431,
+          "url": "https://f-droid.org/repo/io.gresse.hugo.anecdote_23.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "34b8a9a97363c22e3f212d068fff91dcfacbefa96f7b4603dc5cb5a04eb3b203",
+              "size": 2492360
+            }
+          ],
+          "dex_total_bytes": 2492360,
+          "path": "benchmark_android/data/io.gresse.hugo.anecdote/new-23.dexbundle",
+          "sha256": "a3f7fb272b2aa44afc6dd9fd017d2648e831b9fd8c55c16576f27aaffb41a256",
+          "size": 2492404
+        },
+        "release": {
+          "added": 1494028800000,
+          "filename": "io.gresse.hugo.anecdote_23.apk",
+          "section": "repo",
+          "sha256": "7ce6030b81be649452107bd7cbfa6f3b1f2402a3e1bf3c366b03c7d8f54eb17a",
+          "signers_sha256": [
+            "bca827e36a9749a15f08270fcb6a9708e42d482411eb63a03d758211d7b781cf"
+          ],
+          "size": 1896431,
+          "version_code": 23,
+          "version_name": "1.1.5"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/io.gresse.hugo.anecdote/old-22.apk",
+          "reused": false,
+          "sha256": "e0b8b52f274350cc3f95620f34b4db04ea2cc83dd192c3d52261c5e7030d5282",
+          "size": 1897091,
+          "url": "https://f-droid.org/repo/io.gresse.hugo.anecdote_22.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "7443ca1ee6af556cadea7b32ea3b95ea32522c5de0542d3884e4cae910f1051b",
+              "size": 2504560
+            }
+          ],
+          "dex_total_bytes": 2504560,
+          "path": "benchmark_android/data/io.gresse.hugo.anecdote/old-22.dexbundle",
+          "sha256": "9e87225b81745d05bae036ccec05af3312c7395aed4b4246f65bfaafa1be4af1",
+          "size": 2504604
+        },
+        "release": {
+          "added": 1482364800000,
+          "filename": "io.gresse.hugo.anecdote_22.apk",
+          "section": "repo",
+          "sha256": "e0b8b52f274350cc3f95620f34b4db04ea2cc83dd192c3d52261c5e7030d5282",
+          "signers_sha256": [
+            "bca827e36a9749a15f08270fcb6a9708e42d482411eb63a03d758211d7b781cf"
+          ],
+          "size": 1897091,
+          "version_code": 22,
+          "version_name": "1.1.4"
+        }
+      },
+      "package_id": "io.gresse.hugo.anecdote",
+      "pair_id": "fdroid-io.gresse.hugo.anecdote-22-to-23",
+      "project_name": "Anecdote",
+      "source_code": "https://github.com/HugoGresse/Anecdote"
+    },
+    {
+      "candidate_rank": 43,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.msb.bluecheese/new-303.apk",
+          "reused": false,
+          "sha256": "273bf472c40d4d15dfb26cd0a5468178d21a7d3fa0ce17eed4389665ed624a43",
+          "size": 10741240,
+          "url": "https://f-droid.org/repo/com.msb.bluecheese_303.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "9c883b865631b07f8173328804ad91f9c9e5d93b91a764444421f4860853a9cc",
+              "size": 8851168
+            }
+          ],
+          "dex_total_bytes": 8851168,
+          "path": "benchmark_android/data/com.msb.bluecheese/new-303.dexbundle",
+          "sha256": "4825e3d1c1642589a09b5c0afc841e2b18d5de8a3284769bae5e04e8250c40ab",
+          "size": 8851212
+        },
+        "release": {
+          "added": 1784660797434,
+          "filename": "com.msb.bluecheese_303.apk",
+          "section": "repo",
+          "sha256": "273bf472c40d4d15dfb26cd0a5468178d21a7d3fa0ce17eed4389665ed624a43",
+          "signers_sha256": [
+            "f66ea88f9464bba2511f82e609e40cebc86d4aeb8cc5542af1aa2a78058e8aa1"
+          ],
+          "size": 10741240,
+          "version_code": 303,
+          "version_name": "3.0.3"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.msb.bluecheese/old-6.apk",
+          "reused": false,
+          "sha256": "0bbf4c535202dd1d65efb0457361a64192eed93b66dd88dba2f34e772fefa774",
+          "size": 10667409,
+          "url": "https://f-droid.org/repo/com.msb.bluecheese_6.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "49dc559eade18115258f9ac5e0519fd5bc0b2bc0b837047f9f6d36a8effc6a93",
+              "size": 8776828
+            }
+          ],
+          "dex_total_bytes": 8776828,
+          "path": "benchmark_android/data/com.msb.bluecheese/old-6.dexbundle",
+          "sha256": "541b241026718bb866673b2a6a2c8318dcdade22f3c3fc7fcfea887e6aad920f",
+          "size": 8776872
+        },
+        "release": {
+          "added": 1760611062000,
+          "filename": "com.msb.bluecheese_6.apk",
+          "section": "repo",
+          "sha256": "0bbf4c535202dd1d65efb0457361a64192eed93b66dd88dba2f34e772fefa774",
+          "signers_sha256": [
+            "f66ea88f9464bba2511f82e609e40cebc86d4aeb8cc5542af1aa2a78058e8aa1"
+          ],
+          "size": 10667409,
+          "version_code": 6,
+          "version_name": "3.0.2"
+        }
+      },
+      "package_id": "com.msb.bluecheese",
+      "pair_id": "fdroid-com.msb.bluecheese-6-to-303",
+      "project_name": "Bluecheese",
+      "source_code": "https://github.com/msbCyricTohoku/Bluecheese-fdroid"
+    },
+    {
+      "candidate_rank": 44,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.dergoogler.mmrl/new-32432.apk",
+          "reused": false,
+          "sha256": "bfe18498e90e345c00862778a74cb873a3d152f894a9f50fed02aad134ac7569",
+          "size": 4024883,
+          "url": "https://f-droid.org/archive/com.dergoogler.mmrl_32432.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "39d6492cb1db11cb4b7d389a3148f4b8ab40260476c7abaf126b00d7bf9b3e39",
+              "size": 1336940
+            }
+          ],
+          "dex_total_bytes": 1336940,
+          "path": "benchmark_android/data/com.dergoogler.mmrl/new-32432.dexbundle",
+          "sha256": "645cc35a3708f706ec8abf4bd070e18fbc59a81e516bcf0775b8228378a08e3f",
+          "size": 1336984
+        },
+        "release": {
+          "added": 1727007509000,
+          "filename": "com.dergoogler.mmrl_32432.apk",
+          "section": "archive",
+          "sha256": "bfe18498e90e345c00862778a74cb873a3d152f894a9f50fed02aad134ac7569",
+          "signers_sha256": [
+            "7d9d5b2ae804002ff44b2e3e179092283c4bcae4f86d7d8f3f18c9d18c4744ee"
+          ],
+          "size": 4024883,
+          "version_code": 32432,
+          "version_name": "3.24.32"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.dergoogler.mmrl/old-22020.apk",
+          "reused": false,
+          "sha256": "0d3ff2928336b6c7e043884f12623c77a39c706f577cf622f56cb936baf79935",
+          "size": 4123786,
+          "url": "https://f-droid.org/archive/com.dergoogler.mmrl_22020.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "1bc5946afd92770fe567b8183e46b2d604977b8a41f45d6b3227412b43c50813",
+              "size": 1494464
+            }
+          ],
+          "dex_total_bytes": 1494464,
+          "path": "benchmark_android/data/com.dergoogler.mmrl/old-22020.dexbundle",
+          "sha256": "bff2f38b68be123aa486505453fc236469883bff6b9194171be07531160d4577",
+          "size": 1494508
+        },
+        "release": {
+          "added": 1720459660000,
+          "filename": "com.dergoogler.mmrl_22020.apk",
+          "section": "archive",
+          "sha256": "0d3ff2928336b6c7e043884f12623c77a39c706f577cf622f56cb936baf79935",
+          "signers_sha256": [
+            "7d9d5b2ae804002ff44b2e3e179092283c4bcae4f86d7d8f3f18c9d18c4744ee"
+          ],
+          "size": 4123786,
+          "version_code": 22020,
+          "version_name": "2.20.20"
+        }
+      },
+      "package_id": "com.dergoogler.mmrl",
+      "pair_id": "fdroid-com.dergoogler.mmrl-22020-to-32432",
+      "project_name": "MMRL",
+      "source_code": "https://github.com/DerGoogler/MMRL"
+    },
+    {
+      "candidate_rank": 45,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/de.c3nav.droid/new-18040700.apk",
+          "reused": false,
+          "sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+          "size": 4858841,
+          "url": "https://f-droid.org/repo/de.c3nav.droid_18040700.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "f52517b95f01fb590f254963433fd8b51d1f8a470ccdefe0b4027a659b87eff3",
+              "size": 7087996
+            }
+          ],
+          "dex_total_bytes": 7087996,
+          "path": "benchmark_android/data/de.c3nav.droid/new-18040700.dexbundle",
+          "sha256": "48e0c02aca34fb8e83e7575f7cf32685cb21dea4c2a761477f89577b6cd9fd34",
+          "size": 7088040
+        },
+        "release": {
+          "added": 1766794391000,
+          "filename": "de.c3nav.droid_18040700.apk",
+          "section": "repo",
+          "sha256": "482e5c9b9746f352d616597f3f689d47614ff600662e61b8e9f7f8e36bb0125d",
+          "signers_sha256": [
+            "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4"
+          ],
+          "size": 4858841,
+          "version_code": 18040700,
+          "version_name": "4.7.0"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/de.c3nav.droid/old-14040501.apk",
+          "reused": false,
+          "sha256": "b1f264583067e125c736a92255010bac24f68638e1713ba356d4addf6ff5c85b",
+          "size": 4830720,
+          "url": "https://f-droid.org/repo/de.c3nav.droid_14040501.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "d3c29f1db2c706f265b7ec762cb017e552fbc2730dca651020d1ad86bc4a2dbe",
+              "size": 7109152
+            }
+          ],
+          "dex_total_bytes": 7109152,
+          "path": "benchmark_android/data/de.c3nav.droid/old-14040501.dexbundle",
+          "sha256": "dbe87517dce1c2fcc78f43e740d9dfea4771128709b932018947e711a7a7c2c7",
+          "size": 7109196
+        },
+        "release": {
+          "added": 1735842441000,
+          "filename": "de.c3nav.droid_14040501.apk",
+          "section": "repo",
+          "sha256": "b1f264583067e125c736a92255010bac24f68638e1713ba356d4addf6ff5c85b",
+          "signers_sha256": [
+            "db5c285800645cee478e4ed0f7f76cd54fa801949b63dbbae22d7b4e57483ef4"
+          ],
+          "size": 4830720,
+          "version_code": 14040501,
+          "version_name": "4.5.1"
+        }
+      },
+      "package_id": "de.c3nav.droid",
+      "pair_id": "fdroid-de.c3nav.droid-14040501-to-18040700",
+      "project_name": "c3nav",
+      "source_code": "https://github.com/c3nav/c3nav-android/"
+    },
+    {
+      "candidate_rank": 46,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/hashengineering.groestlcoin.wallet_test/new-81401.apk",
+          "reused": false,
+          "sha256": "402cc6d8bc02b9b8bc39f1e0fec2112830f7073ac82199120983c55499bbed01",
+          "size": 3490260,
+          "url": "https://f-droid.org/archive/hashengineering.groestlcoin.wallet_test_81401.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "8b2c1ca5e8793fd89a6e16c5f3683a216b6e32f74beb43e0e0b849bc1d637a72",
+              "size": 4285540
+            }
+          ],
+          "dex_total_bytes": 4285540,
+          "path": "benchmark_android/data/hashengineering.groestlcoin.wallet_test/new-81401.dexbundle",
+          "sha256": "06318b035c5a1007b498068e97d69cedb498117afc412509b64de7b2b2816f21",
+          "size": 4285584
+        },
+        "release": {
+          "added": 1628899200000,
+          "filename": "hashengineering.groestlcoin.wallet_test_81401.apk",
+          "section": "archive",
+          "sha256": "402cc6d8bc02b9b8bc39f1e0fec2112830f7073ac82199120983c55499bbed01",
+          "signers_sha256": [
+            "f4553ee5af3cce355b5fa77a6fa7c55c4323c7d7f2d9242f9c7f37bf6298f415"
+          ],
+          "size": 3490260,
+          "version_code": 81401,
+          "version_name": "8.14.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/hashengineering.groestlcoin.wallet_test/old-73804.apk",
+          "reused": false,
+          "sha256": "e900dcdb96189bc3da9a2bedc4cc1ecbad907d36d99e9b88ea7a14ec63b7b32c",
+          "size": 2959944,
+          "url": "https://f-droid.org/archive/hashengineering.groestlcoin.wallet_test_73804.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "a6eb89f96c26b85a7863cee99165a5edd77645af9996da31fe7ad41e6d38082e",
+              "size": 4086144
+            }
+          ],
+          "dex_total_bytes": 4086144,
+          "path": "benchmark_android/data/hashengineering.groestlcoin.wallet_test/old-73804.dexbundle",
+          "sha256": "94b210e58724d5252154aa1c74c1ed54ce95d1b5693ac312c6258f37cbe4d13f",
+          "size": 4086188
+        },
+        "release": {
+          "added": 1580515200000,
+          "filename": "hashengineering.groestlcoin.wallet_test_73804.apk",
+          "section": "archive",
+          "sha256": "e900dcdb96189bc3da9a2bedc4cc1ecbad907d36d99e9b88ea7a14ec63b7b32c",
+          "signers_sha256": [
+            "f4553ee5af3cce355b5fa77a6fa7c55c4323c7d7f2d9242f9c7f37bf6298f415"
+          ],
+          "size": 2959944,
+          "version_code": 73804,
+          "version_name": "7.38.1"
+        }
+      },
+      "package_id": "hashengineering.groestlcoin.wallet_test",
+      "pair_id": "fdroid-hashengineering.groestlcoin.wallet_test-73804-to-81401",
+      "project_name": "Groestlcoin Wallet TestNet",
+      "source_code": "https://github.com/Groestlcoin/groestlcoin-wallet"
+    },
+    {
+      "candidate_rank": 47,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/gal.sli.singal/new-21.apk",
+          "reused": false,
+          "sha256": "616a9b520f11d501004a78e7aa564d8b89344278da9d164dc7276a1d0300b1e7",
+          "size": 4721694,
+          "url": "https://f-droid.org/repo/gal.sli.singal_21.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "699767466fb9d3af3eb0de589ba2a135b676f9fab9b51da477163a39ef41e7ac",
+              "size": 4542592
+            }
+          ],
+          "dex_total_bytes": 4542592,
+          "path": "benchmark_android/data/gal.sli.singal/new-21.dexbundle",
+          "sha256": "8ebd52e14d9ffbd8a79cb98dd7e00c41b59cab48e631adc82450e70b83117e62",
+          "size": 4542636
+        },
+        "release": {
+          "added": 1637020800000,
+          "filename": "gal.sli.singal_21.apk",
+          "section": "repo",
+          "sha256": "616a9b520f11d501004a78e7aa564d8b89344278da9d164dc7276a1d0300b1e7",
+          "signers_sha256": [
+            "345473b256d42a23c9c4150e838583af64ede2a7814e71a54bb9681e3cced1cc"
+          ],
+          "size": 4721694,
+          "version_code": 21,
+          "version_name": "2.1"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/gal.sli.singal/old-20.apk",
+          "reused": false,
+          "sha256": "0a71f79e77d7e87fde7d252521357a8edb7ae7ec612e892502707a8393f86f29",
+          "size": 4721751,
+          "url": "https://f-droid.org/repo/gal.sli.singal_20.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "5f7e9547b50b2055d3b8ac61edce7a6e6497ffeb90446b88e61a446181313c9f",
+              "size": 4532868
+            }
+          ],
+          "dex_total_bytes": 4532868,
+          "path": "benchmark_android/data/gal.sli.singal/old-20.dexbundle",
+          "sha256": "89ce6fc74f32195a0c8a74213c723c5299dd4e43477db08ffb71d5becb3ccd0c",
+          "size": 4532912
+        },
+        "release": {
+          "added": 1630195200000,
+          "filename": "gal.sli.singal_20.apk",
+          "section": "repo",
+          "sha256": "0a71f79e77d7e87fde7d252521357a8edb7ae7ec612e892502707a8393f86f29",
+          "signers_sha256": [
+            "345473b256d42a23c9c4150e838583af64ede2a7814e71a54bb9681e3cced1cc"
+          ],
+          "size": 4721751,
+          "version_code": 20,
+          "version_name": "2.0"
+        }
+      },
+      "package_id": "gal.sli.singal",
+      "pair_id": "fdroid-gal.sli.singal-20-to-21",
+      "project_name": "SinGal Dictionary",
+      "source_code": "https://github.com/xavier-gz/singal"
+    },
+    {
+      "candidate_rank": 48,
+      "new": {
+        "apk": {
+          "path": "benchmark_android/data/com.kgurgul.cpuinfo/new-40303.apk",
+          "reused": false,
+          "sha256": "d0715cb33af787483c03d38980bf001d48503dce1bb36ff36a94138ab6ea945f",
+          "size": 2630179,
+          "url": "https://f-droid.org/archive/com.kgurgul.cpuinfo_40303.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "d697f74948bb035cdd178f7b79d1eb3f7d19093a6cdee52bf44442d5487d858e",
+              "size": 2868916
+            }
+          ],
+          "dex_total_bytes": 2868916,
+          "path": "benchmark_android/data/com.kgurgul.cpuinfo/new-40303.dexbundle",
+          "sha256": "fa474522f21fb2a6079d00119b68267f9024fefff91892fbb29c5c2e105c324a",
+          "size": 2868960
+        },
+        "release": {
+          "added": 1565654400000,
+          "filename": "com.kgurgul.cpuinfo_40303.apk",
+          "section": "archive",
+          "sha256": "d0715cb33af787483c03d38980bf001d48503dce1bb36ff36a94138ab6ea945f",
+          "signers_sha256": [
+            "1a7057023b8e70775a4d3f86f9c51cff1ffb3551aa24279f3eaa32f1bb1037e6"
+          ],
+          "size": 2630179,
+          "version_code": 40303,
+          "version_name": "4.3.3"
+        }
+      },
+      "old": {
+        "apk": {
+          "path": "benchmark_android/data/com.kgurgul.cpuinfo/old-40302.apk",
+          "reused": false,
+          "sha256": "1082dab4a26c1c62e8c5c5ed6e15014992cc00f332afa39a35191a2d54da150e",
+          "size": 2625156,
+          "url": "https://f-droid.org/archive/com.kgurgul.cpuinfo_40302.apk"
+        },
+        "bundle": {
+          "dex_files": [
+            {
+              "name": "classes.dex",
+              "sha256": "9a9f3f50f8187058fdab6d50fa50a618be150e8613f1441a0388160bd3a33f40",
+              "size": 2711232
+            }
+          ],
+          "dex_total_bytes": 2711232,
+          "path": "benchmark_android/data/com.kgurgul.cpuinfo/old-40302.dexbundle",
+          "sha256": "77e07638627efadca4ad4919fe145e8d6191a911ea8835dfdaab0418ef0e81c1",
+          "size": 2711276
+        },
+        "release": {
+          "added": 1562544000000,
+          "filename": "com.kgurgul.cpuinfo_40302.apk",
+          "section": "archive",
+          "sha256": "1082dab4a26c1c62e8c5c5ed6e15014992cc00f332afa39a35191a2d54da150e",
+          "signers_sha256": [
+            "1a7057023b8e70775a4d3f86f9c51cff1ffb3551aa24279f3eaa32f1bb1037e6"
+          ],
+          "size": 2625156,
+          "version_code": 40302,
+          "version_name": "4.3.2"
+        }
+      },
+      "package_id": "com.kgurgul.cpuinfo",
+      "pair_id": "fdroid-com.kgurgul.cpuinfo-40302-to-40303",
+      "project_name": "CPU Info",
+      "source_code": "https://github.com/kamgurgul/cpu-info"
+    }
+  ],
+  "preregistration_sha256": "bffc001a5414ff2574c1676bfb3086fff053e68935559c12de1e4ffbd5be90d6",
+  "status": "frozen_complete",
+  "target_pair_count": 40
+}

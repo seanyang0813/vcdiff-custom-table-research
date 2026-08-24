@@ -1,0 +1,117 @@
+{
+  "artifact_lock_sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69",
+  "counterexample_sha256": "6018f6edbacbe7fc9ec275352e08c7b71222616b0a7fa5f38341c11467a71cb9",
+  "environment": {
+    "candidate_hint": "SciPy HiGHS 1.2.0 with presolve disabled; hint supplies no bound",
+    "cp_sat_workers": 8,
+    "numpy": "2.2.6",
+    "ortools": "9.15.6755",
+    "scipy": "1.13.0"
+  },
+  "evidence_boundary": "This validates the replacement solver protocol on the trigger pair only. It does not itself validate the remaining frozen corpus.",
+  "fixed_q1_recovery": {
+    "independent_dp": 8254,
+    "instruction_dual": 8254,
+    "instruction_primal": 8254,
+    "selected_patterns": [
+      {
+        "atoms": [
+          {
+            "mode": 0,
+            "size": 18,
+            "type": "ADD"
+          }
+        ]
+      }
+    ],
+    "selected_table_sha256": "45c609720ad5c63f504b9f483f9e758e9a61271eb5bac7ebbe8913280bacce4b",
+    "solver_call": {
+      "best_bound": 8254,
+      "branches": 0,
+      "conflicts": 0,
+      "constraints": 8295,
+      "hint_objective": 8254,
+      "nonzeros": 25322,
+      "objective": 8254,
+      "original_integer_variables": 3379,
+      "ortools_version": "9.15.6755",
+      "promoted_binary_variables": 10050,
+      "returned_solution_source": "validated_scipy_no_presolve_hint",
+      "variables": 13429,
+      "wall_time_seconds": 0.429227134
+    }
+  },
+  "format": "vcdiff-cpsat-recovery-diagnostic-v1",
+  "frozen_optimizer_sha256": "aac3d7906c7b7f6e26a98f95691f34b599057fc477bef9b2675500a302c32b51",
+  "global_recovery": {
+    "historical_decoder": {
+      "command": [
+        "/home/seanyang/Documents/math/vcdiff/build/xdelta/xdelta3-rfc-custom-decoder",
+        "-d",
+        "-f",
+        "-s",
+        "/home/seanyang/Documents/math/vcdiff/benchmark_data/compressed/zstd-v1.5.4.tar.gz",
+        "/tmp/vcdiff-cpsat-recovery-f956603m/patch.vcdiff",
+        "<temporary-output>"
+      ],
+      "decoded_sha256": "9c4396cc829cfae319a6e2615202e82aad41372073482fce286fac78646d3ee4",
+      "decoded_size": 2368543,
+      "returncode": 0,
+      "stderr": ""
+    },
+    "identical": true,
+    "instruction_bytes": 7403,
+    "optimal_patch_bytes": 2227631,
+    "optimal_patch_sha256": "8132df491f2ac76c30a1404742aed8c09fdf739c52ca1b9a97ed6ce737d8b0e1",
+    "patch_dual": 2227631,
+    "patch_primal": 2227631,
+    "physical_slots": 85,
+    "repetitions": 2,
+    "saving_bytes": 299,
+    "selected_pattern_count": 85,
+    "selected_patterns_sha256": "77b5bbaead132286db9159f8cb6e854443fe9380a08e56a77dab272dedc2dec5",
+    "solver_calls": [
+      {
+        "best_bound": 7990,
+        "branches": 0,
+        "conflicts": 0,
+        "constraints": 8368,
+        "hint_objective": 7990,
+        "nonzeros": 50954,
+        "objective": 7990,
+        "original_integer_variables": 3508,
+        "ortools_version": "9.15.6755",
+        "promoted_binary_variables": 10111,
+        "returned_solution_source": "validated_scipy_no_presolve_hint",
+        "variables": 13619,
+        "wall_time_seconds": 1.167623733
+      },
+      {
+        "best_bound": 7990,
+        "branches": 0,
+        "conflicts": 0,
+        "constraints": 8368,
+        "hint_objective": 7990,
+        "nonzeros": 50954,
+        "objective": 7990,
+        "original_integer_variables": 3508,
+        "ortools_version": "9.15.6755",
+        "promoted_binary_variables": 10111,
+        "returned_solution_source": "validated_scipy_no_presolve_hint",
+        "variables": 13619,
+        "wall_time_seconds": 1.078903165
+      }
+    ],
+    "solver_gap": 0.0,
+    "stock_patch_bytes": 2227930,
+    "table_sha256": "555fc9282d4398cacc82aba9688077ee4b9b286ac051bd0dc9f27c357be4a885"
+  },
+  "old_invalid_result": {
+    "feasible_dp": 8258,
+    "reported_dual": 8261,
+    "reported_gap": 0.0,
+    "reported_primal": 8261
+  },
+  "pair_id": "compressed-zstd-tar-gz-v1.5.4-to-v1.5.5",
+  "status": "validated on frozen counterexample"
+}
