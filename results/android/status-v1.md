@@ -2,11 +2,15 @@
 
 **Partial and nonconfirmatory.** The corpus is frozen at 40 independent F-Droid projects, but the preregistered minimum is 30 exact labels.
 
-Exact: 4/40. Nonexact attempted: 6. Not attempted: 30.
+Exact: 5/40. Nonexact attempted: 7. Not attempted: 28.
 
 ## Exact result available
 
 `fdroid-com.jstappdev.e6bflightcomputer-19-to-20`: 251,942 → 240,417 bytes, saving 11,525 bytes (4.5745%), q=93. Both decoders passed.
+
+## Exact result available
+
+`fdroid-com.phg.constellations-10004-to-10005`: 200,048 → 181,966 bytes, saving 18,082 bytes (9.0388%), q=93. Both decoders passed.
 
 ## Exact result available
 
@@ -25,6 +29,8 @@ Exact: 4/40. Nonexact attempted: 6. Not attempted: 30.
 `fdroid-co.loubo.icicle-3-to-4`: stopped without an exact pair label (`witness_search_runtime_stop`). The retained q=93 bound is 460,307 bytes; it is not an attained optimum.
 
 `fdroid-com.dergoogler.mmrl-22020-to-32432`: stopped without an exact pair label (`witness_search_runtime_stop`). The retained q=93 bound is 601,568 bytes; it is not an attained optimum.
+
+`fdroid-com.google.android.stardroid-1704-to-1708`: stopped without an exact pair label (`fractional_root_gap`). The retained q=93 bound is 625,202 bytes; it is not an attained optimum.
 
 `fdroid-com.kolakek.pimiwidget-16-to-17`: stopped without an exact pair label (`scip_external_memory_safety_stop`). The retained q=93 bound is 321,904 bytes; it is not an attained optimum.
 

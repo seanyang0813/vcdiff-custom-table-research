@@ -1,0 +1,144 @@
+{
+  "bound_root": "benchmark_android/artifacts/fdroid-com.phg.constellations-10004-to-10005/fixed-q",
+  "elapsed_seconds": 14.323857445000613,
+  "expected_count": 13,
+  "format": "vcdiff-fixed-q-rational-dual-replay-ledger-v1",
+  "q_range": [
+    80,
+    92
+  ],
+  "replayed_exact_count": 13,
+  "rows": [
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 69501,
+      "full_patch_bytes_integer_lower_bound": 182526,
+      "instruction_bytes_integer_lower_bound": 34751,
+      "model_fingerprint": "7afd65d478345a795bb111f86f01f4ca19b4c9307cb731acc2edbbe3009321d9",
+      "physical_slots": 80,
+      "proof_vectors_sha256": "c9999b47758e89e7f52286cfaed065f7b2a195546e7a503d6ae934cd998a3a3b",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 69381,
+      "full_patch_bytes_integer_lower_bound": 182472,
+      "instruction_bytes_integer_lower_bound": 34691,
+      "model_fingerprint": "3439cc850dd33474778e37a41ca83623b8cf6e26d0d4ac341e083f3399294e38",
+      "physical_slots": 81,
+      "proof_vectors_sha256": "e7e017f702a3ef887a29dbc1f5176a79cac5e0ffe3c528113c78771db3570c08",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 69264,
+      "full_patch_bytes_integer_lower_bound": 182419,
+      "instruction_bytes_integer_lower_bound": 34632,
+      "model_fingerprint": "3f2879259ba6a6ed29bb63dc6213df143e50dd9c516795e4248dbcf00334dcd6",
+      "physical_slots": 82,
+      "proof_vectors_sha256": "b54692b1a48c3ce634e1362a0613e8ee21c612bcd5bcaecc737024bbfa87d900",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 34574,
+      "full_patch_bytes_integer_lower_bound": 182367,
+      "instruction_bytes_integer_lower_bound": 34574,
+      "model_fingerprint": "3c95a318ea481f939b534224797602f5bafba8c948c68b50f83474d5d886d3cc",
+      "physical_slots": 83,
+      "proof_vectors_sha256": "7d7dde132dc66962b6c9478508724562bb4d5f08abf9f18e121200c168e05692",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 69033,
+      "full_patch_bytes_integer_lower_bound": 182316,
+      "instruction_bytes_integer_lower_bound": 34517,
+      "model_fingerprint": "283950c72fb5d2adc19916fef6216f77dd03986424ed5ac971ce2679dbd73834",
+      "physical_slots": 84,
+      "proof_vectors_sha256": "9b9d4e8b4beb6642ac3d2bb17636ed201641ae29485ff58a167a4390718804d2",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 3,
+      "exact_dual_numerator": 103379,
+      "full_patch_bytes_integer_lower_bound": 182265,
+      "instruction_bytes_integer_lower_bound": 34460,
+      "model_fingerprint": "0168aaadc77f15a27b41bafbfa0e86ac27bd25cfa929ca5c044ffde589577ae7",
+      "physical_slots": 85,
+      "proof_vectors_sha256": "38c5ca66516d1670c09925792a7ca19db91ce96d3ab5c643814efd0635729ab2",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 6,
+      "exact_dual_numerator": 206729,
+      "full_patch_bytes_integer_lower_bound": 182266,
+      "instruction_bytes_integer_lower_bound": 34455,
+      "model_fingerprint": "673e7f8ea5d239a32d6a330bba232a837ff6e298c25c15cd7a9f20113f6def31",
+      "physical_slots": 86,
+      "proof_vectors_sha256": "1403ed6211736be089a2c5e292daeb13f8587824603a1bf1ec27ec898b79bef7",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 68799,
+      "full_patch_bytes_integer_lower_bound": 182217,
+      "instruction_bytes_integer_lower_bound": 34400,
+      "model_fingerprint": "5d1df4170f5144a90ea7aaa6fd78f3042c93304dcdcaeb6a5cc6a83e378e6bc9",
+      "physical_slots": 87,
+      "proof_vectors_sha256": "c16ded94b62e82e76b255cf3aa004b16207c14895362873ecc2fb292ceebe82c",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 68688,
+      "full_patch_bytes_integer_lower_bound": 182167,
+      "instruction_bytes_integer_lower_bound": 34344,
+      "model_fingerprint": "05f9d1ccd788a39e3eb88badf36a5a4f036b8c7a59d361059431040bed47c007",
+      "physical_slots": 88,
+      "proof_vectors_sha256": "67e5868995d8d448dad1bca0f0d50c2696743168a0d565d4f096641a581ebaae",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 68579,
+      "full_patch_bytes_integer_lower_bound": 182119,
+      "instruction_bytes_integer_lower_bound": 34290,
+      "model_fingerprint": "0dcc9d21d3a6386aedca8a2de428f34072e428095d31337616eac552c0253ea8",
+      "physical_slots": 89,
+      "proof_vectors_sha256": "31f4973448b28b841d93a60a8b7015db6da514c338ca3a2b30e5e73e1c27eed1",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 68472,
+      "full_patch_bytes_integer_lower_bound": 182072,
+      "instruction_bytes_integer_lower_bound": 34236,
+      "model_fingerprint": "9f7fe02b8060bfedbad9ebd97c1ec24fc59802b536bfb987c27f3bd9a0c027c6",
+      "physical_slots": 90,
+      "proof_vectors_sha256": "887e0ec959f6c8731383c79ee85378564b8e7018c9e62269fe4ccda826c531aa",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 2,
+      "exact_dual_numerator": 68362,
+      "full_patch_bytes_integer_lower_bound": 182023,
+      "instruction_bytes_integer_lower_bound": 34181,
+      "model_fingerprint": "2e4899966ac168a094ba80687f517b6a8a3af2d16d7a86decc2f785f9d4b756c",
+      "physical_slots": 91,
+      "proof_vectors_sha256": "46d82f4066c678e53c31b775aa2c1aef9009629ee06dc5005f4f53c51eacc056",
+      "status": "replayed_exact"
+    },
+    {
+      "exact_dual_denominator": 1,
+      "exact_dual_numerator": 34127,
+      "full_patch_bytes_integer_lower_bound": 181975,
+      "instruction_bytes_integer_lower_bound": 34127,
+      "model_fingerprint": "26a22c800d917ab1d50bc1c88253a9f1a55bf3694e5dd05906c8bdbc5c8a9d3e",
+      "physical_slots": 92,
+      "proof_vectors_sha256": "960296ef3c42d0ccdb23b05a565a9c3c5714fdcef7caf11293086d142af5ed82",
+      "status": "replayed_exact"
+    }
+  ],
+  "trace": "benchmark_android/artifacts/fdroid-com.phg.constellations-10004-to-10005/trace.json"
+}

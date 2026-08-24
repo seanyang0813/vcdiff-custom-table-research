@@ -23,11 +23,12 @@ archive indices: 40 distinct public projects selected in fixed hash order,
 with consecutive universal-APK releases and deterministic complete multidex
 bundles. Corpus membership was frozen before any VCDIFF trace was generated.
 
-Four scheduled pairs are exact. QuickDice 45→48 is 32,517→30,627 bytes,
+Five scheduled pairs are exact. QuickDice 45→48 is 32,517→30,627 bytes,
 saving 1,890 bytes (5.8123%) at q=83. E6B Flight Computer 19→20 is
-251,942→240,417 bytes, saving 11,525 bytes (4.5745%) at q=93. Two small
-independent controls—tTorrent Search 2→3 and Look4Sat 322→323—are exact at
-q=0 with zero gain (70→70 and 61→61 bytes).
+251,942→240,417 bytes, saving 11,525 bytes (4.5745%) at q=93. Constellations
+10004→10005 is 200,048→181,966 bytes, saving 18,082 bytes (9.0388%) at q=93.
+Two small independent controls—tTorrent Search 2→3 and Look4Sat 322→323—are
+exact at q=0 with zero gain (70→70 and 61→61 bytes).
 
 The second pair originally exposed an operational scaling stop: generic exact
 SCIP exceeded 8 GiB process RSS. The replacement proof removes LP-redundant
@@ -44,8 +45,10 @@ QuickDice q=83 and E6 q=93 fixed-q optima at one node, but a larger Pimi Widget
 case still reached the host memory safety boundary without an exact result.
 This is a bounded validation improvement, not a general scaling solution; see
 the [validation ledger](results/android/strengthened-scip-validation-v1.json).
+The same formulation supplies the attained q=93 row in the independently
+replayed [Constellations composite certificate](results/android/constellations-exact-summary-v1.md).
 
-These are **four preregistered examples, not generalization**. The
+These are **five preregistered examples, not generalization**. The
 preregistered minimum is 30 exact Android pairs, so no predictor, table bank,
 deployment experiment, or Superpack claim is authorized. See
 [`status-v1.md`](results/android/status-v1.md) and

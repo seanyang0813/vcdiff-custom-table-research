@@ -10,10 +10,11 @@ import subprocess
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any
 
 import vcdiff_opt.optimizer as optimizer_module
-from benchmark.integer_dual_adapter import IntegerDualReplayAdapter
+from benchmark.integer_dual_adapter import IntegerDualReplayAdapter, _standardize
 from vcdiff_opt.codec import build_custom_table, encode_file, encode_file_header
 from vcdiff_opt.decoder import decode_file
 from vcdiff_opt.default_table import table_to_bytes
@@ -104,6 +105,55 @@ def fixed_q_patch_lower_bound(
         + varint_size(delta_bytes)
     )
     return full, header_bytes
+
+
+def capture_fixed_q_model_fingerprint(
+    windows: tuple[WindowTrace, ...], q: int
+) -> str:
+    """Rebuild the canonical fixed-q model without asking any solver to run."""
+
+    fingerprints: list[str] = []
+
+    def capture(
+        *,
+        c: Any,
+        integrality: Any,
+        bounds: Any,
+        constraints: Any,
+        options: dict[str, Any] | None = None,
+    ) -> Any:
+        del options
+        fingerprints.append(
+            _standardize(
+                c=c,
+                integrality=integrality,
+                bounds=bounds,
+                constraints=constraints,
+            ).fingerprint
+        )
+        return SimpleNamespace(
+            success=False,
+            status="fingerprint_only",
+            message="captured fixed-q model fingerprint without solving",
+            x=None,
+            fun=None,
+        )
+
+    original_milp = optimizer_module.milp
+    optimizer_module.milp = capture
+    try:
+        try:
+            optimizer_module.solve_selection(windows, q)
+        except RuntimeError as error:
+            if "fingerprint_only" not in str(error):
+                raise
+        else:
+            raise AssertionError("fingerprint capture unexpectedly solved the model")
+    finally:
+        optimizer_module.milp = original_milp
+    if len(fingerprints) != 1:
+        raise AssertionError("fingerprint capture did not see exactly one model")
+    return fingerprints[0]
 
 
 def main() -> None:
@@ -276,45 +326,89 @@ def main() -> None:
     result_path = arguments.fixed_q_root / "093" / "result.json"
     document = json.loads(result_path.read_text())
     if (
-        document.get("status") != "exact_fixed_q_only"
-        or int(document.get("physical_slots", -1)) != chosen_q
+        int(document.get("physical_slots", -1)) != chosen_q
         or document["trace"]["sha256"] != trace_hash
     ):
         raise ValueError("q=93 attained-result metadata mismatch")
     chosen_selection = SelectionResult.from_dict(document["selection"])
-    constructor = document["constructor_calls"][0]
-    replay = document["replay_calls"][0]
-    if not (
-        chosen_selection.instruction_bytes
-        == chosen_selection.solver_dual_bound
-        == int(constructor["exact_dual_bound"])
-        == int(replay["exact_dual_bound"])
-    ):
-        raise ValueError("q=93 dual/witness replay mismatch")
-    independent_replay = IntegerDualReplayAdapter(result_path.parent / "proof")
-    original_milp = optimizer_module.milp
-    optimizer_module.milp = independent_replay
-    try:
-        independently_replayed_selection = optimizer_module.solve_selection(
+    chosen_proof: dict[str, Any]
+    if document.get("format") == "vcdiff-android-fixed-q-integer-dual-result-v1":
+        if document.get("status") != "exact_fixed_q_only":
+            raise ValueError("q=93 integer-dual result is not exact")
+        constructor = document["constructor_calls"][0]
+        replay = document["replay_calls"][0]
+        if not (
+            chosen_selection.instruction_bytes
+            == chosen_selection.solver_dual_bound
+            == int(constructor["exact_dual_bound"])
+            == int(replay["exact_dual_bound"])
+        ):
+            raise ValueError("q=93 dual/witness replay mismatch")
+        independent_replay = IntegerDualReplayAdapter(result_path.parent / "proof")
+        original_milp = optimizer_module.milp
+        optimizer_module.milp = independent_replay
+        try:
+            independently_replayed_selection = optimizer_module.solve_selection(
+                windows, chosen_q
+            )
+        finally:
+            optimizer_module.milp = original_milp
+        if independently_replayed_selection != chosen_selection:
+            raise AssertionError("independent q=93 proof replay changed the selection")
+        proof_metadata = Path(constructor["proof_metadata_path"])
+        proof_vectors = Path(constructor["proof_vectors_path"])
+        if not proof_metadata.is_absolute():
+            proof_metadata = ROOT / proof_metadata
+        if not proof_vectors.is_absolute():
+            proof_vectors = ROOT / proof_vectors
+        metadata = json.loads(proof_metadata.read_text())
+        if (
+            sha256(proof_vectors) != constructor["proof_vectors_sha256"]
+            or metadata["vectors_sha256"] != constructor["proof_vectors_sha256"]
+            or metadata["model_fingerprint"] != constructor["model_fingerprint"]
+        ):
+            raise ValueError("q=93 attained proof hash mismatch")
+        chosen_proof = {
+            "proof_kind": "exact rational LP dual plus binary witness",
+            "model_fingerprint": constructor["model_fingerprint"],
+            "proof_metadata_path": str(proof_metadata),
+            "proof_metadata_sha256": sha256(proof_metadata),
+            "proof_vectors_path": str(proof_vectors),
+            "proof_vectors_sha256": sha256(proof_vectors),
+        }
+    elif document.get("format") == "vcdiff-android-fixed-q-strengthened-scip-v1":
+        if document.get("status") != "exact_fixed_q":
+            raise ValueError("q=93 strengthened-SCIP result is not exact")
+        calls = document.get("solver_calls", [])
+        fingerprints = document.get("model_fingerprints", [])
+        if len(calls) != 1 or len(fingerprints) != 1:
+            raise ValueError("q=93 strengthened-SCIP proof metadata is incomplete")
+        call = calls[0]
+        reconstructed_fingerprint = capture_fixed_q_model_fingerprint(
             windows, chosen_q
         )
-    finally:
-        optimizer_module.milp = original_milp
-    if independently_replayed_selection != chosen_selection:
-        raise AssertionError("independent q=93 proof replay changed the selection")
-    proof_metadata = Path(constructor["proof_metadata_path"])
-    proof_vectors = Path(constructor["proof_vectors_path"])
-    if not proof_metadata.is_absolute():
-        proof_metadata = ROOT / proof_metadata
-    if not proof_vectors.is_absolute():
-        proof_vectors = ROOT / proof_vectors
-    metadata = json.loads(proof_metadata.read_text())
-    if (
-        sha256(proof_vectors) != constructor["proof_vectors_sha256"]
-        or metadata["vectors_sha256"] != constructor["proof_vectors_sha256"]
-        or metadata["model_fingerprint"] != constructor["model_fingerprint"]
-    ):
-        raise ValueError("q=93 attained proof hash mismatch")
+        if not (
+            call.get("exact_mode") is True
+            and call.get("returned_solution_source") == "exact_scip"
+            and int(call["objective"])
+            == int(call["best_bound"])
+            == chosen_selection.instruction_bytes
+            == chosen_selection.solver_dual_bound
+            and fingerprints[0] == reconstructed_fingerprint
+        ):
+            raise ValueError("q=93 exact-SCIP/model-fingerprint replay mismatch")
+        chosen_proof = {
+            "proof_kind": "exact aggregate-free SCIP plus integral DP witness",
+            "model_fingerprint": reconstructed_fingerprint,
+            "mps_sha256": call["mps_sha256"],
+            "scip_version": call["scip_version"],
+            "exact_mode": True,
+            "solver_nodes": int(call["nodes"]),
+            "solver_objective": int(call["objective"]),
+            "solver_best_bound": int(call["best_bound"]),
+        }
+    else:
+        raise ValueError("unsupported q=93 attained-result format")
     chosen_table = build_custom_table(chosen_selection.selected, chosen_q)
     chosen_encoding = encode_file(
         windows, source, target, table=chosen_table, physical_slots=chosen_q
@@ -337,12 +431,7 @@ def main() -> None:
         "patch_bytes": len(chosen_encoding.encoded),
         "patch_sha256": sha256_bytes(chosen_encoding.encoded),
         "selected_pattern_count": len(chosen_selection.selected),
-        "proof_kind": "exact rational LP dual plus binary witness",
-        "model_fingerprint": constructor["model_fingerprint"],
-        "proof_metadata_path": str(proof_metadata),
-        "proof_metadata_sha256": sha256(proof_metadata),
-        "proof_vectors_path": str(proof_vectors),
-        "proof_vectors_sha256": sha256(proof_vectors),
+        **chosen_proof,
         "result_path": str(result_path),
         "result_sha256": sha256(result_path),
     }
@@ -388,8 +477,33 @@ def main() -> None:
     oracle_bytes = len(chosen_encoding.encoded)
     saving_bytes = baseline_bytes - oracle_bytes
     saving_percent = 100.0 * saving_bytes / baseline_bytes
+    certificate_format = (
+        "vcdiff-public-android-dex-certificate-v2-integer-dual"
+        if document.get("format")
+        == "vcdiff-android-fixed-q-integer-dual-result-v1"
+        else "vcdiff-public-android-dex-certificate-v3-composite-exact"
+    )
+    proof_backend = (
+        "q=80..92 replayed rational LP lower bounds; q=80 monotonicity "
+        f"transfer to q=1..79; q=93 {chosen_proof['proof_kind']}; "
+        "q=0 exact DP"
+    )
+    proof_of_exhaustion = (
+        "q=0 exact default-table DP; q=80..92 replayed rational LP lower "
+        "bounds; q=80 monotonicity transfers its instruction lower bound "
+        "to q=1..79; every resulting full-patch lower bound is at or above "
+        "the q=93 exact rational-dual plus binary-witness incumbent"
+        if document.get("format")
+        == "vcdiff-android-fixed-q-integer-dual-result-v1"
+        else (
+            "q=0 exact default-table DP; q=80..92 replayed rational LP lower "
+            "bounds; q=80 monotonicity transfers its instruction lower bound "
+            "to q=1..79; every resulting full-patch lower bound is at or above "
+            f"the q=93 incumbent attained by {chosen_proof['proof_kind']}"
+        )
+    )
     certificate = {
-        "format": "vcdiff-public-android-dex-certificate-v2-integer-dual",
+        "format": certificate_format,
         "status": "exact_global_q_0_through_93",
         "evidence_boundary": (
             "Exact for the frozen public F-Droid DEX-bundle surrogate and restricted "
@@ -412,12 +526,7 @@ def main() -> None:
             "table_family": (
                 "replace opcodes 163..(163+q-1), q in every integer 0..93"
             ),
-            "proof_of_exhaustion": (
-                "q=0 exact default-table DP; q=80..92 replayed rational LP lower "
-                "bounds; q=80 monotonicity transfers its instruction lower bound "
-                "to q=1..79; every resulting full-patch lower bound is at or above "
-                "the q=93 exact rational-dual plus binary-witness incumbent"
-            ),
+            "proof_of_exhaustion": proof_of_exhaustion,
         },
         "source": {
             "path": str(source_path),
@@ -484,7 +593,7 @@ def main() -> None:
     certificate_path.write_text(json.dumps(certificate, indent=2, sort_keys=True) + "\n")
     report = "\n".join(
         [
-            "# Exact fixed-q integer-dual Android result",
+            "# Exact composite fixed-q Android result",
             "",
             f"Stock patch: {baseline_bytes:,} bytes. Exact q=0..93 optimum: "
             f"{oracle_bytes:,} bytes at q={chosen_q}. Saving: {saving_bytes:,} bytes "
@@ -492,8 +601,8 @@ def main() -> None:
             "",
             "All 94 physical-slot counts were covered. q=80..92 have replayed exact "
             "rational-dual lower bounds; q=80 transfers monotonically to q=1..79; "
-            "q=93 has a matching binary witness, integral DP attainment, and decoded "
-            "bytes.",
+            f"q=93 uses {chosen_proof['proof_kind']}, integral DP attainment, and "
+            "decoded bytes.",
             "",
             "This is one public F-Droid DEX-bundle pair, not a corpus conclusion or "
             "a claim about Meta/Superpack data.",
@@ -504,12 +613,9 @@ def main() -> None:
 
     if arguments.update_state:
         state = json.loads(STATE.read_text())
-        state["pairs"][pair["pair_id"]] = {
+        state_row = {
             "status": "complete",
-            "proof_backend": (
-                "q=80..92 replayed rational LP lower bounds; q=80 monotonicity "
-                "transfer to q=1..79; q=93 matching binary witness; q=0 exact DP"
-            ),
+            "proof_backend": proof_backend,
             "certificate": str(certificate_path.resolve().relative_to(ROOT)),
             "certificate_sha256": sha256(certificate_path),
             "logical_instructions": sum(len(window.instructions) for window in windows),
@@ -523,10 +629,12 @@ def main() -> None:
             "fixed_q_attained_exact_count": 1,
             "fixed_q_total_with_default": 94,
             "finished_utc": datetime.now(timezone.utc).isoformat(),
-            "prior_scip_scaling_stop_retained": (
-                "results/android/continuous-relaxation-stop-v1.json"
-            ),
         }
+        if pair["pair_id"] == "fdroid-com.jstappdev.e6bflightcomputer-19-to-20":
+            state_row["prior_scip_scaling_stop_retained"] = (
+                "results/android/continuous-relaxation-stop-v1.json"
+            )
+        state["pairs"][pair["pair_id"]] = state_row
         STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n")
     print(certificate_path)
 

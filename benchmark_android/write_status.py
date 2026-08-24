@@ -39,13 +39,16 @@ def main() -> None:
             "results/android/continuous-relaxation-stop-v1.json",
             "results/android/strengthened-root-lp-global-presolve-v1.json",
             "results/android/e6b-fixed-q-bound-replay-v1.json",
+            "results/android/constellations-fixed-q-bound-replay-v1.json",
+            "results/android/constellations-exact-summary-v1.json",
             "results/android/strengthened-scip-validation-v1.json",
             "results/android/mmrl-q93-witness-stop-v1.json",
             "results/android/icicle-q93-witness-stop-v1.json",
             "results/android/tranquilstopwatch-q93-root-gap-v1.json",
             "results/android/ariane-q93-root-gap-v1.json",
             "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
-            "results/android/pathfinder-q93-root-gap-v1.json"
+            "results/android/pathfinder-q93-root-gap-v1.json",
+            "results/android/stardroid-q93-root-gap-v1.json",
         ],
         "evidence_boundary": (
             f"{len(exact)} exact DEX pairs are insufficient for the preregistered "

@@ -13,6 +13,9 @@ from benchmark.integer_dual_adapter import (
     IntegerDualReplayAdapter,
     RationalDualBoundReplayAdapter,
 )
+from benchmark_android.finalize_integer_dual_pair import (
+    capture_fixed_q_model_fingerprint,
+)
 from vcdiff_opt.codec import build_custom_table, encode_file, encode_file_header
 from vcdiff_opt.decoder import decode_file
 from vcdiff_opt.default_table import (
@@ -156,6 +159,14 @@ def test_integer_dual_adapter_writes_and_replays_exact_proof(tmp_path) -> None:
         bound_replay.calls[0].integer_lattice_lower_bound
         == constructed.instruction_bytes
     )
+
+
+def test_fixed_q_model_fingerprint_capture_is_deterministic() -> None:
+    windows = (_add_trace(count=5),)
+    first = capture_fixed_q_model_fingerprint(windows, 1)
+    second = capture_fixed_q_model_fingerprint(windows, 1)
+    assert first == second
+    assert len(first) == 64
 
 
 def test_integer_dual_adapter_replays_fractional_bound_ceiling(tmp_path) -> None:

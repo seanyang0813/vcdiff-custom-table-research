@@ -30,6 +30,21 @@
       "python_decoder_round_trip": true
     }
   ],
+  "exact_new_application": {
+    "attained_patch_bytes": 181966,
+    "attained_patch_sha256": "c8bcf1d7fe64570584a498362aac6b8070c1944204c863f77d94716b2c6393ec",
+    "elapsed_seconds": 108.48385831400083,
+    "exact_instruction_bytes": 34116,
+    "global_certificate_summary": "results/android/constellations-exact-summary-v1.json",
+    "logical_instructions": 45106,
+    "model_fingerprint": "68fc5ead8cc51502de4274fbc9c5cfa194ba2764bdaa3c0a3f0928f142bbed00",
+    "mps_sha256": "cefba17daf43d607d8def45546cad142c3f5572e03e4265613ccc73d9c2f3bc7",
+    "nodes": 5,
+    "pair_id": "fdroid-com.phg.constellations-10004-to-10005",
+    "peak_rss_kb": 3949176,
+    "physical_slots": 93,
+    "python_decoder_round_trip": true
+  },
   "format": "vcdiff-android-strengthened-scip-validation-v1",
   "formulation": "Remove aggregate big-M activation rows, add each occurrence-to-selection implication, retain continuous path-flow variables, and retain binary table-selection variables.",
   "resource_stop": {

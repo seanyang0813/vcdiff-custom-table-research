@@ -1,6 +1,6 @@
 {
-  "evidence_boundary": "4 exact DEX pairs are insufficient for the preregistered 30-pair coverage gate. No predictor, table bank, production prototype, or Superpack claim is authorized.",
-  "exact_pair_count": 4,
+  "evidence_boundary": "5 exact DEX pairs are insufficient for the preregistered 30-pair coverage gate. No predictor, table bank, production prototype, or Superpack claim is authorized.",
+  "exact_pair_count": 5,
   "exact_rows": [
     {
       "baseline_bytes": 251942,
@@ -19,6 +19,24 @@
       "proof_backend": "q=80..92 replayed rational LP lower bounds; q=80 monotonicity transfer to q=1..79; q=93 matching binary witness; q=0 exact DP",
       "saving_bytes": 11525,
       "saving_percent": 4.574465551595209,
+      "status": "complete"
+    },
+    {
+      "baseline_bytes": 200048,
+      "certificate": "benchmark_android/artifacts/fdroid-com.phg.constellations-10004-to-10005/certificate.json",
+      "certificate_sha256": "c19748a916e9f2228dfa6828a9b645d3c3104bdad4ef65e33285142ad2ac8df1",
+      "finished_utc": "2026-08-24T14:13:57.771395+00:00",
+      "fixed_q_attained_exact_count": 1,
+      "fixed_q_direct_exact_lower_bound_count": 13,
+      "fixed_q_monotonicity_derived_bound_count": 79,
+      "fixed_q_total_with_default": 94,
+      "logical_instructions": 45106,
+      "oracle_bytes": 181966,
+      "pair_id": "fdroid-com.phg.constellations-10004-to-10005",
+      "physical_slots": 93,
+      "proof_backend": "q=80..92 replayed rational LP lower bounds; q=80 monotonicity transfer to q=1..79; q=93 exact aggregate-free SCIP plus integral DP witness; q=0 exact DP",
+      "saving_bytes": 18082,
+      "saving_percent": 9.038830680636647,
       "status": "complete"
     },
     {
@@ -76,7 +94,7 @@
   "frozen_pair_count": 40,
   "material_signal_gate_passed": false,
   "minimum_exact_coverage_gate_passed": false,
-  "nonexact_attempt_count": 6,
+  "nonexact_attempt_count": 7,
   "nonexact_attempts": [
     {
       "attempted_physical_slots": 93,
@@ -97,6 +115,16 @@
       "pair_id": "fdroid-com.dergoogler.mmrl-22020-to-32432",
       "q93_full_patch_bytes_integer_lower_bound": 601568,
       "status": "witness_search_runtime_stop"
+    },
+    {
+      "attempted_physical_slots": 93,
+      "baseline_bytes": 651231,
+      "diagnostic": "results/android/stardroid-q93-root-gap-v1.json",
+      "instruction_bytes_integer_lower_bound": 136756,
+      "logical_instructions": 171163,
+      "pair_id": "fdroid-com.google.android.stardroid-1704-to-1708",
+      "q93_full_patch_bytes_integer_lower_bound": 625202,
+      "status": "fractional_root_gap"
     },
     {
       "attempted_physical_slots": 93,
@@ -139,19 +167,22 @@
       "status": "fractional_root_gap"
     }
   ],
-  "not_yet_attempted_count": 30,
+  "not_yet_attempted_count": 28,
   "operational_diagnostics": [
     "results/android/fixed-q1-diagnostic-v1.json",
     "results/android/continuous-relaxation-stop-v1.json",
     "results/android/strengthened-root-lp-global-presolve-v1.json",
     "results/android/e6b-fixed-q-bound-replay-v1.json",
+    "results/android/constellations-fixed-q-bound-replay-v1.json",
+    "results/android/constellations-exact-summary-v1.json",
     "results/android/strengthened-scip-validation-v1.json",
     "results/android/mmrl-q93-witness-stop-v1.json",
     "results/android/icicle-q93-witness-stop-v1.json",
     "results/android/tranquilstopwatch-q93-root-gap-v1.json",
     "results/android/ariane-q93-root-gap-v1.json",
     "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
-    "results/android/pathfinder-q93-root-gap-v1.json"
+    "results/android/pathfinder-q93-root-gap-v1.json",
+    "results/android/stardroid-q93-root-gap-v1.json"
   ],
   "predictor_or_table_bank_authorized": false,
   "status": "partial_nonconfirmatory"

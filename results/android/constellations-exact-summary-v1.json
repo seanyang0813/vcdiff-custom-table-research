@@ -1,0 +1,64 @@
+{
+  "baseline_bytes": 200048,
+  "chosen_patch": {
+    "python_decoder_sha256": "5a3228375831199131c560167a9ac40979946d5da2d120e055d8f6a9abc2bc73",
+    "sha256": "c8bcf1d7fe64570584a498362aac6b8070c1944204c863f77d94716b2c6393ec",
+    "unchanged_xdelta_decoder_sha256": "5a3228375831199131c560167a9ac40979946d5da2d120e055d8f6a9abc2bc73"
+  },
+  "corpus_gate": {
+    "exact_pairs_after_this_result": 5,
+    "material_pairs_after_this_result": 3,
+    "minimum_required_exact_pairs": 30,
+    "predictor_or_table_bank_authorized": false
+  },
+  "evidence_boundary": "Exact for the frozen public F-Droid DEX-bundle surrogate and restricted canonical table family only; no Meta or Superpack claim.",
+  "format": "vcdiff-android-composite-exact-summary-v1",
+  "full_certificate": {
+    "note": "local certificate references frozen APK-derived artifacts excluded from Git",
+    "path": "benchmark_android/artifacts/fdroid-com.phg.constellations-10004-to-10005/certificate.json",
+    "sha256": "c19748a916e9f2228dfa6828a9b645d3c3104bdad4ef65e33285142ad2ac8df1"
+  },
+  "independent_bound_replay": {
+    "path": "results/android/constellations-fixed-q-bound-replay-v1.json",
+    "q_range": [
+      80,
+      92
+    ],
+    "replayed_exact_count": 13,
+    "sha256": "42cb4d61b38480e6b900c680f0c43e0be42d0d91d2195d472337830fc4ff69ab"
+  },
+  "instruction_bytes": 34116,
+  "logical_instruction_count": 45106,
+  "oracle_bytes": 181966,
+  "pair_id": "fdroid-com.phg.constellations-10004-to-10005",
+  "passes_preregistered_one_percent_pair_threshold": true,
+  "physical_slots": 93,
+  "proof_of_exhaustion": {
+    "all_nonincumbent_bounds_eliminate_incumbent": true,
+    "attained_custom_rows": 1,
+    "covered_q_count": 94,
+    "direct_rational_lower_bound_rows": 13,
+    "method": "q=0 exact default-table DP; q=80..92 independently replayed rational LP lower bounds; q=80 monotonicity transfers its instruction lower bound to q=1..79; q=93 exact aggregate-free SCIP has equal primal and dual, an independently rebuilt model fingerprint, integral DP attainment, and two decoder replays",
+    "monotonicity_derived_lower_bound_rows": 79,
+    "nearest_competitor": {
+      "margin_bytes": 9,
+      "patch_bytes_integer_lower_bound": 181975,
+      "physical_slots": 92
+    },
+    "q_domain": [
+      0,
+      93
+    ]
+  },
+  "q93_exact_scip": {
+    "elapsed_seconds": 108.48385831400083,
+    "model_fingerprint": "68fc5ead8cc51502de4274fbc9c5cfa194ba2764bdaa3c0a3f0928f142bbed00",
+    "mps_sha256": "cefba17daf43d607d8def45546cad142c3f5572e03e4265613ccc73d9c2f3bc7",
+    "nodes": 5,
+    "peak_rss_kb": 3949176,
+    "scip_version": "10.0.2"
+  },
+  "saving_bytes": 18082,
+  "saving_percent": 9.038830680636647,
+  "status": "exact_global_q_0_through_93"
+}
