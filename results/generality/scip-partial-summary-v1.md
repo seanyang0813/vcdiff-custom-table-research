@@ -1,6 +1,6 @@
 # Frozen-corpus exact-SCIP partial status
 
-**Trace-complete but exact-incomplete and nonconfirmatory:** every frozen stock trace has been independently replayed, while 31/48 pairs have exact-SCIP certificates. The preregistered distribution, predictor, and table-bank gates have not been evaluated.
+**Trace-complete but exact-incomplete and nonconfirmatory:** every frozen stock trace has been independently replayed, while 34/48 pairs have exact-SCIP certificates. The preregistered distribution, predictor, and table-bank gates have not been evaluated.
 
 | Pair | Category | Trace | Stock | Exact | Saving | q | Wall s | Peak MiB |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
@@ -10,11 +10,14 @@
 | source-git-v2.48.0-to-v2.48.1 | source_tree | 472 | 1,952 | 1,952 | 0 (0.0000%) | 0 | 8.89 | 409 |
 | source-git-v2.48.0-to-v2.49.0 | source_tree | 37,991 | 151,012 | 146,932 | 4,080 (2.7018%) | 93 | 331.77 | 3,560 |
 | source-curl-8.11.0-to-8.11.1 | source_tree | 6,219 | 25,767 | 25,597 | 170 (0.6598%) | 85 | 124.84 | 792 |
+| source-curl-8.11.0-to-8.12.0 | source_tree | 50,826 | 194,029 | 188,493 | 5,536 (2.8532%) | 93 | 599.57 | 4,745 |
 | source-redis-7.4.0-to-7.4.1 | source_tree | 102 | 540 | 540 | 0 (0.0000%) | 0 | 3.32 | 203 |
 | source-redis-7.4.0-to-7.4.2 | source_tree | 1,334 | 5,781 | 5,781 | 0 (0.0000%) | 0 | 4.89 | 276 |
 | source-llvm-19.1.0-to-19.1.1 | source_tree | 51 | 252 | 252 | 0 (0.0000%) | 0 | 2.83 | 178 |
 | source-llvm-19.1.0-to-19.1.2 | source_tree | 155 | 721 | 721 | 0 (0.0000%) | 0 | 2.91 | 188 |
 | source-zstd-v1.5.4-to-v1.5.5 | source_tree | 14,566 | 277,841 | 276,705 | 1,136 (0.4089%) | 85 | 754.41 | 4,061 |
+| source-zstd-v1.5.4-to-v1.5.6 | source_tree | 39,453 | 370,248 | 366,760 | 3,488 (0.9421%) | 93 | 702.01 | 4,034 |
+| source-zstd-v1.5.4-to-v1.5.7 | source_tree | 55,902 | 430,916 | 425,704 | 5,212 (1.2095%) | 93 | 1,680.29 | 5,468 |
 | source-xdelta-v3.0.9-to-v3.0.10 | source_tree | 1,124 | 4,276 | 4,276 | 0 (0.0000%) | 0 | 2.62 | 230 |
 | source-xdelta-v3.0.9-to-v3.0.11 | source_tree | 2,485 | 9,569 | 9,569 | 0 (0.0000%) | 0 | 7.55 | 390 |
 | source-xdelta-v3.0.9-to-v3.1.0 | source_tree | 25,311 | 81,325 | 78,862 | 2,463 (3.0286%) | 93 | 842.18 | 2,707 |
@@ -38,7 +41,7 @@
 
 Every listed row has equal exact-SCIP primal/dual bounds, independent DP attainment, emitted-byte equality, and two successful decoder replays. Pairs without exact labels are not treated as zero-gain or excluded.
 
-The tractability-selected exact subset totals 22,652,441 to 22,616,114 bytes, saving 36,327 (0.1604%). This aggregate is descriptive only and is not a frozen-corpus distribution estimate.
+The tractability-selected exact subset totals 23,647,634 to 23,597,071 bytes, saving 50,563 (0.2138%). This aggregate is descriptive only and is not a frozen-corpus distribution estimate.
 
 ## Unresolved exact frontier
 
@@ -46,9 +49,6 @@ These rows have exact stock-trace byte replay and two decoder checks, but no exa
 
 | Pair | Category | Logical instructions | Stock bytes | Exact status |
 |---|---|---:|---:|---|
-| source-zstd-v1.5.4-to-v1.5.6 | source_tree | 39,453 | 370,248 | not_exactly_attempted |
-| source-curl-8.11.0-to-8.12.0 | source_tree | 50,826 | 194,029 | not_exactly_attempted |
-| source-zstd-v1.5.4-to-v1.5.7 | source_tree | 55,902 | 430,916 | not_exactly_attempted |
 | compiled-curl-8.11.0-to-8.12.0 | compiled | 81,370 | 287,322 | not_exactly_attempted |
 | compiled-zstd-v1.5.4-to-v1.5.5 | compiled | 89,322 | 324,052 | not_exactly_attempted |
 | structured-unicode-15.0.0-to-15.1.0 | structured | 95,788 | 3,728,197 | not_exactly_attempted |

@@ -11,8 +11,8 @@ standard VCDIFF patch, and writes a solver certificate.
 > 10 numerically exact mode, explicitly binary combinatorial variables,
 > independently integral DP attainment, emitted-byte equality, and two decoder
 > replays. It reproduces the trigger and every prior CP-SAT result. All 48
-> frozen stock traces now have exact byte replay, and 31/48 pairs have exact
-> restricted-oracle labels. The remaining 17 pairs are still unlabeled, so the
+> frozen stock traces now have exact byte replay, and 34/48 pairs have exact
+> restricted-oracle labels. The remaining 14 pairs are still unlabeled, so the
 > corpus distribution is nonconfirmatory. See
 > [`scip-partial-summary-v1.md`](results/generality/scip-partial-summary-v1.md).
 > A separate replayed rational-LP-dual backend now handles the larger Android
@@ -107,14 +107,19 @@ Those exploratory gains justified the larger study, not an upstream-ready
 result. The exact-SCIP replacement sweep is still incomplete: no full gain
 distribution, predictor model, table bank, or deployment prototype is claimed.
 
-The current trace-complete checkpoint contains 17 positive and 14 zero-gain
+The current trace-complete checkpoint contains 20 positive and 14 zero-gain
 exact rows. Its tractability-selected exact subset totals
-22,652,441→22,616,114 bytes, saving 36,327 bytes (0.1604%); that aggregate is
+23,647,634→23,597,071 bytes, saving 50,563 bytes (0.2138%); that aggregate is
 descriptive only, not a frozen-corpus estimate. Two useful exact additions are
 the source Zstandard 1.5.4→1.5.5 row at 277,841→276,705 bytes (0.4089%, q=85)
 and the compiled curl 8.11.0→8.11.1 row at 169,800→160,563 bytes (5.4399%,
 q=93). The latter took 1:00:32 and 4,896,992 KiB peak RSS; see its compact
 [certificate summary](results/generality/compiled-curl-8.11.1-exact-v1.md).
+The next locked tranche added source Zstandard 1.5.4→1.5.6 at
+370,248→366,760 bytes (0.9421%, q=93), source curl 8.11.0→8.12.0 at
+194,029→188,493 bytes (2.8532%, q=93), and source Zstandard 1.5.4→1.5.7 at
+430,916→425,704 bytes (1.2095%, q=93). Each has equal exact-SCIP bounds,
+integral DP attainment, and two decoder replays.
 
 ## Reproduce one pair
 
@@ -160,7 +165,7 @@ The outcome-blind acquisition and analysis contracts remain useful and are
 documented in [`benchmark/README.md`](benchmark/README.md). They lock 48 usable
 version pairs and 67 artifacts spanning source trees, compiled code, structured
 data, and compressed controls. All 48 stock traces have independent byte replay,
-but the exact-SCIP sweep currently covers 31/48 pairs. The unresolved frontier
+but the exact-SCIP sweep currently covers 34/48 pairs. The unresolved frontier
 is retained in the partial summary and the preregistered generality gate has not
 been evaluated.
 

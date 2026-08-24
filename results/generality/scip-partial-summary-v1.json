@@ -1,6 +1,6 @@
 {
   "confirmatory_use": false,
-  "exact_pair_count": 31,
+  "exact_pair_count": 34,
   "format": "vcdiff-frozen-corpus-exact-scip-partial-summary-v1",
   "frozen_pair_count": 48,
   "reason": "Every frozen stock trace is replayed, but the preregistered 48-pair exact-oracle distribution is incomplete.",
@@ -150,6 +150,30 @@
       "saving_percent": 0.6597586059688749
     },
     {
+      "baseline_bytes": 194029,
+      "category": "source_tree",
+      "certificate": "benchmark_artifacts_scip/source-curl-8.11.0-to-8.12.0/certificate.json",
+      "certificate_sha256": "3023d4486877449e43d142a7bdae01a3f55b85638d71803100d280bf479c9b18",
+      "global_mps_sha256": "869eed5cd2862af22ef083970cbfd0b2db3efc1b6cc1f997e0df0001488ddb62",
+      "global_scip_nodes": 1,
+      "logical_instruction_count": 50826,
+      "observed_candidate_count": 22028,
+      "oracle_bytes": 188493,
+      "pair_id": "source-curl-8.11.0-to-8.12.0",
+      "physical_slots": 93,
+      "project": "curl",
+      "resource_usage": {
+        "elapsed_wall_seconds": 599.57,
+        "exit_status": 0,
+        "log": "benchmark_work/scip-oracle/source-curl-8.11.0-to-8.12.0.log",
+        "maximum_resident_kib": 4858488,
+        "runner_elapsed_seconds": 599.585189919002,
+        "swap_count": 0
+      },
+      "saving_bytes": 5536,
+      "saving_percent": 2.853181740873787
+    },
+    {
       "baseline_bytes": 540,
       "category": "source_tree",
       "certificate": "benchmark_artifacts_scip/source-redis-7.4.0-to-7.4.1/certificate.json",
@@ -268,6 +292,54 @@
       },
       "saving_bytes": 1136,
       "saving_percent": 0.40886694188402717
+    },
+    {
+      "baseline_bytes": 370248,
+      "category": "source_tree",
+      "certificate": "benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.6/certificate.json",
+      "certificate_sha256": "7c6fcea7557da78d8c164603658fd7fb6527c5c34dfef70b3feee530663dbd6b",
+      "global_mps_sha256": "a56b8dea3c09f06d7c39a5cd904ab94278a6e957b59761bcfa6f41a465d54b1f",
+      "global_scip_nodes": 1,
+      "logical_instruction_count": 39453,
+      "observed_candidate_count": 18194,
+      "oracle_bytes": 366760,
+      "pair_id": "source-zstd-v1.5.4-to-v1.5.6",
+      "physical_slots": 93,
+      "project": "zstd",
+      "resource_usage": {
+        "elapsed_wall_seconds": 702.01,
+        "exit_status": 0,
+        "log": "benchmark_work/scip-oracle/source-zstd-v1.5.4-to-v1.5.6.log",
+        "maximum_resident_kib": 4130644,
+        "runner_elapsed_seconds": 702.0476282539967,
+        "swap_count": 0
+      },
+      "saving_bytes": 3488,
+      "saving_percent": 0.9420712603444178
+    },
+    {
+      "baseline_bytes": 430916,
+      "category": "source_tree",
+      "certificate": "benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.7/certificate.json",
+      "certificate_sha256": "c8df97618a257ff19383f2da26d247d6405eac9e67ebddf24ca00716cd610939",
+      "global_mps_sha256": "2d47519f5253d28d3adfa46583c5ecc0ce08f675989a28f1a715d665c5d3a9e8",
+      "global_scip_nodes": 1,
+      "logical_instruction_count": 55902,
+      "observed_candidate_count": 23430,
+      "oracle_bytes": 425704,
+      "pair_id": "source-zstd-v1.5.4-to-v1.5.7",
+      "physical_slots": 93,
+      "project": "zstd",
+      "resource_usage": {
+        "elapsed_wall_seconds": 1680.29,
+        "exit_status": 0,
+        "log": "benchmark_work/scip-oracle/source-zstd-v1.5.4-to-v1.5.7.log",
+        "maximum_resident_kib": 5598852,
+        "runner_elapsed_seconds": 1680.3293607310043,
+        "swap_count": 0
+      },
+      "saving_bytes": 5212,
+      "saving_percent": 1.2095164718877924
     },
     {
       "baseline_bytes": 4276,
@@ -752,36 +824,6 @@
   "status": "trace_complete_exact_incomplete",
   "trace_frontier": [
     {
-      "baseline_bytes": 370248,
-      "category": "source_tree",
-      "exact_status": "not_exactly_attempted",
-      "logical_instruction_count": 39453,
-      "pair_id": "source-zstd-v1.5.4-to-v1.5.6",
-      "project": "zstd",
-      "trace_preparation": "benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.6/trace-preparation.json",
-      "trace_semantic_sha256": "bab6439f398c0f0f46e483e14b23bbb550c1337a68553126a02bf1c032964c5b"
-    },
-    {
-      "baseline_bytes": 194029,
-      "category": "source_tree",
-      "exact_status": "not_exactly_attempted",
-      "logical_instruction_count": 50826,
-      "pair_id": "source-curl-8.11.0-to-8.12.0",
-      "project": "curl",
-      "trace_preparation": "benchmark_artifacts_scip/source-curl-8.11.0-to-8.12.0/trace-preparation.json",
-      "trace_semantic_sha256": "8a46fe8aebb6facf8502f5eb3a9ba47152ed009ba2db7e011b03fbfa54902338"
-    },
-    {
-      "baseline_bytes": 430916,
-      "category": "source_tree",
-      "exact_status": "not_exactly_attempted",
-      "logical_instruction_count": 55902,
-      "pair_id": "source-zstd-v1.5.4-to-v1.5.7",
-      "project": "zstd",
-      "trace_preparation": "benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.7/trace-preparation.json",
-      "trace_semantic_sha256": "8a41ee2427583749b54e4ae417d0af7f9a440135b392fb953ca5f241d5d17ec1"
-    },
-    {
       "baseline_bytes": 287322,
       "category": "compiled",
       "exact_status": "not_exactly_attempted",
@@ -925,24 +967,21 @@
   "trace_replay_schedule_complete": true,
   "trace_replayed_pair_count": 48,
   "tractability_selected_exact_subset": {
-    "baseline_bytes": 22652441,
+    "baseline_bytes": 23647634,
     "confirmatory_use": false,
-    "oracle_bytes": 22616114,
-    "pair_count": 31,
-    "positive_pair_count": 17,
-    "saving_bytes": 36327,
-    "saving_percent": 0.16036682316047088,
+    "oracle_bytes": 23597071,
+    "pair_count": 34,
+    "positive_pair_count": 20,
+    "saving_bytes": 50563,
+    "saving_percent": 0.21381843105318696,
     "selection_boundary": "Descriptive only: exact labels were selected by operational tractability, not by the frozen corpus analysis plan.",
     "zero_gain_pair_count": 14
   },
   "without_exact_label": [
     "source-git-v2.48.0-to-v2.50.0",
-    "source-curl-8.11.0-to-8.12.0",
     "source-curl-8.11.0-to-8.13.0",
     "source-redis-7.4.0-to-8.0.0",
     "source-llvm-19.1.0-to-20.1.0",
-    "source-zstd-v1.5.4-to-v1.5.6",
-    "source-zstd-v1.5.4-to-v1.5.7",
     "compiled-zstd-v1.5.4-to-v1.5.5",
     "compiled-zstd-v1.5.4-to-v1.5.6",
     "compiled-curl-8.11.0-to-8.12.0",
@@ -954,5 +993,5 @@
     "structured-unicode-15.0.0-to-16.0.0",
     "structured-unicode-15.0.0-to-17.0.0"
   ],
-  "without_exact_label_count": 17
+  "without_exact_label_count": 14
 }

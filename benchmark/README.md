@@ -36,8 +36,8 @@ The original floating HiGHS zero-gap evidence failed because a captured
 feasible vector beat one reported dual bound. Exact labels now require the
 frozen SCIP 10 numerically exact protocol, an independently integral dynamic
 program attaining the same bound, emitted-byte equality, and two decoder
-replays. All 48 stock traces have been independently replayed; 31 pairs meet
-that exact-label standard and 17 remain unlabeled. This trace-complete but
+replays. All 48 stock traces have been independently replayed; 34 pairs meet
+that exact-label standard and 14 remain unlabeled. This trace-complete but
 exact-incomplete corpus supports neither an exact empirical distribution nor a
 claim about broader VCDIFF tables, parses, or deployment behavior.
 
