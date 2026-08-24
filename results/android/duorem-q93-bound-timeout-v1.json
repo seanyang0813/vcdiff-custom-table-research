@@ -1,0 +1,18 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 1280130,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The short run is only a scaling-triage observation after larger-budget timeouts on comparable traces.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 338171,
+  "pair_id": "fdroid-com.vadimfrolov.duorem-5-to-6",
+  "resource_observation": {
+    "adapter_time_budget_seconds": 60,
+    "elapsed_seconds_including_model_construction": 82.89,
+    "peak_rss_kb": 2118548
+  },
+  "solver_status": "Time limit reached (HiGHS Status 13)",
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "A short confirmation run was used because three comparable 248k-to-364k-instruction traces had already exhausted 300-to-600-second budgets. The first LP reached the shared adapter deadline; no fallback or integer search ran.",
+  "trace_sha256": "76e0c3dc1be570c2dd30be4d13f634854462ba804043214c3158fc3acc4a5be8"
+}

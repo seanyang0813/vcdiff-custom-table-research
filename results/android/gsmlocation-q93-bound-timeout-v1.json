@@ -1,0 +1,18 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 864316,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The short run is only a scaling-triage observation after a longer timeout on a comparably sized trace.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 240186,
+  "pair_id": "fdroid-org.fitchfamily.android.gsmlocation-73-to-74",
+  "resource_observation": {
+    "adapter_time_budget_seconds": 60,
+    "elapsed_seconds_including_model_construction": 76.85,
+    "peak_rss_kb": 1572712
+  },
+  "solver_status": "Time limit reached (HiGHS Status 13)",
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "A short confirmation run was used because the comparably sized Spider trace had already exhausted 450 seconds. The first LP reached the shared adapter deadline; no fallback or integer search ran.",
+  "trace_sha256": "87b407be6fb61ac01c46866e86c8620644762402aa9e52b84e037f573eb4079b"
+}

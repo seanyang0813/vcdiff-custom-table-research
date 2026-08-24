@@ -1,0 +1,18 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 1886287,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The short run is only a scaling-triage observation after larger-budget timeouts on smaller traces.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 526416,
+  "pair_id": "fdroid-hashengineering.groestlcoin.wallet_test-73804-to-81401",
+  "resource_observation": {
+    "adapter_time_budget_seconds": 30,
+    "elapsed_seconds_including_model_construction": 65.26,
+    "peak_rss_kb": 3215540
+  },
+  "solver_status": "Time limit reached (HiGHS Status 13)",
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "A short confirmation run was used because smaller large traces had already exhausted longer budgets. The first LP reached the shared adapter deadline; no fallback or integer search ran.",
+  "trace_sha256": "8e1647ac08ee5125951bfed54f706b90db45b7aa0238296c0287b59b4f764279"
+}

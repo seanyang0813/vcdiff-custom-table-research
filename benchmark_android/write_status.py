@@ -18,7 +18,21 @@ def main() -> None:
     corpus = json.loads(CORPUS.read_text())
     state = json.loads(STATE.read_text()) if STATE.is_file() else {"pairs": {}}
     exact = [value | {"pair_id": key} for key, value in state["pairs"].items() if value["status"] == "complete"]
-    failures = [value | {"pair_id": key} for key, value in state["pairs"].items() if value["status"] != "complete"]
+    incomplete = [
+        value | {"pair_id": key}
+        for key, value in state["pairs"].items()
+        if value["status"] != "complete"
+    ]
+    operational_skips = [
+        row
+        for row in incomplete
+        if row["status"] == "solver_skipped_by_posthoc_scaling_gate"
+    ]
+    failures = [
+        row
+        for row in incomplete
+        if row["status"] != "solver_skipped_by_posthoc_scaling_gate"
+    ]
     material = [row for row in exact if float(row["saving_percent"]) >= 1.0]
     coverage_gate = len(exact) >= 30
     signal_gate = coverage_gate and len(material) / len(exact) >= 0.25
@@ -28,12 +42,19 @@ def main() -> None:
         "frozen_pair_count": corpus["accepted_pair_count"],
         "exact_pair_count": len(exact),
         "nonexact_attempt_count": len(failures),
-        "not_yet_attempted_count": corpus["accepted_pair_count"] - len(exact) - len(failures),
+        "operational_skip_count": len(operational_skips),
+        "not_yet_attempted_count": (
+            corpus["accepted_pair_count"]
+            - len(exact)
+            - len(failures)
+            - len(operational_skips)
+        ),
         "minimum_exact_coverage_gate_passed": coverage_gate,
         "material_signal_gate_passed": signal_gate,
         "predictor_or_table_bank_authorized": signal_gate,
         "exact_rows": exact,
         "nonexact_attempts": failures,
+        "operational_skips": operational_skips,
         "operational_diagnostics": [
             "results/android/fixed-q1-diagnostic-v1.json",
             "results/android/continuous-relaxation-stop-v1.json",
@@ -50,6 +71,22 @@ def main() -> None:
             "results/android/pathfinder-q93-root-gap-v1.json",
             "results/android/stardroid-q93-root-gap-v1.json",
             "results/android/anecdote-q93-bound-timeout-v1.json",
+            "results/android/cpuinfo-q93-bound-timeout-v1.json",
+            "results/android/spider-q93-bound-timeout-v1.json",
+            "results/android/duorem-q93-bound-timeout-v1.json",
+            "results/android/plexus-q93-bound-timeout-v1.json",
+            "results/android/onetimepad-q93-bound-timeout-v1.json",
+            "results/android/gsmlocation-q93-bound-timeout-v1.json",
+            "results/android/block6-q93-bound-timeout-v1.json",
+            "results/android/packlist-q93-bound-timeout-v1.json",
+            "results/android/sandwich-q93-bound-timeout-v1.json",
+            "results/android/secondsclock-q93-bound-timeout-v1.json",
+            "results/android/groestlcoin-q93-bound-timeout-v1.json",
+            "results/android/singal-q93-bound-timeout-v1.json",
+            "results/android/rational-dual-scaling-gate-v1.json",
+            "results/android/zapp-scaling-gate-skip-v1.json",
+            "results/android/omninotes-scaling-gate-skip-v1.json",
+            "results/android/muzei-bing-scaling-gate-skip-v1.json",
         ],
         "evidence_boundary": (
             f"{len(exact)} exact DEX pairs are insufficient for the preregistered "
@@ -66,6 +103,7 @@ def main() -> None:
         "F-Droid projects, but the preregistered minimum is 30 exact labels.",
         "",
         f"Exact: {len(exact)}/40. Nonexact attempted: {len(failures)}. "
+        f"Operationally skipped after trace replay: {len(operational_skips)}. "
         f"Not attempted: {value['not_yet_attempted_count']}.",
         "",
     ]
@@ -95,6 +133,19 @@ def main() -> None:
                 [
                     f"`{row['pair_id']}`: stopped without an exact pair label "
                     f"(`{row['status']}`). {detail}",
+                    "",
+                ]
+            )
+    if operational_skips:
+        lines.extend(["## Post-hoc operational skips", ""])
+        for row in operational_skips:
+            lines.extend(
+                [
+                    f"`{row['pair_id']}`: the stock trace was exactly byte-replayed, "
+                    "but the current q=93 solver was not started because the trace "
+                    f"has {row['logical_instructions']:,} logical instructions, at or "
+                    "above the post-hoc 240,000-instruction host cutoff. This produces "
+                    "no exact bound and no oracle label.",
                     "",
                 ]
             )

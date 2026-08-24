@@ -1,0 +1,18 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 1747559,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The short run is only a scaling-triage observation after larger-budget timeouts on smaller traces.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 494757,
+  "pair_id": "fdroid-gal.sli.singal-20-to-21",
+  "resource_observation": {
+    "adapter_time_budget_seconds": 30,
+    "elapsed_seconds_including_model_construction": 63.99,
+    "peak_rss_kb": 3026012
+  },
+  "solver_status": "Time limit reached (HiGHS Status 13)",
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "A short confirmation run was used because smaller large traces had already exhausted longer budgets. The first LP reached the shared adapter deadline; no fallback or integer search ran.",
+  "trace_sha256": "cef6c05bdf1af788f4d12546fcdb52836232318fbddbf3fd1dc046cd531f4058"
+}

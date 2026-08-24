@@ -1,0 +1,46 @@
+{
+  "evidence_boundary": "This is a post-hoc host resource policy, not a preregistered analysis rule, theorem, exact lower bound, or claim that larger traces cannot be solved by another architecture or host. Skipped pairs receive no oracle label.",
+  "exact_bound_successes_below_cutoff": [
+    {
+      "logical_instructions": 116993,
+      "lp_elapsed_seconds": 93.0516417009967,
+      "pair_id": "fdroid-org.evilsoft.pathfinder.reference-36-to-38"
+    },
+    {
+      "logical_instructions": 171163,
+      "lp_elapsed_seconds": 199.28683909300162,
+      "pair_id": "fdroid-com.google.android.stardroid-1704-to-1708"
+    },
+    {
+      "logical_instructions": 200428,
+      "lp_elapsed_seconds": 434.52350896999997,
+      "pair_id": "fdroid-tibarj.tranquilstopwatch-16-to-17"
+    },
+    {
+      "logical_instructions": 209309,
+      "lp_elapsed_seconds": 415.2875974390008,
+      "pair_id": "fdroid-oppen.gemini.ariane-39-to-42"
+    }
+  ],
+  "format": "vcdiff-android-rational-dual-host-scaling-gate-v1",
+  "policy": "After exact stock-trace preparation and replay, do not start the current q=93 rational-dual or SCIP solver when logical_instruction_count is at least 240000. Record a visible scaling-gate skip and continue the frozen schedule.",
+  "status": "posthoc_operational_policy_active",
+  "timeout_basis": [
+    {
+      "adapter_time_budget_seconds": 60,
+      "logical_instructions": 240186,
+      "pair_id": "fdroid-org.fitchfamily.android.gsmlocation-73-to-74"
+    },
+    {
+      "adapter_time_budget_seconds": 450,
+      "logical_instructions": 248374,
+      "pair_id": "fdroid-org.kknickkk.spider-12-to-13"
+    },
+    {
+      "adapter_time_budget_seconds": 300,
+      "logical_instructions": 364470,
+      "pair_id": "fdroid-com.kgurgul.cpuinfo-40302-to-40303"
+    }
+  ],
+  "trace_instruction_cutoff": 240000
+}

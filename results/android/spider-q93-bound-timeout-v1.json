@@ -1,0 +1,18 @@
+{
+  "attempted_physical_slots": 93,
+  "baseline_bytes": 885731,
+  "evidence_boundary": "No exact q=93 lower bound or attained optimum was produced, so no preregistered pair label is assigned. The run is only an operational scaling observation.",
+  "exact_lower_bound_available": false,
+  "format": "vcdiff-android-fixed-q-bound-construction-stop-v1",
+  "logical_instructions": 248374,
+  "pair_id": "fdroid-org.kknickkk.spider-12-to-13",
+  "resource_observation": {
+    "adapter_time_budget_seconds": 450,
+    "elapsed_seconds_including_model_construction": 467.51,
+    "peak_rss_kb": 1620308
+  },
+  "solver_status": "Time limit reached (HiGHS Status 13)",
+  "status": "rational_dual_construction_timeout",
+  "stop_reason": "The first HiGHS dual-candidate solve reached the shared adapter deadline without a replayable bound. No second presolve variant or integer witness search was launched.",
+  "trace_sha256": "b62ac98571e48729f6908a5c5d69e2fbbd713f98354caaaa5a4f4661fe015767"
+}
