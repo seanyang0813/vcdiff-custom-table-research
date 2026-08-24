@@ -32,9 +32,27 @@ build caches live beneath ignored `benchmark_data/`, `benchmark_downloads/`,
 and `benchmark_work/`. Aggregate replayable results are written to
 `results/generality/`.
 
-The intended evidence boundary was a zero-gap optimum within the frozen
-one-window, fixed-xdelta-trace, q=0..93 canonical prefix-replacement family.
-That prerequisite failed: a captured feasible vector beats a reported dual
-bound. Consequently the partial certificates are diagnostic only, and the
-corpus currently supports neither an exact empirical distribution nor a claim
-about broader VCDIFF tables or parses.
+The original floating HiGHS zero-gap evidence failed because a captured
+feasible vector beat one reported dual bound. Exact labels now require the
+frozen SCIP 10 numerically exact protocol, an independently integral dynamic
+program attaining the same bound, emitted-byte equality, and two decoder
+replays. All 48 stock traces have been independently replayed; 31 pairs meet
+that exact-label standard and 17 remain unlabeled. This trace-complete but
+exact-incomplete corpus supports neither an exact empirical distribution nor a
+claim about broader VCDIFF tables, parses, or deployment behavior.
+
+Prepare one frozen trace without invoking a custom-table solver or assigning an
+outcome:
+
+```bash
+PYTHONPATH=src:. python3 benchmark/prepare_pair_trace.py \
+  --pair-id source-zstd-v1.5.4-to-v1.5.6 \
+  --output benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.6
+```
+
+The resulting sidecar checks the lock, stock-patch byte replay, strict Python
+decoder, and unchanged historical decoder. Its semantic trace hash removes only
+checkout/output path strings; source, target, baseline, and logical-window
+content remain hashed. `benchmark/write_scip_partial_summary.py` validates all
+available exact certificates and trace sidecars before writing the public
+exact/unresolved frontier.

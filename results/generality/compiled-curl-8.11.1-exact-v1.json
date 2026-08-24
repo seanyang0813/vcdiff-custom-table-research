@@ -1,0 +1,66 @@
+{
+  "evidence_boundary": "Exact only for the frozen compiled curl 8.11.0 to 8.11.1 pair, its fixed one-window stock xdelta trace, and the locked restricted q=0..93 table family. This is one tractability-selected corpus label, not a distributional or deployment result.",
+  "format": "vcdiff-frozen-pair-exact-scip-summary-v1",
+  "frozen_artifact_lock": {
+    "path": "benchmark/artifact-lock-v1.json",
+    "sha256": "466e539779eae8f31809835ee2b4e51ae2114b01db659f9d36e5326a9fa82c69"
+  },
+  "pair": {
+    "category": "compiled",
+    "id": "compiled-curl-8.11.0-to-8.11.1",
+    "source": {
+      "sha256": "ee38ae9d8999e290c5292d451aa28de963aa9f3f3763eeae6fdecfeb0261d583",
+      "size": 931144
+    },
+    "target": {
+      "sha256": "cb0a20d9b9e1615d741e6dd385db48a020ae5193be0141ee173289e2b4583327",
+      "size": 931080
+    }
+  },
+  "proof": {
+    "certificate": "benchmark_artifacts_scip/compiled-curl-8.11.0-to-8.11.1/certificate.json",
+    "certificate_sha256": "f4f1ff4f8484897755acf2f752541905ade6556bcd47532b99d2d2709f49a92f",
+    "global_mps_sha256": "44a57a6e72d31326a43622fae437fb3aee3003b90428fb0eaa529ff3e45e7e51",
+    "global_dual_bound": 46261,
+    "global_primal_objective": 46261,
+    "global_scip_nodes": 1,
+    "integral_dp_attainment": true,
+    "parse_sha256": "7728e05b4c8e477be1c4daf81863dbedf8fb08a41880e05153d47f54a1a710ca",
+    "pyscipopt_version": "6.2.1",
+    "scip_exact_mode": true,
+    "scip_version": "10.0.2",
+    "validity_amendment": "benchmark/scip-validity-amendment-v2.json",
+    "validity_amendment_sha256": "aa702364f37bc05b7684837504a3438ee5314448dbdbfd754cd5a7edf11c7e6d"
+  },
+  "resource_usage": {
+    "elapsed_wall_seconds": 3632,
+    "maximum_resident_kib": 4896992,
+    "process_swap_count": 0,
+    "threads": 1,
+    "time_source": "GNU time -v runner log"
+  },
+  "result": {
+    "baseline_bytes": 169800,
+    "baseline_sha256": "353d812601947aca2198936411c2dd3074bc404bbc00c0b90b5e1b7f30db4361",
+    "gross_instruction_saving_bytes": 9858,
+    "net_saving_bytes": 9237,
+    "net_saving_percent": 5.439929328621908,
+    "oracle_bytes": 160563,
+    "oracle_sha256": "7aa301f6e3d4e22e21bf1fc8ad9ff6013f82c325505d78532c2c727dc6ad737a",
+    "physical_slots": 93,
+    "table_and_header_cost_bytes": 621
+  },
+  "status": "exact_restricted_optimum",
+  "trace": {
+    "logical_instruction_count": 49094,
+    "observed_candidate_count": 9635,
+    "path_bearing_sha256": "0dfeed204d1bf2f95825c1d4bf38feee426fc7f112fbcdd983f2abe87f40bc98",
+    "semantic_sha256": "17723470acc52fbf799fda6d6a2ef3854adf2ae234578f02c21fc47faba72484"
+  },
+  "verification": {
+    "emitted_patch_hash_matches": true,
+    "historical_xdelta_decoder": true,
+    "independent_python_decoder": true,
+    "target_sha256": "cb0a20d9b9e1615d741e6dd385db48a020ae5193be0141ee173289e2b4583327"
+  }
+}

@@ -13,6 +13,61 @@ from .study import _verify_with_decoder
 from .trace import sha256_file
 
 
+def _verify_exact_scip_claim(certificate: dict[str, Any]) -> dict[str, Any]:
+    proof = certificate.get("tools", {}).get("independent_integer_proof", {})
+    calls = proof.get("calls", [])
+    expected_settings = {
+        "limits/memory_mb": 6000,
+        "limits/time_seconds_per_model": 7200,
+        "lp/threads": 1,
+        "parallel/maxnthreads": 1,
+        "randomization/lpseed": 0,
+        "randomization/permutationseed": 0,
+        "randomization/permuteconss": False,
+        "randomization/permutevars": False,
+        "randomization/randomseedshift": 0,
+    }
+    if (
+        proof.get("api") != "PySCIPOpt / SCIP numerically exact mode"
+        or proof.get("scip_version") != "10.0.2"
+        or proof.get("pyscipopt_version") != "6.2.1"
+        or proof.get("settings") != expected_settings
+    ):
+        raise ValueError("wrong exact proof backend")
+    if len(calls) != len(certificate.get("custom_evaluations", [])) + 1:
+        raise ValueError("exact proof-call count differs from certificate")
+    for call in calls:
+        if (
+            call.get("exact_mode") is not True
+            or int(call.get("objective", -1)) != int(call.get("best_bound", -2))
+            or call.get("returned_solution_source")
+            != "validated_scipy_no_presolve_hint"
+            or int(call.get("threads", 0)) != 1
+        ):
+            raise ValueError("invalid locked exact-SCIP call")
+
+    chosen = certificate["global_optimum"]
+    solver = chosen["solver"]
+    patch_bytes = int(chosen["file_bytes"])
+    if not (
+        patch_bytes
+        == int(solver["patch_bytes"])
+        == int(solver["patch_dual_bound"])
+        and int(calls[-1]["objective"]) == int(solver["variable_patch_bytes"])
+        and int(solver["solver_gap"]) == 0
+    ):
+        raise ValueError("exact SCIP bound does not match emitted patch objective")
+    return {
+        "patch_primal": patch_bytes,
+        "patch_dual": patch_bytes,
+        "instruction_bytes": int(solver["instruction_bytes"]),
+        "solver_gap": 0,
+        "proof_backend": "SCIP numerically exact binary model",
+        "proof_calls": len(calls),
+        "global_mps_sha256": calls[-1]["mps_sha256"],
+    }
+
+
 def verify_certificate(
     certificate_path: Path,
     *,
@@ -24,12 +79,27 @@ def verify_certificate(
     if certificate_format not in {
         "vcdiff-custom-table-certificate-v1",
         "vcdiff-custom-table-certificate-v2",
+        "vcdiff-custom-table-certificate-v4-scip-exact",
     }:
         raise ValueError("unsupported certificate format")
+    if certificate_format == "vcdiff-custom-table-certificate-v4-scip-exact":
+        amendment = certificate.get("validity_amendment", {})
+        amendment_path = Path(amendment.get("path", ""))
+        if not amendment_path.is_absolute():
+            amendment_path = Path(__file__).resolve().parents[2] / amendment_path
+        if (
+            not amendment_path.is_file()
+            or sha256_file(amendment_path) != amendment.get("sha256")
+        ):
+            raise ValueError("exact-SCIP validity amendment mismatch")
 
     chosen_key = (
         "global_optimum"
-        if certificate_format == "vcdiff-custom-table-certificate-v2"
+        if certificate_format
+        in {
+            "vcdiff-custom-table-certificate-v2",
+            "vcdiff-custom-table-certificate-v4-scip-exact",
+        }
         else "chosen_custom"
     )
     chosen = certificate[chosen_key]
@@ -50,7 +120,10 @@ def verify_certificate(
         patch_path,
     ]
     parse_path = None
-    if certificate_format == "vcdiff-custom-table-certificate-v2":
+    if certificate_format in {
+        "vcdiff-custom-table-certificate-v2",
+        "vcdiff-custom-table-certificate-v4-scip-exact",
+    }:
         parse_path = Path(chosen["parse_path"])
         required_paths.append(parse_path)
     if table_path is not None:
@@ -187,6 +260,10 @@ def verify_certificate(
             "instruction_bytes": claimed_instruction_bytes,
             "solver_gap": solver.solver_gap,
         }
+    elif certificate_format == "vcdiff-custom-table-certificate-v4-scip-exact":
+        result_fields = _verify_exact_scip_claim(certificate)
+        if len(patch) != int(result_fields["patch_primal"]):
+            raise ValueError("claimed exact global bound differs from patch length")
     else:
         solver = solve_selection(
             windows,

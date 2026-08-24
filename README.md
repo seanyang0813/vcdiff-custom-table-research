@@ -10,8 +10,10 @@ standard VCDIFF patch, and writes a solver certificate.
 > pair (8,261 bytes versus the true 8,254). The replacement backend uses SCIP
 > 10 numerically exact mode, explicitly binary combinatorial variables,
 > independently integral DP attainment, emitted-byte equality, and two decoder
-> replays. It reproduces the trigger and every prior CP-SAT result. The frozen
-> corpus is currently 25/48 exact, so its distribution is nonconfirmatory. See
+> replays. It reproduces the trigger and every prior CP-SAT result. All 48
+> frozen stock traces now have exact byte replay, and 31/48 pairs have exact
+> restricted-oracle labels. The remaining 17 pairs are still unlabeled, so the
+> corpus distribution is nonconfirmatory. See
 > [`scip-partial-summary-v1.md`](results/generality/scip-partial-summary-v1.md).
 > A separate replayed rational-LP-dual backend now handles the larger Android
 > fixed-q models without weakening the exact label.
@@ -105,6 +107,15 @@ Those exploratory gains justified the larger study, not an upstream-ready
 result. The exact-SCIP replacement sweep is still incomplete: no full gain
 distribution, predictor model, table bank, or deployment prototype is claimed.
 
+The current trace-complete checkpoint contains 17 positive and 14 zero-gain
+exact rows. Its tractability-selected exact subset totals
+22,652,441→22,616,114 bytes, saving 36,327 bytes (0.1604%); that aggregate is
+descriptive only, not a frozen-corpus estimate. Two useful exact additions are
+the source Zstandard 1.5.4→1.5.5 row at 277,841→276,705 bytes (0.4089%, q=85)
+and the compiled curl 8.11.0→8.11.1 row at 169,800→160,563 bytes (5.4399%,
+q=93). The latter took 1:00:32 and 4,896,992 KiB peak RSS; see its compact
+[certificate summary](results/generality/compiled-curl-8.11.1-exact-v1.md).
+
 ## Reproduce one pair
 
 Python 3.11+, a C compiler, Git, NumPy, SciPy, and pytest are required.
@@ -148,8 +159,23 @@ counterexample with:
 The outcome-blind acquisition and analysis contracts remain useful and are
 documented in [`benchmark/README.md`](benchmark/README.md). They lock 48 usable
 version pairs and 67 artifacts spanning source trees, compiled code, structured
-data, and compressed controls. The exact-SCIP sweep currently covers 25/48
-pairs, so the preregistered generality gate has not been evaluated.
+data, and compressed controls. All 48 stock traces have independent byte replay,
+but the exact-SCIP sweep currently covers 31/48 pairs. The unresolved frontier
+is retained in the partial summary and the preregistered generality gate has not
+been evaluated.
+
+Prepare and independently replay one frozen trace without assigning it an
+oracle outcome:
+
+```bash
+PYTHONPATH=src:. python3 benchmark/prepare_pair_trace.py \
+  --pair-id source-zstd-v1.5.4-to-v1.5.6 \
+  --output benchmark_artifacts_scip/source-zstd-v1.5.4-to-v1.5.6
+```
+
+The sidecar records both the path-bearing trace hash and a checkout-independent
+semantic hash. Regenerate the verified exact/trace frontier with
+`PYTHONPATH=src:. python3 benchmark/write_scip_partial_summary.py`.
 
 ## Reproduce the pinned corpus
 
@@ -176,6 +202,10 @@ reproduction.
   LP lower bounds and matching binary witnesses.
 - `benchmark/strengthened_scip_adapter.py` — aggregate-free exact SCIP with
   continuous path variables and binary table selections.
+- `benchmark/prepare_pair_trace.py` — outcome-neutral frozen trace generation,
+  byte replay, two decoder checks, and portable semantic trace hashing.
+- `benchmark/write_scip_partial_summary.py` — certificate/hash/resource audit
+  and trace-complete, exact-incomplete frontier ledger.
 - `benchmark_android/run_fixed_q_integer_dual.py` and
   `verify_fixed_q_bound_sweep.py` — fixed-q proof construction and independent
   bound replay for the public DEX branch.
