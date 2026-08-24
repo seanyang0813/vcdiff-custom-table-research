@@ -393,7 +393,13 @@ def test_global_milp_accounts_for_overwritten_default_pair() -> None:
     assert set(result.selected) == set(candidates)
 
 
-def test_global_optimizer_returns_default_when_no_pattern_can_improve() -> None:
+def test_global_optimizer_returns_default_when_no_pattern_can_improve(
+    monkeypatch,
+) -> None:
+    def reject_solver_call(**_):
+        raise AssertionError("no-pattern branch unexpectedly called a solver")
+
+    monkeypatch.setattr(optimizer_module, "milp", reject_solver_call)
     window = _add_trace(count=1, size=1)
     target = b"x"
     default_encoding = encode_file((window,), b"", target)

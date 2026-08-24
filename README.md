@@ -23,12 +23,19 @@ archive indices: 40 distinct public projects selected in fixed hash order,
 with consecutive universal-APK releases and deterministic complete multidex
 bundles. Corpus membership was frozen before any VCDIFF trace was generated.
 
-Five scheduled pairs are exact. QuickDice 45→48 is 32,517→30,627 bytes,
+The frozen 40-project schedule is trace-complete but oracle-incomplete. Every
+stock trace was exactly byte-replayed and every pair is accounted: 6 exact
+labels, 21 nonexact solver attempts, and 13 disclosed post-hoc resource-gate
+skips. No pair was removed after observing an outcome.
+
+Three exact pairs are favorable. QuickDice 45→48 is 32,517→30,627 bytes,
 saving 1,890 bytes (5.8123%) at q=83. E6B Flight Computer 19→20 is
 251,942→240,417 bytes, saving 11,525 bytes (4.5745%) at q=93. Constellations
 10004→10005 is 200,048→181,966 bytes, saving 18,082 bytes (9.0388%) at q=93.
-Two small independent controls—tTorrent Search 2→3 and Look4Sat 322→323—are
-exact at q=0 with zero gain (70→70 and 61→61 bytes).
+Three exact controls have zero gain: tTorrent Search 2→3 at 70→70, Look4Sat
+322→323 at 61→61, and PowerTools f005 103→104 at 26→26 bytes. The last trace
+has no eligible implicit-size table candidate, so its q=0 optimum is a
+zero-variable structural certificate with two decoder replays and no MILP.
 
 The second pair originally exposed an operational scaling stop: generic exact
 SCIP exceeded 8 GiB process RSS. The replacement proof removes LP-redundant
@@ -48,9 +55,20 @@ the [validation ledger](results/android/strengthened-scip-validation-v1.json).
 The same formulation supplies the attained q=93 row in the independently
 replayed [Constellations composite certificate](results/android/constellations-exact-summary-v1.md).
 
-These are **five preregistered examples, not generalization**. The
-preregistered minimum is 30 exact Android pairs, so no predictor, table bank,
-deployment experiment, or Superpack claim is authorized. See
+Measured rational-bound construction misses began at 240,186 logical
+instructions. A disclosed post-hoc host policy therefore preserves exact trace
+preparation but does not launch the current q=93 solver at 240,000 instructions
+or above. Such rows are operational skips, not solver attempts, lower bounds,
+or compression labels. Below that cutoff, andOTP retained an independently
+replayed q=93 full-patch lower bound of 536,289 bytes, but its best rounded
+captured-model candidate remained 16 instruction bytes above the bound; it is
+also nonexact and unlabeled.
+
+The exactly solved subset totals 484,664→453,167 bytes (6.4987%), but it is
+selected by solver tractability and is **not a distribution estimate or
+generalization result**. The preregistered minimum is 30 exact Android pairs,
+so no predictor, table bank, deployment experiment, or Superpack claim is
+authorized. See
 [`status-v1.md`](results/android/status-v1.md) and
 [`preregistration-v1.json`](benchmark_android/preregistration-v1.json).
 
@@ -161,6 +179,10 @@ reproduction.
 - `benchmark_android/run_fixed_q_integer_dual.py` and
   `verify_fixed_q_bound_sweep.py` — fixed-q proof construction and independent
   bound replay for the public DEX branch.
+- `benchmark_android/finalize_zero_candidate_pair.py` — solver-free exact
+  certification when the restricted family has no eligible table candidate.
+- `benchmark_android/record_scaling_gate_skip.py` — fail-visible recording of
+  trace-replayed rows screened by the post-hoc host cutoff.
 - `docs/model.md` — formulation and exactness argument.
 - `docs/implementation-audit.md` — RFC and decoder audit.
 - `corpus/manifest.json` — immutable corpus provenance.

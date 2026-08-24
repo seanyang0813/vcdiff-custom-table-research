@@ -1,0 +1,42 @@
+{
+  "baseline_bytes": 591769,
+  "candidate_diagnostic": {
+    "best_rounded_instruction_bytes": 112951,
+    "fractional_integer_variables": 6,
+    "fractional_variables": 5663,
+    "rounded_gap_above_instruction_lower_bound": 16,
+    "rounded_selection_attempt_count": 20,
+    "selection_sum": 93
+  },
+  "evidence_boundary": "The stored rational dual proves only a q=93 lower bound. The rounded captured-model candidates are feasible diagnostics, not independently emitted and decoded patches or exact optima, and no preregistered pair label is assigned.",
+  "format": "vcdiff-android-fixed-q-root-gap-v1",
+  "instruction_bytes_integer_lower_bound": 112935,
+  "independent_rational_dual_replay": true,
+  "logical_instructions": 135690,
+  "model_fingerprint": "be3a07546dd70f3050674be72f6b39e4361b8725a7c35ed20d5b57e71f831be5",
+  "pair_id": "fdroid-org.shadowice.flocke.andotp-38-to-39",
+  "physical_slots": 93,
+  "proof_vectors_sha256": "f1ad8a3d9f958beb98e7d7b6cb37b8e035acdbb61421f5105cfbd932b19b52f8",
+  "q93_full_patch_bytes_integer_lower_bound": 536289,
+  "resource_observation": {
+    "adapter_time_budget_seconds": 600,
+    "command_elapsed_seconds": 619.21,
+    "lp_elapsed_seconds": 142.47137688500152,
+    "peak_rss_kb": 2147428,
+    "witness_mip_attempts": [
+      {
+        "elapsed_seconds": 294.3825013630012,
+        "presolve": true,
+        "reported_status": "infeasible"
+      },
+      {
+        "elapsed_seconds": 146.70681106700067,
+        "presolve": false,
+        "reported_status": "time_limit"
+      }
+    ]
+  },
+  "status": "nonexact_fractional_root_gap",
+  "stop_reason": "The exact q=93 rational lower bound was not attained. No rounded fixed-selection path reached it; presolved floating MILP reported infeasibility and the no-presolve attempt exhausted the shared deadline. Neither outcome supplies an exact integer optimum.",
+  "trace_sha256": "e2a363ad24acacf18b1435574b144b94e600d3158fa296ee1078fa5433867d4d"
+}

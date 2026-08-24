@@ -1,0 +1,10 @@
+{
+  "baseline_bytes": 3004737,
+  "evidence_boundary": "The stock trace was exactly byte-replayed, but no q=93 solver was started and no exact lower bound or optimum is claimed. This is a post-hoc host resource skip under results/android/rational-dual-scaling-gate-v1.json.",
+  "format": "vcdiff-android-posthoc-scaling-gate-skip-v1",
+  "logical_instructions": 892360,
+  "pair_id": "fdroid-com.fastaccess.github.libre-466-to-467",
+  "scaling_gate": "results/android/rational-dual-scaling-gate-v1.json",
+  "status": "solver_skipped_by_posthoc_scaling_gate",
+  "trace_sha256": "9c0566fedd26e7f79ed76c0c72b798568ffacfb8c1f7538de3861ba309e2be7b"
+}

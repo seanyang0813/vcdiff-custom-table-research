@@ -1,6 +1,6 @@
 {
-  "evidence_boundary": "5 exact DEX pairs are insufficient for the preregistered 30-pair coverage gate. No predictor, table bank, production prototype, or Superpack claim is authorized.",
-  "exact_pair_count": 5,
+  "evidence_boundary": "All 40 frozen stock traces were replayed, but only 6 DEX pairs have exact oracle labels, insufficient for the preregistered 30-pair coverage gate. The exactly solved subset is selected by solver tractability and is not a corpus distribution estimate. No predictor, table bank, production prototype, or Superpack claim is authorized.",
+  "exact_pair_count": 6,
   "exact_rows": [
     {
       "baseline_bytes": 251942,
@@ -88,13 +88,32 @@
       "saving_percent": 5.812344312205923,
       "started_utc": "2026-08-24T09:12:54.059039+00:00",
       "status": "complete"
+    },
+    {
+      "baseline_bytes": 26,
+      "certificate": "results/android/powertools-f005-exact-zero-v1.json",
+      "certificate_sha256": "f5e738a0db375bf50845f3d7f4967cbc59a3ad8d64004d3031e0c135db373cc5",
+      "logical_instructions": 1,
+      "oracle_bytes": 26,
+      "pair_id": "fdroid-v4lpt.vpt.f005.rsd-103-to-104",
+      "physical_slots": 0,
+      "proof_backend": "exhaustive zero-candidate structural branch; no MILP",
+      "saving_bytes": 0,
+      "saving_percent": 0.0,
+      "status": "complete"
     }
   ],
+  "exact_subset_baseline_bytes": 484664,
+  "exact_subset_oracle_bytes": 453167,
+  "exact_subset_saving_bytes": 31497,
+  "exact_subset_weighted_saving_percent": 6.498729016390737,
   "format": "vcdiff-public-android-status-v1",
   "frozen_pair_count": 40,
+  "frozen_schedule_accounting_complete": true,
+  "material_exact_pair_count": 3,
   "material_signal_gate_passed": false,
   "minimum_exact_coverage_gate_passed": false,
-  "nonexact_attempt_count": 20,
+  "nonexact_attempt_count": 21,
   "nonexact_attempts": [
     {
       "attempted_physical_slots": 93,
@@ -128,16 +147,6 @@
     },
     {
       "attempted_physical_slots": 93,
-      "baseline_bytes": 339039,
-      "diagnostic": "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
-      "instruction_bytes_integer_lower_bound": 80039,
-      "logical_instructions": 92239,
-      "pair_id": "fdroid-com.kolakek.pimiwidget-16-to-17",
-      "q93_full_patch_bytes_integer_lower_bound": 321904,
-      "status": "scip_external_memory_safety_stop"
-    },
-    {
-      "attempted_physical_slots": 93,
       "baseline_bytes": 1192532,
       "diagnostic": "results/android/sandwich-q93-bound-timeout-v1.json",
       "logical_instructions": 330763,
@@ -159,6 +168,16 @@
       "logical_instructions": 364470,
       "pair_id": "fdroid-com.kgurgul.cpuinfo-40302-to-40303",
       "status": "rational_dual_construction_timeout"
+    },
+    {
+      "attempted_physical_slots": 93,
+      "baseline_bytes": 339039,
+      "diagnostic": "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
+      "instruction_bytes_integer_lower_bound": 80039,
+      "logical_instructions": 92239,
+      "pair_id": "fdroid-com.kolakek.pimiwidget-16-to-17",
+      "q93_full_patch_bytes_integer_lower_bound": 321904,
+      "status": "scip_external_memory_safety_stop"
     },
     {
       "attempted_physical_slots": 93,
@@ -246,18 +265,20 @@
     },
     {
       "attempted_physical_slots": 93,
+      "baseline_bytes": 591769,
+      "diagnostic": "results/android/andotp-q93-root-gap-v1.json",
+      "instruction_bytes_integer_lower_bound": 112935,
+      "logical_instructions": 135690,
+      "pair_id": "fdroid-org.shadowice.flocke.andotp-38-to-39",
+      "q93_full_patch_bytes_integer_lower_bound": 536289,
+      "status": "fractional_root_gap"
+    },
+    {
+      "attempted_physical_slots": 93,
       "baseline_bytes": 1918400,
       "diagnostic": "results/android/plexus-q93-bound-timeout-v1.json",
       "logical_instructions": 468357,
       "pair_id": "fdroid-tech.techlore.plexus-217-to-219",
-      "status": "rational_dual_construction_timeout"
-    },
-    {
-      "attempted_physical_slots": 93,
-      "baseline_bytes": 1156255,
-      "diagnostic": "results/android/secondsclock-q93-bound-timeout-v1.json",
-      "logical_instructions": 324708,
-      "pair_id": "fdroid-uk.co.yahoo.p1rpp.secondsclock-6-to-7",
       "status": "rational_dual_construction_timeout"
     },
     {
@@ -269,9 +290,17 @@
       "pair_id": "fdroid-tibarj.tranquilstopwatch-16-to-17",
       "q93_full_patch_bytes_integer_lower_bound": 764506,
       "status": "fractional_root_gap"
+    },
+    {
+      "attempted_physical_slots": 93,
+      "baseline_bytes": 1156255,
+      "diagnostic": "results/android/secondsclock-q93-bound-timeout-v1.json",
+      "logical_instructions": 324708,
+      "pair_id": "fdroid-uk.co.yahoo.p1rpp.secondsclock-6-to-7",
+      "status": "rational_dual_construction_timeout"
     }
   ],
-  "not_yet_attempted_count": 12,
+  "not_yet_attempted_count": 0,
   "operational_diagnostics": [
     "results/android/fixed-q1-diagnostic-v1.json",
     "results/android/continuous-relaxation-stop-v1.json",
@@ -280,38 +309,98 @@
     "results/android/constellations-fixed-q-bound-replay-v1.json",
     "results/android/constellations-exact-summary-v1.json",
     "results/android/strengthened-scip-validation-v1.json",
-    "results/android/mmrl-q93-witness-stop-v1.json",
-    "results/android/icicle-q93-witness-stop-v1.json",
-    "results/android/tranquilstopwatch-q93-root-gap-v1.json",
-    "results/android/ariane-q93-root-gap-v1.json",
-    "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
-    "results/android/pathfinder-q93-root-gap-v1.json",
-    "results/android/stardroid-q93-root-gap-v1.json",
-    "results/android/anecdote-q93-bound-timeout-v1.json",
-    "results/android/cpuinfo-q93-bound-timeout-v1.json",
-    "results/android/spider-q93-bound-timeout-v1.json",
-    "results/android/duorem-q93-bound-timeout-v1.json",
-    "results/android/plexus-q93-bound-timeout-v1.json",
-    "results/android/onetimepad-q93-bound-timeout-v1.json",
-    "results/android/gsmlocation-q93-bound-timeout-v1.json",
-    "results/android/block6-q93-bound-timeout-v1.json",
-    "results/android/packlist-q93-bound-timeout-v1.json",
-    "results/android/sandwich-q93-bound-timeout-v1.json",
-    "results/android/secondsclock-q93-bound-timeout-v1.json",
-    "results/android/groestlcoin-q93-bound-timeout-v1.json",
-    "results/android/singal-q93-bound-timeout-v1.json",
     "results/android/rational-dual-scaling-gate-v1.json",
+    "results/android/valetudo-scaling-gate-skip-v1.json",
+    "results/android/icicle-q93-witness-stop-v1.json",
+    "results/android/koler-scaling-gate-skip-v1.json",
+    "results/android/mmrl-q93-witness-stop-v1.json",
+    "results/android/fasthub-scaling-gate-skip-v1.json",
+    "results/android/stardroid-q93-root-gap-v1.json",
+    "results/android/sandwich-q93-bound-timeout-v1.json",
+    "results/android/block6-q93-bound-timeout-v1.json",
+    "results/android/cpuinfo-q93-bound-timeout-v1.json",
+    "results/android/pimiwidget-q93-scip-safety-stop-v1.json",
+    "results/android/bluecheese-scaling-gate-skip-v1.json",
+    "results/android/packlist-q93-bound-timeout-v1.json",
+    "results/android/onetimepad-q93-bound-timeout-v1.json",
+    "results/android/duorem-q93-bound-timeout-v1.json",
+    "results/android/innertune-scaling-gate-skip-v1.json",
+    "results/android/c3nav-scaling-gate-skip-v1.json",
     "results/android/zapp-scaling-gate-skip-v1.json",
+    "results/android/ning-scaling-gate-skip-v1.json",
+    "results/android/muzei-bing-scaling-gate-skip-v1.json",
+    "results/android/singal-q93-bound-timeout-v1.json",
+    "results/android/groestlcoin-q93-bound-timeout-v1.json",
+    "results/android/anecdote-q93-bound-timeout-v1.json",
     "results/android/omninotes-scaling-gate-skip-v1.json",
-    "results/android/muzei-bing-scaling-gate-skip-v1.json"
+    "results/android/alarmio-scaling-gate-skip-v1.json",
+    "results/android/phonetrack-scaling-gate-skip-v1.json",
+    "results/android/ariane-q93-root-gap-v1.json",
+    "results/android/pathfinder-q93-root-gap-v1.json",
+    "results/android/gsmlocation-q93-bound-timeout-v1.json",
+    "results/android/spider-q93-bound-timeout-v1.json",
+    "results/android/andotp-q93-root-gap-v1.json",
+    "results/android/plexus-q93-bound-timeout-v1.json",
+    "results/android/tranquilstopwatch-q93-root-gap-v1.json",
+    "results/android/secondsclock-q93-bound-timeout-v1.json",
+    "results/android/powertools-f006-scaling-gate-skip-v1.json"
   ],
-  "operational_skip_count": 3,
+  "operational_skip_count": 13,
   "operational_skips": [
+    {
+      "baseline_bytes": 4059682,
+      "diagnostic": "results/android/valetudo-scaling-gate-skip-v1.json",
+      "logical_instructions": 1148504,
+      "pair_id": "fdroid-cloud.valetudo.companion-15-to-16",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 1769914,
+      "diagnostic": "results/android/koler-scaling-gate-skip-v1.json",
+      "logical_instructions": 473436,
+      "pair_id": "fdroid-com.chooloo.www.koler-79-to-82",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 3004737,
+      "diagnostic": "results/android/fasthub-scaling-gate-skip-v1.json",
+      "logical_instructions": 892360,
+      "pair_id": "fdroid-com.fastaccess.github.libre-466-to-467",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 3203226,
+      "diagnostic": "results/android/bluecheese-scaling-gate-skip-v1.json",
+      "logical_instructions": 906317,
+      "pair_id": "fdroid-com.msb.bluecheese-6-to-303",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 3100803,
+      "diagnostic": "results/android/innertune-scaling-gate-skip-v1.json",
+      "logical_instructions": 832627,
+      "pair_id": "fdroid-com.zionhuang.music-19-to-20",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 2493008,
+      "diagnostic": "results/android/c3nav-scaling-gate-skip-v1.json",
+      "logical_instructions": 700352,
+      "pair_id": "fdroid-de.c3nav.droid-14040501-to-18040700",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
     {
       "baseline_bytes": 2605272,
       "diagnostic": "results/android/zapp-scaling-gate-skip-v1.json",
       "logical_instructions": 625284,
       "pair_id": "fdroid-de.christinecoenen.code.zapp-74-to-76",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 2854220,
+      "diagnostic": "results/android/ning-scaling-gate-skip-v1.json",
+      "logical_instructions": 817624,
+      "pair_id": "fdroid-de.csicar.ning-200-to-201",
       "status": "solver_skipped_by_posthoc_scaling_gate"
     },
     {
@@ -327,8 +416,32 @@
       "logical_instructions": 620435,
       "pair_id": "fdroid-it.feio.android.omninotes.foss-330-to-331",
       "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 5677478,
+      "diagnostic": "results/android/alarmio-scaling-gate-skip-v1.json",
+      "logical_instructions": 1616268,
+      "pair_id": "fdroid-me.jfenn.alarmio-20-to-21",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 3578809,
+      "diagnostic": "results/android/phonetrack-scaling-gate-skip-v1.json",
+      "logical_instructions": 1028811,
+      "pair_id": "fdroid-net.eneiluj.nextcloud.phonetrack-10-to-11",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
+    },
+    {
+      "baseline_bytes": 1124455,
+      "diagnostic": "results/android/powertools-f006-scaling-gate-skip-v1.json",
+      "logical_instructions": 278412,
+      "pair_id": "fdroid-v4lpt.vpt.f006.yxn-100-to-102",
+      "status": "solver_skipped_by_posthoc_scaling_gate"
     }
   ],
   "predictor_or_table_bank_authorized": false,
-  "status": "partial_nonconfirmatory"
+  "status": "trace_complete_oracle_incomplete",
+  "trace_replay_schedule_complete": true,
+  "trace_replayed_pair_count": 40,
+  "zero_saving_exact_pair_count": 3
 }

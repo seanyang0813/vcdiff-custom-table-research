@@ -1,0 +1,76 @@
+{
+  "baseline": {
+    "bytes": 26,
+    "sha256": "fe776e482a1e3111da62a10b3aafaa5e0deb2cb69894e2f7541d459c1b36901e"
+  },
+  "evidence_boundary": "Exact only for the frozen logical trace and restricted canonical q=0..93 table family. The zero-candidate branch uses no MILP. This public Android DEX surrogate supports no Meta or Superpack claim.",
+  "exact_restricted_optimum": {
+    "bytes": 26,
+    "physical_slots": 0,
+    "sha256": "fe776e482a1e3111da62a10b3aafaa5e0deb2cb69894e2f7541d459c1b36901e"
+  },
+  "format": "vcdiff-android-zero-candidate-certificate-v1",
+  "frozen_inputs": {
+    "corpus_lock_sha256": "18e0e686948ea313ad5961582688e3f9e95ed55be0f4a373b993712ab66d9739",
+    "execution_lock_sha256": "64d8f74789e98139645563e7176e6270e6e5ba9dd7174dad4fb83bf8acce1d8d",
+    "preregistration_sha256": "bffc001a5414ff2574c1676bfb3086fff053e68935559c12de1e4ffbd5be90d6",
+    "source_sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27",
+    "target_sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27",
+    "trace_sha256": "a10caf212808ca0805767efd3fd4cad9489af54f18b2f14ee9b3b72fab32b5d6"
+  },
+  "pair_id": "fdroid-v4lpt.vpt.f005.rsd-103-to-104",
+  "proof": {
+    "argument": "The frozen family may install only observed implicit-size single or pair patterns. This trace has none, so every q>0 table is infeasible under the family's nonempty-installation rule and q=0 is the sole feasible table. The exact default-table dynamic program emits 26 bytes and attains the structural lower bound.",
+    "global_result": {
+      "candidate_count": 0,
+      "constant_patch_bytes": 14,
+      "delta_length_varint_bytes": 1,
+      "file_header_bytes": 5,
+      "instruction_bytes": 5,
+      "instruction_length_varint_bytes": 1,
+      "max_physical_slots": 93,
+      "model_constraints": 0,
+      "model_variables": 0,
+      "observed_candidate_count": 0,
+      "patch_bytes": 26,
+      "patch_dual_bound": 26,
+      "physical_slots": 0,
+      "selected_patterns": [],
+      "solver_dual_bound": 12,
+      "solver_gap": 0.0,
+      "solver_nodes": 0,
+      "variable_patch_bytes": 12
+    },
+    "kind": "exhaustive zero-candidate structural branch",
+    "physical_slot_range": [
+      0,
+      93
+    ],
+    "solver_invoked": false
+  },
+  "trace": {
+    "logical_instruction_count": 1,
+    "stock_patch_byte_replayed": true
+  },
+  "verification": {
+    "python_decoder": {
+      "decoded_bytes": 9326400,
+      "decoded_sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27"
+    },
+    "unchanged_xdelta_decoder": {
+      "command": [
+        "/home/seanyang/Documents/math/vcdiff/build/xdelta/xdelta3-rfc-custom-decoder",
+        "-d",
+        "-f",
+        "-s",
+        "/home/seanyang/Documents/math/vcdiff/benchmark_android/data/v4lpt.vpt.f005.rsd/old-103.dexbundle",
+        "/home/seanyang/Documents/math/vcdiff/benchmark_android/artifacts/fdroid-v4lpt.vpt.f005.rsd-103-to-104/structural-optimal.vcdiff",
+        "<temporary-output>"
+      ],
+      "decoded_bytes": 9326400,
+      "decoded_sha256": "dbd0ca4011737118e4258035cf91eae3addd8df2785a00c3f835dc41a0a16d27",
+      "returncode": 0,
+      "stderr": ""
+    }
+  }
+}
